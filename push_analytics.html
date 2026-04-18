@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Git Push Analytics</title>
+<style>
+  :root {
+    --bg: #0f1117; --surface: #1a1d27; --border: #2a2d3e;
+    --accent: #6c63ff; --accent2: #00d4aa;
+    --text: #e2e8f0; --muted: #718096;
+    --success: #48bb78; --failed: #fc8181; --error: #f6ad55;
+    --radius: 10px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg);
+         color: var(--text); min-height: 100vh; padding: 24px; }
+
+  /* ── Header ── */
+  .header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+  .header-icon { width: 44px; height: 44px; background: var(--accent);
+                 border-radius: 12px; display: grid; place-items: center; font-size: 22px; }
+  .header h1 { font-size: 22px; font-weight: 700; }
+  .header p  { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .source-pill { margin-left: auto; background: var(--surface); border: 1px solid var(--border);
+                 border-radius: 20px; padding: 5px 14px; font-size: 12px; color: var(--muted); }
+  .source-pill span { color: var(--accent2); font-weight: 600; }
+
+  /* ── Loading / 404 ── */
+  .status-screen { display: flex; flex-direction: column; align-items: center;
+                   justify-content: center; min-height: 60vh; gap: 16px; }
+  .status-screen .icon { font-size: 56px; }
+  .status-screen h2 { font-size: 22px; font-weight: 700; }
+  .status-screen p  { font-size: 14px; color: var(--muted); text-align: center;
+                      max-width: 480px; line-height: 1.7; }
+  .status-screen code { background: var(--surface); border: 1px solid var(--border);
+                        border-radius: 6px; padding: 2px 8px; font-size: 13px;
+                        color: var(--accent2); }
+  .spinner { width: 36px; height: 36px; border: 3px solid var(--border);
+             border-top-color: var(--accent); border-radius: 50%;
+             animation: spin .8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── Stat cards ── */
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+           gap: 14px; margin-bottom: 24px; }
+  .card { background: var(--surface); border: 1px solid var(--border);
+          border-radius: var(--radius); padding: 18px 16px; }
+  .card-label { font-size: 11px; color: var(--muted); text-transform: uppercase;
+                letter-spacing: .06em; margin-bottom: 8px; }
+  .card-value { font-size: 28px; font-weight: 700; }
+  .card-value.green  { color: var(--success); }
+  .card-value.red    { color: var(--failed); }
+  .card-value.purple { color: var(--accent); }
+  .card-value.teal   { color: var(--accent2); }
+
+  /* ── Charts ── */
+  .charts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+  @media(max-width:720px){ .charts { grid-template-columns: 1fr; } }
+  .chart-box { background: var(--surface); border: 1px solid var(--border);
+               border-radius: var(--radius); padding: 18px; }
+  .chart-box h3 { font-size: 11px; color: var(--muted); text-transform: uppercase;
+                  letter-spacing: .06em; margin-bottom: 14px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; }
+  .bar-label { font-size: 12px; width: 110px; white-space: nowrap;
+               overflow: hidden; text-overflow: ellipsis; }
+  .bar-track { flex: 1; background: var(--border); border-radius: 4px; height: 8px; overflow: hidden; }
+  .bar-fill  { height: 100%; border-radius: 4px; transition: width .5s; }
+  .bar-count { font-size: 11px; color: var(--muted); width: 28px; text-align: right; }
+
+  /* ── Filters ── */
+  .filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+  .filters input, .filters select {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 7px; padding: 8px 12px; color: var(--text); font-size: 13px; outline: none; }
+  .filters input:focus, .filters select:focus { border-color: var(--accent); }
+  .filters input[type="search"] { flex: 1; min-width: 200px; }
+  .filter-reset { background: transparent; border: 1px solid var(--border);
+                  border-radius: 7px; padding: 8px 14px; color: var(--muted);
+                  font-size: 13px; cursor: pointer; }
+  .filter-reset:hover { border-color: var(--accent); color: var(--text); }
+
+  /* ── Table ── */
+  .table-wrap { background: var(--surface); border: 1px solid var(--border);
+                border-radius: var(--radius); overflow: hidden; }
+  .table-meta { padding: 12px 16px; font-size: 12px; color: var(--muted);
+                border-bottom: 1px solid var(--border); display: flex;
+                justify-content: space-between; align-items: center; }
+  .refresh-btn { background: transparent; border: 1px solid var(--border);
+                 border-radius: 6px; padding: 4px 10px; color: var(--muted);
+                 font-size: 11px; cursor: pointer; }
+  .refresh-btn:hover { border-color: var(--accent); color: var(--text); }
+  table { width: 100%; border-collapse: collapse; }
+  th { background: #12151f; padding: 11px 14px; text-align: left; font-size: 11px;
+       color: var(--muted); text-transform: uppercase; letter-spacing: .06em;
+       cursor: pointer; user-select: none; white-space: nowrap; }
+  th:hover { color: var(--text); }
+  th.sorted .sort-icon { color: var(--accent); opacity: 1; }
+  .sort-icon { opacity: .35; margin-left: 4px; }
+  td { padding: 10px 14px; font-size: 13px; border-top: 1px solid var(--border); }
+  tr:hover td { background: rgba(108,99,255,.06); }
+  .badge { display: inline-block; padding: 2px 9px; border-radius: 20px;
+           font-size: 11px; font-weight: 600; text-transform: capitalize; }
+  .badge-success { background: rgba(72,187,120,.15);  color: var(--success); }
+  .badge-failed  { background: rgba(252,129,129,.15); color: var(--failed); }
+  .badge-error   { background: rgba(246,173,85,.15);  color: var(--error); }
+  .event-badge   { display: inline-block; padding: 2px 8px; border-radius: 20px;
+                   font-size: 11px; background: rgba(108,99,255,.15); color: var(--accent); }
+  .file-cell  { font-family: monospace; font-size: 12px; color: var(--accent2); }
+  .repo-link  { color: var(--text); text-decoration: none; }
+  .repo-link:hover { color: var(--accent); }
+  .no-results { padding: 40px; text-align: center; color: var(--muted); font-size: 14px; }
+  .pagination { display: flex; justify-content: center; gap: 6px;
+                padding: 14px; border-top: 1px solid var(--border); }
+  .page-btn { background: transparent; border: 1px solid var(--border); border-radius: 6px;
+              padding: 5px 11px; color: var(--muted); font-size: 12px; cursor: pointer; }
+  .page-btn:hover  { border-color: var(--accent); color: var(--text); }
+  .page-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     CONFIGURATION  ← edit these two constants only
+     ═══════════════════════════════════════════════════════════════════════════
+     LOCAL_CSV   : path to push_log.csv relative to this HTML file.
+                   Set to "" to skip local loading.
+     GITHUB_CSV  : full GitHub blob or raw URL to push_log.csv.
+                   Set to "" to skip GitHub loading.
+     Priority    : LOCAL_CSV is tried first, then GITHUB_CSV, then 404.
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<script>
+  const LOCAL_CSV  = "push_log.csv";
+  const GITHUB_CSV = "";
+  // Example GITHUB_CSV:
+  // "https://github.com/username/repo/blob/main/push_log.csv"
+</script>
+
+<!-- Header (shown after data loads) -->
+<div class="header hidden" id="header">
+  <div class="header-icon">🚀</div>
+  <div>
+    <h1>Git Push Analytics</h1>
+    <p>Auto-push activity dashboard</p>
+  </div>
+  <div class="source-pill">Source: <span id="source-label">—</span></div>
+</div>
+
+<!-- Loading screen -->
+<div class="status-screen" id="screen-loading">
+  <div class="spinner"></div>
+  <h2>Loading data…</h2>
+  <p id="loading-msg">Checking for push_log.csv…</p>
+</div>
+
+<!-- 404 screen -->
+<div class="status-screen hidden" id="screen-404">
+  <div class="icon">🔍</div>
+  <h2>No data found</h2>
+  <p>
+    Neither a local CSV nor a GitHub URL was found or accessible.<br><br>
+    To fix this, open <code>push_analytics.html</code> and set one of:<br><br>
+    <code>const LOCAL_CSV  = "push_log.csv";</code><br>
+    <code>const GITHUB_CSV = "https://github.com/you/repo/blob/main/push_log.csv";</code>
+  </p>
+</div>
+
+<!-- Dashboard (shown after data loads) -->
+<div class="hidden" id="dashboard">
+
+  <!-- Stat cards -->
+  <div class="cards">
+    <div class="card"><div class="card-label">Total Pushes</div><div class="card-value purple" id="c-total">—</div></div>
+    <div class="card"><div class="card-label">Successful</div><div class="card-value green"  id="c-success">—</div></div>
+    <div class="card"><div class="card-label">Failed</div><div class="card-value red"    id="c-failed">—</div></div>
+    <div class="card"><div class="card-label">Repos Tracked</div><div class="card-value teal"   id="c-repos">—</div></div>
+    <div class="card"><div class="card-label">Files Changed</div><div class="card-value purple" id="c-files">—</div></div>
+    <div class="card"><div class="card-label">Success Rate</div><div class="card-value green"  id="c-rate">—</div></div>
+  </div>
+
+  <!-- Charts -->
+  <div class="charts">
+    <div class="chart-box"><h3>Pushes by Repo</h3><div id="chart-repos"></div></div>
+    <div class="chart-box"><h3>Activity by Day</h3><div id="chart-days"></div></div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters">
+    <input type="search" id="search"          placeholder="🔍  Search repo, file, status, event…" oninput="applyFilters()" />
+    <select id="filter-repo"   onchange="applyFilters()"><option value="">All repos</option></select>
+    <select id="filter-status" onchange="applyFilters()">
+      <option value="">All statuses</option>
+      <option value="success">Success</option>
+      <option value="failed">Failed</option>
+      <option value="error">Error</option>
+    </select>
+    <select id="filter-event" onchange="applyFilters()">
+      <option value="">All events</option>
+      <option value="created">Created</option>
+      <option value="modified">Modified</option>
+      <option value="deleted">Deleted</option>
+      <option value="moved">Moved</option>
+    </select>
+    <input type="date" id="filter-date-from" onchange="applyFilters()" title="From date" />
+    <input type="date" id="filter-date-to"   onchange="applyFilters()" title="To date" />
+    <button class="filter-reset" onclick="resetFilters()">✕ Reset</button>
+  </div>
+
+  <!-- Table -->
+  <div class="table-wrap">
+    <div class="table-meta">
+      <span id="table-meta">—</span>
+      <button class="refresh-btn" onclick="autoLoad()">↻ Refresh</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th onclick="sortBy('timestamp')"   data-col="timestamp">Timestamp <span class="sort-icon">↕</span></th>
+          <th onclick="sortBy('repo_name')"   data-col="repo_name">Repo <span class="sort-icon">↕</span></th>
+          <th onclick="sortBy('file_changed')" data-col="file_changed">File Changed <span class="sort-icon">↕</span></th>
+          <th onclick="sortBy('event_type')"  data-col="event_type">Event <span class="sort-icon">↕</span></th>
+          <th onclick="sortBy('status')"      data-col="status">Status <span class="sort-icon">↕</span></th>
+          <th>Message</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+    <div class="pagination" id="pagination"></div>
+  </div>
+</div><!-- /dashboard -->
+
+
+<script>
+// ── State ─────────────────────────────────────────────────────────────────────
+let ALL_ROWS    = [];
+let filtered    = [];
+let sortCol     = "timestamp";
+let sortAsc     = false;
+let currentPage = 1;
+const PAGE_SIZE = 15;
+
+// ── Screen helpers ─────────────────────────────────────────────────────────────
+const show = id => document.getElementById(id).classList.remove("hidden");
+const hide = id => document.getElementById(id).classList.add("hidden");
+function setLoading(msg) {
+  hide("screen-404"); hide("dashboard"); hide("header");
+  show("screen-loading");
+  document.getElementById("loading-msg").textContent = msg;
+}
+function show404() {
+  hide("screen-loading"); hide("dashboard"); hide("header");
+  show("screen-404");
+}
+function showDashboard(sourceLabel) {
+  hide("screen-loading"); hide("screen-404");
+  show("header"); show("dashboard");
+  document.getElementById("source-label").textContent = sourceLabel;
+}
+
+// ── URL converter (GitHub blob → raw) ─────────────────────────────────────────
+function toRawUrl(url) {
+  if (!url) return "";
+  url = url.trim();
+  if (url.includes("raw.githubusercontent.com")) return url;
+  const m = url.match(/github\.com\/([^/]+\/[^/]+)\/blob\/(.+)/);
+  if (m) return `https://raw.githubusercontent.com/${m[1]}/${m[2]}`;
+  return url;
+}
+
+// ── CSV parser ────────────────────────────────────────────────────────────────
+function parseCSV(text) {
+  const lines = text.trim().split(/\r?\n/);
+  if (lines.length < 2) return [];
+  const headers = lines[0].split(",").map(h => h.trim());
+  return lines.slice(1)
+    .map(line => {
+      const vals = line.split(",");
+      const obj  = {};
+      headers.forEach((h, i) => obj[h] = (vals[i] || "").trim());
+      return obj;
+    })
+    .filter(r => r.timestamp);
+}
+
+// ── Auto-loader: LOCAL → GITHUB → 404 ────────────────────────────────────────
+async function autoLoad() {
+  // 1. Try local CSV
+  if (LOCAL_CSV) {
+    setLoading(`Looking for local file: ${LOCAL_CSV}`);
+    try {
+      const res = await fetch(LOCAL_CSV + "?t=" + Date.now()); // cache-bust
+      if (res.ok) {
+        const text = await res.text();
+        const rows = parseCSV(text);
+        if (rows.length) {
+          loadData(rows, `Local · ${LOCAL_CSV}`);
+          return;
+        }
+      }
+    } catch (_) { /* file not accessible – try next */ }
+  }
+
+  // 2. Try GitHub CSV
+  if (GITHUB_CSV) {
+    const raw = toRawUrl(GITHUB_CSV);
+    setLoading(`Fetching from GitHub…`);
+    try {
+      const res = await fetch(raw);
+      if (res.ok) {
+        const text = await res.text();
+        const rows = parseCSV(text);
+        if (rows.length) {
+          loadData(rows, `GitHub · ${raw.split("/").slice(-1)[0]}`);
+          return;
+        }
+      }
+    } catch (_) { /* network error */ }
+  }
+
+  // 3. Nothing worked
+  show404();
+}
+
+// ── Load data into dashboard ──────────────────────────────────────────────────
+function loadData(rows, sourceLabel) {
+  ALL_ROWS = rows;
+  populateRepoFilter();
+  renderCards();
+  renderCharts();
+  applyFilters();
+  showDashboard(sourceLabel);
+}
+
+// ── Filters & search ──────────────────────────────────────────────────────────
+function populateRepoFilter() {
+  const repos = [...new Set(ALL_ROWS.map(r => r.repo_name))].sort();
+  const sel   = document.getElementById("filter-repo");
+  sel.innerHTML = '<option value="">All repos</option>' +
+    repos.map(r => `<option value="${r}">${r}</option>`).join("");
+}
+
+function applyFilters() {
+  const q      = document.getElementById("search").value.toLowerCase();
+  const repo   = document.getElementById("filter-repo").value;
+  const status = document.getElementById("filter-status").value;
+  const event  = document.getElementById("filter-event").value;
+  const from   = document.getElementById("filter-date-from").value;
+  const to     = document.getElementById("filter-date-to").value;
+
+  filtered = ALL_ROWS.filter(r => {
+    if (repo   && r.repo_name  !== repo)   return false;
+    if (status && r.status     !== status) return false;
+    if (event  && r.event_type !== event)  return false;
+    if (from   && r.timestamp.slice(0,10) < from) return false;
+    if (to     && r.timestamp.slice(0,10) > to)   return false;
+    if (q && ![r.repo_name, r.file_changed, r.status, r.event_type, r.message]
+                .join(" ").toLowerCase().includes(q)) return false;
+    return true;
+  });
+
+  sortRows();
+}
+
+function resetFilters() {
+  ["search","filter-repo","filter-status","filter-event",
+   "filter-date-from","filter-date-to"].forEach(id => {
+    document.getElementById(id).value = "";
+  });
+  applyFilters();
+}
+
+// ── Sorting ───────────────────────────────────────────────────────────────────
+function sortBy(col) {
+  sortAsc = sortCol === col ? !sortAsc : true;
+  sortCol = col;
+  document.querySelectorAll("th").forEach(th => {
+    th.classList.remove("sorted");
+    const ic = th.querySelector(".sort-icon");
+    if (ic) ic.textContent = "↕";
+  });
+  const th = document.querySelector(`th[data-col="${col}"]`);
+  if (th) { th.classList.add("sorted"); th.querySelector(".sort-icon").textContent = sortAsc ? "↑" : "↓"; }
+  sortRows();
+}
+
+function sortRows() {
+  filtered = [...filtered].sort((a, b) => {
+    const av = (a[sortCol] || "").toLowerCase();
+    const bv = (b[sortCol] || "").toLowerCase();
+    return sortAsc ? av.localeCompare(bv) : bv.localeCompare(av);
+  });
+  currentPage = 1;
+  renderTable();
+}
+
+// ── Table ─────────────────────────────────────────────────────────────────────
+function renderTable() {
+  const start = (currentPage - 1) * PAGE_SIZE;
+  const page  = filtered.slice(start, start + PAGE_SIZE);
+  const tbody = document.getElementById("table-body");
+
+  document.getElementById("table-meta").textContent =
+    `Showing ${filtered.length ? start+1 : 0}–${Math.min(start+PAGE_SIZE, filtered.length)} of ${filtered.length} rows`;
+
+  if (!page.length) {
+    tbody.innerHTML = `<tr><td colspan="6" class="no-results">No results match your filters.</td></tr>`;
+  } else {
+    tbody.innerHTML = page.map(r => `
+      <tr>
+        <td>${r.timestamp}</td>
+        <td><a class="repo-link" href="${r.repo_url}" target="_blank">${r.repo_name}</a></td>
+        <td class="file-cell">${r.file_changed || "—"}</td>
+        <td><span class="event-badge">${r.event_type}</span></td>
+        <td><span class="badge badge-${r.status}">${r.status}</span></td>
+        <td style="color:var(--muted);font-size:12px;max-width:220px;overflow:hidden;
+                   text-overflow:ellipsis;white-space:nowrap" title="${r.message}">${r.message||"—"}</td>
+      </tr>`).join("");
+  }
+  renderPagination();
+}
+
+function renderPagination() {
+  const total = Math.ceil(filtered.length / PAGE_SIZE);
+  const pg = document.getElementById("pagination");
+  if (total <= 1) { pg.innerHTML = ""; return; }
+  pg.innerHTML = Array.from({length: total}, (_, i) =>
+    `<button class="page-btn${i+1===currentPage?" active":""}" onclick="goPage(${i+1})">${i+1}</button>`
+  ).join("");
+}
+
+function goPage(n) { currentPage = n; renderTable(); }
+
+// ── Stat cards ────────────────────────────────────────────────────────────────
+function renderCards() {
+  const total   = ALL_ROWS.length;
+  const success = ALL_ROWS.filter(r => r.status === "success").length;
+  const failed  = ALL_ROWS.filter(r => r.status !== "success").length;
+  const repos   = new Set(ALL_ROWS.map(r => r.repo_name)).size;
+  const files   = new Set(ALL_ROWS.map(r => r.file_changed).filter(Boolean)).size;
+  const rate    = total ? Math.round(success / total * 100) : 0;
+  document.getElementById("c-total").textContent   = total;
+  document.getElementById("c-success").textContent = success;
+  document.getElementById("c-failed").textContent  = failed;
+  document.getElementById("c-repos").textContent   = repos;
+  document.getElementById("c-files").textContent   = files;
+  document.getElementById("c-rate").textContent    = rate + "%";
+}
+
+// ── Bar charts ────────────────────────────────────────────────────────────────
+function barChart(containerId, data, color) {
+  const max = Math.max(...data.map(d => d.count), 1);
+  document.getElementById(containerId).innerHTML = data.slice(0,8).map(d => `
+    <div class="bar-row">
+      <div class="bar-label" title="${d.label}">${d.label}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${Math.round(d.count/max*100)}%;background:${color}"></div></div>
+      <div class="bar-count">${d.count}</div>
+    </div>`).join("");
+}
+
+function renderCharts() {
+  const repoCounts = {};
+  ALL_ROWS.forEach(r => repoCounts[r.repo_name] = (repoCounts[r.repo_name]||0)+1);
+  barChart("chart-repos",
+    Object.entries(repoCounts).map(([label,count])=>({label,count})).sort((a,b)=>b.count-a.count),
+    "var(--accent)");
+
+  const dayCounts = {};
+  ALL_ROWS.forEach(r => { const d=r.timestamp.slice(0,10); dayCounts[d]=(dayCounts[d]||0)+1; });
+  barChart("chart-days",
+    Object.entries(dayCounts).map(([label,count])=>({label,count})).sort((a,b)=>a.label.localeCompare(b.label)),
+    "var(--accent2)");
+}
+
+// ── Boot ──────────────────────────────────────────────────────────────────────
+autoLoad();
+</script>
+</body>
+</html>
