@@ -1,0 +1,3 @@
+pyqtwebengine==5.12.1
+pyqt5==5.12.3
+watchdog>=4.0.0

@@ -1,0 +1,4 @@
+local_path,repo_url,repo_name
+/home/user/projects/my-app,https://github.com/username/my-app.git,my-app
+/home/user/documents/notes,https://github.com/username/notes-repo.git,notes-repo
+/home/user/work/reports,https://github.com/username/work-reports.git,work-reports
