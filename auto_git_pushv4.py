@@ -135,12 +135,8 @@ def build_commit_message(local_path: str, ts: str) -> str:
         return f"auto-push: {names} [{ts}]"
     else:
         subject = f"auto-push: {len(staged)} files changed [{ts}]"
-        body    = "Modified files:
-" + "
-".join(f"- {f}" for f in staged)
-        return f"{subject}
-
-{body}"
+        body    = "Modified files:\n" + "\n".join(f"- {f}" for f in staged)
+        return f"{subject}\n\n{body}"
 
 
 def git_add_commit_push(local_path, repo_name, repo_url, push_log_path,
