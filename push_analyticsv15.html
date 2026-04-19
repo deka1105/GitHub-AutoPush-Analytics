@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Git Push Analytics</title>
+<style>
+:root{
+  --bg:#0d1117;--surface:#161b22;--surface2:#1c2128;--border:#30363d;
+  --accent:#6c63ff;--accent2:#00d4aa;--accent3:#f78166;
+  --text:#e6edf3;--muted:#7d8590;
+  --success:#3fb950;--failed:#f85149;--error:#d29922;
+  --cal0:#2d333b;--cal1:#0e4429;--cal2:#006d32;--cal3:#26a641;--cal4:#39d353;
+  --radius:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:24px 28px;}
+@media(max-width:600px){
+  body{padding:14px 12px;}
+  .header{gap:10px;margin-bottom:20px;}
+  .header h1{font-size:18px;}
+  .header-right{width:100%;justify-content:flex-start;margin-left:0;}
+  .cards{grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:18px;}
+  .card{padding:14px 12px;}
+  .card-value{font-size:24px;}
+  .chart-box{padding:14px;}
+  .bar-label{width:80px;font-size:11px;}
+  .section-title{font-size:10px;}
+  .filters{gap:8px;}
+  .filters input,.filters select{font-size:12px;padding:7px 10px;width:100%;}
+  .filters input[type="search"]{min-width:unset;}
+  .cal-day-label{font-size:9px;}
+  .cal-month-label{font-size:9px;}
+  .table-wrap{overflow-x:auto;}
+  table{min-width:620px;}
+  th,td{padding:8px 10px;font-size:11px;}
+  .donut-wrap{flex-direction:column;align-items:flex-start;}
+}
+
+/* ── Header ── */
+.header{display:flex;align-items:center;gap:14px;margin-bottom:30px;flex-wrap:wrap;}
+.header-icon{width:46px;height:46px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:12px;display:grid;place-items:center;font-size:22px;flex-shrink:0;}
+.header h1{font-size:22px;font-weight:700;letter-spacing:-.3px;}
+.header p{font-size:13px;color:var(--muted);margin-top:2px;}
+.header-right{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.source-pill{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:5px 14px;font-size:12px;color:var(--muted);}
+.source-pill span{color:var(--accent2);font-weight:600;}
+.refresh-btn{background:transparent;border:1px solid var(--border);border-radius:7px;padding:6px 13px;color:var(--muted);font-size:12px;cursor:pointer;transition:.15s;}
+.refresh-btn:hover{border-color:var(--accent);color:var(--text);}
+
+/* ── Status screens ── */
+.status-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:65vh;gap:18px;text-align:center;}
+.status-screen .icon{font-size:58px;}
+.status-screen h2{font-size:22px;font-weight:700;}
+.status-screen p{font-size:14px;color:var(--muted);max-width:500px;line-height:1.75;}
+.status-screen code{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:2px 8px;font-size:13px;color:var(--accent2);}
+.spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.hidden{display:none!important;}
+
+/* ── Stat cards ── */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:14px;margin-bottom:24px;}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 16px;position:relative;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;cursor:default;}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.35);border-color:var(--accent);}
+.card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;}
+.card.purple::after{background:var(--accent);}
+.card.green::after{background:var(--success);}
+.card.red::after{background:var(--failed);}
+.card.teal::after{background:var(--accent2);}
+.card.orange::after{background:var(--error);}
+.card-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;}
+.card-value{font-size:30px;font-weight:700;}
+.card.purple .card-value{color:var(--accent);}
+.card.green  .card-value{color:var(--success);}
+.card.red    .card-value{color:var(--failed);}
+.card.teal   .card-value{color:var(--accent2);}
+.card.orange .card-value{color:var(--error);}
+.card-sub{font-size:11px;color:var(--muted);margin-top:4px;}
+
+/* ── Section title ── */
+.section-title{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.section-title::after{content:'';flex:1;height:1px;background:var(--border);}
+
+/* ── Chart boxes ── */
+.chart-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;overflow:hidden;min-height:160px;position:relative;transition:border-color .25s ease,box-shadow .25s ease;}
+.chart-box:hover{border-color:rgba(108,99,255,.45);box-shadow:0 4px 20px rgba(108,99,255,.08);}
+.charts-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;}
+.charts-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:24px;}
+@media(max-width:900px){.charts-3{grid-template-columns:1fr 1fr;}}
+@media(max-width:768px){.charts-2{grid-template-columns:1fr;}}
+@media(max-width:600px){.charts-2,.charts-3{grid-template-columns:1fr;}}
+
+
+/* ── Bar chart ── */
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:9px;}
+.bar-label{font-size:12px;width:105px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex-shrink:0;}
+.bar-track{flex:1;background:var(--border);border-radius:4px;height:8px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:4px;transition:width .5s;}
+.bar-count{font-size:11px;color:var(--muted);width:30px;text-align:right;flex-shrink:0;}
+
+/* ── Donut chart ── */
+.donut-wrap{display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+.donut-svg{flex-shrink:0;}
+.donut-legend{display:flex;flex-direction:column;gap:10px;}
+.legend-item{display:flex;align-items:center;gap:8px;font-size:13px;}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.legend-pct{color:var(--muted);font-size:12px;margin-left:auto;padding-left:12px;}
+
+/* ── GitHub contribution calendar (SVG-based, fluid) ── */
+.calendar-wrap{margin-bottom:0;height:100%;display:flex;flex-direction:column;}
+#cal-svg-wrap{flex:1;min-height:0;width:100%;overflow:hidden;}
+#cal-svg-wrap svg{display:block;width:100%;height:100%;}
+.cal-cell-rect{cursor:default;transition:opacity .1s;}
+.cal-cell-rect:hover{opacity:.75;}
+
+/* ── Hourly heatmap ── */
+.hour-grid{display:grid;grid-template-columns:repeat(24,1fr);gap:3px;}
+.hour-cell{aspect-ratio:1;border-radius:3px;cursor:default;transition:transform .1s;}
+.hour-cell:hover{transform:scale(1.15);}
+.hour-labels{display:grid;grid-template-columns:repeat(24,1fr);gap:3px;margin-top:4px;}
+.hour-label{font-size:9px;color:var(--muted);text-align:center;}
+
+/* ── Cumulative timeline (SVG) ── */
+#timeline-svg{width:100%;overflow:visible;}
+
+/* ── Top files ── */
+.file-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;font-size:12px;}
+.file-name{font-family:monospace;color:var(--accent2);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.file-bar-track{width:80px;background:var(--border);border-radius:3px;height:6px;}
+.file-bar-fill{height:100%;border-radius:3px;background:var(--accent2);}
+.file-count{color:var(--muted);width:24px;text-align:right;}
+
+/* ── Filters ── */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;}
+.filters input,.filters select{background:var(--surface);border:1px solid var(--border);border-radius:7px;padding:8px 12px;color:var(--text);font-size:13px;outline:none;}
+.filters input:focus,.filters select:focus{border-color:var(--accent);}
+.filters input[type="search"]{flex:1;min-width:200px;}
+.filter-reset{background:transparent;border:1px solid var(--border);border-radius:7px;padding:8px 14px;color:var(--muted);font-size:13px;cursor:pointer;}
+.filter-reset:hover{border-color:var(--accent);color:var(--text);}
+
+/* ── Table ── */
+.table-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:16px;}
+.table-meta{padding:12px 16px;font-size:12px;color:var(--muted);border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;}
+table{width:100%;border-collapse:collapse;}
+th{background:#0d1117;padding:11px 14px;text-align:left;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;cursor:pointer;user-select:none;white-space:nowrap;}
+th:hover{color:var(--text);}
+th.sorted .sort-icon{color:var(--accent);opacity:1;}
+.sort-icon{opacity:.3;margin-left:4px;}
+td{padding:10px 14px;font-size:13px;border-top:1px solid var(--border);}
+tr:hover td{background:rgba(108,99,255,.05);}
+.badge{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:600;text-transform:capitalize;}
+.badge-success{background:rgba(63,185,80,.15);color:var(--success);}
+.badge-failed{background:rgba(248,81,73,.15);color:var(--failed);}
+.badge-error{background:rgba(210,153,34,.15);color:var(--error);}
+.event-badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;background:rgba(108,99,255,.15);color:var(--accent);}
+.file-cell{font-family:monospace;font-size:12px;color:var(--accent2);}
+.repo-link{color:var(--text);text-decoration:none;}
+.repo-link:hover{color:var(--accent);}
+.no-results{padding:40px;text-align:center;color:var(--muted);font-size:14px;}
+.pagination{display:flex;justify-content:center;gap:6px;padding:14px;border-top:1px solid var(--border);flex-wrap:wrap;}
+.page-btn{background:transparent;border:1px solid var(--border);border-radius:6px;padding:5px 11px;color:var(--muted);font-size:12px;cursor:pointer;}
+.page-btn:hover{border-color:var(--accent);color:var(--text);}
+.page-btn.active{background:var(--accent);border-color:var(--accent);color:#fff;}
+
+/* ── Entrance animations ── */
+@keyframes fadeSlideUp{
+  from{opacity:0;transform:translateY(18px);}
+  to{opacity:1;transform:translateY(0);}
+}
+.card{animation:fadeSlideUp .4s ease both;}
+.card:nth-child(1){animation-delay:.04s;} .card:nth-child(2){animation-delay:.08s;}
+.card:nth-child(3){animation-delay:.12s;} .card:nth-child(4){animation-delay:.16s;}
+.card:nth-child(5){animation-delay:.20s;} .card:nth-child(6){animation-delay:.24s;}
+
+.chart-box{animation:fadeSlideUp .45s ease both;}
+.charts-3 .chart-box:nth-child(1){animation-delay:.1s;}
+.charts-3 .chart-box:nth-child(2){animation-delay:.18s;}
+.charts-3 .chart-box:nth-child(3){animation-delay:.26s;}
+.charts-2 .chart-box:nth-child(1){animation-delay:.14s;}
+.charts-2 .chart-box:nth-child(2){animation-delay:.22s;}
+
+/* ── Bar fill animation from 0 ── */
+@keyframes barGrow{from{width:0!important;}to{}}
+.bar-fill{animation:barGrow .6s cubic-bezier(.4,0,.2,1) both;}
+.file-bar-fill{animation:barGrow .6s cubic-bezier(.4,0,.2,1) both;}
+
+/* ── Table row transition ── */
+td{transition:background .15s ease;}
+
+/* ── Smooth badge + filter transitions ── */
+.badge,.event-badge{transition:opacity .15s;}
+.filters input,.filters select{transition:border-color .2s ease,box-shadow .2s ease;}
+.filters input:focus,.filters select:focus{box-shadow:0 0 0 3px rgba(108,99,255,.18);}
+.filter-reset{transition:border-color .2s ease,color .2s ease;}
+
+/* ── Calendar cell pop ── */
+.cal-cell{transition:transform .12s ease,filter .12s ease;}
+.cal-cell:hover{transform:scale(1.45)!important;filter:brightness(1.3);z-index:2;position:relative;}
+
+/* ── Smooth dashboard fade-in ── */
+#dashboard{animation:fadeSlideUp .35s ease both;}
+
+
+/* ── Calendar + repo panel side-by-side ── */
+.cal-section{display:grid;grid-template-columns:1fr 230px;gap:16px;margin-bottom:24px;align-items:stretch;}
+@media(max-width:960px){.cal-section{grid-template-columns:1fr;}}
+
+/* ── Repo panel ── */
+.repo-panel{min-height:unset!important;padding:18px 16px;height:100%;}
+.repo-panel-title{font-size:11px;color:var(--muted);text-transform:uppercase;
+  letter-spacing:.07em;margin-bottom:12px;}
+.repo-btn{
+  width:100%;display:flex;align-items:center;gap:9px;
+  padding:9px 11px;border-radius:8px;border:1px solid transparent;
+  background:transparent;color:var(--text);cursor:pointer;text-align:left;
+  transition:background .16s,border-color .16s,transform .12s;
+  margin-bottom:5px;
+}
+.repo-btn:hover{background:var(--surface2);border-color:var(--border);transform:translateX(2px);}
+.repo-btn.active{
+  background:rgba(108,99,255,.13);border-color:var(--accent);
+  box-shadow:inset 3px 0 0 var(--accent);
+}
+.repo-btn.active .repo-btn-name{color:var(--accent);}
+.repo-btn-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.repo-btn-name{flex:1;font-size:13px;font-weight:500;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;}
+.repo-btn-count{font-size:11px;color:var(--muted);background:var(--bg);
+  padding:1px 7px;border-radius:10px;flex-shrink:0;}
+.repo-panel-divider{height:1px;background:var(--border);margin:14px 0;}
+.repo-stat-block{animation:fadeSlideUp .3s ease both;}
+.repo-stat-row{display:flex;justify-content:space-between;align-items:center;
+  font-size:12px;margin-bottom:7px;}
+.repo-stat-label{color:var(--muted);}
+.repo-stat-val{font-weight:600;font-size:13px;}
+.repo-stat-bar{width:100%;background:var(--border);border-radius:3px;height:4px;
+  margin-top:3px;margin-bottom:10px;overflow:hidden;}
+.repo-stat-bar-fill{height:100%;border-radius:3px;transition:width .5s;}
+@media(max-width:600px){
+  .repo-panel{padding:14px;}
+  .repo-btn{padding:8px 10px;}
+}
+
+/* ── Live-refresh indicator ── */
+.live-pill{display:flex;align-items:center;gap:6px;background:var(--surface);
+  border:1px solid var(--border);border-radius:20px;padding:5px 12px;font-size:12px;color:var(--muted);}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--success);flex-shrink:0;
+  animation:livePulse 2s ease infinite;}
+@keyframes livePulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(.8);}}
+.live-pill.paused .live-dot{background:var(--muted);animation:none;}
+
+/* ── Streak pills in header ── */
+.streak-wrap{display:flex;gap:8px;flex-wrap:wrap;}
+.streak-pill{display:flex;align-items:center;gap:5px;padding:5px 12px;border-radius:20px;
+  font-size:12px;font-weight:600;border:1px solid;}
+.streak-current{background:rgba(63,185,80,.12);border-color:rgba(63,185,80,.4);color:var(--success);}
+.streak-longest{background:rgba(108,99,255,.12);border-color:rgba(108,99,255,.4);color:var(--accent);}
+.streak-emoji{font-size:14px;}
+
+/* ── File history drawer ── */
+.drawer-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:200;
+  opacity:0;pointer-events:none;transition:opacity .25s;}
+.drawer-overlay.open{opacity:1;pointer-events:all;}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(460px,95vw);
+  background:var(--surface);border-left:1px solid var(--border);
+  display:flex;flex-direction:column;z-index:201;
+  transform:translateX(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);}
+.drawer.open{transform:translateX(0);}
+.drawer-header{padding:18px 20px;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+.drawer-title{font-size:14px;font-weight:600;}
+.drawer-subtitle{font-size:12px;color:var(--muted);margin-top:2px;font-family:monospace;}
+.drawer-close{background:transparent;border:none;color:var(--muted);font-size:20px;
+  cursor:pointer;padding:4px 8px;border-radius:6px;line-height:1;}
+.drawer-close:hover{background:var(--border);color:var(--text);}
+.drawer-body{flex:1;overflow-y:auto;padding:16px 20px;}
+.drawer-row{padding:12px 0;border-bottom:1px solid var(--border);display:grid;
+  grid-template-columns:1fr auto;gap:6px;}
+.drawer-row:last-child{border-bottom:none;}
+.drawer-ts{font-size:12px;color:var(--muted);}
+.drawer-file{font-family:monospace;font-size:12px;color:var(--accent2);}
+.drawer-meta{display:flex;gap:6px;align-items:center;margin-top:4px;flex-wrap:wrap;}
+.drawer-msg{font-size:11px;color:var(--muted);margin-top:3px;
+  word-break:break-word;grid-column:1/-1;}
+
+/* ── Failure drill-down ── */
+.failures-wrap{margin-bottom:24px;}
+.failures-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;
+  background:var(--surface);border:1px solid rgba(248,81,73,.4);border-radius:var(--radius);
+  padding:12px 16px;cursor:pointer;color:var(--text);font-size:13px;font-weight:600;
+  transition:background .15s;}
+.failures-toggle:hover{background:var(--surface2);}
+.failures-toggle-left{display:flex;align-items:center;gap:10px;}
+.failures-badge{background:rgba(248,81,73,.2);color:var(--failed);
+  padding:2px 9px;border-radius:20px;font-size:11px;font-weight:700;}
+.failures-chevron{transition:transform .25s;font-size:12px;color:var(--muted);}
+.failures-chevron.open{transform:rotate(90deg);}
+.failures-body{background:var(--surface);border:1px solid var(--border);
+  border-top:none;border-radius:0 0 var(--radius) var(--radius);
+  overflow:hidden;max-height:0;transition:max-height .35s ease;}
+.failures-body.open{max-height:800px;}
+.fail-group{padding:14px 16px;border-bottom:1px solid var(--border);}
+.fail-group:last-child{border-bottom:none;}
+.fail-group-title{font-size:12px;font-weight:600;color:var(--failed);margin-bottom:10px;
+  display:flex;align-items:center;gap:6px;}
+.fail-item{padding:8px 10px;background:var(--bg);border-radius:7px;margin-bottom:6px;font-size:12px;}
+.fail-item-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;}
+.fail-item-ts{color:var(--muted);}
+.fail-item-file{font-family:monospace;color:var(--accent2);}
+.fail-item-msg{color:var(--failed);margin-top:4px;word-break:break-word;opacity:.85;}
+
+/* ── Diff / Push detail modal ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:300;
+  display:flex;align-items:center;justify-content:center;padding:20px;
+  opacity:0;pointer-events:none;transition:opacity .2s;}
+.modal-overlay.open{opacity:1;pointer-events:all;}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:12px;
+  width:min(620px,95vw);max-height:80vh;display:flex;flex-direction:column;
+  transform:scale(.95);transition:transform .2s;}
+.modal-overlay.open .modal{transform:scale(1);}
+.modal-header{padding:18px 20px;border-bottom:1px solid var(--border);
+  display:flex;align-items:flex-start;justify-content:space-between;flex-shrink:0;}
+.modal-title{font-size:15px;font-weight:700;}
+.modal-sub{font-size:12px;color:var(--muted);margin-top:3px;}
+.modal-close{background:transparent;border:none;color:var(--muted);font-size:22px;
+  cursor:pointer;padding:2px 7px;border-radius:6px;line-height:1;flex-shrink:0;}
+.modal-close:hover{background:var(--border);color:var(--text);}
+.modal-body{padding:20px;overflow-y:auto;flex:1;}
+.modal-field{margin-bottom:14px;}
+.modal-label{font-size:10px;color:var(--muted);text-transform:uppercase;
+  letter-spacing:.06em;margin-bottom:4px;}
+.modal-value{font-size:13px;}
+.modal-value.mono{font-family:monospace;color:var(--accent2);}
+.modal-msg-box{background:var(--bg);border:1px solid var(--border);border-radius:7px;
+  padding:10px 12px;font-size:12px;color:var(--muted);word-break:break-word;white-space:pre-wrap;}
+.modal-gh-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;
+  padding:8px 14px;background:rgba(108,99,255,.12);border:1px solid var(--accent);
+  border-radius:7px;color:var(--accent);font-size:13px;text-decoration:none;font-weight:500;
+  transition:background .15s;}
+.modal-gh-link:hover{background:rgba(108,99,255,.22);}
+
+/* ── Weekday heatmap ── */
+.weekday-grid{display:grid;grid-template-columns:36px repeat(7,1fr);gap:4px;align-items:center;}
+.wd-label{font-size:10px;color:var(--muted);text-align:right;padding-right:6px;}
+.wd-col-label{font-size:10px;color:var(--muted);text-align:center;}
+.wd-cell{aspect-ratio:1;border-radius:4px;cursor:default;transition:transform .1s;}
+.wd-cell:hover{transform:scale(1.2);}
+
+/* ── Clickable file rows ── */
+.file-row{cursor:pointer;border-radius:6px;padding:3px 4px;margin:-3px -4px;
+  margin-bottom:5px;transition:background .15s;}
+.file-row:hover{background:rgba(108,99,255,.1);}
+.file-row:hover .file-name{color:var(--accent);}
+
+/* ── Clickable table rows ── */
+tbody tr{cursor:pointer;}
+
+
+/* ── "Help the builder" support toast ── */
+.support-toast{
+  position:fixed;bottom:24px;right:24px;z-index:400;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:14px;padding:16px 18px;width:230px;
+  box-shadow:0 8px 32px rgba(0,0,0,.5);
+  transform:translateY(120%);opacity:0;
+  transition:transform .4s cubic-bezier(.34,1.56,.64,1),opacity .3s;
+  pointer-events:none;
+}
+.support-toast.show{transform:translateY(0);opacity:1;pointer-events:all;}
+.support-toast-title{font-size:13px;font-weight:700;margin-bottom:3px;}
+.support-toast-sub{font-size:11px;color:var(--muted);margin-bottom:12px;}
+.support-links{display:flex;flex-direction:column;gap:7px;}
+.support-link{
+  display:flex;align-items:center;gap:9px;padding:8px 11px;
+  border-radius:8px;border:1px solid var(--border);
+  color:var(--text);text-decoration:none;font-size:12px;font-weight:500;
+  transition:background .15s,border-color .15s,transform .12s;background:var(--bg);
+}
+.support-link:hover{background:var(--surface2);border-color:var(--accent);transform:translateX(2px);}
+.support-link-icon{width:20px;height:20px;border-radius:5px;display:grid;
+  place-items:center;font-size:13px;flex-shrink:0;}
+.support-toast-close{position:absolute;top:10px;right:12px;background:transparent;
+  border:none;color:var(--muted);font-size:16px;cursor:pointer;line-height:1;
+  padding:2px 5px;border-radius:4px;}
+.support-toast-close:hover{color:var(--text);background:var(--border);}
+@media(max-width:600px){
+  .support-toast{bottom:14px;right:12px;left:12px;width:auto;}
+}
+
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     CONFIGURATION — edit only these two constants
+     LOCAL_CSV  : path to push_log.csv relative to this HTML file
+     GITHUB_CSV : GitHub blob or raw URL, or "" to skip
+     Priority: LOCAL_CSV → GITHUB_CSV → 404 screen
+     ══════════════════════════════════════════════════════ -->
+<script>
+const LOCAL_CSV  = "push_log.csv";
+const REFRESH_INTERVAL = 30; // seconds between silent auto-refreshes (0 = off)
+const GITHUB_CSV = "https://raw.githubusercontent.com/deka1105/GitHub-AutoPush-Analytics/refs/heads/main/push_log.csv";
+// Raw GitHub URL is set above — blob URLs are also auto-converted
+</script>
+
+<!-- Header -->
+<div class="header hidden" id="header">
+  <div class="header-icon">🚀</div>
+  <div><h1>Git Push Analytics</h1><p>Auto-push activity dashboard</p></div>
+  <div class="streak-wrap" id="streak-wrap"></div>
+  <div class="header-right">
+    <div class="live-pill" id="live-pill"><div class="live-dot"></div><span id="live-label">Live</span></div>
+    <div class="source-pill">Source: <span id="source-label">—</span></div>
+    <div class="source-pill" style="border-color:rgba(108,99,255,.4);color:var(--accent);font-weight:600;">v14</div>
+    <button class="refresh-btn" onclick="manualRefresh()">↻ Refresh</button>
+  </div>
+</div>
+
+<!-- Loading -->
+<div class="status-screen" id="screen-loading">
+  <div class="spinner"></div>
+  <h2>Loading data…</h2>
+  <p id="loading-msg">Checking for push_log.csv…</p>
+</div>
+
+<!-- 404 -->
+<div class="status-screen hidden" id="screen-404">
+  <div class="icon">🔍</div>
+  <h2>No data found</h2>
+  <p>Neither a local CSV nor a GitHub URL could be loaded.<br><br>
+  Open <code>push_analytics.html</code> and set:<br><br>
+  <code>const LOCAL_CSV  = "push_log.csv";
+const REFRESH_INTERVAL = 30; // seconds between silent auto-refreshes (0 = off)</code><br>
+  <code>const GITHUB_CSV = "https://github.com/you/repo/blob/main/push_log.csv";</code></p>
+</div>
+
+<!-- Dashboard -->
+<div class="hidden" id="dashboard">
+
+<!-- ── Stat cards ── -->
+<div class="cards">
+  <div class="card purple"><div class="card-label">Total Pushes</div><div class="card-value" id="c-total">—</div><div class="card-sub" id="c-total-sub"></div></div>
+  <div class="card green"> <div class="card-label">Successful</div><div class="card-value" id="c-success">—</div><div class="card-sub" id="c-rate"></div></div>
+  <div class="card red">   <div class="card-label">Failed / Error</div><div class="card-value" id="c-failed">—</div><div class="card-sub" id="c-fail-rate"></div></div>
+  <div class="card teal">  <div class="card-label">Repos Tracked</div><div class="card-value" id="c-repos">—</div><div class="card-sub" id="c-repos-sub"></div></div>
+  <div class="card orange"><div class="card-label">Unique Files</div><div class="card-value" id="c-files">—</div><div class="card-sub" id="c-files-sub"></div></div>
+  <div class="card purple"><div class="card-label">Avg / Day</div><div class="card-value" id="c-avg">—</div><div class="card-sub">pushes per active day</div></div>
+</div>
+
+<!-- ── Contribution calendar ── -->
+<div class="section-title">Push Activity Calendar</div>
+<div class="cal-section">
+  <div class="calendar-wrap chart-box" style="min-height:0;">
+    <div id="cal-svg-wrap"></div>
+  </div>
+  <div class="repo-panel chart-box" id="repo-panel"><!-- built by JS --></div>
+</div>
+
+<!-- ── Row 1: Status donut + Hourly heatmap + Event types ── -->
+<div class="section-title">Breakdowns</div>
+<div class="charts-3" style="margin-bottom:24px;">
+  <div class="chart-box">
+    <div class="section-title" style="margin-bottom:14px;">Status Distribution</div>
+    <div class="donut-wrap" id="donut-wrap"></div>
+  </div>
+  <div class="chart-box">
+    <div class="section-title" style="margin-bottom:14px;">Event Type Breakdown</div>
+    <div id="chart-events"></div>
+  </div>
+  <div class="chart-box">
+    <div class="section-title" style="margin-bottom:14px;">Top Files Changed</div>
+    <div id="chart-files"></div>
+  </div>
+</div>
+
+<!-- ── Row 2: Pushes by repo + Cumulative timeline ── -->
+<div class="section-title">Trends</div>
+<div class="charts-2" style="margin-bottom:24px;">
+  <div class="chart-box">
+    <div class="section-title" style="margin-bottom:14px;">Pushes by Repo</div>
+    <div id="chart-repos"></div>
+  </div>
+  <div class="chart-box">
+    <div class="section-title" style="margin-bottom:14px;">Cumulative Pushes Over Time</div>
+    <svg id="timeline-svg" height="160"></svg>
+  </div>
+</div>
+
+<!-- ── Row 3: Daily bars + Hourly heatmap + Weekday heatmap ── -->
+<div class="charts-3" style="margin-bottom:24px;">
+  <div class="chart-box">
+    <div class="section-title" style="margin-bottom:14px;">Daily Activity</div>
+    <div id="chart-days"></div>
+  </div>
+  <div class="chart-box">
+    <div class="section-title" style="margin-bottom:14px;">Hourly Heatmap</div>
+    <div class="hour-grid" id="hour-grid"></div>
+    <div class="hour-labels" id="hour-labels"></div>
+    <div class="cal-legend" style="margin-top:10px;">
+      Low <div class="cal-legend-cell" style="background:var(--cal0);border:1px solid var(--border)"></div>
+      <div class="cal-legend-cell" style="background:var(--cal1)"></div>
+      <div class="cal-legend-cell" style="background:var(--cal2)"></div>
+      <div class="cal-legend-cell" style="background:var(--cal3)"></div>
+      <div class="cal-legend-cell" style="background:var(--cal4)"></div>
+      High
+    </div>
+  </div>
+  <div class="chart-box">
+    <div class="section-title" style="margin-bottom:14px;">Weekday Heatmap</div>
+    <div id="weekday-grid"></div>
+  </div>
+</div>
+
+<!-- ── Filters + Table ── -->
+<div class="section-title">Push Log</div>
+<div class="filters">
+  <input type="search" id="search" placeholder="🔍  Search repo, file, status, event, message…" oninput="applyFilters()"/>
+  <select id="filter-repo"   onchange="applyFilters()"><option value="">All repos</option></select>
+  <select id="filter-status" onchange="applyFilters()">
+    <option value="">All statuses</option><option value="success">Success</option>
+    <option value="failed">Failed</option><option value="error">Error</option>
+  </select>
+  <select id="filter-event" onchange="applyFilters()">
+    <option value="">All events</option><option value="created">Created</option>
+    <option value="modified">Modified</option><option value="deleted">Deleted</option>
+    <option value="moved">Moved</option>
+  </select>
+  <input type="date" id="filter-date-from" onchange="applyFilters()" title="From date"/>
+  <input type="date" id="filter-date-to"   onchange="applyFilters()" title="To date"/>
+  <button class="filter-reset" onclick="resetFilters()">✕ Reset</button>
+</div>
+
+<div class="table-wrap">
+  <div class="table-meta">
+    <span id="table-meta">—</span>
+  </div>
+  <table>
+    <thead><tr>
+      <th onclick="sortBy('timestamp')"   data-col="timestamp">Timestamp <span class="sort-icon">↕</span></th>
+      <th onclick="sortBy('repo_name')"   data-col="repo_name">Repo <span class="sort-icon">↕</span></th>
+      <th onclick="sortBy('file_changed')" data-col="file_changed">File Changed <span class="sort-icon">↕</span></th>
+      <th onclick="sortBy('event_type')"  data-col="event_type">Event <span class="sort-icon">↕</span></th>
+      <th onclick="sortBy('status')"      data-col="status">Status <span class="sort-icon">↕</span></th>
+      <th>Message</th>
+    </tr></thead>
+    <tbody id="table-body"></tbody>
+  </table>
+  <div class="pagination" id="pagination"></div>
+</div>
+
+<!-- ── Failure drill-down ── -->
+<div class="failures-wrap" id="failures-wrap"></div>
+
+</div><!-- /dashboard -->
+
+<!-- ── File history drawer ── -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="closeDrawer()">
+  <div class="drawer" id="drawer" onclick="event.stopPropagation()">
+    <div class="drawer-header">
+      <div>
+        <div class="drawer-title" id="drawer-title">File History</div>
+        <div class="drawer-subtitle" id="drawer-subtitle"></div>
+      </div>
+      <button class="drawer-close" onclick="closeDrawer()">✕</button>
+    </div>
+    <div class="drawer-body" id="drawer-body"></div>
+  </div>
+</div>
+
+<!-- ── Push detail modal ── -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+  <div class="modal" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">Push Details</div>
+        <div class="modal-sub" id="modal-sub"></div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+// ── State ─────────────────────────────────────────────────────────────────────
+let ALL_ROWS=[], filtered=[], sortCol="timestamp", sortAsc=false, currentPage=1;
+let activeRepo=null; // null = show all repos
+
+// ── Active-repo filter helper ─────────────────────────────────────────────────
+function getRows(){ return activeRepo?ALL_ROWS.filter(r=>r.repo_name===activeRepo):ALL_ROWS; }
+
+// Re-render every panel that respects activeRepo
+function refreshAll(){
+  renderCards();
+  renderCalendar();
+  renderDonut();
+  renderCharts();
+  renderTimeline();
+  renderHourHeatmap();
+  renderWeekdayHeatmap();
+  renderFailures();
+  applyFilters();
+  buildRepoPanel();
+}
+const PAGE_SIZE=15;
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+const $=id=>document.getElementById(id);
+const show=id=>$(id).classList.remove("hidden");
+const hide=id=>$(id).classList.add("hidden");
+
+function setLoading(msg){
+  hide("screen-404");hide("dashboard");hide("header");show("screen-loading");
+  $("loading-msg").textContent=msg;
+}
+function show404(){hide("screen-loading");hide("dashboard");hide("header");show("screen-404");}
+function showDashboard(src){
+  hide("screen-loading");hide("screen-404");show("header");show("dashboard");
+  $("source-label").textContent=src;
+}
+function toRawUrl(url){
+  if(!url) return "";
+  url=url.trim();
+  if(url.includes("raw.githubusercontent.com")) return url;
+  const m=url.match(/github\.com\/([^/]+\/[^/]+)\/blob\/(.+)/);
+  return m?`https://raw.githubusercontent.com/${m[1]}/${m[2]}`:url;
+}
+
+// ── CSV parser ────────────────────────────────────────────────────────────────
+function parseCSV(text){
+  const lines=text.trim().split(/\r?\n/);
+  if(lines.length<2) return [];
+  const headers=lines[0].split(",").map(h=>h.trim());
+  return lines.slice(1).map(line=>{
+    // handle commas inside quoted fields minimally
+    const vals=line.split(",");
+    const obj={};
+    headers.forEach((h,i)=>obj[h]=(vals[i]||"").trim());
+    return obj;
+  }).filter(r=>r.timestamp);
+}
+
+// ── Auto-loader ───────────────────────────────────────────────────────────────
+async function autoLoad(){
+  if(LOCAL_CSV){
+    setLoading(`Looking for local file: ${LOCAL_CSV}`);
+    try{
+      const res=await fetch(LOCAL_CSV+"?t="+Date.now());
+      if(res.ok){const t=await res.text();const r=parseCSV(t);if(r.length){loadData(r,`Local · ${LOCAL_CSV}`);return;}}
+    }catch(_){}
+  }
+  if(GITHUB_CSV){
+    const raw=toRawUrl(GITHUB_CSV);
+    setLoading("Fetching from GitHub…");
+    try{
+      const res=await fetch(raw);
+      if(res.ok){const t=await res.text();const r=parseCSV(t);if(r.length){loadData(r,`GitHub · ${raw.split("/").pop()}`);return;}}
+    }catch(_){}
+  }
+  show404();
+}
+
+
+// ── Repo panel (right of calendar) ────────────────────────────────────────────
+const REPO_COLORS=["#6c63ff","#00d4aa","#f78166","#d29922"];
+
+function buildRepoPanel(){
+  const counts={},successes={};
+  ALL_ROWS.forEach(r=>{
+    counts[r.repo_name]=(counts[r.repo_name]||0)+1;
+    if(r.status==="success") successes[r.repo_name]=(successes[r.repo_name]||0)+1;
+  });
+  const top4=Object.entries(counts)
+    .sort((a,b)=>b[1]-a[1]).slice(0,4)
+    .map(([name],i)=>({name,color:REPO_COLORS[i],total:counts[name],ok:successes[name]||0}));
+
+  let btns=`<div class="repo-panel-title">Filter by Repo</div>`;
+  btns+=`<button class="repo-btn${activeRepo===null?" active":""}" onclick="activeRepo=null;refreshAll()">
+    <span class="repo-btn-dot" style="background:var(--muted)"></span>
+    <span class="repo-btn-name">All repos</span>
+    <span class="repo-btn-count">${ALL_ROWS.length}</span>
+  </button>`;
+  top4.forEach(({name,color,total})=>{
+    const safe=name.replace(/'/g,"\'");
+    btns+=`<button class="repo-btn${activeRepo===name?" active":""}" data-repo="${name}"
+      onclick="activeRepo='${safe}';refreshAll()">
+      <span class="repo-btn-dot" style="background:${color}"></span>
+      <span class="repo-btn-name">${name}</span>
+      <span class="repo-btn-count">${total}</span>
+    </button>`;
+  });
+
+  let statsHtml="";
+  if(activeRepo){
+    const rRows=ALL_ROWS.filter(r=>r.repo_name===activeRepo);
+    const tot=rRows.length;
+    const ok=rRows.filter(r=>r.status==="success").length;
+    const rate=tot?Math.round(ok/tot*100):0;
+    const lastDate=rRows.map(r=>r.timestamp.slice(0,10)).sort().pop()||"—";
+    const files=new Set(rRows.map(r=>r.file_changed).filter(Boolean)).size;
+    const repoColor=top4.find(t=>t.name===activeRepo)?.color||"var(--accent)";
+    statsHtml=`
+      <div class="repo-panel-divider"></div>
+      <div class="repo-stat-block">
+        <div class="repo-stat-row"><span class="repo-stat-label">Total pushes</span><span class="repo-stat-val" style="color:${repoColor}">${tot}</span></div>
+        <div class="repo-stat-row"><span class="repo-stat-label">Success rate</span><span class="repo-stat-val" style="color:var(--success)">${rate}%</span></div>
+        <div class="repo-stat-bar"><div class="repo-stat-bar-fill" style="width:${rate}%;background:var(--success)"></div></div>
+        <div class="repo-stat-row"><span class="repo-stat-label">Unique files</span><span class="repo-stat-val">${files}</span></div>
+        <div class="repo-stat-row"><span class="repo-stat-label">Last push</span><span class="repo-stat-val">${lastDate.slice(5)}</span></div>
+      </div>`;
+  } else {
+    const tot=ALL_ROWS.length;
+    const ok=ALL_ROWS.filter(r=>r.status==="success").length;
+    const rate=tot?Math.round(ok/tot*100):0;
+    statsHtml=`
+      <div class="repo-panel-divider"></div>
+      <div class="repo-stat-block">
+        <div class="repo-stat-row"><span class="repo-stat-label">All pushes</span><span class="repo-stat-val" style="color:var(--accent)">${tot}</span></div>
+        <div class="repo-stat-row"><span class="repo-stat-label">Success rate</span><span class="repo-stat-val" style="color:var(--success)">${rate}%</span></div>
+        <div class="repo-stat-bar"><div class="repo-stat-bar-fill" style="width:${rate}%;background:var(--success)"></div></div>
+        <div class="repo-stat-row"><span class="repo-stat-label">Repos</span><span class="repo-stat-val">${new Set(ALL_ROWS.map(r=>r.repo_name)).size}</span></div>
+      </div>`;
+  }
+  $("repo-panel").innerHTML=btns+statsHtml;
+}
+
+// ── Load ──────────────────────────────────────────────────────────────────────
+function loadData(rows, src){
+  ALL_ROWS=rows;
+  activeRepo=null;
+  _lastRows=rows.length;
+  populateRepoFilter();
+  buildRepoPanel();
+  renderCards();
+  renderStreaks();
+  renderCalendar();
+  renderDonut();
+  renderCharts();
+  renderTimeline();
+  renderHourHeatmap();
+  renderWeekdayHeatmap();
+  renderFailures();
+  applyFilters();
+  showDashboard(src);
+  startLiveRefresh();
+}
+
+// ── Stat cards ────────────────────────────────────────────────────────────────
+function renderCards(){
+  const rows   =getRows();
+  const total  =rows.length;
+  const success=rows.filter(r=>r.status==="success").length;
+  const failed =total-success;
+  const repos  =new Set(rows.map(r=>r.repo_name)).size;
+  const files  =new Set(rows.map(r=>r.file_changed).filter(Boolean)).size;
+  const days   =new Set(rows.map(r=>r.timestamp.slice(0,10))).size;
+  const avg    =days?+(total/days).toFixed(1):0;
+  const rate   =total?Math.round(success/total*100):0;
+  $("c-total").textContent=total;
+  $("c-total-sub").textContent=`across ${days} active day${days!==1?"s":""}`;
+  $("c-success").textContent=success;
+  $("c-rate").textContent=`${rate}% success rate`;
+  $("c-failed").textContent=failed;
+  $("c-fail-rate").textContent=`${100-rate}% of total`;
+  $("c-repos").textContent=repos;
+  $("c-repos-sub").textContent=`repo${repos!==1?"s":""} watched`;
+  $("c-files").textContent=files;
+  $("c-files-sub").textContent=`distinct file paths`;
+  $("c-avg").textContent=avg;
+}
+
+// ── Contribution Calendar — SVG-based, ResizeObserver-driven ────────────────
+// Strategy: build all geometry in JS, render one flat SVG.
+// No CSS layout engine touches the cells — zero layout bugs possible.
+
+let _calData = null;
+let _calObserver = null;
+
+// Colour scale (5 levels: 0 = empty/future, 1-4 = intensity)
+const CAL_COLORS = ["#2d333b","#0e4429","#006d32","#26a641","#39d353"];
+
+function renderCalendar() {
+  const rows    = getRows();
+  const dayCounts = {};
+  rows.forEach(r => {
+    const d = r.timestamp.slice(0, 10);
+    dayCounts[d] = (dayCounts[d] || 0) + 1;
+  });
+  const maxVal = Math.max(...Object.values(dayCounts), 1);
+
+  const today     = new Date(); today.setHours(0,0,0,0);
+  const year      = today.getFullYear();
+  const jan1      = new Date(year, 0, 1);
+  const dec31     = new Date(year, 11, 31);
+  const isLeap    = new Date(year, 1, 29).getMonth() === 1;
+  const totalDays = isLeap ? 366 : 365;
+
+  // Monday = 0 … Sunday = 6 (ISO week orientation)
+  const jan1Dow = (jan1.getDay() + 6) % 7;
+
+  // Number of columns = ceil((totalDays + leading empty slots) / 7)
+  const numCols = Math.ceil((totalDays + jan1Dow) / 7);
+
+  // Build one entry per day of the year
+  const days = [];
+  for (let i = 0; i < totalDays; i++) {
+    const d   = new Date(year, 0, i + 1);
+    const key = `${year}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    const n   = dayCounts[key] || 0;
+    const col = Math.floor((i + jan1Dow) / 7);
+    const row = (i + jan1Dow) % 7;
+    let level = 0;
+    if (n > 0 && d <= today) {
+      const p = n / maxVal;
+      level = p < 0.25 ? 1 : p < 0.5 ? 2 : p < 0.75 ? 3 : 4;
+    }
+    days.push({ key, col, row, n, future: d > today, month: d.getMonth(), dom: d.getDate() });
+    days[days.length-1].level = level;
+  }
+
+  // Month label positions: first day of each month → its col
+  const monthLabels = [];
+  const monthNames  = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  let lastMonth = -1;
+  days.forEach(day => {
+    if (day.dom === 1) monthLabels.push({ month: day.month, col: day.col });
+  });
+
+  _calData = { days, numCols, jan1Dow, year, monthLabels };
+
+  // ResizeObserver — redraws whenever the wrapper changes size
+  const wrap = $("cal-svg-wrap");
+  if (_calObserver) { _calObserver.disconnect(); _calObserver = null; }
+  let raf = null;
+  _calObserver = new ResizeObserver(() => {
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => drawCalendar(wrap));
+  });
+  _calObserver.observe(wrap);
+  drawCalendar(wrap);
+}
+
+function drawCalendar(wrap) {
+  if (!_calData) return;
+  const { days, numCols, year, monthLabels } = _calData;
+
+  const W = Math.max(wrap.clientWidth,  80);
+  const H = Math.max(wrap.clientHeight, 60);
+
+  // Fixed chrome dimensions (px in SVG user units = same thing here)
+  const DAY_COL  = 26;  // left column for Mon/Wed/Sun labels
+  const MONTH_H  = 14;  // row for month names
+  const YEAR_H   = 16;  // row for "2026 Push Activity"
+  const LEGEND_H = 18;  // bottom legend row
+  const PAD_TOP  = 4;
+  const PAD_R    = 4;
+
+  const gridW = W - DAY_COL - PAD_R;
+  const gridH = H - YEAR_H - MONTH_H - LEGEND_H - PAD_TOP;
+
+  // Cell size: constrain so cells stay square and fit both axes
+  const rawCell = Math.min(gridW / numCols, gridH / 7);
+  const cell    = Math.max(3, Math.min(rawCell, 16));
+  const gap     = Math.max(1, Math.round(cell * 0.2));
+  const step    = cell + gap;
+  const rr      = Math.max(1, Math.round(cell * 0.2)); // border-radius
+
+  // Coordinate helpers
+  const cx = col => DAY_COL + col * step;
+  const cy = row => YEAR_H + MONTH_H + PAD_TOP + row * step;
+
+  const fs     = Math.max(7, Math.min(cell - 1, 10));  // label font size
+  const textY  = (row) => cy(row) + cell * 0.75;       // vertical text anchor
+
+  // ── SVG pieces ────────────────────────────────────────────────────────────
+  let cells = "", labels = "", months = "", legend = "";
+
+  // Day-of-week labels: Mon(0) Wed(2) Sun(6)
+  const DOW_SHOW = { 0:"Mon", 2:"Wed", 6:"Sun" };
+  for (let row = 0; row < 7; row++) {
+    if (DOW_SHOW[row]) {
+      labels += `<text x="${DAY_COL - 4}" y="${textY(row)}" text-anchor="end"
+        fill="var(--muted)" font-size="${fs}" font-family="Inter,system-ui,sans-serif"
+        dominant-baseline="auto">${DOW_SHOW[row]}</text>`;
+    }
+  }
+
+  // Year label (top right)
+  labels += `<text x="${W - PAD_R}" y="${YEAR_H - 2}" text-anchor="end"
+    fill="var(--muted)" font-size="${fs}" font-family="Inter,system-ui,sans-serif">${year} Push Activity</text>`;
+
+  // Month labels
+  monthLabels.forEach(({ month, col }) => {
+    months += `<text x="${cx(col)}" y="${YEAR_H + MONTH_H - 2}" text-anchor="start"
+      fill="var(--muted)" font-size="${fs}" font-family="Inter,system-ui,sans-serif"
+      >${monthNames[month]}</text>`;
+  });
+
+  // Cells
+  days.forEach(day => {
+    const x   = cx(day.col);
+    const y   = cy(day.row);
+    const bg  = CAL_COLORS[day.level];
+    const tip = `${day.key}: ${day.n} push${day.n !== 1 ? "es" : ""}`;
+    cells += `<rect class="cal-cell-rect" x="${x}" y="${y}" width="${cell}" height="${cell}"
+      rx="${rr}" ry="${rr}" fill="${bg}"><title>${tip}</title></rect>`;
+  });
+
+  // Legend (bottom right)
+  const lc   = Math.max(7, Math.min(cell, 11));
+  const ly   = H - LEGEND_H + (LEGEND_H - lc) / 2;
+  const ltxt = `Less`;
+  let lx     = W - PAD_R - CAL_COLORS.length * (lc + 3) - 24;
+  legend += `<text x="${lx}" y="${ly + lc * 0.78}" fill="var(--muted)" font-size="${Math.max(7,fs-1)}"
+    font-family="Inter,system-ui,sans-serif">${ltxt}</text>`;
+  lx += 26;
+  CAL_COLORS.forEach((c, i) => {
+    legend += `<rect x="${lx + i*(lc+3)}" y="${ly}" width="${lc}" height="${lc}"
+      rx="2" fill="${c}" ${i===0?`stroke="var(--border)" stroke-width="0.5"`:""}/>`;
+  });
+  legend += `<text x="${lx + CAL_COLORS.length*(lc+3) + 3}" y="${ly + lc * 0.78}"
+    fill="var(--muted)" font-size="${Math.max(7,fs-1)}"
+    font-family="Inter,system-ui,sans-serif">More</text>`;
+
+  // ── Assemble SVG ──────────────────────────────────────────────────────────
+  wrap.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"
+    style="display:block;overflow:visible">
+    ${labels}${months}${cells}${legend}
+  </svg>`;
+}
+
+
+// ── Donut chart ───────────────────────────────────────────────────────────────
+function renderDonut(){
+  const rows=getRows();
+  const success=rows.filter(r=>r.status==="success").length;
+  const failed =rows.filter(r=>r.status==="failed").length;
+  const error  =rows.filter(r=>r.status==="error").length;
+  const total  =rows.length||1;
+  const data=[
+    {label:"Success",count:success,color:"var(--success)"},
+    {label:"Failed", count:failed, color:"var(--failed)"},
+    {label:"Error",  count:error,  color:"var(--error)"},
+  ].filter(d=>d.count>0);
+
+  const cx=70,cy=70,r=55,inner=35;
+  let angle=-Math.PI/2;
+  let slices="";
+  data.forEach(d=>{
+    const sweep=2*Math.PI*(d.count/total);
+    const x1=cx+r*Math.cos(angle), y1=cy+r*Math.sin(angle);
+    angle+=sweep;
+    const x2=cx+r*Math.cos(angle), y2=cy+r*Math.sin(angle);
+    const xi1=cx+inner*Math.cos(angle-sweep), yi1=cy+inner*Math.sin(angle-sweep);
+    const xi2=cx+inner*Math.cos(angle), yi2=cy+inner*Math.sin(angle);
+    const large=sweep>Math.PI?1:0;
+    slices+=`<path d="M${x1},${y1} A${r},${r},0,${large},1,${x2},${y2} L${xi2},${yi2} A${inner},${inner},0,${large},0,${xi1},${yi1} Z"
+              fill="${d.color}" opacity=".9"/>`;
+  });
+
+  const legendHtml=data.map(d=>`
+    <div class="legend-item">
+      <div class="legend-dot" style="background:${d.color}"></div>
+      <span>${d.label}</span>
+      <span class="legend-pct">${d.count} (${Math.round(d.count/total*100)}%)</span>
+    </div>`).join("");
+
+  $("donut-wrap").innerHTML=`
+    <svg class="donut-svg" width="140" height="140" viewBox="0 0 140 140">
+      ${slices}
+      <text x="70" y="66" text-anchor="middle" fill="var(--text)" font-size="18" font-weight="700">${total}</text>
+      <text x="70" y="82" text-anchor="middle" fill="var(--muted)" font-size="10">total</text>
+    </svg>
+    <div class="donut-legend">${legendHtml}</div>`;
+}
+
+// ── Bar chart util ────────────────────────────────────────────────────────────
+function barChart(containerId, data, color, maxItems=8){
+  const max=Math.max(...data.map(d=>d.count),1);
+  $(containerId).innerHTML=data.slice(0,maxItems).map(d=>`
+    <div class="bar-row">
+      <div class="bar-label" title="${d.label}">${d.label}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${Math.round(d.count/max*100)}%;background:${color}"></div></div>
+      <div class="bar-count">${d.count}</div>
+    </div>`).join("");
+}
+
+// ── Charts ────────────────────────────────────────────────────────────────────
+function renderCharts(){
+  const rows=getRows();
+  // By repo
+  const repoCounts={};
+  rows.forEach(r=>repoCounts[r.repo_name]=(repoCounts[r.repo_name]||0)+1);
+  barChart("chart-repos",Object.entries(repoCounts).map(([label,count])=>({label,count})).sort((a,b)=>b.count-a.count),"var(--accent)");
+
+  // By day
+  const dayCounts={};
+  rows.forEach(r=>{const d=r.timestamp.slice(0,10);dayCounts[d]=(dayCounts[d]||0)+1;});
+  barChart("chart-days",Object.entries(dayCounts).map(([label,count])=>({label,count})).sort((a,b)=>a.label.localeCompare(b.label)),"var(--accent2)",10);
+
+  // Event types
+  const evCounts={};
+  rows.forEach(r=>evCounts[r.event_type]=(evCounts[r.event_type]||0)+1);
+  barChart("chart-events",Object.entries(evCounts).map(([label,count])=>({label,count})).sort((a,b)=>b.count-a.count),"#f78166");
+
+  // Top files
+  const fileCounts={};
+  rows.forEach(r=>{if(r.file_changed) fileCounts[r.file_changed]=(fileCounts[r.file_changed]||0)+1;});
+  const topFiles=Object.entries(fileCounts).map(([label,count])=>({label,count})).sort((a,b)=>b.count-a.count).slice(0,8);
+  const maxF=Math.max(...topFiles.map(d=>d.count),1);
+  $("chart-files").innerHTML=topFiles.map(d=>`
+    <div class="file-row" onclick="openDrawer('${d.label.replace(/'/g,"\\'")}')">
+      <div class="file-name" title="${d.label}">${d.label.split("/").pop()}</div>
+      <div class="file-bar-track"><div class="file-bar-fill" style="width:${Math.round(d.count/maxF*100)}%"></div></div>
+      <div class="file-count">${d.count}</div>
+    </div>`).join("") || `<div style="color:var(--muted);font-size:13px">No file data</div>`;
+}
+
+// ── Cumulative timeline SVG ───────────────────────────────────────────────────
+function renderTimeline(){
+  const rows=getRows();
+  const dayCounts={};
+  rows.forEach(r=>{const d=r.timestamp.slice(0,10);dayCounts[d]=(dayCounts[d]||0)+1;});
+  const sorted=Object.entries(dayCounts).sort((a,b)=>a[0].localeCompare(b[0]));
+  if(!sorted.length) return;
+
+  let cum=0;
+  const pts=sorted.map(([date,n])=>{cum+=n;return{date,cum};});
+  const maxCum=pts[pts.length-1].cum;
+  const W=800,H=150,padL=30,padR=10,padT=10,padB=30;
+  const iW=W-padL-padR, iH=H-padT-padB;
+  const xStep=pts.length>1?iW/(pts.length-1):iW;
+
+  const pointCoords=pts.map((p,i)=>({
+    x:padL+(pts.length>1?i*xStep:iW/2),
+    y:padT+iH-(p.cum/maxCum)*iH,
+    ...p
+  }));
+
+  const polyline=pointCoords.map(p=>`${p.x},${p.y}`).join(" ");
+  const area=`${padL},${padT+iH} `+pointCoords.map(p=>`${p.x},${p.y}`).join(" ")+` ${pointCoords[pointCoords.length-1].x},${padT+iH}`;
+
+  // X-axis labels (show up to 6)
+  const step=Math.max(1,Math.ceil(pts.length/6));
+  const xLabels=pointCoords.filter((_,i)=>i%step===0||i===pts.length-1).map(p=>
+    `<text x="${p.x}" y="${H-4}" text-anchor="middle" fill="var(--muted)" font-size="9">${p.date.slice(5)}</text>`
+  ).join("");
+
+  // Y-axis labels
+  const yLabels=[0,.5,1].map(f=>`
+    <text x="${padL-4}" y="${padT+iH-(f*iH)+4}" text-anchor="end" fill="var(--muted)" font-size="9">${Math.round(f*maxCum)}</text>
+    <line x1="${padL}" y1="${padT+iH-f*iH}" x2="${padL+iW}" y2="${padT+iH-f*iH}" stroke="var(--border)" stroke-width=".5" stroke-dasharray="3,3"/>`
+  ).join("");
+
+  const svg=`<svg id="timeline-svg" viewBox="0 0 ${W} ${H}" height="160" preserveAspectRatio="xMidYMid meet" style="width:100%">
+    <defs>
+      <linearGradient id="tlGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="var(--accent)" stop-opacity=".35"/>
+        <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    ${yLabels}
+    <polygon points="${area}" fill="url(#tlGrad)"/>
+    <polyline points="${polyline}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    ${pointCoords.map(p=>`<circle cx="${p.x}" cy="${p.y}" r="3" fill="var(--accent)"><title>${p.date}: ${p.cum} total</title></circle>`).join("")}
+    ${xLabels}
+  </svg>`;
+  const container=document.querySelector("#timeline-svg").parentElement;
+  container.innerHTML=`<div class="section-title" style="margin-bottom:14px;">Cumulative Pushes Over Time</div>${svg}`;
+}
+
+// ── Hourly heatmap ────────────────────────────────────────────────────────────
+function renderHourHeatmap(){
+  const rows=getRows();
+  const hCounts=Array(24).fill(0);
+  rows.forEach(r=>{
+    const t=r.timestamp.slice(11,13);
+    const h=parseInt(t,10);
+    if(!isNaN(h)) hCounts[h]++;
+  });
+  const maxH=Math.max(...hCounts,1);
+  const calColors=["var(--cal0)","var(--cal1)","var(--cal2)","var(--cal3)","var(--cal4)"];
+  function hColor(n){
+    if(!n) return calColors[0];
+    const p=n/maxH;
+    if(p<.25) return calColors[1];
+    if(p<.5)  return calColors[2];
+    if(p<.75) return calColors[3];
+    return calColors[4];
+  }
+  $("hour-grid").innerHTML=hCounts.map((n,h)=>`
+    <div class="hour-cell" style="background:${hColor(n)};border:1px solid var(--border)"
+         title="${h.toString().padStart(2,"0")}:00 – ${n} push${n!==1?"es":""}"></div>`).join("");
+  $("hour-labels").innerHTML=Array.from({length:24},(_,h)=>
+    `<div class="hour-label">${h%4===0?h:""}</div>`).join("");
+}
+
+// ── Filters ───────────────────────────────────────────────────────────────────
+function populateRepoFilter(){
+  const repos=[...new Set(ALL_ROWS.map(r=>r.repo_name))].sort();
+  $("filter-repo").innerHTML='<option value="">All repos</option>'+repos.map(r=>`<option value="${r}">${r}</option>`).join("");
+}
+function applyFilters(){
+  const q     =$("search").value.toLowerCase();
+  const repo  =$("filter-repo").value;
+  const status=$("filter-status").value;
+  const event =$("filter-event").value;
+  const from  =$("filter-date-from").value;
+  const to    =$("filter-date-to").value;
+  filtered=getRows().filter(r=>{
+    if(repo   &&r.repo_name !==repo)  return false;
+    if(status &&r.status    !==status)return false;
+    if(event  &&r.event_type!==event) return false;
+    if(from   &&r.timestamp.slice(0,10)<from)return false;
+    if(to     &&r.timestamp.slice(0,10)>to)  return false;
+    if(q&&![r.repo_name,r.file_changed,r.status,r.event_type,r.message].join(" ").toLowerCase().includes(q))return false;
+    return true;
+  });
+  sortRows();
+}
+function resetFilters(){
+  ["search","filter-repo","filter-status","filter-event","filter-date-from","filter-date-to"]
+    .forEach(id=>$(id).value="");
+  applyFilters();
+}
+
+// ── Sort ──────────────────────────────────────────────────────────────────────
+function sortBy(col){
+  sortAsc=sortCol===col?!sortAsc:true; sortCol=col;
+  document.querySelectorAll("th").forEach(th=>{th.classList.remove("sorted");const ic=th.querySelector(".sort-icon");if(ic)ic.textContent="↕";});
+  const th=document.querySelector(`th[data-col="${col}"]`);
+  if(th){th.classList.add("sorted");th.querySelector(".sort-icon").textContent=sortAsc?"↑":"↓";}
+  sortRows();
+}
+function sortRows(){
+  filtered=[...filtered].sort((a,b)=>{
+    const av=(a[sortCol]||"").toLowerCase(), bv=(b[sortCol]||"").toLowerCase();
+    return sortAsc?av.localeCompare(bv):bv.localeCompare(av);
+  });
+  currentPage=1; renderTable();
+}
+
+// ── Table ─────────────────────────────────────────────────────────────────────
+function renderTable(){
+  const start=(currentPage-1)*PAGE_SIZE;
+  const page=filtered.slice(start,start+PAGE_SIZE);
+  $("table-meta").textContent=`Showing ${filtered.length?start+1:0}–${Math.min(start+PAGE_SIZE,filtered.length)} of ${filtered.length} rows`;
+  $("table-body").innerHTML=page.length
+    ? page.map((r,i)=>`<tr onclick="openModal(filtered[${(currentPage-1)*PAGE_SIZE}+${i}])">
+        <td>${r.timestamp}</td>
+        <td><a class="repo-link" href="${r.repo_url}" target="_blank" onclick="event.stopPropagation()">${r.repo_name}</a></td>
+        <td class="file-cell">${r.file_changed||"—"}</td>
+        <td><span class="event-badge">${r.event_type}</span></td>
+        <td><span class="badge badge-${r.status}">${r.status}</span></td>
+        <td style="color:var(--muted);font-size:12px;max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${r.message}">${r.message||"—"}</td>
+      </tr>`).join("")
+    : `<tr><td colspan="6" class="no-results">No results match your filters.</td></tr>`;
+  renderPagination();
+}
+function renderPagination(){
+  const total=Math.ceil(filtered.length/PAGE_SIZE);
+  $("pagination").innerHTML=total<=1?"":Array.from({length:total},(_,i)=>
+    `<button class="page-btn${i+1===currentPage?" active":""}" onclick="goPage(${i+1})">${i+1}</button>`).join("");
+}
+function goPage(n){currentPage=n;renderTable();}
+
+
+
+
+// ── Streak calculation ────────────────────────────────────────────────────────
+function calcStreaks(){
+  const days=[...new Set(ALL_ROWS.filter(r=>r.status==="success")
+    .map(r=>r.timestamp.slice(0,10)))].sort();
+  if(!days.length) return {current:0,longest:0};
+  const today=new Date().toISOString().slice(0,10);
+  let longest=1,run=1,current=0;
+  for(let i=1;i<days.length;i++){
+    const prev=new Date(days[i-1]),cur=new Date(days[i]);
+    const diff=(cur-prev)/(86400000);
+    if(diff===1){ run++; longest=Math.max(longest,run); }
+    else run=1;
+  }
+  // current streak: walk back from today
+  let d=new Date(today);
+  current=0;
+  while(true){
+    const k=d.toISOString().slice(0,10);
+    if(days.includes(k)){ current++; d.setDate(d.getDate()-1); }
+    else break;
+  }
+  return{current,longest:Math.max(longest,run)};
+}
+
+function renderStreaks(){
+  const {current,longest}=calcStreaks();
+  $("streak-wrap").innerHTML=`
+    <div class="streak-pill streak-current">
+      <span class="streak-emoji">🔥</span>
+      <span>${current} day${current!==1?"s":""} streak</span>
+    </div>
+    <div class="streak-pill streak-longest">
+      <span class="streak-emoji">🏆</span>
+      <span>${longest} day best</span>
+    </div>`;
+}
+
+// ── Live auto-refresh ─────────────────────────────────────────────────────────
+let _refreshTimer=null, _refreshCountdown=0, _lastSrc="", _lastRows=0;
+
+function startLiveRefresh(){
+  if(!REFRESH_INTERVAL){ $("live-pill").classList.add("paused"); $("live-label").textContent="Off"; return; }
+  clearInterval(_refreshTimer);
+  _refreshCountdown=REFRESH_INTERVAL;
+  updateLiveLabel();
+  _refreshTimer=setInterval(async()=>{
+    _refreshCountdown--;
+    if(_refreshCountdown<=0){
+      _refreshCountdown=REFRESH_INTERVAL;
+      await silentRefresh();
+    }
+    updateLiveLabel();
+  },1000);
+}
+
+function updateLiveLabel(){
+  $("live-label").textContent=`${_refreshCountdown}s`;
+}
+
+async function silentRefresh(){
+  // Fetch CSV silently and only reload if row count changed
+  let text="", src="";
+  if(LOCAL_CSV){
+    try{ const r=await fetch(LOCAL_CSV+"?t="+Date.now()); if(r.ok){text=await r.text();src="local";} }catch(_){}
+  }
+  if(!text && GITHUB_CSV){
+    const raw=toRawUrl(GITHUB_CSV);
+    try{ const r=await fetch(raw); if(r.ok){text=await r.text();src="github";} }catch(_){}
+  }
+  if(!text) return;
+  const rows=parseCSV(text);
+  if(rows.length!==_lastRows || src!==_lastSrc){
+    _lastRows=rows.length; _lastSrc=src;
+    const srcLabel=src==="local"?`Local · ${LOCAL_CSV}`:`GitHub · ${GITHUB_CSV.split("/").pop()}`;
+    loadData(rows, srcLabel);
+  }
+}
+
+function manualRefresh(){ _refreshCountdown=REFRESH_INTERVAL; autoLoad(); }
+
+// ── Weekday heatmap ───────────────────────────────────────────────────────────
+function renderWeekdayHeatmap(){
+  const rows=getRows();
+  // 7 days × 52 weeks; count pushes per (dayOfWeek, weekOfYear)
+  const wdCounts=Array.from({length:7},()=>0); // aggregate per day-of-week
+  rows.forEach(r=>{
+    const d=new Date(r.timestamp.slice(0,10));
+    if(!isNaN(d)) wdCounts[d.getDay()]++;
+  });
+  const maxWd=Math.max(...wdCounts,1);
+  const dayNames=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  const calColors=["var(--cal0)","var(--cal1)","var(--cal2)","var(--cal3)","var(--cal4)"];
+  function wColor(n){
+    if(!n) return calColors[0];
+    const p=n/maxWd;
+    return p<.25?calColors[1]:p<.5?calColors[2]:p<.75?calColors[3]:calColors[4];
+  }
+
+  // For richness: show individual week columns per day-of-week
+  // Build a 7-row bar chart styled as heatmap cells
+  let html="";
+  wdCounts.forEach((n,i)=>{
+    const pct=Math.round(n/maxWd*100);
+    html+=`
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px;">
+      <div style="width:30px;font-size:10px;color:var(--muted);flex-shrink:0;">${dayNames[i]}</div>
+      <div style="flex:1;background:var(--border);border-radius:3px;height:16px;overflow:hidden;">
+        <div style="width:${pct}%;height:100%;background:${wColor(n)};border-radius:3px;
+             transition:width .5s;"></div>
+      </div>
+      <div style="width:28px;font-size:11px;color:var(--muted);text-align:right;">${n}</div>
+    </div>`;
+  });
+  $("weekday-grid").innerHTML=html;
+}
+
+// ── Failure drill-down ────────────────────────────────────────────────────────
+function renderFailures(){
+  const rows=getRows();
+  const fails=rows.filter(r=>r.status==="failed"||r.status==="error");
+  const wrap=$("failures-wrap");
+  if(!fails.length){ wrap.innerHTML=""; return; }
+
+  // Group by repo
+  const byRepo={};
+  fails.forEach(r=>{
+    if(!byRepo[r.repo_name]) byRepo[r.repo_name]=[];
+    byRepo[r.repo_name].push(r);
+  });
+
+  const bodyHtml=Object.entries(byRepo).map(([repo,items])=>`
+    <div class="fail-group">
+      <div class="fail-group-title">⚠ ${repo} <span style="font-weight:400;color:var(--muted)">(${items.length})</span></div>
+      ${items.map(r=>`
+        <div class="fail-item">
+          <div class="fail-item-top">
+            <span class="fail-item-ts">${r.timestamp}</span>
+            <span class="badge badge-${r.status}">${r.status}</span>
+          </div>
+          <div class="fail-item-file">${r.file_changed||"—"}</div>
+          <div class="fail-item-msg">${r.message||"no message"}</div>
+        </div>`).join("")}
+    </div>`).join("");
+
+  wrap.innerHTML=`
+    <div class="section-title" style="margin-bottom:0;">Failures</div>
+    <div style="margin-bottom:24px;">
+      <button class="failures-toggle" onclick="toggleFailures(this)">
+        <div class="failures-toggle-left">
+          <span>⚠ Push Failures</span>
+          <span class="failures-badge">${fails.length}</span>
+        </div>
+        <span class="failures-chevron" id="fail-chevron">▶</span>
+      </button>
+      <div class="failures-body" id="failures-body">${bodyHtml}</div>
+    </div>`;
+}
+
+function toggleFailures(btn){
+  const body=$("failures-body");
+  const chev=$("fail-chevron");
+  const open=body.classList.toggle("open");
+  chev.classList.toggle("open",open);
+}
+
+// ── File history drawer ───────────────────────────────────────────────────────
+function openDrawer(filename){
+  const rows=ALL_ROWS.filter(r=>r.file_changed===filename)
+    .sort((a,b)=>b.timestamp.localeCompare(a.timestamp));
+  $("drawer-title").textContent="File History";
+  $("drawer-subtitle").textContent=filename;
+  $("drawer-body").innerHTML=rows.length
+    ? rows.map(r=>`
+      <div class="drawer-row">
+        <div>
+          <div class="drawer-ts">${r.timestamp}</div>
+          <div class="drawer-meta">
+            <span class="event-badge">${r.event_type}</span>
+            <span class="badge badge-${r.status}">${r.status}</span>
+            <span style="font-size:11px;color:var(--muted)">${r.repo_name}</span>
+          </div>
+          <div class="drawer-msg">${r.message||""}</div>
+        </div>
+      </div>`).join("")
+    : `<p style="color:var(--muted);font-size:13px;">No history found for this file.</p>`;
+  $("drawer-overlay").classList.add("open");
+  $("drawer").classList.add("open");
+  document.body.style.overflow="hidden";
+}
+
+function closeDrawer(){
+  $("drawer-overlay").classList.remove("open");
+  $("drawer").classList.remove("open");
+  document.body.style.overflow="";
+}
+
+// ── Push detail modal ─────────────────────────────────────────────────────────
+function openModal(r){
+  // Build GitHub commits link from repo_url
+  const ghBase=r.repo_url.replace(/\.git$/,"");
+  const ghCommitsUrl=`${ghBase}/commits/main`;
+  const ghFileUrl=r.file_changed?`${ghBase}/commits/main/${r.file_changed}`:"";
+
+  $("modal-sub").textContent=`${r.repo_name} · ${r.timestamp}`;
+  $("modal-body").innerHTML=`
+    <div class="modal-field">
+      <div class="modal-label">Repository</div>
+      <div class="modal-value"><a href="${ghBase}" target="_blank" style="color:var(--accent)">${r.repo_name}</a></div>
+    </div>
+    <div class="modal-field">
+      <div class="modal-label">File Changed</div>
+      <div class="modal-value mono">${r.file_changed||"—"}</div>
+    </div>
+    <div class="modal-field">
+      <div class="modal-label">Event</div>
+      <div class="modal-value"><span class="event-badge">${r.event_type}</span></div>
+    </div>
+    <div class="modal-field">
+      <div class="modal-label">Status</div>
+      <div class="modal-value"><span class="badge badge-${r.status}">${r.status}</span></div>
+    </div>
+    <div class="modal-field">
+      <div class="modal-label">Commit / Git Message</div>
+      <div class="modal-msg-box">${r.message||"—"}</div>
+    </div>
+    <a class="modal-gh-link" href="${r.file_changed?ghFileUrl:ghCommitsUrl}" target="_blank">
+      ↗ View commits on GitHub
+    </a>`;
+  $("modal-overlay").classList.add("open");
+  document.body.style.overflow="hidden";
+}
+
+function closeModal(){
+  $("modal-overlay").classList.remove("open");
+  document.body.style.overflow="";
+}
+
+// Esc key closes drawer/modal
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"){ closeDrawer(); closeModal(); }
+});
+
+// ── Support toast ─────────────────────────────────────────────────────────────
+(function(){
+  const TOAST_DELAY=30000; // 30 seconds
+  if(sessionStorage.getItem("toastDismissed")) return;
+  setTimeout(()=>{
+    const t=document.getElementById("support-toast");
+    if(t) t.classList.add("show");
+  }, TOAST_DELAY);
+})();
+
+function dismissToast(){
+  document.getElementById("support-toast").classList.remove("show");
+  sessionStorage.setItem("toastDismissed","1");
+}
+// ── Boot ──────────────────────────────────────────────────────────────────────
+if(window.location.protocol==="file:"){
+  hide("screen-loading");
+  $("screen-404").classList.remove("hidden");
+  $("screen-404").innerHTML=`
+    <div class="icon">⚠️</div>
+    <h2>Opened via file:// — CSV cannot load</h2>
+    <p>Browsers block local file access when opened directly.<br><br>
+    <strong>Run a local server from your project folder:</strong><br><br>
+    <code>python3 -m http.server 8080</code><br><br>
+    Then open: <code>http://localhost:8080/push_analytics.html</code></p>`;
+} else {
+  autoLoad();
+}
+</script>
+
+<!-- ── Support toast ── -->
+<div class="support-toast" id="support-toast">
+  <button class="support-toast-close" onclick="dismissToast()">✕</button>
+  <div class="support-toast-title">✨ Help the builder</div>
+  <div class="support-toast-sub">Connect or explore my work</div>
+  <div class="support-links">
+    <a class="support-link" href="https://www.linkedin.com/in/shubham-dekatey/" target="_blank" rel="noopener">
+      <span class="support-link-icon" style="background:rgba(10,102,194,.2);color:#0a66c2;">in</span>
+      LinkedIn
+    </a>
+    <a class="support-link" href="https://github.com/deka1105" target="_blank" rel="noopener">
+      <span class="support-link-icon" style="background:rgba(255,255,255,.08);color:#e6edf3;">⌥</span>
+      GitHub
+    </a>
+    <a class="support-link" href="https://sdfolio.com" target="_blank" rel="noopener">
+      <span class="support-link-icon" style="background:rgba(108,99,255,.2);color:var(--accent);">🌐</span>
+      sdfolio.com
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
