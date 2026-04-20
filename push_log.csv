@@ -37,15 +37,7 @@ timestamp,repo_name,repo_url,file_changed,event_type,status,message
 2026-04-19 18:07:34,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-19 18:07:33]
 2026-04-19 18:08:47,MultistockDashboard,https://github.com/deka1105/MultistockDashboard.git,Files/stockdash2-3/.gitignore,created,success,auto-push: 61 files changed [2026-04-19 18:08:45]
 2026-04-19 18:08:48,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-19 18:08:47]
-2026-04-19 18:10:18,PlayBooks,https://github.com/deka1105/Playbooks.git,gitLogs.csv,created,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists."
+2026-04-19 18:10:18,PlayBooks,https://github.com/deka1105/Playbooks.git,gitLogs.csv,created,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository /n fatal: Could not read from remote repository. /n Please make sure you have the correct access rights and the repository exists."
 2026-04-19 18:10:20,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-19 18:10:18]
-2026-04-19 18:11:06,PlayBooks,https://github.com/deka1105/Playbooks.git,git-history.txt,created,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists."
+2026-04-19 18:11:06,PlayBooks,https://github.com/deka1105/Playbooks.git,git-history.txt,created,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository /n fatal: Could not read from remote repository. /n Please make sure you have the correct access rights and the repository exists."
 2026-04-19 18:11:07,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-19 18:11:06]
