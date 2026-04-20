@@ -1,102 +1,3 @@
-timestamp,repo_name,repo_url,file_changed,event_type,status,message
-<<<<<<< HEAD
-2026-04-18 15:38:18,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,auto_git_push.py,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-18 15:39:03,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analytics.html,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-18 15:39:08,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,auto_git_push.py,deleted,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-18 15:39:28,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analytics.html,modified,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-18 15:40:25,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analytics.html,modified,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-18 15:42:56,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analytics.html,modified,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-18 15:44:18,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,README.md,deleted,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-18 15:47:29,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,moved,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-18 15:48:05,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-18 16:18:44,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,README (1).md,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-18 16:43:42,MultistockDashboard,https://github.com/deka1105/MultistockDashboard.git,Files/stockdash/.gitignore,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-18 16:57:58,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,autoGitv3.zip,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-18 16:58:53,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,autoGit.zip,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 01:57:21,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv5.html,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 02:04:43,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv6.html,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 02:04:51,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv6.html,modified,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 02:24:24,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv7.html,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 02:32:02,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv9.html,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 02:32:14,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv9.html,modified,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 02:40:30,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv10.html,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 02:40:40,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv10.html,modified,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 02:46:56,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv11.html,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 02:47:13,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,README.md,moved,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 02:47:29,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,README.md,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 09:24:07,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv12.html,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 17:06:07,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv13.html,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 17:20:03,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv14.html,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 17:20:13,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv14.html,modified,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 17:24:43,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv14_1.html,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 17:29:58,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv15.html,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 17:30:10,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv15.html,modified,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 17:59:41,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,auto_git_pushv4.py,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.
-2026-04-19 18:07:23,MultistockDashboard,https://github.com/deka1105/MultistockDashboard.git,Files/stockdash-2/.gitignore,created,success,"auto-push: .DS_Store, .DS_Store, .gitignore [2026-04-19 18:07:22]"
-2026-04-19 18:07:24,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,"auto-push: auto_git_pushv4.py, push_log.csv [2026-04-19 18:07:23]"
-2026-04-19 18:07:33,MultistockDashboard,https://github.com/deka1105/MultistockDashboard.git,Files/stockdash2/.gitignore,created,success,auto-push: 61 files changed [2026-04-19 18:07:31]
-2026-04-19 18:07:34,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-19 18:07:33]
-2026-04-19 18:08:47,MultistockDashboard,https://github.com/deka1105/MultistockDashboard.git,Files/stockdash2-3/.gitignore,created,success,auto-push: 61 files changed [2026-04-19 18:08:45]
-2026-04-19 18:08:48,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-19 18:08:47]
-2026-04-19 18:10:18,PlayBooks,https://github.com/deka1105/Playbooks.git,gitLogs.csv,created,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository /n fatal: Could not read from remote repository. /n Please make sure you have the correct access rights and the repository exists."
-2026-04-19 18:10:20,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-19 18:10:18]
-2026-04-19 18:11:06,PlayBooks,https://github.com/deka1105/Playbooks.git,git-history.txt,created,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository /n fatal: Could not read from remote repository. /n Please make sure you have the correct access rights and the repository exists."
-2026-04-19 18:11:07,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-19 18:11:06]
-2026-04-19 21:38:37,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv16.html,created,success,"auto-push: push_analyticsv16.html, push_log.csv [2026-04-19 21:38:36]"
-2026-04-19 22:48:48,MultistockDashboard,https://github.com/deka1105/MultistockDashboard.git,Files/stockdash2-2/frontend/tsconfig.node.json,created,success,auto-push: 62 files changed [2026-04-19 22:48:46]
-2026-04-19 22:48:50,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-19 22:48:48]
-2026-04-19 23:30:17,PlayBooks,https://github.com/deka1105/Playbooks.git,clicker.py,created,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists."
-2026-04-19 23:30:19,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-19 23:30:17]
-2026-04-19 23:32:30,PlayBooks,https://github.com/deka1105/Playbooks.git,clicker.py,modified,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists."
-2026-04-19 23:32:31,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-19 23:32:30]
-2026-04-20 06:57:31,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analyticsv17.html,created,success,"auto-push: push_analyticsv17.html, push_log.csv [2026-04-20 06:57:29]"
-2026-04-20 07:08:33,PlayBooks,https://github.com/deka1105/Playbooks.git,clicker.py,modified,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists."
-2026-04-20 07:08:34,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-20 07:08:33]
-2026-04-20 07:15:31,PlayBooks,https://github.com/deka1105/Playbooks.git,clicker.py,modified,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists."
-2026-04-20 07:15:32,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-20 07:15:31]
-2026-04-20 07:24:10,PlayBooks,https://github.com/deka1105/Playbooks.git,clicker.py,modified,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists."
-2026-04-20 07:24:11,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-20 07:24:10]
-2026-04-20 08:26:48,PlayBooks,https://github.com/deka1105/Playbooks.git,"DS_Store, licker.py",startup-sync,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists. --END--"
-2026-04-20 08:26:48,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,"ush_log.csv, auto_git_pushv5.py, auto_git_pushv6.py, push_analyticsv17_1.html, push_analyticsv18.html",startup-sync,failed,"To https://github.com/deka1105/GitHub-AutoPush-Analytics.git
- ! [rejected]        HEAD -> main (fetch first)
-error: failed to push some refs to 'https://github.com/deka1105/GitHub-AutoPush-Analytics.git'
-hint: Updates were rejected because the remote contains work that you do
-hint: not have locally. This is usually caused by another repository pushing
-hint: to the same ref. You may want to first integrate the remote changes
-hint: (e.g., 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details. --END--"
-2026-04-20 08:26:50,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,failed,"To https://github.com/deka1105/GitHub-AutoPush-Analytics.git
- ! [rejected]        HEAD -> main (non-fast-forward)
-error: failed to push some refs to 'https://github.com/deka1105/GitHub-AutoPush-Analytics.git'
-hint: Updates were rejected because the tip of your current branch is behind
-hint: its remote counterpart. Integrate the remote changes (e.g.
-hint: 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details. --END--"
-=======
 2026-04-18 15:38:18,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,auto_git_push.py,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.--END--
 2026-04-18 15:39:03,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_analytics.html,created,success,Branch 'main' set up to track remote branch 'main' from 'origin'.--END--
 2026-04-18 15:39:08,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,auto_git_push.py,deleted,success,Branch 'main' set up to track remote branch 'main' from 'origin'.--END--
@@ -152,5 +53,25 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details. --END
 2026-04-20 07:15:31,PlayBooks,https://github.com/deka1105/Playbooks.git,clicker.py,modified,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository /n fatal: Could not read from remote repository. /n Please make sure you have the correct access rights and the repository exists."--END--
 2026-04-20 07:15:32,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-20 07:15:31]--END--
 2026-04-20 07:24:10,PlayBooks,https://github.com/deka1105/Playbooks.git,clicker.py,modified,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository /n fatal: Could not read from remote repository. /n Please make sure you have the correct access rights and the repository exists."--END--
->>>>>>> 7452f51ef40b34a6a353a9dec1ea48bfbd874ddb
+2026-04-20 07:24:11,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-20 07:24:10]
+2026-04-20 08:26:48,PlayBooks,https://github.com/deka1105/Playbooks.git,"DS_Store, licker.py",startup-sync,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists. --END--"
+2026-04-20 08:26:48,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,"ush_log.csv, auto_git_pushv5.py, auto_git_pushv6.py, push_analyticsv17_1.html, push_analyticsv18.html",startup-sync,failed,"To https://github.com/deka1105/GitHub-AutoPush-Analytics.git
+ ! [rejected]        HEAD -> main (fetch first)
+error: failed to push some refs to 'https://github.com/deka1105/GitHub-AutoPush-Analytics.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details. --END--"
+2026-04-20 08:26:50,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,failed,"To https://github.com/deka1105/GitHub-AutoPush-Analytics.git
+ ! [rejected]        HEAD -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/deka1105/GitHub-AutoPush-Analytics.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details. --END--"
 2026-04-20 08:27:47,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,deleted,success,auto-push: push_log.csv [2026-04-20 08:27:45] --END--
