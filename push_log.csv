@@ -55,25 +55,8 @@ timestamp,repo_name,repo_url,file_changed,event_type,status,message
 2026-04-20 07:15:32,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-20 07:15:31]--END--
 2026-04-20 07:24:10,PlayBooks,https://github.com/deka1105/Playbooks.git,clicker.py,modified,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository /n fatal: Could not read from remote repository. /n Please make sure you have the correct access rights and the repository exists."--END--
 2026-04-20 07:24:11,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-20 07:24:10]
-2026-04-20 08:26:48,PlayBooks,https://github.com/deka1105/Playbooks.git,"DS_Store, licker.py",startup-sync,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists. --END--"
-2026-04-20 08:26:48,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,"ush_log.csv, auto_git_pushv5.py, auto_git_pushv6.py, push_analyticsv17_1.html, push_analyticsv18.html",startup-sync,failed,"To https://github.com/deka1105/GitHub-AutoPush-Analytics.git
- ! [rejected]        HEAD -> main (fetch first)
-error: failed to push some refs to 'https://github.com/deka1105/GitHub-AutoPush-Analytics.git'
-hint: Updates were rejected because the remote contains work that you do
-hint: not have locally. This is usually caused by another repository pushing
-hint: to the same ref. You may want to first integrate the remote changes
-hint: (e.g., 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details. --END--"
-2026-04-20 08:26:50,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,failed,"To https://github.com/deka1105/GitHub-AutoPush-Analytics.git
- ! [rejected]        HEAD -> main (non-fast-forward)
-error: failed to push some refs to 'https://github.com/deka1105/GitHub-AutoPush-Analytics.git'
-hint: Updates were rejected because the tip of your current branch is behind
-hint: its remote counterpart. Integrate the remote changes (e.g.
-hint: 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details. --END--"
+2026-04-20 08:26:48,PlayBooks,https://github.com/deka1105/Playbooks.git,"DS_Store, licker.py",startup-sync,failed,"fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository /n fatal: Could not read from remote repository. /n Please make sure you have the correct access rights and the repository exists. --END--"
+2026-04-20 08:26:48,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,"ush_log.csv, auto_git_pushv5.py, auto_git_pushv6.py, push_analyticsv17_1.html, push_analyticsv18.html",startup-sync,failed,"To https://github.com/deka1105/GitHub-AutoPush-Analytics.git  /n ! [rejected]        HEAD -> main (fetch first) /n error: failed to push some refs to 'https://github.com/deka1105/GitHub-AutoPush-Analytics.git' /n hint: Updates were rejected because the remote contains work that you do /n hint: not have locally. This is usually caused by another repository pushing /n hint: to the same ref. You may want to first integrate the remote changes /n hint: (e.g., 'git pull ...') before pushing again. /n hint: See the 'Note about fast-forwards' in 'git push --help' for details. --END--"
+2026-04-20 08:26:50,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,failed,"To https://github.com/deka1105/GitHub-AutoPush-Analytics.git /n  ! [rejected]        HEAD -> main (non-fast-forward) /n error: failed to push some refs to 'https://github.com/deka1105/GitHub-AutoPush-Analytics.git' /n hint: Updates were rejected because the tip of your current branch is behind /n hint: its remote counterpart. Integrate the remote changes (e.g. /n hint: 'git pull ...') before pushing again. /n hint: See the 'Note about fast-forwards' in 'git push --help' for details. --END--"
 2026-04-20 08:27:47,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,deleted,success,auto-push: push_log.csv [2026-04-20 08:27:45] --END--
 2026-04-20 08:37:43,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-20 08:37:42] --END--
