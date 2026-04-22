@@ -429,54 +429,24 @@ send-pack: unexpected disconnect while reading sideband packet
 fatal: the remote end hung up unexpectedly
 Everything up-to-date --END--"
 2026-04-21 22:08:13,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-21 22:08:11] --END--
-2026-04-21 22:08:41,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,NodeApp/build.js,created,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400
-send-pack: unexpected disconnect while reading sideband packet
-fatal: the remote end hung up unexpectedly
-Everything up-to-date --END--"
+2026-04-21 22:08:41,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,NodeApp/build.js,created,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400 /n send-pack: unexpected disconnect while reading sideband packet /n fatal: the remote end hung up unexpectedly /n Everything up-to-date --END--"
 2026-04-21 22:08:43,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-21 22:08:41] --END--
-2026-04-21 22:09:31,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,NodeApp/server.js,modified,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400
-send-pack: unexpected disconnect while reading sideband packet
-fatal: the remote end hung up unexpectedly
-Everything up-to-date --END--"
+2026-04-21 22:09:31,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,NodeApp/server.js,modified,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400 /n send-pack: unexpected disconnect while reading sideband packet /n fatal: the remote end hung up unexpectedly /n Everything up-to-date --END--"
 2026-04-21 22:09:33,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-21 22:09:32] --END--
-2026-04-21 22:11:25,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,NodeApp/server.js,modified,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400
-send-pack: unexpected disconnect while reading sideband packet
-fatal: the remote end hung up unexpectedly
-Everything up-to-date --END--"
+2026-04-21 22:11:25,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,NodeApp/server.js,modified,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400 /n send-pack: unexpected disconnect while reading sideband packet /n fatal: the remote end hung up unexpectedly /n Everything up-to-date --END--"
 2026-04-21 22:11:27,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-21 22:11:25] --END--
-2026-04-21 22:11:39,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,NodeApp/server.js,modified,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400
-send-pack: unexpected disconnect while reading sideband packet
-fatal: the remote end hung up unexpectedly
-Everything up-to-date --END--"
+2026-04-21 22:11:39,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,NodeApp/server.js,modified,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400 /n send-pack: unexpected disconnect while reading sideband packet /n fatal: the remote end hung up unexpectedly /n Everything up-to-date --END--"
 2026-04-21 22:11:40,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-21 22:11:39] --END--
-2026-04-21 22:14:12,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,NodeApp/public/favicon.png,created,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400
-send-pack: unexpected disconnect while reading sideband packet
-fatal: the remote end hung up unexpectedly
-Everything up-to-date --END--"
+2026-04-21 22:14:12,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,NodeApp/public/favicon.png,created,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400 /n send-pack: unexpected disconnect while reading sideband packet /n fatal: the remote end hung up unexpectedly /n Everything up-to-date --END--"
 2026-04-21 22:14:13,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-21 22:14:12] --END--
-2026-04-21 22:14:21,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,NodeApp/views/index.ejs,modified,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400
-send-pack: unexpected disconnect while reading sideband packet
-fatal: the remote end hung up unexpectedly
-Everything up-to-date --END--"
+2026-04-21 22:14:21,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,NodeApp/views/index.ejs,modified,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400 /n send-pack: unexpected disconnect while reading sideband packet /n fatal: the remote end hung up unexpectedly /n Everything up-to-date --END--"
 2026-04-21 22:14:23,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-21 22:14:21] --END--
-2026-04-21 23:35:18,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,app.py,moved,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400
-send-pack: unexpected disconnect while reading sideband packet
-fatal: the remote end hung up unexpectedly
-Everything up-to-date --END--"
+2026-04-21 23:35:18,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,app.py,moved,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400 /n send-pack: unexpected disconnect while reading sideband packet /n fatal: the remote end hung up unexpectedly /n Everything up-to-date --END--"
 2026-04-21 23:35:20,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-21 23:35:19] --END--
-2026-04-21 23:35:24,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,New Folder With Items/custom_nodes.json,moved,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400
-send-pack: unexpected disconnect while reading sideband packet
-fatal: the remote end hung up unexpectedly
-Everything up-to-date --END--"
+2026-04-21 23:35:24,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,New Folder With Items/custom_nodes.json,moved,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400 /n send-pack: unexpected disconnect while reading sideband packet /n fatal: the remote end hung up unexpectedly /n Everything up-to-date --END--"
 2026-04-21 23:35:26,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-21 23:35:24] --END--
-2026-04-21 23:35:39,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,NodeApp/build.js,moved,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400
-send-pack: unexpected disconnect while reading sideband packet
-fatal: the remote end hung up unexpectedly
-Everything up-to-date --END--"
+2026-04-21 23:35:39,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,NodeApp/build.js,moved,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400 /n send-pack: unexpected disconnect while reading sideband packet /n fatal: the remote end hung up unexpectedly /n Everything up-to-date --END--"
 2026-04-21 23:35:40,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-21 23:35:39] --END--
-2026-04-21 23:35:50,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,NodeApp/node_modules/.package-lock.json,moved,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400
-send-pack: unexpected disconnect while reading sideband packet
-fatal: the remote end hung up unexpectedly
-Everything up-to-date --END--"
+2026-04-21 23:35:50,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,NodeApp/node_modules/.package-lock.json,moved,failed,"error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400 /n send-pack: unexpected disconnect while reading sideband packet /n fatal: the remote end hung up unexpectedly /n Everything up-to-date --END--"
 2026-04-21 23:35:51,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,push_log.csv,modified,success,auto-push: push_log.csv [2026-04-21 23:35:50] --END--
 2026-04-22 00:07:14,WarehouseFlow,https://github.com/deka1105/WarehouseFlow.git,workflows/workflow_2026-04-22T01-41-44.csv,deleted,success,"auto-push: .DS_Store, workflow_2026-04-22T01-41-44.csv, workflow_20260421_125606.csv, workflow_20260421_130931.csv, workflow_20260421_130934.csv [2026-04-22 00:07:12] --END--"
