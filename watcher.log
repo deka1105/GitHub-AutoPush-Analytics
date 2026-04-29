@@ -1781,3 +1781,69 @@ and the repository exists.
 2026-04-28 22:09:03 [INFO    ] [GitHub AutoPush Analytics] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics
 2026-04-28 22:09:03 [INFO    ] [GitHub AutoPush Analytics] Startup sync — checking for offline changes…
 2026-04-28 22:09:03 [DEBUG   ]   $ git stash --include-untracked  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics]
+2026-04-28 22:14:31 [INFO    ] ============================================================
+2026-04-28 22:14:31 [INFO    ] Auto Git Pusher v4 starting
+2026-04-28 22:14:31 [INFO    ]   Config CSV : repos_config.csv
+2026-04-28 22:14:31 [INFO    ]   Push log   : push_log.csv
+2026-04-28 22:14:31 [INFO    ]   Watcher log: watcher.log
+2026-04-28 22:14:31 [INFO    ] ============================================================
+2026-04-28 22:14:31 [INFO    ] Loaded 10 repo(s) from repos_config.csv
+2026-04-28 22:14:31 [INFO    ] [TestWatcher] Setting up repo…
+2026-04-28 22:14:31 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-04-28 22:14:31 [DEBUG   ]   stdout: https://github.com/deka1105/TestWatcher.git
+2026-04-28 22:14:31 [INFO    ] [TestWatcher] Repo ready at /Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher
+2026-04-28 22:14:31 [INFO    ] [TestWatcher] Startup sync — checking for offline changes…
+2026-04-28 22:14:31 [DEBUG   ]   $ git stash --include-untracked  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-04-28 22:14:31 [DEBUG   ]   stdout: No local changes to save
+2026-04-28 22:14:31 [DEBUG   ]   $ git pull --rebase origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-04-28 22:14:32 [DEBUG   ]   stdout: Already up to date.
+2026-04-28 22:14:32 [DEBUG   ]   stderr: From https://github.com/deka1105/TestWatcher
+ * branch            HEAD       -> FETCH_HEAD
+2026-04-28 22:14:32 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-04-28 22:14:32 [INFO    ] [TestWatcher] Startup sync: nothing to push — already up to date.
+2026-04-28 22:14:32 [INFO    ] [TestWatcher] Watching: /Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher
+2026-04-28 22:14:32 [INFO    ] [MultistockDashboard] Setting up repo…
+2026-04-28 22:14:32 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-04-28 22:14:32 [DEBUG   ]   stdout: https://github.com/deka1105/MultistockDashboard.git
+2026-04-28 22:14:32 [INFO    ] [MultistockDashboard] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard
+2026-04-28 22:14:32 [INFO    ] [MultistockDashboard] Startup sync — checking for offline changes…
+2026-04-28 22:14:32 [DEBUG   ]   $ git stash --include-untracked  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-04-28 22:14:32 [DEBUG   ]   stdout: No local changes to save
+2026-04-28 22:14:32 [DEBUG   ]   $ git pull --rebase origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-04-28 22:14:32 [DEBUG   ]   stdout: Already up to date.
+2026-04-28 22:14:32 [DEBUG   ]   stderr: From https://github.com/deka1105/MultistockDashboard
+ * branch            HEAD       -> FETCH_HEAD
+2026-04-28 22:14:32 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-04-28 22:14:32 [INFO    ] [MultistockDashboard] Startup sync: nothing to push — already up to date.
+2026-04-28 22:14:32 [INFO    ] [MultistockDashboard] Watching: /Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard
+2026-04-28 22:14:32 [INFO    ] [PlayBooks] Setting up repo…
+2026-04-28 22:14:32 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-04-28 22:14:32 [DEBUG   ]   stdout: github.com/deka1105/Playbooks
+2026-04-28 22:14:32 [WARNING ] [PlayBooks] Remote URL mismatch (expected https://github.com/deka1105/Playbooks.git)
+2026-04-28 22:14:32 [INFO    ] [PlayBooks] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day0
+2026-04-28 22:14:32 [INFO    ] [PlayBooks] Startup sync — checking for offline changes…
+2026-04-28 22:14:32 [DEBUG   ]   $ git stash --include-untracked  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-04-28 22:14:32 [DEBUG   ]   stdout: No local changes to save
+2026-04-28 22:14:32 [DEBUG   ]   $ git pull --rebase origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-04-28 22:14:32 [DEBUG   ]   stderr: fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+2026-04-28 22:14:32 [WARNING ] [PlayBooks] Startup pull --rebase issue: fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+2026-04-28 22:14:32 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-04-28 22:14:32 [WARNING ] [PlayBooks] Rebase issue but no conflicted files found.
+2026-04-28 22:14:32 [DEBUG   ]   $ git rebase --abort  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-04-28 22:14:32 [DEBUG   ]   stderr: fatal: no rebase in progress
+2026-04-28 22:14:32 [ERROR   ] [PlayBooks] Startup sync aborted due to unresolvable conflict.
+2026-04-28 22:14:32 [INFO    ] [PlayBooks] Watching: /Users/shubhamarundekatey/ClaudeCode/day0
+2026-04-28 22:14:32 [INFO    ] [GitHub AutoPush Analytics] Setting up repo…
+2026-04-28 22:14:32 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics]
+2026-04-28 22:14:32 [DEBUG   ]   stdout: https://github.com/deka1105/GitHub-AutoPush-Analytics.git
+2026-04-28 22:14:32 [INFO    ] [GitHub AutoPush Analytics] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics
+2026-04-28 22:14:32 [INFO    ] [GitHub AutoPush Analytics] Startup sync — checking for offline changes…
+2026-04-28 22:14:32 [DEBUG   ]   $ git stash --include-untracked  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics]
