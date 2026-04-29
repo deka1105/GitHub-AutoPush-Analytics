@@ -1126,3 +1126,658 @@ error: Please commit or stash them.
 2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/06/efa4bf586a89ceb422e5503a4e4fb2fbd21133", inode=260437605, flags=110400, id=17015263): is_file, is_hardlink, is_inode_meta_mod
 2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3/3438e3d7c777fcb47a673b5f563bbf7884cf95", inode=260438282, flags=110100, id=17015272): is_created, is_file, is_hardlink
 2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3/3438e3d7c777fcb47a673b5f563bbf7884cf95", inode=260438282, flags=110100, id=17015272): is_created, is_file, is_hardlink
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3", inode=259915821, flags=20400, id=17015275): is_directory, is_inode_meta_mod
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3", inode=259915821, flags=20400, id=17015275): is_directory, is_inode_meta_mod
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3/tmp_obj_WXoNmy", inode=260438282, flags=111300, id=17015278): is_coalesced, is_created, is_file, is_hardlink, is_modified, is_removed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3/tmp_obj_WXoNmy", inode=260438282, flags=111300, id=17015278): is_coalesced, is_created, is_file, is_hardlink, is_modified, is_removed
+2026-04-28 21:55:44 [DEBUG   ] drop event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/06/efa4bf586a89ceb422e5503a4e4fb2fbd21133', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/06/efa4bf586a89ceb422e5503a4e4fb2fbd21133', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3/3438e3d7c777fcb47a673b5f563bbf7884cf95', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3/3438e3d7c777fcb47a673b5f563bbf7884cf95', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3/tmp_obj_WXoNmy', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3/tmp_obj_WXoNmy', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3/tmp_obj_WXoNmy', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3/tmp_obj_WXoNmy', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/d3', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ]   stderr: warning: in the working copy of 'push_log.csv', CRLF will be replaced by LF the next time Git touches it
+2026-04-28 21:55:44 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics]
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/pack/pack-3bcc89e53969c9752f5fe0f8a144af0b01531f6f.pack", inode=259817617, flags=10400, id=17015281): is_file, is_inode_meta_mod
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/pack/pack-3bcc89e53969c9752f5fe0f8a144af0b01531f6f.pack", inode=259817617, flags=10400, id=17015281): is_file, is_inode_meta_mod
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/4a/16d66445aeda452db9b1bfc090550d432124d0", inode=260437609, flags=110400, id=17015284): is_file, is_hardlink, is_inode_meta_mod
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/4a/16d66445aeda452db9b1bfc090550d432124d0", inode=260437609, flags=110400, id=17015284): is_file, is_hardlink, is_inode_meta_mod
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8/6d4454870f9c5c324290abb31795143899f3e6", inode=260438286, flags=110100, id=17015296): is_created, is_file, is_hardlink
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8/6d4454870f9c5c324290abb31795143899f3e6", inode=260438286, flags=110100, id=17015296): is_created, is_file, is_hardlink
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8", inode=260438285, flags=20500, id=17015299): is_created, is_directory, is_inode_meta_mod
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8", inode=260438285, flags=20500, id=17015299): is_created, is_directory, is_inode_meta_mod
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8/tmp_obj_Z2bLEi", inode=260438286, flags=111300, id=17015302): is_coalesced, is_created, is_file, is_hardlink, is_modified, is_removed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8/tmp_obj_Z2bLEi", inode=260438286, flags=111300, id=17015302): is_coalesced, is_created, is_file, is_hardlink, is_modified, is_removed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock", inode=260438281, flags=11900, id=17015308): is_coalesced, is_created, is_file, is_modified, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock", inode=260438281, flags=11900, id=17015308): is_coalesced, is_created, is_file, is_modified, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438281, flags=10800, id=17015309): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438281, flags=10800, id=17015309): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438000, flags=10800, id=17015310): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438000, flags=10800, id=17015310): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/pack/pack-3bcc89e53969c9752f5fe0f8a144af0b01531f6f.pack', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/pack/pack-3bcc89e53969c9752f5fe0f8a144af0b01531f6f.pack', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/4a/16d66445aeda452db9b1bfc090550d432124d0', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/4a/16d66445aeda452db9b1bfc090550d432124d0', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8/6d4454870f9c5c324290abb31795143899f3e6', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8/6d4454870f9c5c324290abb31795143899f3e6', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8', dest_path='', event_type='created', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8', dest_path='', event_type='created', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8/tmp_obj_Z2bLEi', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8/tmp_obj_Z2bLEi', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8/tmp_obj_Z2bLEi', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8/tmp_obj_Z2bLEi', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/b8', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] Destination event for rename is NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438281, flags=10800, id=17015309)
+2026-04-28 21:55:44 [DEBUG   ] Destination event for rename is NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438281, flags=10800, id=17015309)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileMovedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', event_type='moved', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileMovedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', event_type='moved', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ]   stdout: M  .DS_Store
+R  README.md -> "Previous Versions/README.md"
+R  auto_git_pushv6.py -> "Previous Versions/auto_git_pushv6.py"
+A  auto_git_pushv7.py
+M  push_log.csv
+AM watcher.log
+2026-04-28 21:55:44 [DEBUG   ]   $ git diff --cached --name-only  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics]
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock", inode=260438289, flags=11900, id=17015319): is_coalesced, is_created, is_file, is_modified, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438289, flags=10800, id=17015320): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438281, flags=10800, id=17015321): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] drop event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock", inode=260438289, flags=11900, id=17015319): is_coalesced, is_created, is_file, is_modified, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438289, flags=10800, id=17015320): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] drop event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438281, flags=10800, id=17015321): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] Destination event for rename is NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438289, flags=10800, id=17015320)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileMovedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', event_type='moved', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] Destination event for rename is NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438289, flags=10800, id=17015320)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileMovedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', event_type='moved', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ]   stdout: .DS_Store
+Previous Versions/README.md
+Previous Versions/auto_git_pushv6.py
+auto_git_pushv7.py
+push_log.csv
+watcher.log
+2026-04-28 21:55:44 [INFO    ] [GitHub AutoPush Analytics] Committing: auto-push: 6 files changed [2026-04-28 21:55:44]
+2026-04-28 21:55:44 [DEBUG   ]   $ git commit -m auto-push: 6 files changed [2026-04-28 21:55:44]
+
+Modified files:
+- .DS_Store
+- Previous Versions/README.md
+- Previous Versions/auto_git_pushv6.py
+- auto_git_pushv7.py
+- push_log.csv
+- watcher.log  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics]
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/5c2ca20a74980408a9cf346d81cc9c8c5fb75b", inode=260438292, flags=110100, id=17015336): is_created, is_file, is_hardlink
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/5c2ca20a74980408a9cf346d81cc9c8c5fb75b", inode=260438292, flags=110100, id=17015336): is_created, is_file, is_hardlink
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67", inode=260438291, flags=20500, id=17015339): is_created, is_directory, is_inode_meta_mod
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67", inode=260438291, flags=20500, id=17015339): is_created, is_directory, is_inode_meta_mod
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/tmp_obj_Iwd0qD", inode=260438292, flags=111300, id=17015342): is_coalesced, is_created, is_file, is_hardlink, is_modified, is_removed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/tmp_obj_Iwd0qD", inode=260438292, flags=111300, id=17015342): is_coalesced, is_created, is_file, is_hardlink, is_modified, is_removed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13/fed039fc78fc54faf61744c94faa7c4f1a6020", inode=260438295, flags=110100, id=17015351): is_created, is_file, is_hardlink
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13/fed039fc78fc54faf61744c94faa7c4f1a6020", inode=260438295, flags=110100, id=17015351): is_created, is_file, is_hardlink
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13", inode=259913426, flags=20400, id=17015354): is_directory, is_inode_meta_mod
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13", inode=259913426, flags=20400, id=17015354): is_directory, is_inode_meta_mod
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13/tmp_obj_rw8kEh", inode=260438295, flags=111300, id=17015357): is_coalesced, is_created, is_file, is_hardlink, is_modified, is_removed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13/tmp_obj_rw8kEh", inode=260438295, flags=111300, id=17015357): is_coalesced, is_created, is_file, is_hardlink, is_modified, is_removed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock", inode=260438290, flags=11900, id=17015363): is_coalesced, is_created, is_file, is_modified, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock", inode=260438290, flags=11900, id=17015363): is_coalesced, is_created, is_file, is_modified, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438290, flags=10800, id=17015364): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438290, flags=10800, id=17015364): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438289, flags=10800, id=17015365): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438289, flags=10800, id=17015365): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/COMMIT_EDITMSG", inode=258493936, flags=11400, id=17015371): is_file, is_inode_meta_mod, is_modified
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/COMMIT_EDITMSG", inode=258493936, flags=11400, id=17015371): is_file, is_inode_meta_mod, is_modified
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/tmp_obj_cUZ9KZ", inode=260438298, flags=10100, id=17015374): is_created, is_file
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/tmp_obj_cUZ9KZ", inode=260438298, flags=10100, id=17015374): is_created, is_file
+2026-04-28 21:55:44 [DEBUG   ] drop event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/5c2ca20a74980408a9cf346d81cc9c8c5fb75b', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/5c2ca20a74980408a9cf346d81cc9c8c5fb75b', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67', dest_path='', event_type='created', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67', dest_path='', event_type='created', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/tmp_obj_Iwd0qD', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/tmp_obj_Iwd0qD', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/tmp_obj_Iwd0qD', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/tmp_obj_Iwd0qD', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13/fed039fc78fc54faf61744c94faa7c4f1a6020', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13/fed039fc78fc54faf61744c94faa7c4f1a6020', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13/tmp_obj_rw8kEh', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13/tmp_obj_rw8kEh', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13/tmp_obj_rw8kEh', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13/tmp_obj_rw8kEh', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/13', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] Destination event for rename is NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438290, flags=10800, id=17015364)
+2026-04-28 21:55:44 [DEBUG   ] Destination event for rename is NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438290, flags=10800, id=17015364)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileMovedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', event_type='moved', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileMovedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', event_type='moved', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/COMMIT_EDITMSG', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/COMMIT_EDITMSG', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/tmp_obj_cUZ9KZ', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/tmp_obj_cUZ9KZ', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/6c433a4aa02077c0bb884777cce271bd0ae41d", inode=260438298, flags=110100, id=17015380): is_created, is_file, is_hardlink
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/6c433a4aa02077c0bb884777cce271bd0ae41d", inode=260438298, flags=110100, id=17015380): is_created, is_file, is_hardlink
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67", inode=260438291, flags=20500, id=17015383): is_created, is_directory, is_inode_meta_mod
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67", inode=260438291, flags=20500, id=17015383): is_created, is_directory, is_inode_meta_mod
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/tmp_obj_cUZ9KZ", inode=260438298, flags=111300, id=17015386): is_coalesced, is_created, is_file, is_hardlink, is_modified, is_removed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/tmp_obj_cUZ9KZ", inode=260438298, flags=111300, id=17015386): is_coalesced, is_created, is_file, is_hardlink, is_modified, is_removed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/logs/HEAD", inode=258493944, flags=11000, id=17015398): is_file, is_modified
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/logs/HEAD", inode=258493944, flags=11000, id=17015398): is_file, is_modified
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/logs/refs/heads/main", inode=258493947, flags=11000, id=17015401): is_file, is_modified
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/logs/refs/heads/main", inode=258493947, flags=11000, id=17015401): is_file, is_modified
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main.lock", inode=260438302, flags=11900, id=17015404): is_coalesced, is_created, is_file, is_modified, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main.lock", inode=260438302, flags=11900, id=17015404): is_coalesced, is_created, is_file, is_modified, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main", inode=260438302, flags=10800, id=17015405): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main", inode=260438302, flags=10800, id=17015405): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main", inode=260437922, flags=10800, id=17015406): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main", inode=260437922, flags=10800, id=17015406): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/HEAD.lock", inode=260438301, flags=10300, id=17015409): is_coalesced, is_created, is_file, is_removed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/HEAD.lock", inode=260438301, flags=10300, id=17015409): is_coalesced, is_created, is_file, is_removed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/AUTO_MERGE.lock", inode=260438303, flags=10300, id=17015418): is_coalesced, is_created, is_file, is_removed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/packed-refs.lock", inode=260438304, flags=10300, id=17015421): is_coalesced, is_created, is_file, is_removed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/AUTO_MERGE.lock", inode=260438303, flags=10300, id=17015418): is_coalesced, is_created, is_file, is_removed
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/packed-refs.lock", inode=260438304, flags=10300, id=17015421): is_coalesced, is_created, is_file, is_removed
+2026-04-28 21:55:44 [DEBUG   ] drop event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/tmp_obj_cUZ9KZ', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/tmp_obj_cUZ9KZ', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/tmp_obj_cUZ9KZ', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67/tmp_obj_cUZ9KZ', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/logs/HEAD', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/67', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/logs/refs/heads/main', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/logs/HEAD', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/logs/refs/heads/main', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] Destination event for rename is NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main", inode=260438302, flags=10800, id=17015405)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileMovedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main.lock', dest_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main', event_type='moved', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] Destination event for rename is NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main", inode=260438302, flags=10800, id=17015405)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileMovedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main.lock', dest_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main', event_type='moved', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads/main', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/HEAD.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/refs/heads', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/HEAD.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/HEAD.lock', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/HEAD.lock', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/AUTO_MERGE.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/AUTO_MERGE.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/AUTO_MERGE.lock', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/AUTO_MERGE.lock', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/packed-refs.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/packed-refs.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/packed-refs.lock', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/packed-refs.lock', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ]   stdout: [main 676c433] auto-push: 6 files changed [2026-04-28 21:55:44]
+ 6 files changed, 1739 insertions(+)
+ rename README.md => Previous Versions/README.md (100%)
+ rename auto_git_pushv6.py => Previous Versions/auto_git_pushv6.py (100%)
+ create mode 100644 auto_git_pushv7.py
+ create mode 100644 watcher.log
+2026-04-28 21:55:44 [INFO    ] [GitHub AutoPush Analytics] Pull --rebase before push…
+2026-04-28 21:55:44 [DEBUG   ]   $ git pull --rebase origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics]
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/maintenance.lock", inode=260438305, flags=10300, id=17015427): is_coalesced, is_created, is_file, is_removed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/maintenance.lock", inode=260438305, flags=10300, id=17015427): is_coalesced, is_created, is_file, is_removed
+2026-04-28 21:55:44 [DEBUG   ] drop event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/maintenance.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/maintenance.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/maintenance.lock', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects/maintenance.lock', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/objects', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ]   stderr: error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+2026-04-28 21:55:44 [WARNING ] [GitHub AutoPush Analytics] pull --rebase issue: error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+2026-04-28 21:55:44 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics]
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock", inode=260438306, flags=11900, id=17015436): is_coalesced, is_created, is_file, is_modified, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock", inode=260438306, flags=11900, id=17015436): is_coalesced, is_created, is_file, is_modified, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438306, flags=10800, id=17015437): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438306, flags=10800, id=17015437): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438290, flags=10800, id=17015438): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438290, flags=10800, id=17015438): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] drop event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] Destination event for rename is NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438306, flags=10800, id=17015437)
+2026-04-28 21:55:44 [DEBUG   ] Destination event for rename is NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438306, flags=10800, id=17015437)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileMovedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', event_type='moved', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileMovedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', event_type='moved', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ]   stdout: M watcher.log
+2026-04-28 21:55:44 [WARNING ] [GitHub AutoPush Analytics] Rebase issue but no conflicted files found.
+2026-04-28 21:55:44 [DEBUG   ]   $ git rebase --abort  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics]
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock", inode=260438307, flags=11900, id=17015447): is_coalesced, is_created, is_file, is_modified, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock", inode=260438307, flags=11900, id=17015447): is_coalesced, is_created, is_file, is_modified, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438307, flags=10800, id=17015448): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438307, flags=10800, id=17015448): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438306, flags=10800, id=17015449): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438306, flags=10800, id=17015449): is_file, is_renamed
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] Destination event for rename is NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438307, flags=10800, id=17015448)
+2026-04-28 21:55:44 [DEBUG   ] Destination event for rename is NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index", inode=260438307, flags=10800, id=17015448)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileMovedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', event_type='moved', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileMovedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index.lock', dest_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', event_type='moved', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event FileDeletedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git/index', dest_path='', event_type='deleted', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] drop event DirModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.git', dest_path='', event_type='modified', is_directory=True, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ]   stderr: fatal: no rebase in progress
+2026-04-28 21:55:44 [ERROR   ] [GitHub AutoPush Analytics] Rebase not resolved — skipping push.
+2026-04-28 21:55:44 [INFO    ] [GitHub AutoPush Analytics] Push result: failed (0.16s) — rebase conflict unresolved: error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash the
+2026-04-28 21:55:44 [DEBUG   ] Push log written: status=failed file=README.md
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/push_log.csv", inode=260435795, flags=11000, id=17015452): is_file, is_modified
+2026-04-28 21:55:44 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/push_log.csv", inode=260435795, flags=11000, id=17015452): is_file, is_modified
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/push_log.csv', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/push_log.csv', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 21:55:44 [DEBUG   ] [GitHub AutoPush Analytics] Cooldown active, skipping /Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/push_log.csv
+2026-04-28 22:04:02 [INFO    ] Stopping…
+2026-04-28 22:04:02 [INFO    ] Done.
+2026-04-28 22:04:09 [INFO    ] ============================================================
+2026-04-28 22:04:09 [INFO    ] Auto Git Pusher v4 starting
+2026-04-28 22:04:09 [INFO    ]   Config CSV : repos_config.csv
+2026-04-28 22:04:09 [INFO    ]   Push log   : push_log.csv
+2026-04-28 22:04:09 [INFO    ]   Watcher log: watcher.log
+2026-04-28 22:04:09 [INFO    ] ============================================================
+2026-04-28 22:04:09 [INFO    ] Loaded 10 repo(s) from repos_config.csv
+2026-04-28 22:04:09 [INFO    ] [TestWatcher] Setting up repo…
+2026-04-28 22:04:09 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-04-28 22:04:09 [DEBUG   ]   stdout: https://github.com/deka1105/TestWatcher.git
+2026-04-28 22:04:09 [INFO    ] [TestWatcher] Repo ready at /Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher
+2026-04-28 22:04:09 [INFO    ] [TestWatcher] Startup sync — checking for offline changes…
+2026-04-28 22:04:09 [DEBUG   ]   $ git pull --rebase origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-04-28 22:04:09 [DEBUG   ]   stdout: Already up to date.
+2026-04-28 22:04:09 [DEBUG   ]   stderr: From https://github.com/deka1105/TestWatcher
+ * branch            HEAD       -> FETCH_HEAD
+2026-04-28 22:04:09 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-04-28 22:04:09 [INFO    ] [TestWatcher] Startup sync: nothing to push — already up to date.
+2026-04-28 22:04:09 [INFO    ] [TestWatcher] Watching: /Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher
+2026-04-28 22:04:09 [INFO    ] [MultistockDashboard] Setting up repo…
+2026-04-28 22:04:09 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-04-28 22:04:09 [DEBUG   ]   stdout: https://github.com/deka1105/MultistockDashboard.git
+2026-04-28 22:04:09 [INFO    ] [MultistockDashboard] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard
+2026-04-28 22:04:09 [INFO    ] [MultistockDashboard] Startup sync — checking for offline changes…
+2026-04-28 22:04:09 [DEBUG   ]   $ git pull --rebase origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-04-28 22:04:09 [DEBUG   ]   stderr: error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+2026-04-28 22:04:09 [WARNING ] [MultistockDashboard] Startup pull --rebase issue: error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+2026-04-28 22:04:09 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-04-28 22:04:09 [DEBUG   ]   stdout: M .DS_Store
+ M Files/.DS_Store
+?? Files/stockdash2-8/.gitignore
+?? Files/stockdash2-8/README.md
+?? Files/stockdash2-8/backend/
+?? Files/stockdash2-8/docker-compose.yml
+?? Files/stockdash2-8/frontend/src/lib/queryClient.ts
+?? Files/stockdash2-8/frontend/src/pages/
+?? Files/stockdash2-8/frontend/src/store/
+2026-04-28 22:04:09 [WARNING ] [MultistockDashboard] Rebase issue but no conflicted files found.
+2026-04-28 22:04:09 [DEBUG   ]   $ git rebase --abort  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-04-28 22:04:09 [DEBUG   ]   stderr: fatal: no rebase in progress
+2026-04-28 22:04:09 [ERROR   ] [MultistockDashboard] Startup sync aborted due to unresolvable conflict.
+2026-04-28 22:04:09 [INFO    ] [MultistockDashboard] Watching: /Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard
+2026-04-28 22:04:09 [INFO    ] [PlayBooks] Setting up repo…
+2026-04-28 22:04:09 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-04-28 22:04:10 [DEBUG   ]   stdout: github.com/deka1105/Playbooks
+2026-04-28 22:04:10 [WARNING ] [PlayBooks] Remote URL mismatch (expected https://github.com/deka1105/Playbooks.git)
+2026-04-28 22:04:10 [INFO    ] [PlayBooks] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day0
+2026-04-28 22:04:10 [INFO    ] [PlayBooks] Startup sync — checking for offline changes…
+2026-04-28 22:04:10 [DEBUG   ]   $ git pull --rebase origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-04-28 22:04:10 [DEBUG   ]   stderr: fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+2026-04-28 22:04:10 [WARNING ] [PlayBooks] Startup pull --rebase issue: fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+2026-04-28 22:04:10 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-04-28 22:04:10 [WARNING ] [PlayBooks] Rebase issue but no conflicted files found.
+2026-04-28 22:04:10 [DEBUG   ]   $ git rebase --abort  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-04-28 22:04:10 [DEBUG   ]   stderr: fatal: no rebase in progress
+2026-04-28 22:04:10 [ERROR   ] [PlayBooks] Startup sync aborted due to unresolvable conflict.
+2026-04-28 22:04:10 [INFO    ] [PlayBooks] Watching: /Users/shubhamarundekatey/ClaudeCode/day0
+2026-04-28 22:04:10 [INFO    ] [GitHub AutoPush Analytics] Setting up repo…
+2026-04-28 22:04:10 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics]
+2026-04-28 22:04:10 [DEBUG   ]   stdout: https://github.com/deka1105/GitHub-AutoPush-Analytics.git
+2026-04-28 22:04:10 [INFO    ] [GitHub AutoPush Analytics] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics
+2026-04-28 22:04:10 [INFO    ] [GitHub AutoPush Analytics] Startup sync — checking for offline changes…
+2026-04-28 22:04:10 [DEBUG   ]   $ git pull --rebase origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics]
+2026-04-28 22:04:10 [DEBUG   ]   stderr: error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+2026-04-28 22:04:10 [WARNING ] [GitHub AutoPush Analytics] Startup pull --rebase issue: error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+2026-04-28 22:04:10 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics]
+2026-04-28 22:04:10 [DEBUG   ]   stdout: M push_log.csv
+ M watcher.log
+2026-04-28 22:04:10 [WARNING ] [GitHub AutoPush Analytics] Rebase issue but no conflicted files found.
+2026-04-28 22:04:10 [DEBUG   ]   $ git rebase --abort  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics]
+2026-04-28 22:04:10 [DEBUG   ]   stderr: fatal: no rebase in progress
+2026-04-28 22:04:10 [ERROR   ] [GitHub AutoPush Analytics] Startup sync aborted due to unresolvable conflict.
+2026-04-28 22:04:10 [INFO    ] [GitHub AutoPush Analytics] Watching: /Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics
+2026-04-28 22:04:10 [INFO    ] [WarehouseFlow] Setting up repo…
+2026-04-28 22:04:10 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day11/WarehouseFlow]
+2026-04-28 22:04:10 [DEBUG   ]   stdout: https://github.com/deka1105/WarehouseFlow.git
+2026-04-28 22:04:10 [INFO    ] [WarehouseFlow] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day11/WarehouseFlow
+2026-04-28 22:04:10 [INFO    ] [WarehouseFlow] Startup sync — checking for offline changes…
+2026-04-28 22:04:10 [DEBUG   ]   $ git pull --rebase origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day11/WarehouseFlow]
+2026-04-28 22:04:10 [DEBUG   ]   stdout: Already up to date.
+2026-04-28 22:04:10 [DEBUG   ]   stderr: From https://github.com/deka1105/WarehouseFlow
+ * branch            HEAD       -> FETCH_HEAD
+2026-04-28 22:04:10 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/day11/WarehouseFlow]
+2026-04-28 22:04:10 [INFO    ] [WarehouseFlow] Startup sync: nothing to push — already up to date.
+2026-04-28 22:04:10 [INFO    ] [WarehouseFlow] Watching: /Users/shubhamarundekatey/ClaudeCode/day11/WarehouseFlow
+2026-04-28 22:04:10 [INFO    ] [ImageFix] Setting up repo…
+2026-04-28 22:04:10 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day8/ImageFix]
+2026-04-28 22:04:10 [DEBUG   ]   stdout: https://github.com/deka1105/Image-Fix.git
+2026-04-28 22:04:10 [INFO    ] [ImageFix] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day8/ImageFix
+2026-04-28 22:04:10 [INFO    ] [ImageFix] Startup sync — checking for offline changes…
+2026-04-28 22:04:10 [DEBUG   ]   $ git pull --rebase origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day8/ImageFix]
+2026-04-28 22:04:10 [DEBUG   ]   stderr: error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+2026-04-28 22:04:10 [WARNING ] [ImageFix] Startup pull --rebase issue: error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+2026-04-28 22:04:10 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/day8/ImageFix]
+2026-04-28 22:04:11 [DEBUG   ]   stdout: M .DS_Store
+2026-04-28 22:04:11 [WARNING ] [ImageFix] Rebase issue but no conflicted files found.
+2026-04-28 22:04:11 [DEBUG   ]   $ git rebase --abort  [cwd=/Users/shubhamarundekatey/ClaudeCode/day8/ImageFix]
+2026-04-28 22:04:11 [DEBUG   ]   stderr: fatal: no rebase in progress
+2026-04-28 22:04:11 [ERROR   ] [ImageFix] Startup sync aborted due to unresolvable conflict.
+2026-04-28 22:04:11 [INFO    ] [ImageFix] Watching: /Users/shubhamarundekatey/ClaudeCode/day8/ImageFix
+2026-04-28 22:04:11 [INFO    ] [TrashMan] Setting up repo…
+2026-04-28 22:04:11 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day12/TrashMan]
+2026-04-28 22:04:11 [DEBUG   ]   stdout: https://github.com/deka1105/TrashMan.git
+2026-04-28 22:04:11 [INFO    ] [TrashMan] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day12/TrashMan
+2026-04-28 22:04:11 [INFO    ] [TrashMan] Startup sync — checking for offline changes…
+2026-04-28 22:04:11 [DEBUG   ]   $ git pull --rebase origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day12/TrashMan]
+2026-04-28 22:04:11 [DEBUG   ]   stderr: error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+2026-04-28 22:04:11 [WARNING ] [TrashMan] Startup pull --rebase issue: error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+2026-04-28 22:04:11 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/day12/TrashMan]
+2026-04-28 22:04:11 [DEBUG   ]   stdout: M .DS_Store
+2026-04-28 22:04:11 [WARNING ] [TrashMan] Rebase issue but no conflicted files found.
+2026-04-28 22:04:11 [DEBUG   ]   $ git rebase --abort  [cwd=/Users/shubhamarundekatey/ClaudeCode/day12/TrashMan]
+2026-04-28 22:04:11 [DEBUG   ]   stderr: fatal: no rebase in progress
+2026-04-28 22:04:11 [ERROR   ] [TrashMan] Startup sync aborted due to unresolvable conflict.
+2026-04-28 22:04:11 [INFO    ] [TrashMan] Watching: /Users/shubhamarundekatey/ClaudeCode/day12/TrashMan
+2026-04-28 22:04:11 [INFO    ] [ShadowController] Setting up repo…
+2026-04-28 22:04:11 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day13/ShadowController]
+2026-04-28 22:04:11 [DEBUG   ]   stdout: https://github.com/deka1105/ShadowController.git
+2026-04-28 22:04:11 [INFO    ] [ShadowController] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day13/ShadowController
+2026-04-28 22:04:11 [INFO    ] [ShadowController] Startup sync — checking for offline changes…
+2026-04-28 22:04:11 [DEBUG   ]   $ git pull --rebase origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day13/ShadowController]
+2026-04-28 22:04:11 [DEBUG   ]   stdout: Already up to date.
+2026-04-28 22:04:11 [DEBUG   ]   stderr: From https://github.com/deka1105/ShadowController
+ * branch            HEAD       -> FETCH_HEAD
+2026-04-28 22:04:11 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/day13/ShadowController]
+2026-04-28 22:04:11 [INFO    ] [ShadowController] Startup sync: nothing to push — already up to date.
+2026-04-28 22:04:11 [INFO    ] [ShadowController] Watching: /Users/shubhamarundekatey/ClaudeCode/day13/ShadowController
+2026-04-28 22:04:11 [INFO    ] [SimuLogin] Setting up repo…
+2026-04-28 22:04:11 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day14/SimuLogin]
+2026-04-28 22:04:11 [DEBUG   ]   stdout: https://github.com/deka1105/SimuLogin.git
+2026-04-28 22:04:11 [INFO    ] [SimuLogin] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day14/SimuLogin
+2026-04-28 22:04:11 [INFO    ] [SimuLogin] Startup sync — checking for offline changes…
+2026-04-28 22:04:11 [DEBUG   ]   $ git pull --rebase origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day14/SimuLogin]
+2026-04-28 22:04:12 [DEBUG   ]   stdout: Already up to date.
+2026-04-28 22:04:12 [DEBUG   ]   stderr: From https://github.com/deka1105/SimuLogin
+ * branch            HEAD       -> FETCH_HEAD
+2026-04-28 22:04:12 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/day14/SimuLogin]
+2026-04-28 22:04:12 [INFO    ] [SimuLogin] Startup sync: nothing to push — already up to date.
+2026-04-28 22:04:12 [INFO    ] [SimuLogin] Watching: /Users/shubhamarundekatey/ClaudeCode/day14/SimuLogin
+2026-04-28 22:04:12 [INFO    ] [CodeFlow] Setting up repo…
+2026-04-28 22:04:12 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day14/CodeFlow]
+2026-04-28 22:04:12 [DEBUG   ]   stdout: https://github.com/deka1105/CodeFlow.git
+2026-04-28 22:04:12 [INFO    ] [CodeFlow] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day14/CodeFlow
+2026-04-28 22:04:12 [INFO    ] [CodeFlow] Startup sync — checking for offline changes…
+2026-04-28 22:04:12 [DEBUG   ]   $ git pull --rebase origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day14/CodeFlow]
+2026-04-28 22:04:12 [DEBUG   ]   stderr: error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+2026-04-28 22:04:12 [WARNING ] [CodeFlow] Startup pull --rebase issue: error: cannot pull with rebase: You have unstaged changes.
+error: Please commit or stash them.
+2026-04-28 22:04:12 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/day14/CodeFlow]
+2026-04-28 22:04:12 [DEBUG   ]   stdout: M .DS_Store
+2026-04-28 22:04:12 [WARNING ] [CodeFlow] Rebase issue but no conflicted files found.
+2026-04-28 22:04:12 [DEBUG   ]   $ git rebase --abort  [cwd=/Users/shubhamarundekatey/ClaudeCode/day14/CodeFlow]
+2026-04-28 22:04:12 [DEBUG   ]   stderr: fatal: no rebase in progress
+2026-04-28 22:04:12 [ERROR   ] [CodeFlow] Startup sync aborted due to unresolvable conflict.
+2026-04-28 22:04:12 [INFO    ] [CodeFlow] Watching: /Users/shubhamarundekatey/ClaudeCode/day14/CodeFlow
+2026-04-28 22:04:12 [INFO    ] Auto Git Pusher v4 running. Press Ctrl+C to stop.
+
+2026-04-28 22:04:12 [INFO    ] Detailed logs → /Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/watcher.log
+2026-04-28 22:08:07 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.DS_Store", inode=259150187, flags=11400, id=17047634): is_file, is_inode_meta_mod, is_modified
+2026-04-28 22:08:07 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.DS_Store", inode=259150187, flags=11400, id=17047634): is_file, is_inode_meta_mod, is_modified
+2026-04-28 22:08:07 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.DS_Store', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 22:08:07 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics/.DS_Store', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
+2026-04-28 22:08:44 [INFO    ] Stopping…
+2026-04-28 22:08:44 [INFO    ] Done.
+2026-04-28 22:09:01 [INFO    ] ============================================================
+2026-04-28 22:09:01 [INFO    ] Auto Git Pusher v4 starting
+2026-04-28 22:09:01 [INFO    ]   Config CSV : repos_config.csv
+2026-04-28 22:09:01 [INFO    ]   Push log   : push_log.csv
+2026-04-28 22:09:01 [INFO    ]   Watcher log: watcher.log
+2026-04-28 22:09:01 [INFO    ] ============================================================
+2026-04-28 22:09:01 [INFO    ] Loaded 10 repo(s) from repos_config.csv
+2026-04-28 22:09:01 [INFO    ] [TestWatcher] Setting up repo…
+2026-04-28 22:09:01 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-04-28 22:09:01 [DEBUG   ]   stdout: https://github.com/deka1105/TestWatcher.git
+2026-04-28 22:09:01 [INFO    ] [TestWatcher] Repo ready at /Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher
+2026-04-28 22:09:01 [INFO    ] [TestWatcher] Startup sync — checking for offline changes…
+2026-04-28 22:09:01 [DEBUG   ]   $ git stash --include-untracked  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-04-28 22:09:01 [DEBUG   ]   stdout: No local changes to save
+2026-04-28 22:09:01 [DEBUG   ]   $ git pull --rebase origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-04-28 22:09:01 [DEBUG   ]   stdout: Already up to date.
+2026-04-28 22:09:01 [DEBUG   ]   stderr: From https://github.com/deka1105/TestWatcher
+ * branch            HEAD       -> FETCH_HEAD
+2026-04-28 22:09:01 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-04-28 22:09:01 [INFO    ] [TestWatcher] Startup sync: nothing to push — already up to date.
+2026-04-28 22:09:01 [INFO    ] [TestWatcher] Watching: /Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher
+2026-04-28 22:09:01 [INFO    ] [MultistockDashboard] Setting up repo…
+2026-04-28 22:09:01 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-04-28 22:09:01 [DEBUG   ]   stdout: https://github.com/deka1105/MultistockDashboard.git
+2026-04-28 22:09:01 [INFO    ] [MultistockDashboard] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard
+2026-04-28 22:09:01 [INFO    ] [MultistockDashboard] Startup sync — checking for offline changes…
+2026-04-28 22:09:01 [DEBUG   ]   $ git stash --include-untracked  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-04-28 22:09:01 [DEBUG   ]   stdout: Saved working directory and index state WIP on main: e5993d1 auto-push: 80 files changed [2026-04-28 21:38:49]
+2026-04-28 22:09:01 [DEBUG   ] [MultistockDashboard] Startup: stashed working tree before pull
+2026-04-28 22:09:01 [DEBUG   ]   $ git pull --rebase origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-04-28 22:09:02 [DEBUG   ]   stdout: Already up to date.
+2026-04-28 22:09:02 [DEBUG   ]   stderr: From https://github.com/deka1105/MultistockDashboard
+ * branch            HEAD       -> FETCH_HEAD
+2026-04-28 22:09:02 [DEBUG   ]   $ git stash pop  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-04-28 22:09:02 [DEBUG   ]   stdout: On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .DS_Store
+	modified:   Files/.DS_Store
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Files/stockdash2-8/.gitignore
+	Files/s
+2026-04-28 22:09:02 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-04-28 22:09:02 [DEBUG   ]   stdout: M .DS_Store
+ M Files/.DS_Store
+?? Files/stockdash2-8/.gitignore
+?? Files/stockdash2-8/README.md
+?? Files/stockdash2-8/backend/
+?? Files/stockdash2-8/docker-compose.yml
+?? Files/stockdash2-8/frontend/src/lib/queryClient.ts
+?? Files/stockdash2-8/frontend/src/pages/
+?? Files/stockdash2-8/frontend/src/store/
+2026-04-28 22:09:02 [INFO    ] [MultistockDashboard] Startup sync: 9 offline change(s) → ['DS_Store', 'iles/.DS_Store', 'Files/stockdash2-8/.gitignore', 'Files/stockdash2-8/README.md', 'Files/stockdash2-8/backend/']
+2026-04-28 22:09:02 [DEBUG   ]   $ git add -A  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-04-28 22:09:02 [DEBUG   ]   $ git commit -m startup-sync: 9 offline changes [2026-04-28 22:09:02]
+
+Files changed while watcher was offline:
+- DS_Store
+- iles/.DS_Store
+- Files/stockdash2-8/.gitignore
+- Files/stockdash2-8/README.md
+- Files/stockdash2-8/backend/
+- Files/stockdash2-8/docker-compose.yml
+- Files/stockdash2-8/frontend/src/lib/queryClient.ts
+- Files/stockdash2-8/frontend/src/pages/
+- Files/stockdash2-8/frontend/src/store/  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-04-28 22:09:02 [DEBUG   ]   stdout: [main 26cf46f] startup-sync: 9 offline changes [2026-04-28 22:09:02]
+ 46 files changed, 3880 insertions(+)
+ create mode 100644 Files/stockdash2-8/.gitignore
+ create mode 100644 Files/stockdash2-8/README.md
+ create mode 100644 Files/stockdash2-8/backend/.env.example
+ create mode 100644 Files/stockdash2-8/backend/Dockerfile
+ create mode 100644 Files/stockdash2-8/backend/alembic.ini
+ create mode 1006
+2026-04-28 22:09:02 [DEBUG   ]   $ git push --set-upstream origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-04-28 22:09:03 [DEBUG   ]   stdout: branch 'main' set up to track 'origin/main'.
+2026-04-28 22:09:03 [DEBUG   ]   stderr: To https://github.com/deka1105/MultistockDashboard.git
+   e5993d1..26cf46f  HEAD -> main
+2026-04-28 22:09:03 [INFO    ] [MultistockDashboard] Startup sync: pushed 9 change(s) ✓
+2026-04-28 22:09:03 [DEBUG   ] Push log written: status=success file=DS_Store, iles/.DS_Store, Files/stockdash2-8/.gitignore, Files/stockdash2-8/README.md, Files/stockdash2-8/backend/
+2026-04-28 22:09:03 [INFO    ] [MultistockDashboard] Watching: /Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard
+2026-04-28 22:09:03 [INFO    ] [PlayBooks] Setting up repo…
+2026-04-28 22:09:03 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-04-28 22:09:03 [DEBUG   ]   stdout: github.com/deka1105/Playbooks
+2026-04-28 22:09:03 [WARNING ] [PlayBooks] Remote URL mismatch (expected https://github.com/deka1105/Playbooks.git)
+2026-04-28 22:09:03 [INFO    ] [PlayBooks] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day0
+2026-04-28 22:09:03 [INFO    ] [PlayBooks] Startup sync — checking for offline changes…
+2026-04-28 22:09:03 [DEBUG   ]   $ git stash --include-untracked  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-04-28 22:09:03 [DEBUG   ]   stdout: No local changes to save
+2026-04-28 22:09:03 [DEBUG   ]   $ git pull --rebase origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-04-28 22:09:03 [DEBUG   ]   stderr: fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+2026-04-28 22:09:03 [WARNING ] [PlayBooks] Startup pull --rebase issue: fatal: 'github.com/deka1105/Playbooks' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+2026-04-28 22:09:03 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-04-28 22:09:03 [WARNING ] [PlayBooks] Rebase issue but no conflicted files found.
+2026-04-28 22:09:03 [DEBUG   ]   $ git rebase --abort  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-04-28 22:09:03 [DEBUG   ]   stderr: fatal: no rebase in progress
+2026-04-28 22:09:03 [ERROR   ] [PlayBooks] Startup sync aborted due to unresolvable conflict.
+2026-04-28 22:09:03 [INFO    ] [PlayBooks] Watching: /Users/shubhamarundekatey/ClaudeCode/day0
+2026-04-28 22:09:03 [INFO    ] [GitHub AutoPush Analytics] Setting up repo…
+2026-04-28 22:09:03 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics]
+2026-04-28 22:09:03 [DEBUG   ]   stdout: https://github.com/deka1105/GitHub-AutoPush-Analytics.git
+2026-04-28 22:09:03 [INFO    ] [GitHub AutoPush Analytics] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics
+2026-04-28 22:09:03 [INFO    ] [GitHub AutoPush Analytics] Startup sync — checking for offline changes…
+2026-04-28 22:09:03 [DEBUG   ]   $ git stash --include-untracked  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub AutoPush Analytics]

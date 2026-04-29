@@ -508,3 +508,5 @@ hint: Updates were rejected because the tip of your current branch is behind
 hint: its remote counterpart. If you want to integrate the remote changes,
 hint: use 'git pull' before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details. --END--"
+2026-04-28 21:55:44,GitHub AutoPush Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,README.md,moved,failed,rebase conflict unresolved: error: cannot pull with rebase: You have unstaged changes.\nerror: Please commit or stash them. --END--
+2026-04-28 22:09:03,MultistockDashboard,https://github.com/deka1105/MultistockDashboard.git,"DS_Store, iles/.DS_Store, Files/stockdash2-8/.gitignore, Files/stockdash2-8/README.md, Files/stockdash2-8/backend/",startup-sync,success,startup-sync: 9 offline changes [2026-04-28 22:09:02] --END--
