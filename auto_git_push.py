@@ -38,33 +38,102 @@ from watchdog.events import FileSystemEventHandler
 # Logging setup — console + rotating file
 # ══════════════════════════════════════════════════════════════════════════════
 
-LOG_FORMAT      = "%(asctime)s [%(levelname)-8s] %(message)s"
-LOG_DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
+LOG_DATE_FORMAT = "%H:%M:%S"   # console shows time only; file gets full timestamp
+LOG_FILE_FORMAT = "%(asctime)s [%(levelname)-8s] %(message)s"
+LOG_FILE_DATE   = "%Y-%m-%d %H:%M:%S"
+
+# ── ANSI colour palette ───────────────────────────────────────────────────────
+_R = "[0m"          # reset
+_BOLD = "[1m"
+_DIM  = "[2m"
+
+_LEVEL_COLOURS = {
+    "DEBUG"   : "[38;5;240m",   # dark grey
+    "INFO"    : "[38;5;39m",    # sky blue
+    "WARNING" : "[38;5;214m",   # amber
+    "ERROR"   : "[38;5;196m",   # red
+    "CRITICAL": "[48;5;196m[97m",  # red bg, white text
+}
+
+_REPO_COLOUR = "[38;5;141m"   # soft purple for [RepoName]
+_TIME_COLOUR = "[38;5;244m"   # mid grey for timestamp
+_MSG_COLOURS = {
+    "✓"   : "[38;5;82m",    # bright green — success
+    "Push": "[38;5;39m",    # blue
+    "Comm": "[38;5;75m",    # lighter blue — committing
+    "Stag": "[38;5;244m",   # grey — staging
+    "Pull": "[38;5;220m",   # yellow
+    "Noth": "[38;5;240m",   # dark grey — nothing to commit
+    "CREA": "[38;5;82m",    # green — file created
+    "MODI": "[38;5;75m",    # blue — file modified
+    "DELE": "[38;5;196m",   # red — file deleted
+    "MOVE": "[38;5;214m",   # amber — file moved
+}
+
+import re as _re
+_REPO_PAT = _re.compile(r"^\[([^\]]+)\]\s*(.*)")
+
+
+class ColourFormatter(logging.Formatter):
+    """
+    Console formatter:
+        HH:MM:SS  LEVEL  [RepoName]  message text
+    Each part has its own colour. Message text is coloured by keyword.
+    File/plain formatter stays plain (no ANSI codes).
+    """
+    def format(self, record: logging.LogRecord) -> str:
+        ts    = self.formatTime(record, LOG_DATE_FORMAT)
+        level = record.levelname
+        lc    = _LEVEL_COLOURS.get(level, "")
+        level_tag = f"{lc}{_BOLD}{'▶' if level == 'INFO' else '⚠' if level == 'WARNING' else '✖' if level == 'ERROR' else '●'} {level:<8}{_R}"
+
+        msg   = record.getMessage()
+
+        # Separate [RepoName] from the rest
+        m = _REPO_PAT.match(msg)
+        if m:
+            repo, body = m.group(1), m.group(2)
+            repo_part  = f"{_REPO_COLOUR}{_BOLD}[{repo}]{_R}"
+        else:
+            repo_part  = ""
+            body       = msg
+
+        # Colour the message body by leading keyword
+        body_colour = _R
+        for kw, colour in _MSG_COLOURS.items():
+            if body.startswith(kw):
+                body_colour = colour
+                break
+
+        time_part = f"{_TIME_COLOUR}{ts}{_R}"
+        body_part = f"{body_colour}{body}{_R}"
+
+        if repo_part:
+            return f"{time_part}  {level_tag}  {repo_part}  {body_part}"
+        return f"{time_part}  {level_tag}  {body_part}"
+
 
 def setup_logging(logfile: str = "watcher.log") -> logging.Logger:
     """
-    Configure root logger with:
-      - Console handler  (INFO+, coloured level tags)
-      - Rotating file handler (DEBUG+, max 5 MB × 3 backups)
-    Returns the named logger for this module.
+    Configure root logger:
+      Console  → INFO+,  coloured, time-only timestamp
+      Log file → DEBUG+, plain,    full date+time timestamp, rotating 5 MB × 3
     """
     root = logging.getLogger()
     root.setLevel(logging.DEBUG)
 
-    fmt = logging.Formatter(LOG_FORMAT, datefmt=LOG_DATE_FORMAT)
-
-    # Console — INFO and above
+    # Console — coloured
     ch = logging.StreamHandler()
     ch.setLevel(logging.INFO)
-    ch.setFormatter(fmt)
+    ch.setFormatter(ColourFormatter(datefmt=LOG_DATE_FORMAT))
     root.addHandler(ch)
 
-    # Rotating file — DEBUG and above (captures everything)
+    # Rotating file — plain text, full timestamps
     fh = logging.handlers.RotatingFileHandler(
         logfile, maxBytes=5 * 1024 * 1024, backupCount=3, encoding="utf-8"
     )
     fh.setLevel(logging.DEBUG)
-    fh.setFormatter(fmt)
+    fh.setFormatter(logging.Formatter(LOG_FILE_FORMAT, datefmt=LOG_FILE_DATE))
     root.addHandler(fh)
 
     return logging.getLogger(__name__)
@@ -452,16 +521,23 @@ def git_add_commit_push(
             _log("skipped", f"oversized files removed: {', '.join(oversized)}")
             return
 
+    # Verify something is actually staged before committing
+    _, cached_out, _ = run(["git", "diff", "--cached", "--name-only"], cwd=local_path)
+    if not cached_out.strip():
+        log.info(f"[{repo_name}] Nothing staged after git add (files may be gitignored).")
+        return
+
     # Build commit message
     ts  = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     msg = build_commit_message(local_path, ts)
     subject_line = msg.splitlines()[0]
     log.info(f"[{repo_name}] Committing: {subject_line}")
 
-    code, _, err = run(["git", "commit", "-m", msg], cwd=local_path)
+    code, out, err = run(["git", "commit", "-m", msg], cwd=local_path)
     if code != 0:
-        log.error(f"[{repo_name}] git commit failed: {err}")
-        _log("error", f"git commit failed: {err}")
+        reason = err.strip() or out.strip() or "unknown reason"
+        log.error(f"[{repo_name}] git commit failed: {reason}")
+        _log("error", f"git commit failed: {reason}")
         return
 
     # Stash any unstaged changes so pull --rebase has a clean working tree
