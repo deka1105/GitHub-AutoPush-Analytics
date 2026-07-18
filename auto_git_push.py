@@ -249,6 +249,19 @@ def commits_per_day_last_7(log_path: str) -> dict:
 # Live stats panel — per-day push counts pinned to the terminal's top-right
 # ══════════════════════════════════════════════════════════════════════════════
 
+# Row shades for the stats panel dates: darkest green for today, progressively
+# lighter (more washed-out) the further back the day is. Index = days ago.
+_DAY_SHADES = [
+    "\x1b[38;5;34m",    # today      — deep green
+    "\x1b[38;5;40m",
+    "\x1b[38;5;46m",
+    "\x1b[38;5;83m",
+    "\x1b[38;5;120m",
+    "\x1b[38;5;157m",
+    "\x1b[38;5;194m",   # 6 days ago — palest green
+]
+
+
 class StatsPanel:
     """
     Repaints a small box in the top-right corner of the terminal after every
@@ -287,15 +300,11 @@ class StatsPanel:
         border = _LEVEL_COLOURS["DEBUG"]
         lines  = [f"{border}┌{' Pushes · last 7 days '.center(inner, '─')}┐{_R}"]
         for d, n in counts.items():
-            bar  = "▇" * (max(1, round(n / peak * self.BAR_WIDTH)) if n else 0)
-            text = f" {d.strftime('%a %d')} {bar:<{self.BAR_WIDTH}} {n:>4} ".ljust(inner)[:inner]
-            if d == today:
-                body = f"{_MSG_COLOURS['✓']}{_BOLD}{text}{_R}"
-            elif n == 0:
-                body = f"{border}{text}{_R}"
-            else:
-                body = f"{_TIME_COLOUR}{text}{_R}"
-            lines.append(f"{border}│{_R}{body}{border}│{_R}")
+            bar   = "▇" * (max(1, round(n / peak * self.BAR_WIDTH)) if n else 0)
+            text  = f" {d.strftime('%a %d')} {bar:<{self.BAR_WIDTH}} {n:>4} ".ljust(inner)[:inner]
+            shade = _DAY_SHADES[min((today - d).days, len(_DAY_SHADES) - 1)]
+            bold  = _BOLD if d == today else ""
+            lines.append(f"{border}│{_R}{shade}{bold}{text}{_R}{border}│{_R}")
         lines.append(f"{border}├{'─' * inner}┤{_R}")
         total_text = f" Total {total:>{inner - 8}} "
         lines.append(f"{border}│{_R}{_BOLD}{total_text}{_R}{border}│{_R}")
@@ -576,8 +585,13 @@ def startup_sync(local_path: str, repo_name: str, repo_url: str, push_log_path: 
     if ss_stashed:
         log.debug(f"[{repo_name}] Startup: stashed working tree before pull")
 
+    # -c diff.ignoreSubmodules=all → dirty nested repos (gitlinks) can't be
+    # stashed and would otherwise fail rebase's clean-tree check forever.
+    # --autostash → files written between our stash and the rebase (e.g. an
+    # app appending to a log) get stashed by the rebase itself, closing the race.
     pull_code, _, pull_err = run(
-        ["git", "pull", "--rebase", "origin", "HEAD"], cwd=local_path
+        ["git", "-c", "diff.ignoreSubmodules=all", "pull", "--rebase",
+         "--autostash", "origin", "HEAD"], cwd=local_path
     )
     if pull_code != 0:
         if is_auth_or_network_error(pull_err):
@@ -770,8 +784,13 @@ def git_add_commit_push(
     if stashed:
         log.debug(f"[{repo_name}] Stashed working tree changes: {stash_out}")
 
+    # -c diff.ignoreSubmodules=all → dirty nested repos (gitlinks) can't be
+    # stashed and would otherwise fail rebase's clean-tree check forever.
+    # --autostash → files written between our stash and the rebase (e.g. an
+    # app appending to a log) get stashed by the rebase itself, closing the race.
     pull_code, _, pull_err = run(
-        ["git", "pull", "--rebase", "origin", "HEAD"], cwd=local_path
+        ["git", "-c", "diff.ignoreSubmodules=all", "pull", "--rebase",
+         "--autostash", "origin", "HEAD"], cwd=local_path
     )
     if pull_code != 0:
         if is_auth_or_network_error(pull_err):
