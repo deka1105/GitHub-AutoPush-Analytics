@@ -8,6 +8,7 @@ Auto Git Pusher  v4
 • Logs every push event to push_log.csv for analytics
 • Detailed rotating file logging to watcher.log
 • Auto-resolves rebase conflicts on append-only files (push_log.csv etc.)
+• Live panel pinned to the terminal's top-right showing pushes per day (7 days)
 
 CSV config format  (repos_config.csv):
     local_path, repo_url, repo_name
@@ -21,6 +22,7 @@ Usage:
 """
 
 import os
+import sys
 import csv
 import time
 import argparse
@@ -28,8 +30,9 @@ import logging
 import logging.handlers
 import threading
 import subprocess
+import shutil
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timedelta
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
@@ -38,7 +41,7 @@ from watchdog.events import FileSystemEventHandler
 # Logging setup — console + rotating file
 # ══════════════════════════════════════════════════════════════════════════════
 
-LOG_DATE_FORMAT = "%H:%M:%S"   # console shows time only; file gets full timestamp
+LOG_DATE_FORMAT = "%Y-%m-%d %H:%M:%S"   # console and file both show full date+time
 LOG_FILE_FORMAT = "%(asctime)s [%(levelname)-8s] %(message)s"
 LOG_FILE_DATE   = "%Y-%m-%d %H:%M:%S"
 
@@ -77,7 +80,7 @@ _REPO_PAT = _re.compile(r"^\[([^\]]+)\]\s*(.*)")
 class ColourFormatter(logging.Formatter):
     """
     Console formatter:
-        HH:MM:SS  LEVEL  [RepoName]  message text
+        YYYY-MM-DD HH:MM:SS  LEVEL  [RepoName]  message text
     Each part has its own colour. Message text is coloured by keyword.
     File/plain formatter stays plain (no ANSI codes).
     """
@@ -122,8 +125,8 @@ def setup_logging(logfile: str = "watcher.log") -> logging.Logger:
     root = logging.getLogger()
     root.setLevel(logging.DEBUG)
 
-    # Console — coloured
-    ch = logging.StreamHandler()
+    # Console — coloured, with live stats panel repaint
+    ch = PanelStreamHandler()
     ch.setLevel(logging.INFO)
     ch.setFormatter(ColourFormatter(datefmt=LOG_DATE_FORMAT))
     root.addHandler(ch)
@@ -186,17 +189,182 @@ def write_push_log(log_path: str, **fields):
         with open(log_path, "a", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=PUSH_LOG_HEADERS)
             writer.writerow(row)
+    if STATS_PANEL is not None:
+        STATS_PANEL.invalidate()
     log.debug(f"Push log written: status={row['status']} file={row['file_changed']}")
+
+
+def commits_last_7_days(log_path: str) -> int:
+    """Count successful pushes recorded in push_log.csv over the past 7 days."""
+    cutoff = datetime.now() - timedelta(days=7)
+    count = 0
+    try:
+        with PUSH_LOG_LOCK:
+            with open(log_path, newline="") as f:
+                for row in csv.DictReader(f):
+                    if (row.get("status") or "").strip() != "success":
+                        continue
+                    try:
+                        ts = datetime.strptime(
+                            (row.get("timestamp") or "").strip(), "%Y-%m-%d %H:%M:%S"
+                        )
+                    except ValueError:
+                        continue
+                    if ts >= cutoff:
+                        count += 1
+    except OSError as exc:
+        log.debug(f"Could not read push log for 7-day stat: {exc}")
+    return count
+
+
+def log_weekly_commits(log_path: str):
+    log.info(f"📊 Commits pushed in past 7 days: {commits_last_7_days(log_path)}")
+
+
+def commits_per_day_last_7(log_path: str) -> dict:
+    """Successful pushes per calendar day for the past 7 days (oldest first)."""
+    today = datetime.now().date()
+    counts = {today - timedelta(days=i): 0 for i in range(6, -1, -1)}
+    try:
+        with PUSH_LOG_LOCK:
+            with open(log_path, newline="") as f:
+                for row in csv.DictReader(f):
+                    if (row.get("status") or "").strip() != "success":
+                        continue
+                    try:
+                        ts = datetime.strptime(
+                            (row.get("timestamp") or "").strip(), "%Y-%m-%d %H:%M:%S"
+                        )
+                    except ValueError:
+                        continue
+                    d = ts.date()
+                    if d in counts:
+                        counts[d] += 1
+    except OSError:
+        pass  # keep zeros; may run inside a log-handler emit, so don't log here
+    return counts
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+# Live stats panel — per-day push counts pinned to the terminal's top-right
+# ══════════════════════════════════════════════════════════════════════════════
+
+class StatsPanel:
+    """
+    Repaints a small box in the top-right corner of the terminal after every
+    console log line (and periodically from the main loop), showing successful
+    pushes per day over the past 7 days. No-op when the stream isn't a TTY.
+    """
+    WIDTH     = 30            # total box width incl. borders
+    BAR_WIDTH = 10
+    CACHE_TTL = 60            # seconds between push_log.csv re-reads
+    MIN_COLS  = WIDTH + 50    # skip drawing on terminals too narrow to share
+
+    def __init__(self, push_log_path: str):
+        self.push_log_path = push_log_path
+        self._cache        = None
+        self._cache_time   = 0.0
+        self._draw_lock    = threading.Lock()
+
+    def invalidate(self):
+        """Force a CSV re-read on the next draw (called after each push)."""
+        self._cache_time = 0.0
+
+    def _counts(self) -> dict:
+        now = time.time()
+        if self._cache is None or now - self._cache_time > self.CACHE_TTL:
+            self._cache      = commits_per_day_last_7(self.push_log_path)
+            self._cache_time = now
+        return self._cache
+
+    def _render(self) -> list:
+        counts = self._counts()
+        inner  = self.WIDTH - 2
+        total  = sum(counts.values())
+        peak   = max(counts.values()) or 1
+        today  = datetime.now().date()
+
+        border = _LEVEL_COLOURS["DEBUG"]
+        lines  = [f"{border}┌{' Pushes · last 7 days '.center(inner, '─')}┐{_R}"]
+        for d, n in counts.items():
+            bar  = "▇" * (max(1, round(n / peak * self.BAR_WIDTH)) if n else 0)
+            text = f" {d.strftime('%a %d')} {bar:<{self.BAR_WIDTH}} {n:>4} ".ljust(inner)[:inner]
+            if d == today:
+                body = f"{_MSG_COLOURS['✓']}{_BOLD}{text}{_R}"
+            elif n == 0:
+                body = f"{border}{text}{_R}"
+            else:
+                body = f"{_TIME_COLOUR}{text}{_R}"
+            lines.append(f"{border}│{_R}{body}{border}│{_R}")
+        lines.append(f"{border}├{'─' * inner}┤{_R}")
+        total_text = f" Total {total:>{inner - 8}} "
+        lines.append(f"{border}│{_R}{_BOLD}{total_text}{_R}{border}│{_R}")
+        lines.append(f"{border}└{'─' * inner}┘{_R}")
+        return lines
+
+    def draw(self, stream=None):
+        stream = stream or sys.stderr
+        try:
+            if not stream.isatty():
+                return
+            cols = shutil.get_terminal_size().columns
+        except (OSError, ValueError, AttributeError):
+            return
+        if cols < self.MIN_COLS:
+            return
+        left = cols - self.WIDTH + 1
+        with self._draw_lock:
+            out = ["\x1b7"]                               # save cursor
+            for i, line in enumerate(self._render(), start=1):
+                out.append(f"\x1b[{i};{left}H{line}")     # paint row i at right edge
+            out.append("\x1b8")                           # restore cursor
+            try:
+                stream.write("".join(out))
+                stream.flush()
+            except (OSError, ValueError):
+                pass
+
+
+STATS_PANEL = None   # set in AutoGitPusher.start(); None until then
+
+
+class PanelStreamHandler(logging.StreamHandler):
+    """Console handler that repaints the stats panel after each log line."""
+    def emit(self, record):
+        super().emit(record)
+        if STATS_PANEL is not None:
+            STATS_PANEL.draw(self.stream)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
 # Git helpers
 # ══════════════════════════════════════════════════════════════════════════════
 
+# Absolute path to git: subprocess only takes the posix_spawn() fast path when
+# the executable has a directory component (no PATH search in posix_spawn).
+GIT_BIN = shutil.which("git") or "git"
+
 def run(cmd: list, cwd: str) -> tuple[int, str, str]:
     """Run a git command, log it at DEBUG level, return (code, stdout, stderr)."""
     log.debug(f"  $ {' '.join(cmd)}  [cwd={cwd}]")
-    result = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True)
+    # Never block on an interactive credential prompt. If git can't find a
+    # credential helper / stored token it fails fast with a clear error that
+    # we log, instead of hanging on "Username for 'https://github.com':".
+    env = {k: v for k, v in os.environ.items() if not k.startswith("Malloc")}
+    env["GIT_TERMINAL_PROMPT"] = "0"
+    env.setdefault("GIT_ASKPASS", "")
+    env.setdefault("SSH_ASKPASS", "")
+    # Use `git -C <dir>` instead of cwd=, an absolute git path, and
+    # close_fds=False so CPython spawns via posix_spawn() rather than fork().
+    # fork() trips libmalloc's at-fork handler on recent macOS, which spams
+    # "MallocStackLogging: can't turn off malloc stack logging" to the terminal.
+    if cmd and cmd[0] == "git":
+        cmd = [GIT_BIN, "-C", cwd] + cmd[1:]
+        result = subprocess.run(cmd, capture_output=True, text=True, env=env,
+                                close_fds=False)
+    else:
+        result = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True,
+                                env=env)
     if result.stdout.strip():
         log.debug(f"  stdout: {result.stdout.strip()[:400]}")
     if result.stderr.strip():
@@ -282,6 +450,31 @@ def ensure_gitignore(local_path: str, repo_name: str):
 
 
 
+def is_auth_or_network_error(err: str) -> bool:
+    """
+    True if a git pull/push failure is due to authentication or connectivity,
+    NOT a merge conflict. These need a stored token / network, not conflict
+    resolution, so they should be reported honestly instead of as "conflicts".
+    """
+    e = err.lower()
+    signals = (
+        "could not read username",
+        "terminal prompts disabled",
+        "authentication failed",
+        "invalid username or token",
+        "password authentication is not supported",
+        "permission denied",
+        "could not resolve host",
+        "could not resolve proxy",
+        "connection timed out",
+        "connection refused",
+        "failed to connect",
+        "does not appear to be a git repository",
+        "repository not found",
+    )
+    return any(s in e for s in signals)
+
+
 def resolve_rebase_conflict(local_path: str, repo_name: str) -> bool:
     """
     After a failed `git pull --rebase`, attempt to auto-resolve conflicts:
@@ -356,7 +549,11 @@ def ensure_repo(local_path: str, repo_url: str, repo_name: str) -> bool:
         if code != 0:
             run(["git", "remote", "add", "origin", repo_url], cwd=local_path)
         elif remote_url != repo_url:
-            log.warning(f"[{repo_name}] Remote URL mismatch (expected {repo_url})")
+            log.warning(
+                f"[{repo_name}] Remote URL mismatch "
+                f"(found {remote_url!r}, expected {repo_url!r}) — fixing"
+            )
+            run(["git", "remote", "set-url", "origin", repo_url], cwd=local_path)
 
     ensure_gitignore(local_path, repo_name)
     log.info(f"[{repo_name}] Repo ready at {local_path}")
@@ -383,6 +580,17 @@ def startup_sync(local_path: str, repo_name: str, repo_url: str, push_log_path: 
         ["git", "pull", "--rebase", "origin", "HEAD"], cwd=local_path
     )
     if pull_code != 0:
+        if is_auth_or_network_error(pull_err):
+            if ss_stashed:
+                run(["git", "stash", "pop"], cwd=local_path)
+            log.error(
+                f"[{repo_name}] Startup sync skipped — cannot reach remote "
+                f"(auth/network): {pull_err}"
+            )
+            write_push_log(push_log_path, repo_name=repo_name, repo_url=repo_url,
+                           file_changed="", event_type="startup-sync",
+                           status="failed", message=f"auth/network error: {pull_err}")
+            return
         log.warning(f"[{repo_name}] Startup pull --rebase issue: {pull_err}")
         if not resolve_rebase_conflict(local_path, repo_name):
             if ss_stashed:
@@ -402,16 +610,29 @@ def startup_sync(local_path: str, repo_name: str, repo_url: str, push_log_path: 
 
     changed_files = []
     for line in status_out.splitlines():
-        line = line.strip()
-        if line:
-            parts = line[3:].split(" -> ")
-            changed_files.append(parts[-1].strip())
+        if not line.strip():
+            continue
+        # Porcelain format is "XY PATH" (2 status chars + space); slice the raw
+        # line so paths keep their first character (don't strip() beforehand).
+        parts = line[3:].split(" -> ")
+        changed_files.append(parts[-1].strip())
 
     log.info(f"[{repo_name}] Startup sync: {len(changed_files)} offline change(s) → {changed_files[:5]}")
 
     code, _, err = run(["git", "add", "-A"], cwd=local_path)
     if code != 0:
         log.error(f"[{repo_name}] Startup sync: git add failed: {err}")
+        return
+
+    # Nothing actually staged? This happens when the only changes live inside
+    # nested/submodule repos (dirty content the parent can't stage) or when
+    # everything is gitignored. Skip gracefully instead of failing the commit.
+    _, cached_out, _ = run(["git", "diff", "--cached", "--name-only"], cwd=local_path)
+    if not cached_out.strip():
+        log.info(
+            f"[{repo_name}] Startup sync: nothing staged after git add "
+            "(changes may be inside submodules or gitignored) — skipping."
+        )
         return
 
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -495,6 +716,8 @@ def git_add_commit_push(
             file_changed=changed_file, event_type=event_type,
             status=status, message=msg,
         )
+        if status == "success":
+            log_weekly_commits(push_log_path)
 
     # Stage
     log.debug(f"[{repo_name}] Staging all changes…")
@@ -551,6 +774,12 @@ def git_add_commit_push(
         ["git", "pull", "--rebase", "origin", "HEAD"], cwd=local_path
     )
     if pull_code != 0:
+        if is_auth_or_network_error(pull_err):
+            if stashed:
+                run(["git", "stash", "pop"], cwd=local_path)
+            log.error(f"[{repo_name}] Cannot reach remote (auth/network): {pull_err}")
+            _log("failed", f"auth/network error: {pull_err}")
+            return
         log.warning(f"[{repo_name}] pull --rebase issue: {pull_err}")
         resolved = resolve_rebase_conflict(local_path, repo_name)
         if not resolved:
@@ -715,6 +944,9 @@ class AutoGitPusher:
             log.warning(f"{removed} removed from CSV (still watching until restart)")
 
     def start(self):
+        global STATS_PANEL
+        STATS_PANEL = StatsPanel(self.push_log_path)
+
         init_push_log(self.push_log_path)
 
         repos = load_csv(self.csv_path)
@@ -736,10 +968,21 @@ class AutoGitPusher:
         self.observer.start()
         log.info("Auto Git Pusher v4 running. Press Ctrl+C to stop.\n")
         log.info(f"Detailed logs → {logging.getLogger().handlers[1].baseFilename}")
+        log_weekly_commits(self.push_log_path)
 
+        STAT_INTERVAL  = 3600  # repeat the 7-day commit stat every hour
+        PANEL_INTERVAL = 5     # keep the stats panel painted even when idle
+        next_stat  = time.time() + STAT_INTERVAL
+        next_panel = time.time() + PANEL_INTERVAL
         try:
             while True:
                 time.sleep(1)
+                if time.time() >= next_panel:
+                    next_panel = time.time() + PANEL_INTERVAL
+                    STATS_PANEL.draw()
+                if time.time() >= next_stat:
+                    next_stat = time.time() + STAT_INTERVAL
+                    log_weekly_commits(self.push_log_path)
         except KeyboardInterrupt:
             log.info("Stopping…")
             self.observer.stop()
@@ -765,6 +1008,14 @@ def main():
     if not os.path.exists(args.csv):
         log.error(f"CSV not found: {args.csv}")
         return
+
+    # Running under sudo uses root's HOME/keychain, so the user's stored
+    # GitHub token is invisible and git falls back to interactive prompts.
+    if os.geteuid() == 0 or os.environ.get("SUDO_USER"):
+        log.warning(
+            "Running as root (sudo) — git can't see your keychain credentials "
+            "and will fail auth. Run WITHOUT sudo: python auto_git_push.py ..."
+        )
 
     log.info("=" * 60)
     log.info("Auto Git Pusher v4 starting")
