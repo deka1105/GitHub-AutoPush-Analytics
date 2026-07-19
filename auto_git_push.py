@@ -108,7 +108,10 @@ class ColourFormatter(logging.Formatter):
                 body_colour = colour
                 break
 
-        time_part = f"{_TIME_COLOUR}{ts}{_R}"
+        # Shade the timestamp by the record's age: today darkest → older lighter
+        age = (datetime.now().date() - datetime.fromtimestamp(record.created).date()).days
+        ts_colour = _DAY_SHADES[min(max(age, 0), len(_DAY_SHADES) - 1)]
+        time_part = f"{ts_colour}{ts}{_R}"
         body_part = f"{body_colour}{body}{_R}"
 
         if repo_part:
@@ -249,8 +252,8 @@ def commits_per_day_last_7(log_path: str) -> dict:
 # Live stats panel — per-day push counts pinned to the terminal's top-right
 # ══════════════════════════════════════════════════════════════════════════════
 
-# Row shades for the stats panel dates: darkest green for today, progressively
-# lighter (more washed-out) the further back the day is. Index = days ago.
+# Shades for log-line timestamps: darkest green for lines logged today,
+# progressively lighter the older the line's date is. Index = days ago.
 _DAY_SHADES = [
     "\x1b[38;5;34m",    # today      — deep green
     "\x1b[38;5;40m",
@@ -300,11 +303,15 @@ class StatsPanel:
         border = _LEVEL_COLOURS["DEBUG"]
         lines  = [f"{border}┌{' Pushes · last 7 days '.center(inner, '─')}┐{_R}"]
         for d, n in counts.items():
-            bar   = "▇" * (max(1, round(n / peak * self.BAR_WIDTH)) if n else 0)
-            text  = f" {d.strftime('%a %d')} {bar:<{self.BAR_WIDTH}} {n:>4} ".ljust(inner)[:inner]
-            shade = _DAY_SHADES[min((today - d).days, len(_DAY_SHADES) - 1)]
-            bold  = _BOLD if d == today else ""
-            lines.append(f"{border}│{_R}{shade}{bold}{text}{_R}{border}│{_R}")
+            bar  = "▇" * (max(1, round(n / peak * self.BAR_WIDTH)) if n else 0)
+            text = f" {d.strftime('%a %d')} {bar:<{self.BAR_WIDTH}} {n:>4} ".ljust(inner)[:inner]
+            if d == today:
+                body = f"{_MSG_COLOURS['✓']}{_BOLD}{text}{_R}"
+            elif n == 0:
+                body = f"{border}{text}{_R}"
+            else:
+                body = f"{_TIME_COLOUR}{text}{_R}"
+            lines.append(f"{border}│{_R}{body}{border}│{_R}")
         lines.append(f"{border}├{'─' * inner}┤{_R}")
         total_text = f" Total {total:>{inner - 8}} "
         lines.append(f"{border}│{_R}{_BOLD}{total_text}{_R}{border}│{_R}")
