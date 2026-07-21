@@ -888,8 +888,8 @@ class ConfigCSVHandler(FileSystemEventHandler):
         self._reload_callback = reload_callback
         self._last_reload     = 0.0
 
-    def _trigger(self, event):
-        if os.path.abspath(event.src_path) != self._csv_path:
+    def _trigger(self, path: str):
+        if os.path.abspath(path) != self._csv_path:
             return
         now = time.time()
         if now - self._last_reload < 2:
@@ -898,8 +898,13 @@ class ConfigCSVHandler(FileSystemEventHandler):
         log.info("Config CSV changed — reloading…")
         self._reload_callback()
 
-    def on_modified(self, event): self._trigger(event)
-    def on_created(self, event):  self._trigger(event)
+    def on_modified(self, event): self._trigger(event.src_path)
+    def on_created(self, event):  self._trigger(event.src_path)
+    # Atomic-write editors (incl. this repo's own Edit tooling) save by writing
+    # a temp file then renaming it over the target — watchdog reports that as
+    # a move, not a modify/create, so it must be handled here too or the
+    # reload never fires and the CSV edit is silently ignored.
+    def on_moved(self, event):    self._trigger(event.dest_path)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
