@@ -1183,6 +1183,9 @@ def main():
             "and will fail auth. Run WITHOUT sudo: python auto_git_push.py ..."
         )
 
+    if live_ui:
+        live_ui.start()      # enter alt-screen + start the render thread
+
     log.info("=" * 60)
     log.info("Auto Git Pusher v4 starting")
     log.info(f"  Config CSV : {args.csv}")
@@ -1190,7 +1193,12 @@ def main():
     log.info(f"  Watcher log: {args.logfile}")
     log.info("=" * 60)
 
-    AutoGitPusher(csv_path=args.csv, push_log_path=args.log).start()
+    try:
+        AutoGitPusher(csv_path=args.csv, push_log_path=args.log,
+                      live_ui=live_ui).start()
+    finally:
+        if live_ui:
+            live_ui.stop()   # always restore the terminal, even on crash
 
 
 if __name__ == "__main__":
