@@ -137,10 +137,6 @@ class Stats:
         self.busiest = max(days.items(), key=lambda kv: kv[1]) if days else (today, 0)
         self.today   = days.get(today, 0)
 
-        # most recent rows (any status), newest first
-        self.recent = list(reversed(rows[-12:]))
-
-
 def _parse_day(ts: str | None):
     try:
         return datetime.strptime((ts or "").strip(), _TS_FMT).date()
