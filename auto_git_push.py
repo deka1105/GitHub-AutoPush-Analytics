@@ -367,6 +367,109 @@ class PanelStreamHandler(logging.StreamHandler):
 
 
 # ══════════════════════════════════════════════════════════════════════════════
+# Live split-screen UI — dashboard (left) + logs (right), driven by dashboard.py
+# ══════════════════════════════════════════════════════════════════════════════
+
+class _BufferHandler(logging.Handler):
+    """Feeds INFO+ log records into the LiveUI's log buffer (never prints)."""
+    def __init__(self, ui: "LiveUI"):
+        super().__init__()
+        self.ui = ui
+
+    def emit(self, record):
+        try:
+            ts = time.strftime("%H:%M:%S", time.localtime(record.created))
+            self.ui.push_log_line(ts, record.levelname, record.getMessage())
+        except Exception:       # logging must never raise
+            pass
+
+
+class LiveUI:
+    """
+    Full-screen renderer that repaints on its own thread:
+
+      • terminal wide  (cols >= split_cols) → analytics dashboard on the LEFT
+        half + live log tail on the RIGHT half
+      • terminal narrow (cols <  split_cols) → logs only, full width
+
+    All rendering is delegated to dashboard.py so the two stay in lockstep.
+    Active only on a TTY with dashboard.py importable; otherwise inert and the
+    watcher keeps its classic scrolling output.
+    """
+    def __init__(self, push_log_path: str, logfile: str, split_cols: int = 120,
+                 interval: float = 0.5):
+        self.push_log_path = push_log_path
+        self.logfile       = logfile
+        self.split_cols    = split_cols
+        self.interval      = interval
+        self._buf          = deque(maxlen=500)
+        self._stop         = threading.Event()
+        self._thread       = None
+        self._out          = sys.stdout
+        self._stats        = None
+        self._stats_mtime  = -1.0
+
+    # -- logging bridge --------------------------------------------------------
+    def handler(self) -> logging.Handler:
+        h = _BufferHandler(self)
+        h.setLevel(logging.INFO)
+        return h
+
+    def push_log_line(self, ts: str, level: str, msg: str):
+        self._buf.append((ts, level, msg))
+
+    # -- lifecycle -------------------------------------------------------------
+    def active(self) -> bool:
+        return _dash is not None and self._out.isatty()
+
+    def start(self) -> bool:
+        if not self.active():
+            return False
+        self._out.write("\x1b[?1049h\x1b[?25l\x1b[2J")   # alt screen, hide cursor, clear
+        self._out.flush()
+        self._thread = threading.Thread(target=self._loop, name="LiveUI", daemon=True)
+        self._thread.start()
+        return True
+
+    def stop(self):
+        self._stop.set()
+        if self._thread:
+            self._thread.join(timeout=2)
+        try:
+            self._out.write("\x1b[?25h\x1b[?1049l")       # show cursor, leave alt screen
+            self._out.flush()
+        except (OSError, ValueError):
+            pass
+
+    # -- render loop -----------------------------------------------------------
+    def _current_stats(self):
+        try:
+            mtime = os.path.getmtime(self.push_log_path)
+            if mtime != self._stats_mtime:
+                self._stats = _dash.Stats(_dash.load(self.push_log_path))
+                self._stats_mtime = mtime
+        except (OSError, csv.Error):
+            pass
+        return self._stats
+
+    def _loop(self):
+        while not self._stop.is_set():
+            try:
+                stats = self._current_stats()
+                logs  = list(self._buf)
+                cols, rows = shutil.get_terminal_size((80, 24))
+                self._out.write(_dash.frame(
+                    stats, logs, None, self.push_log_path, self.logfile,
+                    cols, rows, self.split_cols))
+                self._out.flush()
+            except (OSError, ValueError):
+                pass
+            except Exception:
+                pass          # a render glitch must never kill the watcher
+            self._stop.wait(self.interval)
+
+
+# ══════════════════════════════════════════════════════════════════════════════
 # Git helpers
 # ══════════════════════════════════════════════════════════════════════════════
 
