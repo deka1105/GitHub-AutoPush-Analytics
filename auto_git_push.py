@@ -1047,9 +1047,10 @@ def load_csv(csv_path: str) -> list[dict]:
 # ══════════════════════════════════════════════════════════════════════════════
 
 class AutoGitPusher:
-    def __init__(self, csv_path: str, push_log_path: str):
+    def __init__(self, csv_path: str, push_log_path: str, live_ui: "LiveUI" = None):
         self.csv_path      = csv_path
         self.push_log_path = push_log_path
+        self.live_ui       = live_ui
         self.observer      = Observer()
         self._watched: dict = {}
 
