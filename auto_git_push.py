@@ -1129,7 +1129,7 @@ class AutoGitPusher:
         try:
             while True:
                 time.sleep(1)
-                if time.time() >= next_panel:
+                if STATS_PANEL is not None and time.time() >= next_panel:
                     next_panel = time.time() + PANEL_INTERVAL
                     STATS_PANEL.draw()
                 if time.time() >= next_stat:
@@ -1152,10 +1152,24 @@ def main():
     parser.add_argument("--csv",     required=True,          help="Path to repos config CSV")
     parser.add_argument("--log",     default="push_log.csv", help="Push events CSV output path")
     parser.add_argument("--logfile", default="watcher.log",  help="Detailed log file path (default: watcher.log)")
+    parser.add_argument("--no-dashboard", action="store_true",
+                        help="Disable the live split-screen dashboard; use classic scrolling logs")
+    parser.add_argument("--split-cols", type=int, default=120,
+                        help="Min terminal width to show the dashboard beside the logs; "
+                             "narrower shows logs only (default: 120)")
     args = parser.parse_args()
 
+    # Build the live UI first (if wanted + possible) so its buffering handler
+    # captures the startup banner too. Inert on a non-TTY or if dashboard.py
+    # is unavailable, in which case the classic scrolling console is used.
+    live_ui = None
+    if not args.no_dashboard:
+        candidate = LiveUI(args.log, args.logfile, split_cols=args.split_cols)
+        if candidate.active():
+            live_ui = candidate
+
     global log
-    log = setup_logging(args.logfile)
+    log = setup_logging(args.logfile, console=live_ui.handler() if live_ui else None)
 
     if not os.path.exists(args.csv):
         log.error(f"CSV not found: {args.csv}")
