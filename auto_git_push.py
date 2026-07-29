@@ -128,19 +128,24 @@ class ColourFormatter(logging.Formatter):
         return f"{time_part}  {level_tag}  {body_part}"
 
 
-def setup_logging(logfile: str = "watcher.log") -> logging.Logger:
+def setup_logging(logfile: str = "watcher.log", console=None) -> logging.Logger:
     """
     Configure root logger:
       Console  → INFO+,  coloured, time-only timestamp
       Log file → DEBUG+, plain,    full date+time timestamp, rotating 5 MB × 3
+
+    `console`, when given, replaces the default scrolling console handler — the
+    LiveUI passes its buffering handler here so log lines feed the split-screen
+    renderer instead of being printed directly.
     """
     root = logging.getLogger()
     root.setLevel(logging.DEBUG)
 
-    # Console — coloured, with live stats panel repaint
-    ch = PanelStreamHandler()
+    # Console — coloured, with live stats panel repaint (or the LiveUI buffer)
+    ch = console if console is not None else PanelStreamHandler()
     ch.setLevel(logging.INFO)
-    ch.setFormatter(ColourFormatter(datefmt=LOG_DATE_FORMAT))
+    if console is None:
+        ch.setFormatter(ColourFormatter(datefmt=LOG_DATE_FORMAT))
     root.addHandler(ch)
 
     # Rotating file — plain text, full timestamps
