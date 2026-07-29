@@ -245,7 +245,7 @@ def _plain_len(s: str) -> int:
             j = s.find("m", i)
             i = j + 1 if j != -1 else i + 1
         else:
-            out += 1
+            out += _cw(s[i])
             i += 1
     return out
 
