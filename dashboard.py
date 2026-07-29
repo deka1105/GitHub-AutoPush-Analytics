@@ -267,7 +267,6 @@ def _ljust_ansi(s: str, width: int) -> str:
 # identical to the watcher's console. The live watcher feeds pre-coloured lines
 # straight from its ColourFormatter; the standalone tail rebuilds the same look
 # from the plain watcher.log via _format_tail() below.
-_LOG_RE = re.compile(r"^\d{4}-\d\d-\d\d \d\d:\d\d:\d\d) \[(\w+)\s*\]\s?(.*)$".replace(") ", ") "))
 _LOG_RE = re.compile(r"^(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d) \[(\w+)\s*\]\s?(.*)$")
 
 _LEVELS = {  # level → (colour, glyph); DEBUG is dropped, mirroring the console
