@@ -36,6 +36,15 @@ from datetime import datetime, timedelta
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
+# Optional: the split-screen renderer (dashboard.py, same directory). When
+# present and the console is a TTY, the watcher paints a live analytics
+# dashboard beside the logs. If it can't be imported we silently fall back to
+# the classic scrolling logs + small top-right stats panel.
+try:
+    import dashboard as _dash
+except Exception:       # pragma: no cover — any import failure ⇒ classic UI
+    _dash = None
+
 
 # ══════════════════════════════════════════════════════════════════════════════
 # Logging setup — console + rotating file
