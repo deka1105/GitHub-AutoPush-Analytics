@@ -159,6 +159,10 @@ class Stats:
         self.per_day = days
         self.busiest = max(days.items(), key=lambda kv: kv[1]) if days else (today, 0)
         self.today   = days.get(today, 0)
+        # last 7 calendar days (mirrors the watcher's "📊 Commits pushed in past
+        # 7 days" headline metric)
+        self.last_7_days = list(days.items())[-7:]
+        self.last7       = sum(n for _, n in self.last_7_days)
 
 def _parse_day(ts: str | None):
     try:
