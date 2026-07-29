@@ -18,13 +18,14 @@ from __future__ import annotations
 import argparse
 import csv
 import os
+import re
 import select
 import shutil
 import signal
 import sys
 import termios
 import tty
-from collections import Counter, OrderedDict
+from collections import Counter, OrderedDict, deque
 from datetime import datetime, timedelta
 
 # ── palette (256-colour, matched to auto_git_push.py) ─────────────────────────
