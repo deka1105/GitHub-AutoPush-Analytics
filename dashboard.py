@@ -59,8 +59,17 @@ def seg(text: str, ansi: str = "") -> Seg:
     return (text, ansi)
 
 
+def _cw(ch: str) -> int:
+    """Terminal column width of one char (2 for wide/fullwidth glyphs, else 1)."""
+    return 2 if unicodedata.east_asian_width(ch) in ("W", "F") else 1
+
+
+def disp_len(text: str) -> int:
+    return sum(_cw(c) for c in text)
+
+
 def vis_len(line: list[Seg]) -> int:
-    return sum(len(t) for t, _ in line)
+    return sum(disp_len(t) for t, _ in line)
 
 
 def pad(line: list[Seg], width: int, align: str = "left") -> list[Seg]:
