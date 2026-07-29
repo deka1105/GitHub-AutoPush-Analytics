@@ -405,7 +405,7 @@ def frame(stats: Stats | None, logs: list[tuple], err: str | None,
     return HOME + body + "\x1b[J"
 
 
-def run(path: str, interval: float) -> int:
+def run(path: str, log_path: str, interval: float, split_cols: int) -> int:
     if not os.path.exists(path):
         print(f"push log not found: {path}", file=sys.stderr)
         return 1
@@ -425,6 +425,7 @@ def run(path: str, interval: float) -> int:
 
     cache_mtime = -1.0
     stats: Stats | None = None
+    logs: list[tuple] = []
     err: str | None = None
 
     def cleanup(*_):
