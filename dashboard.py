@@ -85,15 +85,20 @@ def pad(line: list[Seg], width: int, align: str = "left") -> list[Seg]:
 
 
 def _truncate(line: list[Seg], width: int) -> list[Seg]:
+    if vis_len(line) <= width:
+        return line
     out, used = [], 0
     for text, ansi in line:
-        if used >= width:
-            break
-        room = width - used
-        if len(text) > room:
-            text = text[: max(0, room - 1)] + "…"
-        out.append((text, ansi))
-        used += len(text)
+        chunk = ""
+        for ch in text:
+            w = _cw(ch)
+            if used + w > width - 1:            # leave a column for the ellipsis
+                out.append((chunk, ansi))
+                out.append(("…", ""))
+                return out
+            chunk += ch
+            used += w
+        out.append((chunk, ansi))
     return out
 
 
