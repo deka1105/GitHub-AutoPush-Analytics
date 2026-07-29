@@ -369,14 +369,51 @@ def _fit_raw(s: str, width: int) -> str:
     return res
 
 
+def _wrap_raw(s: str, width: int, indent: int = 2) -> list[str]:
+    """Wrap a raw ANSI string into lines of exactly `width` display columns,
+    carrying the active colour across the wrap and indenting continuations."""
+    if width <= 0:
+        return [""]
+    indent = indent if indent < width else 0
+    lines, cur, used, active, i = [], [], 0, "", 0
+
+    def flush():
+        nonlocal cur, used
+        lines.append("".join(cur) + _R + " " * (width - used if used < width else 0))
+        cur, used = [], 0
+
+    while i < len(s):
+        if s[i] == "\x1b":                              # colour code — zero width
+            j = s.find("m", i)
+            k = j + 1 if j != -1 else i + 1
+            code = s[i:k]
+            cur.append(code)
+            active = "" if code == _R else active + code
+            i = k
+            continue
+        w = _cw(s[i])
+        if used + w > width:                            # wrap: continue the colour, indented
+            flush()
+            if indent:
+                cur.append(" " * indent); used += indent
+            if active:
+                cur.append(active)
+        cur.append(s[i]); used += w; i += 1
+    flush()
+    return lines
+
+
 def log_box(entries: list[str], width: int, height: int,
             note: str | None = None) -> list[str]:
-    """A 'Live log' box exactly `height` lines tall; newest coloured line at bottom."""
+    """A 'Live log' box exactly `height` lines tall; long lines wrap, newest at bottom."""
     inner = width - 2
     slots = max(1, height - 2)
-    shown = list(entries[-slots:]) if entries else \
+    src = list(entries) if entries else \
         [f"{GREY}{note or ' waiting for watcher.log …'}{_R}"]
-    shown = ([""] * (slots - len(shown)) + shown)[-slots:]   # newest sits at the bottom
+    visual: list[str] = []
+    for line in src:                                    # wrap each entry, keep order
+        visual.extend(_wrap_raw(line, inner))
+    shown = ([""] * slots + visual)[-slots:]            # pad top so newest sits at bottom
 
     title = "Live log"
     head = _truncate([seg("┌─", BORDER), seg(f" {title} ", CYAN + _BOLD),
@@ -392,6 +429,7 @@ def dashboard_column(s: Stats, width: int) -> list[str]:
     """Stacked analytics panels for the left half of a split view."""
     out: list[str] = []
     out += summary_panel(s, width);   out.append("")
+    out += week_panel(s, width);      out.append("")
     out += sparkline_panel(s, width); out.append("")
     out += status_panel(s, width);    out.append("")
     out += top_repos_panel(s, width)
