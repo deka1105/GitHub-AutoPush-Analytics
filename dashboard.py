@@ -1,15 +1,23 @@
 #!/usr/bin/env python3
 """
-GitHub AutoPush · Analytics — live terminal dashboard.
+GitHub AutoPush · Analytics — live split-screen terminal dashboard.
 
-A full-screen TUI that reads push_log.csv and renders push analytics that
-refresh in place: totals, a 14-day activity sparkline, per-status breakdown,
-the busiest repos and the most recent pushes. Read-only — it never touches
-the repos or the watcher; run it in a spare terminal alongside auto_git_push.py.
+A full-screen TUI that refreshes in place. Its layout adapts to the terminal
+width:
 
-    python3 dashboard.py                      # watches ./push_log.csv
-    python3 dashboard.py --log push_log.csv   # explicit path
-    python3 dashboard.py --interval 5         # refresh every 5s (default 2)
+  • Maximized (wide, cols >= --split-cols)  → analytics dashboard pinned to the
+    LEFT half (totals, 14-day sparkline, status breakdown, busiest repos) with a
+    live tail of the watcher's logs on the RIGHT half.
+  • Half window (narrow, cols < --split-cols) → the dashboard is hidden and only
+    the logs are shown, full width.
+
+Read-only — it never touches the repos or the watcher. It reads push_log.csv
+for analytics and tails watcher.log (INFO+ lines) for the log pane, so run it in
+a spare terminal next to auto_git_push.py.
+
+    python3 dashboard.py                      # ./push_log.csv + ./watcher.log
+    python3 dashboard.py --split-cols 140     # require a wider window to split
+    python3 dashboard.py --interval 5         # refresh every 5s (default 1.5)
 
 Quit with q or Ctrl-C.
 """
