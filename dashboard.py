@@ -274,43 +274,133 @@ def _ljust_ansi(s: str, width: int) -> str:
     return " " * max(0, width - _plain_len(s))
 
 
+# ── watcher log tail (right-hand pane) ─────────────────────────────────────────
+# Matches the watcher's plain file format: "2026-07-29 13:07:47 [INFO    ] msg"
+_LOG_RE = re.compile(r"^\d{4}-\d\d-\d\d (\d\d:\d\d:\d\d) \[(\w+)\s*\]\s?(.*)$")
+_LEVELS = {  # level → (colour, glyph); DEBUG is dropped, mirroring the console
+    "INFO":     (TITLE,  "▶"),
+    "WARNING":  (AMBER,  "⚠"),
+    "ERROR":    (RED,    "✖"),
+    "CRITICAL": (RED,    "●"),
+}
+
+
+def tail_log(path: str, limit: int = 400) -> list[tuple]:
+    """Return the most recent (time, level, message) INFO+ entries, oldest first."""
+    try:
+        size = os.path.getsize(path)
+        with open(path, "rb") as f:
+            if size > 262_144:                     # only decode the tail of big logs
+                f.seek(-262_144, os.SEEK_END)
+                f.readline()                        # drop the partial first line
+            data = f.read().decode("utf-8", "replace")
+    except OSError:
+        return []
+    out = deque(maxlen=limit)
+    for line in data.splitlines():
+        m = _LOG_RE.match(line)
+        if m and m.group(2) in _LEVELS:
+            out.append((m.group(1), m.group(2), m.group(3)))
+    return list(out)
+
+
+def log_pane(entries: list[tuple], width: int, height: int,
+             note: str | None = None) -> list[str]:
+    """A 'Live log' box exactly `height` lines tall; newest entry at the bottom."""
+    inner = width - 2
+    slots = max(1, height - 2)
+    rows: list[list[Seg]] = []
+    if not entries:
+        rows.append([seg(note or " waiting for watcher.log …", GREY)])
+    else:
+        for ts, level, msg in entries[-slots:]:
+            col, glyph = _LEVELS[level]
+            rows.append([seg(f" {ts} ", GREY), seg(f"{glyph} ", col),
+                         seg(msg, col if level != "INFO" else "")])
+    # pad at the TOP so the freshest lines sit at the bottom of the pane
+    while len(rows) < slots:
+        rows.insert(0, [seg("")])
+    return box("Live log", rows[-slots:], width, CYAN)
+
+
+def dashboard_column(s: Stats, width: int) -> list[str]:
+    """Stacked analytics panels for the left half of a split view."""
+    out: list[str] = []
+    out += summary_panel(s, width);   out.append("")
+    out += sparkline_panel(s, width); out.append("")
+    out += status_panel(s, width);    out.append("")
+    out += top_repos_panel(s, width)
+    return out
+
+
+def _join_split(left: list[str], right: list[str], leftw: int, height: int) -> list[str]:
+    """Place `left` column (padded to leftw) beside `right`, over `height` rows."""
+    out = []
+    for i in range(height):
+        l = left[i] if i < len(left) else ""
+        r = right[i] if i < len(right) else ""
+        out.append(f"{l}{_ljust_ansi(l, leftw)} {r}")
+    return out
+
+
 # ── screen / render loop ────────────────────────────────────────────────────────
 ALT_ON, ALT_OFF   = "\x1b[?1049h", "\x1b[?1049l"
 CUR_OFF, CUR_ON   = "\x1b[?25l", "\x1b[?25h"
 HOME, CLEAR       = "\x1b[H", "\x1b[2J"
 
 
-def frame(stats: Stats | None, err: str | None, path: str,
-          cols: int, rows_avail: int) -> str:
-    width = min(96, max(48, cols - 2))
+def frame(stats: Stats | None, logs: list[tuple], err: str | None,
+          push_path: str, log_path: str, cols: int, rows: int,
+          split_cols: int) -> str:
+    """Compose one full-screen frame.
+
+    Wide terminal ("maximized")  → dashboard on the left half, live logs on the
+    right. Narrow terminal ("half window", cols < split_cols) → logs only.
+    """
+    height = max(3, rows)
+    body_h = height - 2                      # title line + footer line
     lines: list[str] = []
 
+    # ── title bar ─────────────────────────────────────────────────────────────
     now = datetime.now().strftime("%a %d %b · %H:%M:%S")
-    title = [seg("  GitHub AutoPush ", TITLE + _BOLD), seg("· Analytics", GREY)]
-    title = pad(title, width - 12) + [seg(now, GREY)]
-    lines.append(render(title))
-    lines.append("")
+    title = pad([seg("  GitHub AutoPush ", TITLE + _BOLD), seg("· Analytics", GREY)],
+                max(0, cols - len(now) - 2)) + [seg(now + "  ", GREY)]
+    lines.append(render(_truncate(title, cols)))
+
+    split = (stats is not None and stats.total > 0
+             and cols >= split_cols and body_h >= 14)
 
     if err:
-        lines.append(render([seg("  ⚠ " + err, AMBER + _BOLD)]))
-    elif stats is None or stats.total == 0:
-        lines.append(render([seg("  Waiting for push data…", GREY)]))
+        lines += [render([seg("  ⚠ " + err, AMBER + _BOLD)])] + [""] * (body_h - 1)
+        mode = "error"
+    elif split:
+        leftw   = min(56, max(44, cols // 2))
+        rightw  = cols - leftw - 1
+        left    = dashboard_column(stats, leftw)[:body_h]
+        right   = log_pane(logs, rightw, body_h)
+        lines  += _join_split(left, right, leftw, body_h)
+        mode = "split"
     else:
-        lines += summary_panel(stats, width)
-        lines.append("")
-        lines += sparkline_panel(stats, width)
-        lines.append("")
-        lines += status_panel(stats, width)
-        lines.append("")
-        lines += two_col(top_repos_panel(stats, width // 2 - 1),
-                         recent_panel(stats, width - width // 2))
+        # logs-only (half window) — full-width log pane
+        lines += log_pane(logs, cols, body_h,
+                          note="  waiting for watcher.log … (run auto_git_push.py)")
+        mode = "logs"
 
-    lines.append("")
-    lines.append(render([seg("  q", _BOLD), seg(" quit   ", GREY),
-                         seg("live", GREEN), seg(f" · {os.path.basename(path)}", GREY)]))
+    # ── footer ────────────────────────────────────────────────────────────────
+    if mode == "logs" and stats is not None and stats.total:
+        hint = f"logs only · widen to ≥{split_cols} cols for the dashboard"
+    elif mode == "split":
+        hint = f"dashboard + logs · {os.path.basename(log_path)}"
+    else:
+        hint = os.path.basename(push_path)
+    footer = [seg("  q", _BOLD), seg(" quit   ", GREY),
+              seg("● live", GREEN), seg(f"  {hint}", GREY)]
+    lines.append(render(_truncate(footer, cols)))
 
-    lines = lines[:rows_avail]
-    # pad each line to full columns so stale characters from prior frames are wiped
+    lines = lines[:height]
+    while len(lines) < height:
+        lines.append("")
+    # pad each line so stale characters from prior frames are wiped
     body = "\r\n".join(l + "\x1b[K" for l in lines)
     return HOME + body + "\x1b[J"
 
