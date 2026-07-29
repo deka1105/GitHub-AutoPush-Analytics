@@ -153,10 +153,6 @@ def load(path: str) -> list[dict]:
 
 
 # ── panel builders ─────────────────────────────────────────────────────────────
-def _clean(msg: str) -> str:
-    return (msg or "").rstrip().removesuffix("--END--").rstrip()
-
-
 def summary_panel(s: Stats, width: int) -> list[str]:
     rate_col = GREEN if s.rate >= 95 else AMBER if s.rate >= 80 else RED
     cells = [
