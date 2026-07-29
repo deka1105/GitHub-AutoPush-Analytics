@@ -446,8 +446,9 @@ def run(path: str, log_path: str, interval: float, split_cols: int) -> int:
             except (OSError, csv.Error) as e:
                 err = f"cannot read {path}: {e}"
 
+            logs = tail_log(log_path)
             cols, rows = shutil.get_terminal_size((80, 24))
-            out.write(frame(stats, err, path, cols, rows - 1))
+            out.write(frame(stats, logs, err, path, log_path, cols, rows, split_cols))
             out.flush()
 
             # wait `interval`, but wake early if a key is pressed
@@ -468,11 +469,15 @@ def run(path: str, log_path: str, interval: float, split_cols: int) -> int:
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description="Live terminal analytics dashboard for push_log.csv")
+    ap = argparse.ArgumentParser(description="Live split-screen analytics dashboard + log tail")
     ap.add_argument("--log", default="push_log.csv", help="path to push_log.csv (default: ./push_log.csv)")
-    ap.add_argument("--interval", type=float, default=2.0, help="refresh seconds (default: 2)")
+    ap.add_argument("--watcher-log", default="watcher.log", help="path to the watcher's log file (default: ./watcher.log)")
+    ap.add_argument("--interval", type=float, default=1.5, help="refresh seconds (default: 1.5)")
+    ap.add_argument("--split-cols", type=int, default=120,
+                    help="min terminal width to show the dashboard beside the logs; "
+                         "narrower than this shows logs only (default: 120)")
     args = ap.parse_args()
-    return run(args.log, max(0.2, args.interval))
+    return run(args.log, args.watcher_log, max(0.2, args.interval), args.split_cols)
 
 
 if __name__ == "__main__":
