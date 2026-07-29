@@ -263,18 +263,45 @@ def _ljust_ansi(s: str, width: int) -> str:
 
 
 # ── watcher log tail (right-hand pane) ─────────────────────────────────────────
-# Matches the watcher's plain file format: "2026-07-29 13:07:47 [INFO    ] msg"
-_LOG_RE = re.compile(r"^\d{4}-\d\d-\d\d (\d\d:\d\d:\d\d) \[(\w+)\s*\]\s?(.*)$")
+# The log pane renders fully-coloured lines (date · level · [repo] · message),
+# identical to the watcher's console. The live watcher feeds pre-coloured lines
+# straight from its ColourFormatter; the standalone tail rebuilds the same look
+# from the plain watcher.log via _format_tail() below.
+_LOG_RE = re.compile(r"^\d{4}-\d\d-\d\d \d\d:\d\d:\d\d) \[(\w+)\s*\]\s?(.*)$".replace(") ", ") "))
+_LOG_RE = re.compile(r"^(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d) \[(\w+)\s*\]\s?(.*)$")
+
 _LEVELS = {  # level → (colour, glyph); DEBUG is dropped, mirroring the console
-    "INFO":     (TITLE,  "▶"),
-    "WARNING":  (AMBER,  "⚠"),
-    "ERROR":    (RED,    "✖"),
-    "CRITICAL": (RED,    "●"),
+    "INFO":     (TITLE,       "▶"),
+    "WARNING":  (AMBER,       "⚠"),
+    "ERROR":    (RED,         "✖"),
+    "CRITICAL": (RED + _BOLD, "●"),
+}
+_REPO_RE = re.compile(r"^\[([^\]]+)\]\s*(.*)")
+_MSG_KW = {  # leading keyword → body colour (mirrors the watcher's palette)
+    "✓":    "\x1b[38;5;82m",  "Push": "\x1b[38;5;39m",  "Comm": "\x1b[38;5;75m",
+    "Stag": "\x1b[38;5;244m", "Pull": "\x1b[38;5;220m", "Noth": "\x1b[38;5;240m",
+    "CREA": "\x1b[38;5;82m",  "MODI": "\x1b[38;5;75m",  "DELE": "\x1b[38;5;196m",
+    "MOVE": "\x1b[38;5;214m",
 }
 
 
-def tail_log(path: str, limit: int = 400) -> list[tuple]:
-    """Return the most recent (time, level, message) INFO+ entries, oldest first."""
+def _format_tail(ts: str, level: str, msg: str) -> str:
+    """Rebuild a coloured console-style line from a plain watcher.log entry."""
+    col, glyph = _LEVELS.get(level, (GREY, "●"))
+    tag = f"{col}{_BOLD}{glyph} {level:<8}{_R}"
+    m = _REPO_RE.match(msg)
+    if m:
+        repo, body = m.group(1), m.group(2)
+        repo_part = f"{PURPLE}{_BOLD}[{repo}]{_R}  "
+    else:
+        repo_part, body = "", msg
+    body_col = next((c for kw, c in _MSG_KW.items() if body.startswith(kw)), "")
+    body_part = f"{body_col}{body}{_R}" if body_col else body
+    return f"{GREY}{ts}{_R}  {tag}  {repo_part}{body_part}"
+
+
+def tail_log(path: str, limit: int = 400) -> list[str]:
+    """Most recent INFO+ entries as ready-to-print coloured lines, oldest first."""
     try:
         size = os.path.getsize(path)
         with open(path, "rb") as f:
@@ -288,27 +315,49 @@ def tail_log(path: str, limit: int = 400) -> list[tuple]:
     for line in data.splitlines():
         m = _LOG_RE.match(line)
         if m and m.group(2) in _LEVELS:
-            out.append((m.group(1), m.group(2), m.group(3)))
+            out.append(_format_tail(m.group(1), m.group(2), m.group(3)))
     return list(out)
 
 
-def log_pane(entries: list[tuple], width: int, height: int,
-             note: str | None = None) -> list[str]:
-    """A 'Live log' box exactly `height` lines tall; newest entry at the bottom."""
+def _fit_raw(s: str, width: int) -> str:
+    """Truncate/pad a raw ANSI string to exactly `width` display columns."""
+    out, used, i, cut = [], 0, 0, False
+    while i < len(s):
+        if s[i] == "\x1b":                          # copy colour codes verbatim (0 width)
+            j = s.find("m", i)
+            k = j + 1 if j != -1 else i + 1
+            out.append(s[i:k]); i = k; continue
+        w = _cw(s[i])
+        if used + w > width:
+            cut = True
+            break
+        out.append(s[i]); used += w; i += 1
+    res = "".join(out)
+    if cut and used < width:                        # ellipsis when there's room
+        res += f"{_R}…"; used += 1
+    res += _R
+    if used < width:
+        res += " " * (width - used)
+    return res
+
+
+def log_box(entries: list[str], width: int, height: int,
+            note: str | None = None) -> list[str]:
+    """A 'Live log' box exactly `height` lines tall; newest coloured line at bottom."""
     inner = width - 2
     slots = max(1, height - 2)
-    rows: list[list[Seg]] = []
-    if not entries:
-        rows.append([seg(note or " waiting for watcher.log …", GREY)])
-    else:
-        for ts, level, msg in entries[-slots:]:
-            col, glyph = _LEVELS[level]
-            rows.append([seg(f" {ts} ", GREY), seg(f"{glyph} ", col),
-                         seg(msg, col if level != "INFO" else "")])
-    # pad at the TOP so the freshest lines sit at the bottom of the pane
-    while len(rows) < slots:
-        rows.insert(0, [seg("")])
-    return box("Live log", rows[-slots:], width, CYAN)
+    shown = list(entries[-slots:]) if entries else \
+        [f"{GREY}{note or ' waiting for watcher.log …'}{_R}"]
+    shown = ([""] * (slots - len(shown)) + shown)[-slots:]   # newest sits at the bottom
+
+    title = "Live log"
+    head = _truncate([seg("┌─", BORDER), seg(f" {title} ", CYAN + _BOLD),
+                      seg("─" * max(0, inner - len(title) - 3) + "┐", BORDER)], width)
+    out = [render(head)]
+    for line in shown:
+        out.append(f"{BORDER}│{_R}{_fit_raw(line, inner)}{BORDER}│{_R}")
+    out.append(render([seg("└" + "─" * inner + "┘", BORDER)]))
+    return out
 
 
 def dashboard_column(s: Stats, width: int) -> list[str]:
