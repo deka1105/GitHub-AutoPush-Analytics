@@ -395,7 +395,7 @@ def frame(stats: Stats | None, logs: list[tuple], err: str | None,
         hint = os.path.basename(push_path)
     footer = [seg("  q", _BOLD), seg(" quit   ", GREY),
               seg("● live", GREEN), seg(f"  {hint}", GREY)]
-    lines.append(render(_truncate(footer, cols)))
+    lines.append(render(pad(_truncate(footer, cols), cols)))
 
     lines = lines[:height]
     while len(lines) < height:
