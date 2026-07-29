@@ -213,3 +213,13 @@
 2026-07-29 13:47:32 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics/.git/index.lock', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
 2026-07-29 13:47:32 [DEBUG   ] Destination event for rename is NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics/.git/index.stash.81952", inode=279206334, flags=10800, id=105234112)
 2026-07-29 13:47:32 [DEBUG   ] Destination event for rename is NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics/.git/index.stash.81952", inode=279206334, flags=10800, id=105234112)
+2026-07-29 13:48:42 [INFO    ] ============================================================
+2026-07-29 13:48:42 [INFO    ] Auto Git Pusher v4 starting
+2026-07-29 13:48:42 [INFO    ]   Config CSV : repos_config.csv
+2026-07-29 13:48:42 [INFO    ]   Push log   : push_log.csv
+2026-07-29 13:48:42 [INFO    ]   Watcher log: watcher.log
+2026-07-29 13:48:42 [INFO    ] ============================================================
+2026-07-29 13:48:42 [INFO    ] Loaded 33 repo(s) from repos_config.csv
+2026-07-29 13:48:42 [INFO    ] [TestWatcher] Setting up repo…
+2026-07-29 13:48:42 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-07-29 13:48:42 [DEBUG   ]   stdout: https://github.com/deka1105/TestWatcher.git
