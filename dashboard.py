@@ -230,34 +230,7 @@ def top_repos_panel(s: Stats, width: int) -> list[str]:
     return box("Busiest repos", rows, width, PURPLE)
 
 
-def recent_panel(s: Stats, width: int) -> list[str]:
-    mark = {"success": (GREEN, "✓"), "failed": (AMBER, "▲"), "error": (RED, "✖")}
-    rows = []
-    for r in s.recent:
-        col, m = mark.get((r.get("status") or "").strip(), (GREY, "·"))
-        ts = (r.get("timestamp") or "")[5:16]        # MM-DD HH:MM
-        rows.append([
-            seg(f" {ts} ", GREY),
-            seg(f"{m} ", col),
-            seg(f"{(r.get('repo_name') or '?')[:16]:<16} ", PURPLE),
-            seg(_clean(r.get("message"))[:40], GREY),
-        ])
-    if not rows:
-        rows = [[seg(" no pushes logged yet", GREY)]]
-    return box("Recent activity", rows, width, CYAN)
-
-
-def two_col(left: list[str], right: list[str], gap: int = 1) -> list[str]:
-    lw = max((_plain_len(x) for x in left), default=0)
-    out, pad_s = [], " " * gap
-    for i in range(max(len(left), len(right))):
-        l = left[i] if i < len(left) else " " * lw
-        r = right[i] if i < len(right) else ""
-        out.append(f"{l}{_ljust_ansi(l, lw)}{pad_s}{r}")
-    return out
-
-
-# ANSI-aware width helpers for the two-column joiner
+# ANSI-aware width helpers for the split-column joiner
 def _plain_len(s: str) -> int:
     out, i = 0, 0
     while i < len(s):
