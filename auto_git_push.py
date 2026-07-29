@@ -421,8 +421,8 @@ class LiveUI:
         h.setLevel(logging.INFO)
         return h
 
-    def push_log_line(self, ts: str, level: str, msg: str):
-        self._buf.append((ts, level, msg))
+    def push_line(self, line: str):
+        self._buf.append(line)
 
     # -- lifecycle -------------------------------------------------------------
     def active(self) -> bool:
