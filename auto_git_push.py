@@ -1095,7 +1095,9 @@ class AutoGitPusher:
 
     def start(self):
         global STATS_PANEL
-        STATS_PANEL = StatsPanel(self.push_log_path)
+        # The LiveUI renders its own full-screen dashboard, so the small
+        # top-right stats panel is only used in the classic (non-UI) path.
+        STATS_PANEL = None if self.live_ui else StatsPanel(self.push_log_path)
 
         init_push_log(self.push_log_path)
 
