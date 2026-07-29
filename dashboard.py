@@ -385,7 +385,7 @@ CUR_OFF, CUR_ON   = "\x1b[?25l", "\x1b[?25h"
 HOME, CLEAR       = "\x1b[H", "\x1b[2J"
 
 
-def frame(stats: Stats | None, logs: list[tuple], err: str | None,
+def frame(stats: Stats | None, logs: list[str], err: str | None,
           push_path: str, log_path: str, cols: int, rows: int,
           split_cols: int) -> str:
     """Compose one full-screen frame.
