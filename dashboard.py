@@ -197,6 +197,31 @@ def summary_panel(s: Stats, width: int) -> list[str]:
     return box("Overview", [big, lab], width, TITLE)
 
 
+def week_panel(s: Stats, width: int) -> list[str]:
+    """Per-day successful pushes over the last 7 calendar days, plus the total."""
+    inner = width - 2
+    days  = s.last_7_days
+    peak  = max((n for _, n in days), default=0) or 1
+    today = datetime.now().date()
+    bar_w = max(4, inner - 15)
+    rows = []
+    for d, n in days:
+        fil = round(n / peak * bar_w) if n else 0
+        if d == today:
+            col, style = GREEN, _BOLD          # today stands out
+        elif n == 0:
+            col, style = GREY, ""
+        else:
+            col, style = TITLE, ""
+        rows.append([
+            seg(f" {d.strftime('%a %d')} ", col + style),
+            seg("▇" * fil, col),
+            seg("·" * (bar_w - fil), BORDER),
+            seg(f" {n:>4} ", col + _BOLD),
+        ])
+    return box(f"Last 7 days · {s.last7} pushes", rows, width, GREEN)
+
+
 def sparkline_panel(s: Stats, width: int) -> list[str]:
     peak = max(s.per_day.values()) or 1
     spark, labels = [], []
