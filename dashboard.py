@@ -25,6 +25,7 @@ import signal
 import sys
 import termios
 import tty
+import unicodedata
 from collections import Counter, OrderedDict, deque
 from datetime import datetime, timedelta
 
