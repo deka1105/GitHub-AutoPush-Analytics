@@ -413,13 +413,13 @@ def frame(stats: Stats | None, logs: list[str], err: str | None,
         leftw   = min(56, max(44, cols // 2))
         rightw  = cols - leftw - 1
         left    = dashboard_column(stats, leftw)[:body_h]
-        right   = log_pane(logs, rightw, body_h)
+        right   = log_box(logs, rightw, body_h)
         lines  += _join_split(left, right, leftw, body_h)
         mode = "split"
     else:
         # logs-only (half window) — full-width log pane
-        lines += log_pane(logs, cols, body_h,
-                          note="  waiting for watcher.log … (run auto_git_push.py)")
+        lines += log_box(logs, cols, body_h,
+                         note="  waiting for watcher.log … (run auto_git_push.py)")
         mode = "logs"
 
     # ── footer ────────────────────────────────────────────────────────────────

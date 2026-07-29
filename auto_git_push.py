@@ -372,15 +372,20 @@ class PanelStreamHandler(logging.StreamHandler):
 # ══════════════════════════════════════════════════════════════════════════════
 
 class _BufferHandler(logging.Handler):
-    """Feeds INFO+ log records into the LiveUI's log buffer (never prints)."""
+    """Feeds INFO+ log records into the LiveUI's log buffer (never prints).
+
+    Records are rendered with the same ColourFormatter the console uses, so the
+    live log pane looks identical to the classic scrolling output — full
+    timestamp, coloured level tag, purple [repo], keyword-coloured message.
+    """
     def __init__(self, ui: "LiveUI"):
         super().__init__()
         self.ui = ui
+        self.setFormatter(ColourFormatter(datefmt=LOG_DATE_FORMAT))
 
     def emit(self, record):
         try:
-            ts = time.strftime("%H:%M:%S", time.localtime(record.created))
-            self.ui.push_log_line(ts, record.levelname, record.getMessage())
+            self.ui.push_line(self.format(record))
         except Exception:       # logging must never raise
             pass
 
