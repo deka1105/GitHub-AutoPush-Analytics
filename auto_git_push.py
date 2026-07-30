@@ -991,17 +991,28 @@ class RepoEventHandler(FileSystemEventHandler):
     def _handle(self, event, event_type: str):
         if event.is_directory or self._should_ignore(event.src_path):
             return
-        now = time.time()
-        if now - self._last_push < self.COOLDOWN:
+        if time.time() - self._last_push < self.COOLDOWN:
             log.debug(f"[{self.repo_name}] Cooldown active, skipping {event.src_path}")
             return
-        self._last_push = now
-        rel = os.path.relpath(event.src_path, self.local_path)
-        log.info(f"[{self.repo_name}] {event_type.upper()}: {rel}")
-        git_add_commit_push(
-            self.local_path, self.repo_name, self.repo_url,
-            self.push_log, changed_file=rel, event_type=event_type,
-        )
+        # Drop the event if a push for this repo is already in flight — the file
+        # change is already covered by that push, and starting a second git
+        # sequence now is exactly what caused the 'Unable to create index.lock'
+        # errors.
+        if not self._push_lock.acquire(blocking=False):
+            log.debug(f"[{self.repo_name}] Push in progress, skipping {event.src_path}")
+            return
+        try:
+            rel = os.path.relpath(event.src_path, self.local_path)
+            log.info(f"[{self.repo_name}] {event_type.upper()}: {rel}")
+            git_add_commit_push(
+                self.local_path, self.repo_name, self.repo_url,
+                self.push_log, changed_file=rel, event_type=event_type,
+            )
+        finally:
+            # Start the cooldown when the push *finishes*, so the burst of events
+            # it generated is coalesced instead of each launching another push.
+            self._last_push = time.time()
+            self._push_lock.release()
 
     def on_created(self, e):  self._handle(e, "created")
     def on_modified(self, e): self._handle(e, "modified")
