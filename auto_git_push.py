@@ -973,11 +973,20 @@ class RepoEventHandler(FileSystemEventHandler):
         self.repo_url   = repo_url
         self.push_log   = push_log_path
         self._last_push = 0.0
+        # Serialises pushes for THIS repo so two events can't run git add/commit
+        # concurrently and collide on .git/index.lock.
+        self._push_lock = threading.Lock()
 
     def _should_ignore(self, path: str) -> bool:
         ignore = {".git", "__pycache__", ".DS_Store", "Thumbs.db"}
         parts  = Path(path).parts
-        return any(p in ignore for p in parts) or path.endswith((".tmp", ".swp", "~"))
+        if any(p in ignore for p in parts) or path.endswith((".tmp", ".swp", "~")):
+            return True
+        # The watcher writes its own push log + rotating logs into whichever repo
+        # it lives in; those writes must never trigger a push, or the repo keeps
+        # re-committing itself in a loop.
+        name = Path(path).name
+        return name == os.path.basename(self.push_log) or name.startswith("watcher.log")
 
     def _handle(self, event, event_type: str):
         if event.is_directory or self._should_ignore(event.src_path):
