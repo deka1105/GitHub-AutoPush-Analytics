@@ -481,6 +481,7 @@ class LiveUI:
         return self._stats
 
     def _loop(self):
+        scrolls = self._stdin_scrolls()
         while not self._stop.is_set():
             try:
                 stats = self._current_stats()
@@ -488,13 +489,25 @@ class LiveUI:
                 cols, rows = shutil.get_terminal_size((80, 24))
                 self._out.write(_dash.frame(
                     stats, logs, None, self.push_log_path, self.logfile,
-                    cols, rows, self.split_cols))
+                    cols, rows, self.split_cols, self._view))
                 self._out.flush()
             except (OSError, ValueError):
                 pass
             except Exception:
                 pass          # a render glitch must never kill the watcher
-            self._stop.wait(self.interval)
+
+            # pace the loop; wake early on a keypress to scroll the log pane
+            if scrolls:
+                try:
+                    r, _, _ = select.select([sys.stdin], [], [], self.interval)
+                    if r:
+                        data = os.read(sys.stdin.fileno(), 64)
+                        for tok in _dash.decode_keys(data):
+                            _dash.apply_scroll(self._view, tok, page=max(1, rows - 4))
+                except (OSError, ValueError):
+                    self._stop.wait(self.interval)
+            else:
+                self._stop.wait(self.interval)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
