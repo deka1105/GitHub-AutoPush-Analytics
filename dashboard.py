@@ -477,8 +477,13 @@ def _wrap_raw(s: str, width: int, indent: int = 2) -> list[str]:
 
 
 def log_box(entries: list[str], width: int, height: int,
-            note: str | None = None) -> list[str]:
-    """A 'Live log' box exactly `height` lines tall; long lines wrap, newest at bottom."""
+            note: str | None = None, view: "LogView | None" = None) -> list[str]:
+    """A 'Live log' box exactly `height` lines tall; long lines wrap, newest at bottom.
+
+    When a `view` is given the pane is scrollable: `view.scroll` lines are hidden
+    below the viewport, a scrollbar is drawn on the right border, and while
+    scrolled the viewport stays anchored to the same lines as new logs stream in.
+    """
     inner = width - 2
     slots = max(1, height - 2)
     src = list(entries) if entries else \
@@ -486,14 +491,37 @@ def log_box(entries: list[str], width: int, height: int,
     visual: list[str] = []
     for line in src:                                    # wrap each entry, keep order
         visual.extend(_wrap_raw(line, inner))
-    shown = ([""] * slots + visual)[-slots:]            # pad top so newest sits at bottom
+    total = len(visual)
 
-    title = "Live log"
-    head = _truncate([seg("┌─", BORDER), seg(f" {title} ", CYAN + _BOLD),
+    scroll, max_scroll = 0, max(0, total - slots)
+    if view is not None:
+        # keep the viewport on the same content as new lines arrive while scrolled
+        if view.scroll > 0 and total > view.prev_total:
+            view.scroll += total - view.prev_total
+        view.prev_total = total
+        view.max_scroll = max_scroll
+        view.scroll = max(0, min(view.scroll, max_scroll))
+        scroll = view.scroll
+
+    end   = total - scroll
+    start = max(0, end - slots)
+    shown = ([""] * slots + visual[start:end])[-slots:]  # pad top; newest sits at bottom
+
+    title = "Live log" if scroll == 0 else f"Live log · ↑{scroll}/{max_scroll} SCROLLED"
+    accent = CYAN if scroll == 0 else AMBER
+    head = _truncate([seg("┌─", BORDER), seg(f" {title} ", accent + _BOLD),
                       seg("─" * max(0, inner - len(title) - 3) + "┐", BORDER)], width)
     out = [render(head)]
-    for line in shown:
-        out.append(f"{BORDER}│{_R}{_fit_raw(line, inner)}{BORDER}│{_R}")
+    # scrollbar thumb on the right border
+    if total > slots:
+        thumb = max(1, round(slots * slots / total))
+        top   = round((start / (total - slots)) * (slots - thumb)) if total > slots else 0
+        bar   = [(top <= r < top + thumb) for r in range(slots)]
+    else:
+        bar = [False] * slots
+    for r, line in enumerate(shown):
+        right = f"{CYAN}█{_R}" if bar[r] else f"{BORDER}│{_R}"
+        out.append(f"{BORDER}│{_R}{_fit_raw(line, inner)}{right}")
     out.append(render([seg("└" + "─" * inner + "┘", BORDER)]))
     return out
 
@@ -502,9 +530,9 @@ def dashboard_column(s: Stats, width: int) -> list[str]:
     """Stacked analytics panels for the left half of a split view."""
     out: list[str] = []
     out += summary_panel(s, width);   out.append("")
+    out += pie_panel(s, width);       out.append("")
     out += week_panel(s, width);      out.append("")
     out += sparkline_panel(s, width); out.append("")
-    out += status_panel(s, width);    out.append("")
     out += top_repos_panel(s, width)
     return out
 
