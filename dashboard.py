@@ -329,25 +329,6 @@ def sparkline_panel(s: Stats, width: int) -> list[str]:
     return box("Pushes · last 14 days", [spark, labels], width, GREEN)
 
 
-def status_panel(s: Stats, width: int) -> list[str]:
-    order = [("success", GREEN, "✓"), ("failed", AMBER, "▲"), ("error", RED, "✖")]
-    total = s.total or 1
-    inner = width - 2
-    bar_w = max(6, inner - 22)
-    rows = []
-    for name, col, mark in order:
-        n   = s.status.get(name, 0)
-        fil = round(n / total * bar_w)
-        row = [
-            seg(f" {mark} {name:<8}", col),
-            seg("▇" * fil, col),
-            seg("·" * (bar_w - fil), BORDER),
-            seg(f" {n:>5} ", col + _BOLD),
-        ]
-        rows.append(row)
-    return box("Status breakdown", rows, width, AMBER)
-
-
 def top_repos_panel(s: Stats, width: int) -> list[str]:
     inner = width - 2
     peak  = s.top_repos[0][1] if s.top_repos else 1
