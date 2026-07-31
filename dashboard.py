@@ -632,8 +632,9 @@ def run(path: str, log_path: str, interval: float, split_cols: int) -> int:
 
     cache_mtime = -1.0
     stats: Stats | None = None
-    logs: list[tuple] = []
+    logs: list[str] = []
     err: str | None = None
+    view = LogView()
 
     def cleanup(*_):
         out.write(CUR_ON + ALT_OFF)
