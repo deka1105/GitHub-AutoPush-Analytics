@@ -128,6 +128,49 @@ def box(title: str, rows: list[list[Seg]], width: int, accent: str = TITLE) -> l
     return out
 
 
+# ── log scrolling ──────────────────────────────────────────────────────────────
+class LogView:
+    """Scroll state for the live-log pane, shared between renders.
+
+    `scroll` counts wrapped lines above the bottom (0 = following the newest).
+    log_box() clamps it to the current geometry and, while scrolled, keeps the
+    viewport anchored to the same content as new lines stream in.
+    """
+    def __init__(self):
+        self.scroll     = 0
+        self.max_scroll = 0
+        self.prev_total = 0
+
+    @property
+    def following(self) -> bool:
+        return self.scroll <= 0
+
+
+def decode_keys(data: bytes) -> list[str]:
+    """Translate raw terminal bytes into scroll tokens."""
+    toks, i = [], 0
+    while i < len(data):
+        if data[i:i + 4] in (b"\x1b[5~", b"\x1b[6~"):
+            toks.append("pageup" if data[i + 2:i + 3] == b"5" else "pagedown"); i += 4
+        elif data[i:i + 3] == b"\x1b[A": toks.append("up");     i += 3
+        elif data[i:i + 3] == b"\x1b[B": toks.append("down");   i += 3
+        elif data[i:i + 3] in (b"\x1b[H", b"\x1b[1~"): toks.append("top");    i += 3
+        elif data[i:i + 3] in (b"\x1b[F", b"\x1b[4~"): toks.append("bottom"); i += 3
+        else:
+            c = chr(data[i]) if data[i] < 128 else ""
+            toks.append({"k": "up", "j": "down", "g": "top", "G": "bottom",
+                         "b": "pageup", " ": "pagedown", "f": "pagedown"}.get(c, ""))
+            i += 1
+    return [t for t in toks if t]
+
+
+def apply_scroll(view: LogView, tok: str, page: int):
+    """Adjust the view for one key token (bottom clamp here, top clamp in log_box)."""
+    step = {"up": 1, "down": -1, "pageup": page, "pagedown": -page,
+            "top": 10 ** 9, "bottom": -(10 ** 9)}.get(tok, 0)
+    view.scroll = max(0, view.scroll + step)
+
+
 # ── data ──────────────────────────────────────────────────────────────────────
 class Stats:
     """One parsed snapshot of push_log.csv."""
@@ -184,10 +227,12 @@ def load(path: str) -> list[dict]:
 def summary_panel(s: Stats, width: int) -> list[str]:
     rate_col = GREEN if s.rate >= 95 else AMBER if s.rate >= 80 else RED
     cells = [
-        (f"{s.total:,}",         "Total pushes", TITLE),
-        (f"{s.rate:.1f}%",       "Success rate", rate_col),
-        (f"{s.repos_active}",    "Active repos", PURPLE),
-        (f"{s.today}",           "Today",        GREEN),
+        (f"{s.total:,}",              "Total",   TITLE),
+        (f"{s.rate:.0f}%",            "Success", rate_col),
+        (f"{s.status.get('error',0)}", "Errors", RED),
+        (f"{s.last7}",                "7 days",  CYAN),
+        (f"{s.repos_active}",         "Repos",   PURPLE),
+        (f"{s.today}",                "Today",   GREEN),
     ]
     inner = width - 2
     cw    = inner // len(cells)
@@ -196,6 +241,52 @@ def summary_panel(s: Stats, width: int) -> list[str]:
         big += pad([seg(value, col + _BOLD)], cw, "center")
         lab += pad([seg(label, GREY)], cw, "center")
     return box("Overview", [big, lab], width, TITLE)
+
+
+def pie_panel(s: Stats, width: int) -> list[str]:
+    """A round status pie (success / failed / error) with a counts + % legend."""
+    data  = [("success", s.status.get("success", 0), GREEN),
+             ("failed",  s.status.get("failed", 0),  AMBER),
+             ("error",   s.status.get("error", 0),   RED)]
+    data  = [d for d in data if d[1] > 0]
+    total = sum(c for _, c, _ in data)
+    if total == 0:
+        return box("Status mix", [[seg(" no pushes logged yet", GREY)]], width, RED)
+
+    # cumulative angle boundaries, as fractions of a full turn
+    bounds, acc = [], 0
+    for _, cnt, col in data:
+        start = acc / total; acc += cnt
+        bounds.append((start, acc / total, col))
+
+    rows_n, cols_n = 7, 15                       # cols ≈ 2·rows keeps it circular
+    grid = []
+    for iy in range(rows_n):
+        y = (iy - (rows_n - 1) / 2) / ((rows_n - 1) / 2)
+        line = []
+        for ix in range(cols_n):
+            x = (ix - (cols_n - 1) / 2) / ((cols_n - 1) / 2)
+            if x * x + y * y <= 1.0:
+                frac = (math.atan2(y, x) / (2 * math.pi)) % 1.0
+                col  = next((c for a, b, c in bounds if a <= frac < b), data[-1][2])
+                line.append(seg("█", col))
+            else:
+                line.append(seg(" "))
+        grid.append(line)
+
+    legend = []
+    for label, cnt, col in data:
+        legend.append([seg("● ", col), seg(f"{label:<7} ", col),
+                       seg(f"{cnt:>6} ", _BOLD), seg(f"{cnt / total * 100:4.1f}%", GREY)])
+    legend.append([seg("  total ", GREY), seg(f"{total:>6}", _BOLD)])
+
+    rows = []
+    for i, g in enumerate(grid):
+        row = list(g) + [seg("  ")]
+        if i < len(legend):
+            row += legend[i]
+        rows.append(row)
+    return box("Status mix", rows, width, RED)
 
 
 def week_panel(s: Stats, width: int) -> list[str]:
