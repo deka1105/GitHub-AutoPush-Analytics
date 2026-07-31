@@ -31,6 +31,12 @@ import logging.handlers
 import threading
 import subprocess
 import shutil
+import select
+try:
+    import termios
+    import tty
+except ImportError:                 # non-POSIX — scrolling keys simply unavailable
+    termios = tty = None
 from collections import deque
 from pathlib import Path
 from datetime import datetime, timedelta
