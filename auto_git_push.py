@@ -420,6 +420,8 @@ class LiveUI:
         self._out          = sys.stdout
         self._stats        = None
         self._stats_mtime  = -1.0
+        self._view         = _dash.LogView() if _dash else None
+        self._old_term     = None            # saved stdin tty state (for scroll keys)
 
     # -- logging bridge --------------------------------------------------------
     def handler(self) -> logging.Handler:
@@ -434,11 +436,20 @@ class LiveUI:
     def active(self) -> bool:
         return _dash is not None and self._out.isatty()
 
+    def _stdin_scrolls(self) -> bool:
+        return termios is not None and sys.stdin.isatty()
+
     def start(self) -> bool:
         if not self.active():
             return False
         self._out.write("\x1b[?1049h\x1b[?25l\x1b[2J")   # alt screen, hide cursor, clear
         self._out.flush()
+        if self._stdin_scrolls():                        # cbreak so arrow keys scroll logs
+            try:
+                self._old_term = termios.tcgetattr(sys.stdin)
+                tty.setcbreak(sys.stdin.fileno())         # leaves ISIG on, so Ctrl-C still quits
+            except (termios.error, ValueError):
+                self._old_term = None
         self._thread = threading.Thread(target=self._loop, name="LiveUI", daemon=True)
         self._thread.start()
         return True
@@ -447,6 +458,11 @@ class LiveUI:
         self._stop.set()
         if self._thread:
             self._thread.join(timeout=2)
+        if self._old_term is not None:
+            try:
+                termios.tcsetattr(sys.stdin, termios.TCSADRAIN, self._old_term)
+            except (termios.error, ValueError):
+                pass
         try:
             self._out.write("\x1b[?25h\x1b[?1049l")       # show cursor, leave alt screen
             self._out.flush()
