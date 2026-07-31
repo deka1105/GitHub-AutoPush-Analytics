@@ -656,16 +656,18 @@ def run(path: str, log_path: str, interval: float, split_cols: int) -> int:
 
             logs = tail_log(log_path)
             cols, rows = shutil.get_terminal_size((80, 24))
-            out.write(frame(stats, logs, err, path, log_path, cols, rows, split_cols))
+            out.write(frame(stats, logs, err, path, log_path, cols, rows, split_cols, view))
             out.flush()
 
             # wait `interval`, but wake early if a key is pressed
             if stdin_tty:
                 r, _, _ = select.select([sys.stdin], [], [], interval)
                 if r:
-                    ch = sys.stdin.read(1)
-                    if ch in ("q", "Q", "\x03"):   # q or Ctrl-C
+                    data = os.read(sys.stdin.fileno(), 64)
+                    if b"q" in data or b"Q" in data or b"\x03" in data:   # q / Ctrl-C
                         break
+                    for tok in decode_keys(data):
+                        apply_scroll(view, tok, page=max(1, rows - 4))
             else:
                 import time
                 time.sleep(interval)
