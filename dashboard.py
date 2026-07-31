@@ -555,7 +555,7 @@ HOME, CLEAR       = "\x1b[H", "\x1b[2J"
 
 def frame(stats: Stats | None, logs: list[str], err: str | None,
           push_path: str, log_path: str, cols: int, rows: int,
-          split_cols: int) -> str:
+          split_cols: int, view: "LogView | None" = None) -> str:
     """Compose one full-screen frame.
 
     Wide terminal ("maximized")  → dashboard on the left half, live logs on the
@@ -581,24 +581,27 @@ def frame(stats: Stats | None, logs: list[str], err: str | None,
         leftw   = min(56, max(44, cols // 2))
         rightw  = cols - leftw - 1
         left    = dashboard_column(stats, leftw)[:body_h]
-        right   = log_box(logs, rightw, body_h)
+        right   = log_box(logs, rightw, body_h, view=view)
         lines  += _join_split(left, right, leftw, body_h)
         mode = "split"
     else:
         # logs-only (half window) — full-width log pane
-        lines += log_box(logs, cols, body_h,
+        lines += log_box(logs, cols, body_h, view=view,
                          note="  waiting for watcher.log … (run auto_git_push.py)")
         mode = "logs"
 
     # ── footer ────────────────────────────────────────────────────────────────
-    if mode == "logs" and stats is not None and stats.total:
+    scrolled = view is not None and not view.following
+    if scrolled:
+        hint = "↑↓/PgUp/PgDn scroll · G live · q quit"
+    elif mode == "logs" and stats is not None and stats.total:
         hint = f"logs only · widen to ≥{split_cols} cols for the dashboard"
     elif mode == "split":
-        hint = f"dashboard + logs · {os.path.basename(log_path)}"
+        hint = f"↑↓ scroll logs · {os.path.basename(log_path)}"
     else:
         hint = os.path.basename(push_path)
-    footer = [seg("  q", _BOLD), seg(" quit   ", GREY),
-              seg("● live", GREEN), seg(f"  {hint}", GREY)]
+    live = [seg("↕ scrolled", AMBER)] if scrolled else [seg("● live", GREEN)]
+    footer = [seg("  q", _BOLD), seg(" quit   ", GREY)] + live + [seg(f"  {hint}", GREY)]
     lines.append(render(pad(_truncate(footer, cols), cols)))
 
     lines = lines[:height]
