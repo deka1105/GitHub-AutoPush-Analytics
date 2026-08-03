@@ -703,11 +703,14 @@ HOME, CLEAR       = "\x1b[H", "\x1b[2J"
 
 def frame(stats: Stats | None, logs: list[str], err: str | None,
           push_path: str, log_path: str, cols: int, rows: int,
-          split_cols: int, view: "LogView | None" = None) -> str:
+          split_cols: int, view: "LogView | None" = None,
+          repos: list[dict] | None = None, repos_view: "LogView | None" = None,
+          focus: str = "logs") -> str:
     """Compose one full-screen frame.
 
-    Wide terminal ("maximized")  → dashboard on the left half, live logs on the
-    right. Narrow terminal ("half window", cols < split_cols) → logs only.
+    Wide terminal ("maximized")  → dashboard + a scrollable watched-repos list on
+    the left half, live logs on the right. Narrow ("half window") → logs only.
+    Tab moves focus between the logs pane and the repos list.
     """
     height = max(3, rows)
     body_h = height - 2                      # title line + footer line
@@ -721,6 +724,7 @@ def frame(stats: Stats | None, logs: list[str], err: str | None,
 
     split = (stats is not None and stats.total > 0
              and cols >= split_cols and body_h >= 14)
+    has_repos = bool(repos)
 
     if err:
         lines += [render([seg("  ⚠ " + err, AMBER + _BOLD)])] + [""] * (body_h - 1)
@@ -728,19 +732,32 @@ def frame(stats: Stats | None, logs: list[str], err: str | None,
     elif split:
         leftw   = min(56, max(44, cols // 2))
         rightw  = cols - leftw - 1
-        left    = dashboard_column(stats, leftw)[:body_h]
-        right   = log_box(logs, rightw, body_h, view=view)
+        if has_repos:
+            # bottom of the left column becomes a scrollable "Watched repos" list
+            repos_h    = min(len(repos) + 2, max(6, body_h // 3), body_h - 8)
+            analytics  = dashboard_column(stats, leftw)[:body_h - repos_h]
+            analytics += [""] * (body_h - repos_h - len(analytics))
+            left       = analytics + list_box(
+                f"Watched repos · {len(repos)}", watched_repos_lines(repos, stats),
+                leftw, repos_h, repos_view, focused=(focus == "repos"))
+        else:
+            left = dashboard_column(stats, leftw)[:body_h]
+        right   = log_box(logs, rightw, body_h, view=view, focused=(focus == "logs"))
         lines  += _join_split(left, right, leftw, body_h)
         mode = "split"
     else:
         # logs-only (half window) — full-width log pane
-        lines += log_box(logs, cols, body_h, view=view,
+        lines += log_box(logs, cols, body_h, view=view, focused=True,
                          note="  waiting for watcher.log … (run auto_git_push.py)")
         mode = "logs"
 
     # ── footer ────────────────────────────────────────────────────────────────
-    scrolled = view is not None and not view.following
-    if scrolled:
+    focus_view = repos_view if (focus == "repos" and has_repos) else view
+    scrolled   = focus_view is not None and focus_view.scroll > 0
+    if mode == "split" and has_repos:
+        tabhint = "Tab: " + ("[repos]" if focus == "repos" else "[logs]")
+        hint = f"↑↓ scroll · {tabhint} · G {'top' if focus=='repos' else 'live'} · q quit"
+    elif scrolled:
         hint = "↑↓/PgUp/PgDn scroll · G live · q quit"
     elif mode == "logs" and stats is not None and stats.total:
         hint = f"logs only · widen to ≥{split_cols} cols for the dashboard"
