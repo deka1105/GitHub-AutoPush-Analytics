@@ -292,6 +292,17 @@ def load(path: str) -> list[dict]:
         ]
 
 
+def load_repos(path: str) -> list[dict]:
+    """The watched-repos config (local_path, repo_url, repo_name); [] if unreadable."""
+    try:
+        with open(path, newline="") as f:
+            rows = [{k.strip(): (v.strip() if v else "") for k, v in row.items()}
+                    for row in csv.DictReader(f)]
+        return [r for r in rows if r.get("repo_name")]
+    except (OSError, csv.Error):
+        return []
+
+
 # ── panel builders ─────────────────────────────────────────────────────────────
 def summary_panel(s: Stats, width: int) -> list[str]:
     rate_col = GREEN if s.rate >= 95 else AMBER if s.rate >= 80 else RED
