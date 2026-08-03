@@ -614,6 +614,7 @@ def dashboard_column(s: Stats, width: int) -> list[str]:
     """Stacked analytics panels for the left half of a split view."""
     out: list[str] = []
     out += summary_panel(s, width);   out.append("")
+    out += recent24_panel(s, width);  out.append("")
     out += pie_panel(s, width);       out.append("")
     out += week_panel(s, width);      out.append("")
     out += sparkline_panel(s, width); out.append("")
