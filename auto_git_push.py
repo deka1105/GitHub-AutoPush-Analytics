@@ -409,9 +409,10 @@ class LiveUI:
     watcher keeps its classic scrolling output.
     """
     def __init__(self, push_log_path: str, logfile: str, split_cols: int = 120,
-                 interval: float = 0.5):
+                 interval: float = 0.5, config_path: str = "repos_config.csv"):
         self.push_log_path = push_log_path
         self.logfile       = logfile
+        self.config_path   = config_path
         self.split_cols    = split_cols
         self.interval      = interval
         self._buf          = deque(maxlen=500)
@@ -420,7 +421,11 @@ class LiveUI:
         self._out          = sys.stdout
         self._stats        = None
         self._stats_mtime  = -1.0
+        self._repos        = _dash.load_repos(config_path) if _dash else []
+        self._repos_mtime  = -1.0
         self._view         = _dash.LogView() if _dash else None
+        self._repos_view   = _dash.LogView() if _dash else None
+        self._focus        = "logs"
         self._old_term     = None            # saved stdin tty state (for scroll keys)
 
     # -- logging bridge --------------------------------------------------------
