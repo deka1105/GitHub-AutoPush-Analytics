@@ -1217,7 +1217,13 @@ def main():
     parser.add_argument("--split-cols", type=int, default=120,
                         help="Min terminal width to show the dashboard beside the logs; "
                              "narrower shows logs only (default: 120)")
+    parser.add_argument("--theme", choices=("auto", "dark", "light"), default="auto",
+                        help="Tune dashboard neutral tones for your terminal background "
+                             "(default: auto — reads on both)")
     args = parser.parse_args()
+
+    if _dash is not None:
+        _dash.apply_theme(args.theme)     # colourblind-safe palette; tune neutrals for bg
 
     # Build the live UI first (if wanted + possible) so its buffering handler
     # captures the startup banner too. Inert on a non-TTY or if dashboard.py
