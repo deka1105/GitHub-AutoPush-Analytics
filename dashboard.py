@@ -579,8 +579,34 @@ def _wrap_raw(s: str, width: int, indent: int = 2) -> list[str]:
     return lines
 
 
-def log_box(entries: list[str], width: int, height: int,
-            note: str | None = None, view: "LogView | None" = None) -> list[str]:
+def _scrollbar(total: int, slots: int, first: int) -> list[bool]:
+    """Which of the `slots` visible rows carry the scrollbar thumb (first = top index)."""
+    if total <= slots:
+        return [False] * slots
+    thumb = max(1, round(slots * slots / total))
+    top   = round((first / (total - slots)) * (slots - thumb))
+    return [top <= r < top + thumb for r in range(slots)]
+
+
+def _framed(title: str, rows: list[str], width: int, bar: list[bool],
+            accent: str, focused: bool) -> list[str]:
+    """Render `rows` (already exactly inner-wide raw strings) inside a titled box
+    with a scrollbar; the left border + title brighten when the pane is focused."""
+    inner  = width - 2
+    tcol   = accent + _BOLD if focused else accent
+    lb     = accent if focused else BORDER            # focus tint on the left border
+    head   = _truncate([seg("┌─", lb), seg(f" {title} ", tcol),
+                        seg("─" * max(0, inner - len(title) - 3) + "┐", BORDER)], width)
+    out = [render(head)]
+    for r, line in enumerate(rows):
+        right = f"{accent}█{_R}" if bar[r] else f"{BORDER}│{_R}"
+        out.append(f"{lb}│{_R}{_fit_raw(line, inner)}{right}")
+    out.append(render([seg("└" + "─" * inner + "┘", BORDER)]))
+    return out
+
+
+def log_box(entries: list[str], width: int, height: int, note: str | None = None,
+            view: "LogView | None" = None, focused: bool = False) -> list[str]:
     """A 'Live log' box exactly `height` lines tall; long lines wrap, newest at bottom.
 
     When a `view` is given the pane is scrollable: `view.scroll` lines are hidden
@@ -610,23 +636,41 @@ def log_box(entries: list[str], width: int, height: int,
     start = max(0, end - slots)
     shown = ([""] * slots + visual[start:end])[-slots:]  # pad top; newest sits at bottom
 
-    title = "Live log" if scroll == 0 else f"Live log · ↑{scroll}/{max_scroll} SCROLLED"
+    title  = "Live log" if scroll == 0 else f"Live log · ↑{scroll}/{max_scroll} SCROLLED"
     accent = CYAN if scroll == 0 else AMBER
-    head = _truncate([seg("┌─", BORDER), seg(f" {title} ", accent + _BOLD),
-                      seg("─" * max(0, inner - len(title) - 3) + "┐", BORDER)], width)
-    out = [render(head)]
-    # scrollbar thumb on the right border
-    if total > slots:
-        thumb = max(1, round(slots * slots / total))
-        top   = round((start / (total - slots)) * (slots - thumb)) if total > slots else 0
-        bar   = [(top <= r < top + thumb) for r in range(slots)]
-    else:
-        bar = [False] * slots
-    for r, line in enumerate(shown):
-        right = f"{CYAN}█{_R}" if bar[r] else f"{BORDER}│{_R}"
-        out.append(f"{BORDER}│{_R}{_fit_raw(line, inner)}{right}")
-    out.append(render([seg("└" + "─" * inner + "┘", BORDER)]))
+    return _framed(title, shown, width, _scrollbar(total, slots, start), accent, focused)
+
+
+def watched_repos_lines(repos: list[dict], stats: "Stats | None") -> list[str]:
+    """One coloured row per watched repo: activity dot · name · 24h count · path."""
+    active = {n: c for n, c, _ in stats.last24_repos} if stats else {}
+    out = []
+    for r in repos:
+        name = r.get("repo_name", "?")
+        path = "/".join(r.get("local_path", "").rstrip("/").split("/")[-2:])
+        cnt  = active.get(name)
+        dot  = f"{GREEN}●{_R}" if cnt else f"{BORDER}●{_R}"     # blue = pushed in last 24h
+        tag  = f" {GREEN}{cnt}↑{_R}" if cnt else ""
+        out.append(f" {dot} {PURPLE}{name}{_R}{tag}  {GREY}{path}{_R}")
     return out
+
+
+def list_box(title: str, lines: list[str], width: int, height: int,
+             view: "LogView | None" = None, focused: bool = False,
+             accent: str = CYAN) -> list[str]:
+    """A top-anchored scrollable list box (one row per item, no wrapping)."""
+    inner = width - 2
+    slots = max(1, height - 2)
+    total = len(lines)
+    scroll = 0
+    if view is not None:
+        view.max_scroll = max(0, total - slots)
+        view.scroll = max(0, min(view.scroll, view.max_scroll))
+        scroll = view.scroll
+    window = (lines[scroll:scroll + slots] + [""] * slots)[:slots]
+    shown  = f"{title} · {min(scroll + slots, total)}/{total}" if total > slots else \
+             f"{title} · {total}"
+    return _framed(shown, window, width, _scrollbar(total, slots, scroll), accent, focused)
 
 
 def dashboard_column(s: Stats, width: int) -> list[str]:
