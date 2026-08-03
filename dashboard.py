@@ -708,7 +708,10 @@ def main() -> int:
     ap.add_argument("--split-cols", type=int, default=120,
                     help="min terminal width to show the dashboard beside the logs; "
                          "narrower than this shows logs only (default: 120)")
+    ap.add_argument("--theme", choices=("auto", "dark", "light"), default="auto",
+                    help="tune neutral tones for your terminal background (default: auto)")
     args = ap.parse_args()
+    apply_theme(args.theme)
     return run(args.log, args.watcher_log, max(0.2, args.interval), args.split_cols)
 
 
