@@ -1,0 +1,50 @@
+[38;5;34m2026-08-01 09:23:03[0m  [38;5;39m[1m▶ INFO    [0m  [0m============================================================[0m
+[38;5;34m2026-08-01 09:23:03[0m  [38;5;39m[1m▶ INFO    [0m  [0mAuto Git Pusher v4 starting[0m
+[38;5;34m2026-08-01 09:23:03[0m  [38;5;39m[1m▶ INFO    [0m  [0m  Config CSV : repos_config.csv[0m
+[38;5;34m2026-08-01 09:23:03[0m  [38;5;39m[1m▶ INFO    [0m  [0m  Push log   : push_log.csv[0m
+[38;5;34m2026-08-01 09:23:03[0m  [38;5;39m[1m▶ INFO    [0m  [0m  Watcher log: watcher.log[0m
+[38;5;34m2026-08-01 09:23:03[0m  [38;5;39m[1m▶ INFO    [0m  [0m============================================================[0m
+[38;5;34m2026-08-01 09:23:03[0m  [38;5;39m[1m▶ INFO    [0m  [0mLoaded 34 repo(s) from repos_config.csv[0m
+[38;5;34m2026-08-01 09:23:03[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[TestWatcher][0m  [0mSetting up repo…[0m
+[38;5;34m2026-08-01 09:23:03[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[TestWatcher][0m  [0mRepo ready at /Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher[0m
+[38;5;34m2026-08-01 09:23:03[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[TestWatcher][0m  [0mStartup sync — checking for offline changes…[0m
+[38;5;34m2026-08-01 09:23:03[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[TestWatcher][0m  [0mStartup sync: nothing to push — already up to date.[0m
+[38;5;34m2026-08-01 09:23:03[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[TestWatcher][0m  [0mWatching: /Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher[0m
+[38;5;34m2026-08-01 09:23:03[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[MultistockDashboard][0m  [0mSetting up repo…[0m
+[38;5;34m2026-08-01 09:23:03[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[MultistockDashboard][0m  [0mRepo ready at /Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard[0m
+[38;5;34m2026-08-01 09:23:03[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[MultistockDashboard][0m  [0mStartup sync — checking for offline changes…[0m
+[38;5;34m2026-08-01 09:23:04[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[MultistockDashboard][0m  [0mStartup sync: nothing to push — already up to date.[0m
+[38;5;34m2026-08-01 09:23:04[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[MultistockDashboard][0m  [0mWatching: /Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard[0m
+[38;5;34m2026-08-01 09:23:04[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[PlayBooks][0m  [0mSetting up repo…[0m
+[38;5;34m2026-08-01 09:23:04[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[PlayBooks][0m  [0mRepo ready at /Users/shubhamarundekatey/ClaudeCode/day0[0m
+[38;5;34m2026-08-01 09:23:04[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[PlayBooks][0m  [0mStartup sync — checking for offline changes…[0m
+[38;5;34m2026-08-01 09:23:04[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[PlayBooks][0m  [0mStartup sync: nothing to push — already up to date.[0m
+[38;5;34m2026-08-01 09:23:04[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[PlayBooks][0m  [0mWatching: /Users/shubhamarundekatey/ClaudeCode/day0[0m
+[38;5;34m2026-08-01 09:23:04[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[GitHub-AutoPush-Analytics][0m  [0mSetting up repo…[0m
+[38;5;34m2026-08-01 09:23:04[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[GitHub-AutoPush-Analytics][0m  [0mRepo ready at /Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics[0m
+[38;5;34m2026-08-01 09:23:04[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[GitHub-AutoPush-Analytics][0m  [0mStartup sync — checking for offline changes…[0m
+[38;5;34m2026-08-01 10:41:18[0m  [38;5;39m[1m▶ INFO    [0m  [0m============================================================[0m
+[38;5;34m2026-08-01 10:41:18[0m  [38;5;39m[1m▶ INFO    [0m  [0mAuto Git Pusher v4 starting[0m
+[38;5;34m2026-08-01 10:41:18[0m  [38;5;39m[1m▶ INFO    [0m  [0m  Config CSV : repos_config.csv[0m
+[38;5;34m2026-08-01 10:41:18[0m  [38;5;39m[1m▶ INFO    [0m  [0m  Push log   : push_log.csv[0m
+[38;5;34m2026-08-01 10:41:18[0m  [38;5;39m[1m▶ INFO    [0m  [0m  Watcher log: watcher.log[0m
+[38;5;34m2026-08-01 10:41:18[0m  [38;5;39m[1m▶ INFO    [0m  [0m============================================================[0m
+[38;5;34m2026-08-01 10:41:18[0m  [38;5;39m[1m▶ INFO    [0m  [0mLoaded 34 repo(s) from repos_config.csv[0m
+[38;5;34m2026-08-01 10:41:18[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[TestWatcher][0m  [0mSetting up repo…[0m
+[38;5;34m2026-08-01 10:41:18[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[TestWatcher][0m  [0mRepo ready at /Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher[0m
+[38;5;34m2026-08-01 10:41:18[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[TestWatcher][0m  [0mStartup sync — checking for offline changes…[0m
+[38;5;34m2026-08-01 10:41:19[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[TestWatcher][0m  [0mStartup sync: nothing to push — already up to date.[0m
+[38;5;34m2026-08-01 10:41:19[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[TestWatcher][0m  [0mWatching: /Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher[0m
+[38;5;34m2026-08-01 10:41:19[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[MultistockDashboard][0m  [0mSetting up repo…[0m
+[38;5;34m2026-08-01 10:41:19[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[MultistockDashboard][0m  [0mRepo ready at /Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard[0m
+[38;5;34m2026-08-01 10:41:19[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[MultistockDashboard][0m  [0mStartup sync — checking for offline changes…[0m
+[38;5;34m2026-08-01 10:41:19[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[MultistockDashboard][0m  [0mStartup sync: nothing to push — already up to date.[0m
+[38;5;34m2026-08-01 10:41:19[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[MultistockDashboard][0m  [0mWatching: /Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard[0m
+[38;5;34m2026-08-01 10:41:19[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[PlayBooks][0m  [0mSetting up repo…[0m
+[38;5;34m2026-08-01 10:41:19[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[PlayBooks][0m  [0mRepo ready at /Users/shubhamarundekatey/ClaudeCode/day0[0m
+[38;5;34m2026-08-01 10:41:19[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[PlayBooks][0m  [0mStartup sync — checking for offline changes…[0m
+[38;5;34m2026-08-01 10:41:19[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[PlayBooks][0m  [0mStartup sync: nothing to push — already up to date.[0m
+[38;5;34m2026-08-01 10:41:19[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[PlayBooks][0m  [0mWatching: /Users/shubhamarundekatey/ClaudeCode/day0[0m
+[38;5;34m2026-08-01 10:41:19[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[GitHub-AutoPush-Analytics][0m  [0mSetting up repo…[0m
+[38;5;34m2026-08-01 10:41:19[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[GitHub-AutoPush-Analytics][0m  [0mRepo ready at /Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics[0m
+[38;5;34m2026-08-01 10:41:19[0m  [38;5;39m[1m▶ INFO    [0m  [38;5;141m[1m[GitHub-AutoPush-Analytics][0m  [0mStartup sync — checking for offline changes…[0m

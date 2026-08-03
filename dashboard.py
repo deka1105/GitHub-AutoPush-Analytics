@@ -38,22 +38,44 @@ import unicodedata
 from collections import Counter, OrderedDict, deque
 from datetime import datetime, timedelta
 
-# ── palette (256-colour, matched to auto_git_push.py) ─────────────────────────
+# ── palette (256-colour) ──────────────────────────────────────────────────────
+# Colourblind-safe + theme-agnostic. Categorical status hues are blue / orange /
+# pink-red — distinguishable under red-green colour blindness and readable on
+# both light and dark terminals; success/failed/error also carry ✓ ▲ ✖ glyphs and
+# text labels as non-colour cues. Legacy names are kept to limit churn:
+#   GREEN → blue (success/positive)   AMBER → orange (failed)   RED → pink-red (error)
 _R      = "\x1b[0m"
 _BOLD   = "\x1b[1m"
 _DIM    = "\x1b[2m"
-BORDER  = "\x1b[38;5;240m"     # dark grey box lines
-TITLE   = "\x1b[38;5;39m"      # sky blue
-GREEN   = "\x1b[38;5;82m"      # success
-AMBER   = "\x1b[38;5;214m"     # failed
-RED     = "\x1b[38;5;196m"     # error
-PURPLE  = "\x1b[38;5;141m"     # repo names
-GREY    = "\x1b[38;5;244m"     # timestamps / muted
-CYAN    = "\x1b[38;5;80m"
+TITLE   = "\x1b[38;5;33m"      # headers / INFO       — blue
+GREEN   = "\x1b[38;5;33m"      # success / positive   — blue
+AMBER   = "\x1b[38;5;208m"     # failed               — orange
+RED     = "\x1b[38;5;197m"     # error                — pink-red
+PURPLE  = "\x1b[38;5;141m"     # repo names           — lavender (non-status)
+CYAN    = "\x1b[38;5;37m"      # secondary accent     — teal
 
-# green ramp, freshest → palest, for the 14-day sparkline
-_RAMP = ["\x1b[38;5;22m", "\x1b[38;5;28m", "\x1b[38;5;34m", "\x1b[38;5;40m",
-         "\x1b[38;5;46m", "\x1b[38;5;83m", "\x1b[38;5;120m", "\x1b[38;5;157m"]
+# Neutrals are theme-tunable (see apply_theme) so borders and muted text keep
+# contrast on any background.
+BORDER  = "\x1b[38;5;244m"     # box lines
+GREY    = "\x1b[38;5;246m"     # timestamps / muted text
+
+# Blue intensity ramp (newest → oldest) for the sparkline, kept mid-range so
+# both ends stay visible on light and dark backgrounds.
+_RAMP = ["\x1b[38;5;45m", "\x1b[38;5;39m", "\x1b[38;5;38m", "\x1b[38;5;33m",
+         "\x1b[38;5;32m", "\x1b[38;5;31m", "\x1b[38;5;66m", "\x1b[38;5;244m"]
+
+_THEMES = {   # background-sensitive neutrals; hues above stay fixed
+    "auto":  ("\x1b[38;5;244m", "\x1b[38;5;246m"),
+    "dark":  ("\x1b[38;5;246m", "\x1b[38;5;250m"),   # brighter lines/text on black
+    "light": ("\x1b[38;5;240m", "\x1b[38;5;238m"),   # darker  lines/text on white
+}
+
+
+def apply_theme(name: str):
+    """Tune the background-sensitive neutrals: 'auto' (default), 'dark', 'light'."""
+    global BORDER, GREY
+    BORDER, GREY = _THEMES.get(name, _THEMES["auto"])
+
 
 _SPARK  = "▁▂▃▄▅▆▇█"
 _TS_FMT = "%Y-%m-%d %H:%M:%S"
