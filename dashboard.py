@@ -400,11 +400,11 @@ _LEVELS = {  # level → (colour, glyph); DEBUG is dropped, mirroring the consol
     "CRITICAL": (RED + _BOLD, "●"),
 }
 _REPO_RE = re.compile(r"^\[([^\]]+)\]\s*(.*)")
-_MSG_KW = {  # leading keyword → body colour (mirrors the watcher's palette)
-    "✓":    "\x1b[38;5;82m",  "Push": "\x1b[38;5;39m",  "Comm": "\x1b[38;5;75m",
-    "Stag": "\x1b[38;5;244m", "Pull": "\x1b[38;5;220m", "Noth": "\x1b[38;5;240m",
-    "CREA": "\x1b[38;5;82m",  "MODI": "\x1b[38;5;75m",  "DELE": "\x1b[38;5;196m",
-    "MOVE": "\x1b[38;5;214m",
+_MSG_KW = {  # leading keyword → body colour (colourblind-safe, mirrors the watcher)
+    "✓":    "\x1b[38;5;33m",  "Push": "\x1b[38;5;39m",  "Comm": "\x1b[38;5;38m",
+    "Stag": "\x1b[38;5;246m", "Pull": "\x1b[38;5;37m",  "Noth": "\x1b[38;5;244m",
+    "CREA": "\x1b[38;5;33m",  "MODI": "\x1b[38;5;39m",  "DELE": "\x1b[38;5;197m",
+    "MOVE": "\x1b[38;5;208m",
 }
 
 
