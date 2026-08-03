@@ -67,26 +67,26 @@ _BOLD = "[1m"
 _DIM  = "[2m"
 
 _LEVEL_COLOURS = {
-    "DEBUG"   : "[38;5;240m",   # dark grey
-    "INFO"    : "[38;5;39m",    # sky blue
-    "WARNING" : "[38;5;214m",   # amber
-    "ERROR"   : "[38;5;196m",   # red
-    "CRITICAL": "[48;5;196m[97m",  # red bg, white text
+    "DEBUG"   : "[38;5;244m",   # mid grey
+    "INFO"    : "[38;5;33m",    # blue
+    "WARNING" : "[38;5;208m",   # orange (failed)
+    "ERROR"   : "[38;5;197m",   # pink-red (error)
+    "CRITICAL": "[48;5;197m[97m",  # pink-red bg, white text
 }
 
 _REPO_COLOUR = "[38;5;141m"   # soft purple for [RepoName]
-_TIME_COLOUR = "[38;5;244m"   # mid grey for timestamp
+_TIME_COLOUR = "[38;5;246m"   # mid grey for timestamp
 _MSG_COLOURS = {
-    "✓"   : "[38;5;82m",    # bright green — success
+    "✓"   : "[38;5;33m",    # blue — success
     "Push": "[38;5;39m",    # blue
-    "Comm": "[38;5;75m",    # lighter blue — committing
-    "Stag": "[38;5;244m",   # grey — staging
-    "Pull": "[38;5;220m",   # yellow
-    "Noth": "[38;5;240m",   # dark grey — nothing to commit
-    "CREA": "[38;5;82m",    # green — file created
-    "MODI": "[38;5;75m",    # blue — file modified
-    "DELE": "[38;5;196m",   # red — file deleted
-    "MOVE": "[38;5;214m",   # amber — file moved
+    "Comm": "[38;5;38m",    # blue — committing
+    "Stag": "[38;5;246m",   # grey — staging
+    "Pull": "[38;5;37m",    # teal — pulling
+    "Noth": "[38;5;244m",   # grey — nothing to commit
+    "CREA": "[38;5;33m",    # blue — file created
+    "MODI": "[38;5;39m",    # blue — file modified
+    "DELE": "[38;5;197m",   # pink-red — file deleted
+    "MOVE": "[38;5;208m",   # orange — file moved
 }
 
 import re as _re
@@ -276,13 +276,13 @@ def commits_per_day_last_7(log_path: str) -> dict:
 # Shades for log-line timestamps: darkest green for lines logged today,
 # progressively lighter the older the line's date is. Index = days ago.
 _DAY_SHADES = [
-    "\x1b[38;5;34m",    # today      — deep green
-    "\x1b[38;5;40m",
-    "\x1b[38;5;46m",
-    "\x1b[38;5;83m",
-    "\x1b[38;5;120m",
-    "\x1b[38;5;157m",
-    "\x1b[38;5;194m",   # 6 days ago — palest green
+    "[38;5;45m",    # today      — bright blue
+    "[38;5;39m",
+    "[38;5;38m",
+    "[38;5;33m",
+    "[38;5;32m",
+    "[38;5;66m",
+    "[38;5;244m",   # 6 days ago — grey
 ]
 
 
