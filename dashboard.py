@@ -777,7 +777,8 @@ def frame(stats: Stats | None, logs: list[str], err: str | None,
     return HOME + body + "\x1b[J"
 
 
-def run(path: str, log_path: str, interval: float, split_cols: int) -> int:
+def run(path: str, log_path: str, interval: float, split_cols: int,
+        config_path: str = "repos_config.csv") -> int:
     if not os.path.exists(path):
         print(f"push log not found: {path}", file=sys.stderr)
         return 1
@@ -795,11 +796,13 @@ def run(path: str, log_path: str, interval: float, split_cols: int) -> int:
     out.write(ALT_ON + CUR_OFF + CLEAR)
     out.flush()
 
-    cache_mtime = -1.0
+    cache_mtime = repos_mtime = -1.0
     stats: Stats | None = None
     logs: list[str] = []
     err: str | None = None
-    view = LogView()
+    repos: list[dict] = load_repos(config_path)
+    view, repos_view = LogView(), LogView()
+    focus = "logs"
 
     def cleanup(*_):
         out.write(CUR_ON + ALT_OFF)
@@ -818,10 +821,17 @@ def run(path: str, log_path: str, interval: float, split_cols: int) -> int:
                     cache_mtime = mtime
             except (OSError, csv.Error) as e:
                 err = f"cannot read {path}: {e}"
+            try:                                    # hot-reload the watched-repos list
+                rm = os.path.getmtime(config_path)
+                if rm != repos_mtime:
+                    repos, repos_mtime = load_repos(config_path), rm
+            except OSError:
+                pass
 
             logs = tail_log(log_path)
             cols, rows = shutil.get_terminal_size((80, 24))
-            out.write(frame(stats, logs, err, path, log_path, cols, rows, split_cols, view))
+            out.write(frame(stats, logs, err, path, log_path, cols, rows, split_cols,
+                            view, repos, repos_view, focus))
             out.flush()
 
             # wait `interval`, but wake early if a key is pressed
@@ -832,7 +842,12 @@ def run(path: str, log_path: str, interval: float, split_cols: int) -> int:
                     if b"q" in data or b"Q" in data or b"\x03" in data:   # q / Ctrl-C
                         break
                     for tok in decode_keys(data):
-                        apply_scroll(view, tok, page=max(1, rows - 4))
+                        if tok == "focus":
+                            focus = "repos" if focus == "logs" else "logs"
+                        elif focus == "repos":
+                            apply_scroll_list(repos_view, tok, page=max(1, rows - 4))
+                        else:
+                            apply_scroll(view, tok, page=max(1, rows - 4))
             else:
                 import time
                 time.sleep(interval)
