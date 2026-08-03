@@ -181,15 +181,23 @@ def decode_keys(data: bytes) -> list[str]:
         else:
             c = chr(data[i]) if data[i] < 128 else ""
             toks.append({"k": "up", "j": "down", "g": "top", "G": "bottom",
-                         "b": "pageup", " ": "pagedown", "f": "pagedown"}.get(c, ""))
+                         "b": "pageup", " ": "pagedown", "f": "pagedown",
+                         "\t": "focus"}.get(c, ""))
             i += 1
     return [t for t in toks if t]
 
 
 def apply_scroll(view: LogView, tok: str, page: int):
-    """Adjust the view for one key token (bottom clamp here, top clamp in log_box)."""
+    """Scroll a bottom-anchored pane (logs): up = older; 0 = following newest."""
     step = {"up": 1, "down": -1, "pageup": page, "pagedown": -page,
             "top": 10 ** 9, "bottom": -(10 ** 9)}.get(tok, 0)
+    view.scroll = max(0, view.scroll + step)
+
+
+def apply_scroll_list(view: LogView, tok: str, page: int):
+    """Scroll a top-anchored pane (a list): up = toward the top; 0 = top."""
+    step = {"up": -1, "down": 1, "pageup": -page, "pagedown": page,
+            "top": -(10 ** 9), "bottom": 10 ** 9}.get(tok, 0)
     view.scroll = max(0, view.scroll + step)
 
 
