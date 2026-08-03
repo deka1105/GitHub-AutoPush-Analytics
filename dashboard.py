@@ -375,6 +375,29 @@ def week_panel(s: Stats, width: int) -> list[str]:
     return box(f"Last 7 days · {s.last7} pushes", rows, width, GREEN)
 
 
+def recent24_panel(s: Stats, width: int) -> list[str]:
+    """Repos active in the last 24h — most-recent first — with commit counts."""
+    repos = s.last24_repos[:6]
+    title = f"Last 24h · {s.last24_total} commits"
+    if not repos:
+        return box(title, [[seg(" no pushes in the last 24 hours", GREY)]], width, CYAN)
+    now    = datetime.now()
+    namew  = min(20, max(len(n) for n, _, _ in repos))
+    peak   = max(c for _, c, _ in repos) or 1
+    inner  = width - 2
+    bar_w  = max(3, inner - namew - 16)
+    rows = []
+    for name, cnt, dt in repos:
+        fil = max(1, round(cnt / peak * bar_w))
+        rows.append([
+            seg(f" {name[:namew]:<{namew}} ", PURPLE),
+            seg("▇" * fil, GREEN),
+            seg(f" {cnt:>3}", GREEN + _BOLD),
+            seg(f"  {_ago(now - dt):>3} ago ", GREY),
+        ])
+    return box(title, rows, width, CYAN)
+
+
 def sparkline_panel(s: Stats, width: int) -> list[str]:
     peak = max(s.per_day.values()) or 1
     spark, labels = [], []
