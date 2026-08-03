@@ -230,11 +230,50 @@ class Stats:
         self.last_7_days = list(days.items())[-7:]
         self.last7       = sum(n for _, n in self.last_7_days)
 
+        # rolling 24h: successful pushes per repo + when each last pushed, so the
+        # panel can list the most-recently-active repos with their commit counts.
+        now, cutoff = datetime.now(), datetime.now() - timedelta(hours=24)
+        rec: dict = {}                          # repo -> [count, latest_dt]
+        for r in rows:
+            if (r.get("status") or "").strip() != "success":
+                continue
+            dt = _parse_dt(r.get("timestamp"))
+            if dt is None or dt < cutoff or dt > now:
+                continue
+            name = (r.get("repo_name") or "?").strip()
+            e = rec.get(name)
+            if e is None:
+                rec[name] = [1, dt]
+            else:
+                e[0] += 1
+                e[1] = max(e[1], dt)
+        self.last24_total = sum(v[0] for v in rec.values())
+        self.last24_repos = sorted(((n, c, dt) for n, (c, dt) in rec.items()),
+                                   key=lambda t: t[2], reverse=True)   # latest first
+
+
 def _parse_day(ts: str | None):
     try:
         return datetime.strptime((ts or "").strip(), _TS_FMT).date()
     except (ValueError, AttributeError):
         return None
+
+
+def _parse_dt(ts: str | None):
+    try:
+        return datetime.strptime((ts or "").strip(), _TS_FMT)
+    except (ValueError, AttributeError):
+        return None
+
+
+def _ago(td: timedelta) -> str:
+    """Compact 'time since' label: 5s / 42m / 3h."""
+    s = int(td.total_seconds())
+    if s < 60:
+        return f"{s}s"
+    if s < 3600:
+        return f"{s // 60}m"
+    return f"{s // 3600}h"
 
 
 def load(path: str) -> list[dict]:

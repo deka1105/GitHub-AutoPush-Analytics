@@ -8115,3 +8115,64 @@ Another git process seems to be running in this repository, or the lock file may
 2026-08-03 16:23:02 [DEBUG   ] queue_event FileModifiedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics/.git/objects/pack/pack-989a77f1f3891d04a0fa979eeb98103a13391f7b.pack', dest_path='', event_type='modified', is_directory=False, is_synthetic=False)
 2026-08-03 16:23:02 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics/.git/objects/eb/tmp_obj_snX48h", inode=279992745, flags=111300, id=124305967): is_coalesced, is_created, is_file, is_hardlink, is_modified, is_removed
 2026-08-03 16:23:02 [DEBUG   ] queue_event FileCreatedEvent(src_path='/Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics/.git/index.stash.82110.lock', dest_path='', event_type='created', is_directory=False, is_synthetic=False)
+2026-08-03 16:29:16 [INFO    ] ============================================================
+2026-08-03 16:29:16 [INFO    ] Auto Git Pusher v4 starting
+2026-08-03 16:29:16 [INFO    ]   Config CSV : repos_config.csv
+2026-08-03 16:29:16 [INFO    ]   Push log   : push_log.csv
+2026-08-03 16:29:16 [INFO    ]   Watcher log: watcher.log
+2026-08-03 16:29:16 [INFO    ] ============================================================
+2026-08-03 16:29:16 [INFO    ] Loaded 34 repo(s) from repos_config.csv
+2026-08-03 16:29:16 [INFO    ] [TestWatcher] Setting up repo…
+2026-08-03 16:29:16 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-08-03 16:29:16 [DEBUG   ]   stdout: https://github.com/deka1105/TestWatcher.git
+2026-08-03 16:29:16 [INFO    ] [TestWatcher] Repo ready at /Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher
+2026-08-03 16:29:16 [INFO    ] [TestWatcher] Startup sync — checking for offline changes…
+2026-08-03 16:29:16 [DEBUG   ]   $ git stash --include-untracked  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-08-03 16:29:16 [DEBUG   ]   stdout: No local changes to save
+2026-08-03 16:29:16 [DEBUG   ]   $ git -c diff.ignoreSubmodules=all pull --rebase --autostash origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-08-03 16:29:16 [DEBUG   ]   stdout: Already up to date.
+2026-08-03 16:29:16 [DEBUG   ]   stderr: From https://github.com/deka1105/TestWatcher
+ * branch            HEAD       -> FETCH_HEAD
+2026-08-03 16:29:16 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-08-03 16:29:16 [INFO    ] [TestWatcher] Startup sync: nothing to push — already up to date.
+2026-08-03 16:29:16 [INFO    ] [TestWatcher] Watching: /Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher
+2026-08-03 16:29:16 [INFO    ] [MultistockDashboard] Setting up repo…
+2026-08-03 16:29:16 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-08-03 16:29:16 [DEBUG   ]   stdout: https://github.com/deka1105/MultistockDashboard.git
+2026-08-03 16:29:16 [INFO    ] [MultistockDashboard] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard
+2026-08-03 16:29:16 [INFO    ] [MultistockDashboard] Startup sync — checking for offline changes…
+2026-08-03 16:29:16 [DEBUG   ]   $ git stash --include-untracked  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-08-03 16:29:16 [DEBUG   ]   stdout: No local changes to save
+2026-08-03 16:29:16 [DEBUG   ]   $ git -c diff.ignoreSubmodules=all pull --rebase --autostash origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-08-03 16:29:16 [DEBUG   ]   stderr: From https://github.com/deka1105/MultistockDashboard
+ * branch            HEAD       -> FETCH_HEAD
+fatal: Cannot rebase onto multiple branches.
+2026-08-03 16:29:16 [WARNING ] [MultistockDashboard] Startup pull --rebase issue: From https://github.com/deka1105/MultistockDashboard
+ * branch            HEAD       -> FETCH_HEAD
+fatal: Cannot rebase onto multiple branches.
+2026-08-03 16:29:16 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-08-03 16:29:16 [WARNING ] [MultistockDashboard] Rebase issue but no conflicted files found.
+2026-08-03 16:29:16 [DEBUG   ]   $ git rebase --abort  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-08-03 16:29:16 [DEBUG   ]   stderr: fatal: no rebase in progress
+2026-08-03 16:29:16 [ERROR   ] [MultistockDashboard] Startup sync aborted due to unresolvable conflict.
+2026-08-03 16:29:16 [INFO    ] [MultistockDashboard] Watching: /Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard
+2026-08-03 16:29:16 [INFO    ] [PlayBooks] Setting up repo…
+2026-08-03 16:29:16 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-08-03 16:29:16 [DEBUG   ]   stdout: https://github.com/deka1105/Playbooks.git
+2026-08-03 16:29:16 [INFO    ] [PlayBooks] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day0
+2026-08-03 16:29:16 [INFO    ] [PlayBooks] Startup sync — checking for offline changes…
+2026-08-03 16:29:16 [DEBUG   ]   $ git stash --include-untracked  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-08-03 16:29:16 [DEBUG   ]   stdout: No local changes to save
+2026-08-03 16:29:16 [DEBUG   ]   $ git -c diff.ignoreSubmodules=all pull --rebase --autostash origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-08-03 16:29:17 [DEBUG   ]   stdout: Current branch main is up to date.
+2026-08-03 16:29:17 [DEBUG   ]   stderr: From https://github.com/deka1105/Playbooks
+ * branch            HEAD       -> FETCH_HEAD
+2026-08-03 16:29:17 [DEBUG   ]   $ git status --porcelain  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-08-03 16:29:17 [INFO    ] [PlayBooks] Startup sync: nothing to push — already up to date.
+2026-08-03 16:29:17 [INFO    ] [PlayBooks] Watching: /Users/shubhamarundekatey/ClaudeCode/day0
+2026-08-03 16:29:17 [INFO    ] [GitHub-AutoPush-Analytics] Setting up repo…
+2026-08-03 16:29:17 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics]
+2026-08-03 16:29:17 [DEBUG   ]   stdout: https://github.com/deka1105/GitHub-AutoPush-Analytics.git
+2026-08-03 16:29:17 [INFO    ] [GitHub-AutoPush-Analytics] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics
+2026-08-03 16:29:17 [INFO    ] [GitHub-AutoPush-Analytics] Startup sync — checking for offline changes…
+2026-08-03 16:29:17 [DEBUG   ]   $ git stash --include-untracked  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics]
