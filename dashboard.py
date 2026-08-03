@@ -868,9 +868,12 @@ def main() -> int:
                          "narrower than this shows logs only (default: 120)")
     ap.add_argument("--theme", choices=("auto", "dark", "light"), default="auto",
                     help="tune neutral tones for your terminal background (default: auto)")
+    ap.add_argument("--config", default="repos_config.csv",
+                    help="watched-repos config for the repo list (default: ./repos_config.csv)")
     args = ap.parse_args()
     apply_theme(args.theme)
-    return run(args.log, args.watcher_log, max(0.2, args.interval), args.split_cols)
+    return run(args.log, args.watcher_log, max(0.2, args.interval), args.split_cols,
+               args.config)
 
 
 if __name__ == "__main__":
