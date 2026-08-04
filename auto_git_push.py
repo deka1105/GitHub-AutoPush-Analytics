@@ -1252,7 +1252,8 @@ def main():
     # is unavailable, in which case the classic scrolling console is used.
     live_ui = None
     if not args.no_dashboard:
-        candidate = LiveUI(args.log, args.logfile, split_cols=args.split_cols)
+        candidate = LiveUI(args.log, args.logfile, split_cols=args.split_cols,
+                           config_path=args.csv)
         if candidate.active():
             live_ui = candidate
 
