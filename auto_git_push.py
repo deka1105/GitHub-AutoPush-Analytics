@@ -485,30 +485,47 @@ class LiveUI:
             pass
         return self._stats
 
+    def _current_repos(self):
+        try:                                    # hot-reload the watched-repos list
+            mtime = os.path.getmtime(self.config_path)
+            if mtime != self._repos_mtime:
+                self._repos = _dash.load_repos(self.config_path)
+                self._repos_mtime = mtime
+        except OSError:
+            pass
+        return self._repos
+
     def _loop(self):
         scrolls = self._stdin_scrolls()
         while not self._stop.is_set():
             try:
                 stats = self._current_stats()
+                repos = self._current_repos()
                 logs  = list(self._buf)
                 cols, rows = shutil.get_terminal_size((80, 24))
                 self._out.write(_dash.frame(
                     stats, logs, None, self.push_log_path, self.logfile,
-                    cols, rows, self.split_cols, self._view))
+                    cols, rows, self.split_cols, self._view,
+                    repos, self._repos_view, self._focus))
                 self._out.flush()
             except (OSError, ValueError):
                 pass
             except Exception:
                 pass          # a render glitch must never kill the watcher
 
-            # pace the loop; wake early on a keypress to scroll the log pane
+            # pace the loop; wake early on a keypress to scroll the focused pane
             if scrolls:
                 try:
                     r, _, _ = select.select([sys.stdin], [], [], self.interval)
                     if r:
                         data = os.read(sys.stdin.fileno(), 64)
                         for tok in _dash.decode_keys(data):
-                            _dash.apply_scroll(self._view, tok, page=max(1, rows - 4))
+                            if tok == "focus":
+                                self._focus = "repos" if self._focus == "logs" else "logs"
+                            elif self._focus == "repos":
+                                _dash.apply_scroll_list(self._repos_view, tok, page=max(1, rows - 4))
+                            else:
+                                _dash.apply_scroll(self._view, tok, page=max(1, rows - 4))
                 except (OSError, ValueError):
                     self._stop.wait(self.interval)
             else:
