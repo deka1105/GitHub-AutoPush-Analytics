@@ -808,7 +808,7 @@ def run(path: str, log_path: str, interval: float, split_cols: int,
     out.flush()
 
     cache_mtime = repos_mtime = -1.0
-    rows: list[dict] | None = None
+    log_rows: list[dict] | None = None       # cached parse (note: `rows` below is the terminal height)
     stats: Stats | None = None
     logs: list[str] = []
     err: str | None = None
