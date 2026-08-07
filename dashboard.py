@@ -285,11 +285,18 @@ def _ago(td: timedelta) -> str:
 
 
 def load(path: str) -> list[dict]:
+    """Parse push_log.csv. Each row carries a cached ``_dt`` (its parsed
+    timestamp, or None) so Stats can be rebuilt on every render — keeping the
+    time-windowed metrics (Today / Last 24h / per-day) live — without paying the
+    per-row strptime cost each time."""
     with open(path, newline="") as f:
-        return [
+        rows = [
             {k.strip(): (v.strip() if v else "") for k, v in row.items()}
             for row in csv.DictReader(f)
         ]
+    for r in rows:
+        r["_dt"] = _parse_dt(r.get("timestamp"))
+    return rows
 
 
 def load_repos(path: str) -> list[dict]:
