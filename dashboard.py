@@ -829,14 +829,14 @@ def run(path: str, log_path: str, interval: float, split_cols: int,
             try:
                 mtime = os.path.getmtime(path)
                 if mtime != cache_mtime:          # re-parse only when the file grows
-                    rows, cache_mtime, err = load(path), mtime, None
+                    log_rows, cache_mtime, err = load(path), mtime, None
             except (OSError, csv.Error) as e:
                 err = f"cannot read {path}: {e}"
             # rebuild Stats every tick (≈2ms with cached timestamps) so the
             # time-windowed metrics — Today / Last 24h / per-day — stay live
             # instead of freezing until the next commit lands.
-            if rows is not None:
-                stats = Stats(rows)
+            if log_rows is not None:
+                stats = Stats(log_rows)
             try:                                    # hot-reload the watched-repos list
                 rm = os.path.getmtime(config_path)
                 if rm != repos_mtime:
