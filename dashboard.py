@@ -241,12 +241,13 @@ class Stats:
 
         # rolling 24h: successful pushes per repo + when each last pushed, so the
         # panel can list the most-recently-active repos with their commit counts.
-        now, cutoff = datetime.now(), datetime.now() - timedelta(hours=24)
+        now    = datetime.now()
+        cutoff = now - timedelta(hours=24)
         rec: dict = {}                          # repo -> [count, latest_dt]
         for r in rows:
             if (r.get("status") or "").strip() != "success":
                 continue
-            dt = _parse_dt(r.get("timestamp"))
+            dt = _row_dt(r)
             if dt is None or dt < cutoff or dt > now:
                 continue
             name = (r.get("repo_name") or "?").strip()
