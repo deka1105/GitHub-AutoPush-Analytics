@@ -419,6 +419,7 @@ class LiveUI:
         self._stop         = threading.Event()
         self._thread       = None
         self._out          = sys.stdout
+        self._rows         = None
         self._stats        = None
         self._stats_mtime  = -1.0
         self._repos        = _dash.load_repos(config_path) if _dash else []
@@ -478,11 +479,15 @@ class LiveUI:
     def _current_stats(self):
         try:
             mtime = os.path.getmtime(self.push_log_path)
-            if mtime != self._stats_mtime:
-                self._stats = _dash.Stats(_dash.load(self.push_log_path))
+            if mtime != self._stats_mtime:          # re-parse only when it changes
+                self._rows = _dash.load(self.push_log_path)
                 self._stats_mtime = mtime
         except (OSError, csv.Error):
             pass
+        # rebuild Stats every tick (≈2ms with cached timestamps) so Today /
+        # Last 24h / per-day slide with the wall clock, not just when a push lands.
+        if self._rows is not None:
+            self._stats = _dash.Stats(self._rows)
         return self._stats
 
     def _current_repos(self):
