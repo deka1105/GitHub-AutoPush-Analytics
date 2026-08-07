@@ -262,13 +262,6 @@ class Stats:
                                    key=lambda t: t[2], reverse=True)   # latest first
 
 
-def _parse_day(ts: str | None):
-    try:
-        return datetime.strptime((ts or "").strip(), _TS_FMT).date()
-    except (ValueError, AttributeError):
-        return None
-
-
 def _parse_dt(ts: str | None):
     try:
         return datetime.strptime((ts or "").strip(), _TS_FMT)
