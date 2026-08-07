@@ -227,7 +227,8 @@ class Stats:
         for r in rows:
             if (r.get("status") or "").strip() != "success":
                 continue
-            d = _parse_day(r.get("timestamp"))
+            dt = _row_dt(r)
+            d  = dt.date() if dt else None
             if d in days:
                 days[d] += 1
         self.per_day = days
@@ -272,6 +273,15 @@ def _parse_dt(ts: str | None):
         return datetime.strptime((ts or "").strip(), _TS_FMT)
     except (ValueError, AttributeError):
         return None
+
+
+_MISSING = object()
+
+def _row_dt(r: dict):
+    """The row's parsed timestamp. Uses the ``_dt`` cached by load() when present
+    (fast path); falls back to parsing for hand-built rows that lack it."""
+    dt = r.get("_dt", _MISSING)
+    return _parse_dt(r.get("timestamp")) if dt is _MISSING else dt
 
 
 def _ago(td: timedelta) -> str:
