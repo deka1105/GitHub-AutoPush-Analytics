@@ -5681,3 +5681,605 @@
 2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
 2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
 2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_OPEN, cookie=0, name='HEAD'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'.', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='HEAD'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./.gitignore', wd=1, mask=IN_OPEN, cookie=0, name='.gitignore'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_OPEN, cookie=0, name='config'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./.gitignore', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='.gitignore'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='config'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./Previous Versions', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='Previous Versions'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_OPEN, cookie=0, name='config'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./Previous Versions', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='Previous Versions'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='config'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'.', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./push_log_linux.csv', wd=1, mask=IN_OPEN, cookie=0, name='push_log_linux.csv'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./.gitattributes', wd=1, mask=IN_OPEN, cookie=0, name='.gitattributes'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./.gitattributes', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='.gitattributes'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_OPEN, cookie=0, name='config'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='config'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./push_log_linux.csv', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='push_log_linux.csv'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_OPEN, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index.lock', wd=2, mask=IN_CREATE, cookie=0, name='index.lock'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index.lock', wd=2, mask=IN_OPEN, cookie=0, name='index.lock'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index', wd=2, mask=IN_OPEN, cookie=0, name='index'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='index'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/info/exclude', wd=6, mask=IN_OPEN, cookie=0, name='exclude'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/info/exclude', wd=6, mask=IN_CLOSE_NOWRITE, cookie=0, name='exclude'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.gitignore', wd=1, mask=IN_OPEN, cookie=0, name='.gitignore'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.gitignore', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='.gitignore'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='Previous Versions'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old Py Files', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name='Old Py Files'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old Py Files', wd=55, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old Py Files', wd=3, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='Old Py Files'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old Py Files', wd=55, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old Dashboards', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name='Old Dashboards'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old Dashboards', wd=56, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old Dashboards', wd=3, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='Old Dashboards'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old Dashboards', wd=56, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/autoGitv3', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name='autoGitv3'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/autoGitv3', wd=57, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/autoGitv3', wd=3, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='autoGitv3'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/autoGitv3', wd=57, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old ReadMe', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name='Old ReadMe'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old ReadMe', wd=58, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log.1', wd=1, mask=IN_OPEN, cookie=0, name='watcher_linux.log.1'>
+2026-09-09 22:25:09 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old ReadMe', wd=3, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='Old ReadMe'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old ReadMe', wd=58, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='Previous Versions'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions', wd=3, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/push_log_linux.csv', wd=1, mask=IN_OPEN, cookie=0, name='push_log_linux.csv'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.gitattributes', wd=1, mask=IN_OPEN, cookie=0, name='.gitattributes'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.gitattributes', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='.gitattributes'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=2, mask=IN_ISDIR|IN_OPEN, cookie=0, name='refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=8, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=2, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=8, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/packed-refs', wd=2, mask=IN_OPEN, cookie=0, name='packed-refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/packed-refs', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='packed-refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=5, mask=IN_ISDIR|IN_OPEN, cookie=0, name='pack'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=24, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=5, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='pack'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=24, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack/pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx', wd=24, mask=IN_OPEN, cookie=0, name='pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/70/50b3d7a09c62fb4946e37ee7bdbe1938adf122', wd=92, mask=IN_OPEN, cookie=0, name='50b3d7a09c62fb4946e37ee7bdbe1938adf122'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/70/50b3d7a09c62fb4946e37ee7bdbe1938adf122', wd=92, mask=IN_CLOSE_NOWRITE, cookie=0, name='50b3d7a09c62fb4946e37ee7bdbe1938adf122'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/12', wd=5, mask=IN_CREATE|IN_ISDIR, cookie=0, name='12'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/12/f4bc63ed9422f600136824944ed8d6a490d77e', wd=100, mask=IN_CREATE, cookie=0, name='f4bc63ed9422f600136824944ed8d6a490d77e'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/push_log_linux.csv', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='push_log_linux.csv'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_OPEN, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/43/c1e724a361a8cbeb9840249cb9db1470f91b35', wd=93, mask=IN_OPEN, cookie=0, name='c1e724a361a8cbeb9840249cb9db1470f91b35'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/12', wd=5, mask=IN_ISDIR|IN_OPEN, cookie=0, name='12'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/12', wd=100, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/12', wd=5, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='12'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/12', wd=100, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log.1', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='watcher_linux.log.1'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log.2', wd=1, mask=IN_OPEN, cookie=0, name='watcher_linux.log.2'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/43/c1e724a361a8cbeb9840249cb9db1470f91b35', wd=93, mask=IN_CLOSE_NOWRITE, cookie=0, name='c1e724a361a8cbeb9840249cb9db1470f91b35'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/7e/tmp_obj_Rshe5h', wd=61, mask=IN_CREATE, cookie=0, name='tmp_obj_Rshe5h'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/7e/tmp_obj_Rshe5h', wd=61, mask=IN_OPEN, cookie=0, name='tmp_obj_Rshe5h'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/7e/tmp_obj_Rshe5h', wd=61, mask=IN_MODIFY, cookie=0, name='tmp_obj_Rshe5h'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log.2', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='watcher_linux.log.2'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/7e/tmp_obj_Rshe5h', wd=61, mask=IN_CLOSE_WRITE, cookie=0, name='tmp_obj_Rshe5h'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log.3', wd=1, mask=IN_OPEN, cookie=0, name='watcher_linux.log.3'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/7e/baa837a6991b5b7cf760e0b6dcf1341f4fa305', wd=61, mask=IN_CREATE, cookie=0, name='baa837a6991b5b7cf760e0b6dcf1341f4fa305'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/7e/tmp_obj_Rshe5h', wd=61, mask=IN_DELETE, cookie=0, name='tmp_obj_Rshe5h'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log.1', wd=1, mask=IN_OPEN, cookie=0, name='watcher_linux.log.1'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/73/ae0010821483c6ef8f06a2592454f22455d6e0', wd=86, mask=IN_OPEN, cookie=0, name='ae0010821483c6ef8f06a2592454f22455d6e0'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/73/ae0010821483c6ef8f06a2592454f22455d6e0', wd=86, mask=IN_CLOSE_NOWRITE, cookie=0, name='ae0010821483c6ef8f06a2592454f22455d6e0'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/8f/b7a912480f95c836151131657b0b5aa3b58a9e', wd=98, mask=IN_ATTRIB, cookie=0, name='b7a912480f95c836151131657b0b5aa3b58a9e'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log.1', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='watcher_linux.log.1'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log.2', wd=1, mask=IN_OPEN, cookie=0, name='watcher_linux.log.2'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/85/2306de980b59517adaa547d1d85c1bec1f5df4', wd=42, mask=IN_OPEN, cookie=0, name='2306de980b59517adaa547d1d85c1bec1f5df4'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/85/2306de980b59517adaa547d1d85c1bec1f5df4', wd=42, mask=IN_CLOSE_NOWRITE, cookie=0, name='2306de980b59517adaa547d1d85c1bec1f5df4'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/73/ae0010821483c6ef8f06a2592454f22455d6e0', wd=86, mask=IN_ATTRIB, cookie=0, name='ae0010821483c6ef8f06a2592454f22455d6e0'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log.2', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='watcher_linux.log.2'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log.3', wd=1, mask=IN_OPEN, cookie=0, name='watcher_linux.log.3'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/d9/56ce6640f6682ba4248d4043fed25e199790d3', wd=70, mask=IN_OPEN, cookie=0, name='56ce6640f6682ba4248d4043fed25e199790d3'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/d9/56ce6640f6682ba4248d4043fed25e199790d3', wd=70, mask=IN_CLOSE_NOWRITE, cookie=0, name='56ce6640f6682ba4248d4043fed25e199790d3'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log.3', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='watcher_linux.log.3'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/85/2306de980b59517adaa547d1d85c1bec1f5df4', wd=42, mask=IN_ATTRIB, cookie=0, name='2306de980b59517adaa547d1d85c1bec1f5df4'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log.3', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='watcher_linux.log.3'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index.lock', wd=2, mask=IN_MODIFY, cookie=0, name='index.lock'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index.lock', wd=2, mask=IN_CLOSE_WRITE, cookie=0, name='index.lock'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ]   stderr: warning: in the working copy of 'push_log_linux.csv', CRLF will be replaced by LF the next time Git touches it
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index.lock', wd=2, mask=IN_MOVED_FROM, cookie=26013, name='index.lock'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ]   $ git status --porcelain  [cwd=/home/zeus/claudeCode/GitHub-AutoPush-Analytics]
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index', wd=2, mask=IN_MOVED_TO, cookie=26013, name='index'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack/pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx', wd=24, mask=IN_CLOSE_NOWRITE, cookie=0, name='pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_OPEN, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_OPEN, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_OPEN, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ]   stdout: M  push_log_linux.csv
+MM watcher_linux.log
+M  watcher_linux.log.1
+M  watcher_linux.log.2
+M  watcher_linux.log.3
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'.', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ]   $ git diff --cached --name-only  [cwd=/home/zeus/claudeCode/GitHub-AutoPush-Analytics]
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./.gitignore', wd=1, mask=IN_OPEN, cookie=0, name='.gitignore'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_OPEN, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./.gitignore', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='.gitignore'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./Previous Versions', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='Previous Versions'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_OPEN, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./Previous Versions', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='Previous Versions'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs/heads/main', wd=53, mask=IN_OPEN, cookie=0, name='main'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'.', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ]   stdout: push_log_linux.csv
+watcher_linux.log
+watcher_linux.log.1
+watcher_linux.log.2
+watcher_linux.log.3
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs/heads/main', wd=53, mask=IN_CLOSE_NOWRITE, cookie=0, name='main'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/packed-refs', wd=2, mask=IN_OPEN, cookie=0, name='packed-refs'>
+2026-09-09 22:25:10 [DEBUG   ]   $ git diff --cached --name-only  [cwd=/home/zeus/claudeCode/GitHub-AutoPush-Analytics]
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/packed-refs', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='packed-refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index', wd=2, mask=IN_OPEN, cookie=0, name='index'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='index'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index.lock', wd=2, mask=IN_CREATE, cookie=0, name='index.lock'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ]   stdout: push_log_linux.csv
+watcher_linux.log
+watcher_linux.log.1
+watcher_linux.log.2
+watcher_linux.log.3
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index.lock', wd=2, mask=IN_OPEN, cookie=0, name='index.lock'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ]   $ git diff --cached --name-only  [cwd=/home/zeus/claudeCode/GitHub-AutoPush-Analytics]
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_OPEN, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs/heads/main', wd=53, mask=IN_OPEN, cookie=0, name='main'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs/heads/main', wd=53, mask=IN_CLOSE_NOWRITE, cookie=0, name='main'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_OPEN, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ]   stdout: push_log_linux.csv
+watcher_linux.log
+watcher_linux.log.1
+watcher_linux.log.2
+watcher_linux.log.3
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs/heads/main', wd=53, mask=IN_OPEN, cookie=0, name='main'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [INFO    ] [GitHub-AutoPush-Analytics] Committing: auto-push: push_log_linux.csv, watcher_linux.log, watcher_linux.log.1, watcher_linux.log.2, watcher_linux.log.3 [2026-09-09 22:25:10]
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs/heads/main', wd=53, mask=IN_CLOSE_NOWRITE, cookie=0, name='main'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ]   $ git commit -m auto-push: push_log_linux.csv, watcher_linux.log, watcher_linux.log.1, watcher_linux.log.2, watcher_linux.log.3 [2026-09-09 22:25:10]  [cwd=/home/zeus/claudeCode/GitHub-AutoPush-Analytics]
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=2, mask=IN_ISDIR|IN_OPEN, cookie=0, name='refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=8, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=2, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=8, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=5, mask=IN_ISDIR|IN_OPEN, cookie=0, name='pack'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=24, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=5, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='pack'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=24, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack/pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx', wd=24, mask=IN_OPEN, cookie=0, name='pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/46/61009fbacffeeec8743ce3faa488b2b3a01917', wd=95, mask=IN_OPEN, cookie=0, name='61009fbacffeeec8743ce3faa488b2b3a01917'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/46/61009fbacffeeec8743ce3faa488b2b3a01917', wd=95, mask=IN_CLOSE_NOWRITE, cookie=0, name='61009fbacffeeec8743ce3faa488b2b3a01917'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/46/61009fbacffeeec8743ce3faa488b2b3a01917', wd=95, mask=IN_OPEN, cookie=0, name='61009fbacffeeec8743ce3faa488b2b3a01917'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/46/61009fbacffeeec8743ce3faa488b2b3a01917', wd=95, mask=IN_CLOSE_NOWRITE, cookie=0, name='61009fbacffeeec8743ce3faa488b2b3a01917'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/59/0d7ec6c679785faf6eede7ffd9227062955f1a', wd=94, mask=IN_OPEN, cookie=0, name='0d7ec6c679785faf6eede7ffd9227062955f1a'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/59/0d7ec6c679785faf6eede7ffd9227062955f1a', wd=94, mask=IN_CLOSE_NOWRITE, cookie=0, name='0d7ec6c679785faf6eede7ffd9227062955f1a'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/info/exclude', wd=6, mask=IN_OPEN, cookie=0, name='exclude'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/info/exclude', wd=6, mask=IN_CLOSE_NOWRITE, cookie=0, name='exclude'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/info/exclude', wd=6, mask=IN_OPEN, cookie=0, name='exclude'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/info/exclude', wd=6, mask=IN_CLOSE_NOWRITE, cookie=0, name='exclude'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.gitignore', wd=1, mask=IN_OPEN, cookie=0, name='.gitignore'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.gitignore', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='.gitignore'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='Previous Versions'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old Py Files', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name='Old Py Files'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./.gitattributes', wd=1, mask=IN_OPEN, cookie=0, name='.gitattributes'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old Py Files', wd=55, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./.gitattributes', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='.gitattributes'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old Py Files', wd=3, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='Old Py Files'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./.gitattributes', wd=1, mask=IN_OPEN, cookie=0, name='.gitattributes'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old Py Files', wd=55, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./.gitattributes', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='.gitattributes'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old Dashboards', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name='Old Dashboards'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old Dashboards', wd=56, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old Dashboards', wd=3, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='Old Dashboards'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old Dashboards', wd=56, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/autoGitv3', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name='autoGitv3'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/autoGitv3', wd=57, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/autoGitv3', wd=3, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='autoGitv3'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/autoGitv3', wd=57, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old ReadMe', wd=3, mask=IN_ISDIR|IN_OPEN, cookie=0, name='Old ReadMe'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old ReadMe', wd=58, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old ReadMe', wd=3, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='Old ReadMe'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions/Old ReadMe', wd=58, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='Previous Versions'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/Previous Versions', wd=3, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index.lock', wd=2, mask=IN_CLOSE_WRITE, cookie=0, name='index.lock'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index.lock', wd=2, mask=IN_DELETE, cookie=0, name='index.lock'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack/pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx', wd=24, mask=IN_CLOSE_NOWRITE, cookie=0, name='pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_OPEN, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_OPEN, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_OPEN, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_OPEN, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_OPEN, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs/heads/main', wd=53, mask=IN_OPEN, cookie=0, name='main'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs/heads/main', wd=53, mask=IN_CLOSE_NOWRITE, cookie=0, name='main'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/packed-refs', wd=2, mask=IN_OPEN, cookie=0, name='packed-refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/packed-refs', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='packed-refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=2, mask=IN_ISDIR|IN_OPEN, cookie=0, name='refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=8, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=2, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=8, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=5, mask=IN_ISDIR|IN_OPEN, cookie=0, name='pack'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=24, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=5, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='pack'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=24, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack/pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx', wd=24, mask=IN_OPEN, cookie=0, name='pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/46/61009fbacffeeec8743ce3faa488b2b3a01917', wd=95, mask=IN_OPEN, cookie=0, name='61009fbacffeeec8743ce3faa488b2b3a01917'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/46/61009fbacffeeec8743ce3faa488b2b3a01917', wd=95, mask=IN_CLOSE_NOWRITE, cookie=0, name='61009fbacffeeec8743ce3faa488b2b3a01917'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/46/61009fbacffeeec8743ce3faa488b2b3a01917', wd=95, mask=IN_OPEN, cookie=0, name='61009fbacffeeec8743ce3faa488b2b3a01917'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/46/61009fbacffeeec8743ce3faa488b2b3a01917', wd=95, mask=IN_CLOSE_NOWRITE, cookie=0, name='61009fbacffeeec8743ce3faa488b2b3a01917'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index', wd=2, mask=IN_OPEN, cookie=0, name='index'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='index'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/59/0d7ec6c679785faf6eede7ffd9227062955f1a', wd=94, mask=IN_OPEN, cookie=0, name='0d7ec6c679785faf6eede7ffd9227062955f1a'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/59/0d7ec6c679785faf6eede7ffd9227062955f1a', wd=94, mask=IN_CLOSE_NOWRITE, cookie=0, name='0d7ec6c679785faf6eede7ffd9227062955f1a'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/info/exclude', wd=6, mask=IN_OPEN, cookie=0, name='exclude'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/info/exclude', wd=6, mask=IN_CLOSE_NOWRITE, cookie=0, name='exclude'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack/pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx', wd=24, mask=IN_CLOSE_NOWRITE, cookie=0, name='pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_OPEN, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_OPEN, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_OPEN, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_OPEN, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_OPEN, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs/heads/main', wd=53, mask=IN_OPEN, cookie=0, name='main'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs/heads/main', wd=53, mask=IN_CLOSE_NOWRITE, cookie=0, name='main'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/packed-refs', wd=2, mask=IN_OPEN, cookie=0, name='packed-refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/packed-refs', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='packed-refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=2, mask=IN_ISDIR|IN_OPEN, cookie=0, name='refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=8, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=2, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=8, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=5, mask=IN_ISDIR|IN_OPEN, cookie=0, name='pack'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=24, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=5, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='pack'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=24, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack/pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx', wd=24, mask=IN_OPEN, cookie=0, name='pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/46/61009fbacffeeec8743ce3faa488b2b3a01917', wd=95, mask=IN_OPEN, cookie=0, name='61009fbacffeeec8743ce3faa488b2b3a01917'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/46/61009fbacffeeec8743ce3faa488b2b3a01917', wd=95, mask=IN_CLOSE_NOWRITE, cookie=0, name='61009fbacffeeec8743ce3faa488b2b3a01917'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/46/61009fbacffeeec8743ce3faa488b2b3a01917', wd=95, mask=IN_OPEN, cookie=0, name='61009fbacffeeec8743ce3faa488b2b3a01917'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/46/61009fbacffeeec8743ce3faa488b2b3a01917', wd=95, mask=IN_CLOSE_NOWRITE, cookie=0, name='61009fbacffeeec8743ce3faa488b2b3a01917'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index', wd=2, mask=IN_OPEN, cookie=0, name='index'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='index'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/59/0d7ec6c679785faf6eede7ffd9227062955f1a', wd=94, mask=IN_OPEN, cookie=0, name='0d7ec6c679785faf6eede7ffd9227062955f1a'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/59/0d7ec6c679785faf6eede7ffd9227062955f1a', wd=94, mask=IN_CLOSE_NOWRITE, cookie=0, name='0d7ec6c679785faf6eede7ffd9227062955f1a'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/info/exclude', wd=6, mask=IN_OPEN, cookie=0, name='exclude'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/info/exclude', wd=6, mask=IN_CLOSE_NOWRITE, cookie=0, name='exclude'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack/pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx', wd=24, mask=IN_CLOSE_NOWRITE, cookie=0, name='pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_OPEN, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_OPEN, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_OPEN, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_OPEN, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_OPEN, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs/heads/main', wd=53, mask=IN_OPEN, cookie=0, name='main'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs/heads/main', wd=53, mask=IN_CLOSE_NOWRITE, cookie=0, name='main'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/packed-refs', wd=2, mask=IN_OPEN, cookie=0, name='packed-refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/packed-refs', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='packed-refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=2, mask=IN_ISDIR|IN_OPEN, cookie=0, name='refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=8, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=2, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='refs'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ]   stdout: [main 7e00809] auto-push: push_log_linux.csv, watcher_linux.log, watcher_linux.log.1, watcher_linux.log.2, watcher_linux.log.3 [2026-09-09 22:25:10]
+ 5 files changed, 33196 insertions(+), 34266 deletions(-)
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/refs', wd=8, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [INFO    ] [GitHub-AutoPush-Analytics] Pull --rebase before push…
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=5, mask=IN_ISDIR|IN_OPEN, cookie=0, name='pack'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ]   $ git stash --include-untracked  [cwd=/home/zeus/claudeCode/GitHub-AutoPush-Analytics]
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=24, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'.', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./.gitignore', wd=1, mask=IN_OPEN, cookie=0, name='.gitignore'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./.gitignore', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='.gitignore'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=5, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='pack'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=24, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack/pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx', wd=24, mask=IN_OPEN, cookie=0, name='pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./Previous Versions', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='Previous Versions'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./Previous Versions', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='Previous Versions'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/46/61009fbacffeeec8743ce3faa488b2b3a01917', wd=95, mask=IN_OPEN, cookie=0, name='61009fbacffeeec8743ce3faa488b2b3a01917'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/46/61009fbacffeeec8743ce3faa488b2b3a01917', wd=95, mask=IN_CLOSE_NOWRITE, cookie=0, name='61009fbacffeeec8743ce3faa488b2b3a01917'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'.', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'.', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name=''>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/46/61009fbacffeeec8743ce3faa488b2b3a01917', wd=95, mask=IN_OPEN, cookie=0, name='61009fbacffeeec8743ce3faa488b2b3a01917'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/46/61009fbacffeeec8743ce3faa488b2b3a01917', wd=95, mask=IN_CLOSE_NOWRITE, cookie=0, name='61009fbacffeeec8743ce3faa488b2b3a01917'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index', wd=2, mask=IN_OPEN, cookie=0, name='index'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/index', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='index'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/59/0d7ec6c679785faf6eede7ffd9227062955f1a', wd=94, mask=IN_OPEN, cookie=0, name='0d7ec6c679785faf6eede7ffd9227062955f1a'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/59/0d7ec6c679785faf6eede7ffd9227062955f1a', wd=94, mask=IN_CLOSE_NOWRITE, cookie=0, name='0d7ec6c679785faf6eede7ffd9227062955f1a'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/info/exclude', wd=6, mask=IN_OPEN, cookie=0, name='exclude'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/info/exclude', wd=6, mask=IN_CLOSE_NOWRITE, cookie=0, name='exclude'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./.gitignore', wd=1, mask=IN_OPEN, cookie=0, name='.gitignore'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack/pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx', wd=24, mask=IN_CLOSE_NOWRITE, cookie=0, name='pack-34eaba74e933518dfadfb02db7922b5b088ec5d0.idx'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_OPEN, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/HEAD', wd=2, mask=IN_CLOSE_NOWRITE, cookie=0, name='HEAD'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./.gitignore', wd=1, mask=IN_CLOSE_NOWRITE, cookie=0, name='.gitignore'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./Previous Versions', wd=1, mask=IN_ISDIR|IN_OPEN, cookie=0, name='Previous Versions'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./watcher_linux.log', wd=1, mask=IN_MODIFY, cookie=0, name='watcher_linux.log'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/config', wd=2, mask=IN_OPEN, cookie=0, name='config'>
+2026-09-09 22:25:10 [DEBUG   ] in-event <InotifyEvent: src_path=b'./Previous Versions', wd=1, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='Previous Versions'>
