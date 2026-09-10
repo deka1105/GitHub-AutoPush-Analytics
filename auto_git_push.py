@@ -1295,7 +1295,7 @@ def main():
 
     try:
         AutoGitPusher(csv_path=args.csv, push_log_path=args.log,
-                      live_ui=live_ui).start()
+                      live_ui=live_ui, watcher_log_path=args.logfile).start()
     finally:
         if live_ui:
             live_ui.stop()   # always restore the terminal, even on crash
