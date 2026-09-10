@@ -11225,3 +11225,38 @@ Modified files:
 2026-09-09 23:00:41 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=5, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name='pack'>
 2026-09-09 23:00:41 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/pack', wd=24, mask=IN_CLOSE_NOWRITE|IN_ISDIR, cookie=0, name=''>
 2026-09-09 23:00:41 [DEBUG   ] in-event <InotifyEvent: src_path=b'/home/zeus/claudeCode/GitHub-AutoPush-Analytics/.git/objects/17', wd=5, mask=IN_ISDIR|IN_OPEN, cookie=0, name='17'>
+2026-09-09 23:00:53 [INFO    ] ============================================================
+2026-09-09 23:00:53 [INFO    ] Auto Git Pusher v4 starting
+2026-09-09 23:00:53 [INFO    ]   Config CSV : reposlinux_config.csv
+2026-09-09 23:00:53 [INFO    ]   Push log   : push_log_linux.csv
+2026-09-09 23:00:53 [INFO    ]   Watcher log: watcher_linux.log
+2026-09-09 23:00:53 [INFO    ] ============================================================
+2026-09-09 23:00:53 [INFO    ] Loaded 2 repo(s) from reposlinux_config.csv
+2026-09-09 23:00:53 [INFO    ] [n8n_IG_workflow] Setting up repo…
+2026-09-09 23:00:53 [DEBUG   ]   $ git remote get-url origin  [cwd=/home/zeus/n8n_IG_workflow]
+2026-09-09 23:00:53 [DEBUG   ]   stdout: https://github.com/deka1105/n8n_IG_workflow
+2026-09-09 23:00:53 [INFO    ] [n8n_IG_workflow] Repo ready at /home/zeus/n8n_IG_workflow
+2026-09-09 23:00:53 [INFO    ] [n8n_IG_workflow] Startup sync — checking for offline changes…
+2026-09-09 23:00:53 [DEBUG   ]   $ git stash --include-untracked  [cwd=/home/zeus/n8n_IG_workflow]
+2026-09-09 23:00:53 [DEBUG   ]   stderr: You do not have the initial commit yet
+2026-09-09 23:00:53 [DEBUG   ] [n8n_IG_workflow] Startup: stashed working tree before pull
+2026-09-09 23:00:53 [DEBUG   ]   $ git -c diff.ignoreSubmodules=all pull --rebase --autostash origin HEAD  [cwd=/home/zeus/n8n_IG_workflow]
+2026-09-09 23:00:53 [DEBUG   ]   stderr: fatal: Updating an unborn branch with changes added to the index.
+2026-09-09 23:00:53 [WARNING ] [n8n_IG_workflow] Startup pull --rebase issue: fatal: Updating an unborn branch with changes added to the index.
+2026-09-09 23:00:53 [DEBUG   ]   $ git status --porcelain  [cwd=/home/zeus/n8n_IG_workflow]
+2026-09-09 23:00:53 [DEBUG   ]   stdout: A  .gitignore
+AD SETUP.md.tmp.15597.f586c6def250
+?? SETUP.md
+2026-09-09 23:00:53 [WARNING ] [n8n_IG_workflow] Rebase issue but no conflicted files found.
+2026-09-09 23:00:53 [DEBUG   ]   $ git rebase --abort  [cwd=/home/zeus/n8n_IG_workflow]
+2026-09-09 23:00:53 [DEBUG   ]   stderr: fatal: No rebase in progress?
+2026-09-09 23:00:53 [DEBUG   ]   $ git stash pop  [cwd=/home/zeus/n8n_IG_workflow]
+2026-09-09 23:00:53 [DEBUG   ]   stderr: No stash entries found.
+2026-09-09 23:00:53 [ERROR   ] [n8n_IG_workflow] Startup sync aborted due to unresolvable conflict.
+2026-09-09 23:00:53 [INFO    ] [n8n_IG_workflow] Watching: /home/zeus/n8n_IG_workflow
+2026-09-09 23:00:53 [INFO    ] [GitHub-AutoPush-Analytics] Setting up repo…
+2026-09-09 23:00:53 [DEBUG   ]   $ git remote get-url origin  [cwd=/home/zeus/claudeCode/GitHub-AutoPush-Analytics]
+2026-09-09 23:00:53 [DEBUG   ]   stdout: https://github.com/deka1105/GitHub-AutoPush-Analytics.git
+2026-09-09 23:00:53 [INFO    ] [GitHub-AutoPush-Analytics] Repo ready at /home/zeus/claudeCode/GitHub-AutoPush-Analytics
+2026-09-09 23:00:53 [INFO    ] [GitHub-AutoPush-Analytics] Startup sync — checking for offline changes…
+2026-09-09 23:00:53 [DEBUG   ]   $ git stash --include-untracked  [cwd=/home/zeus/claudeCode/GitHub-AutoPush-Analytics]
