@@ -1137,9 +1137,11 @@ def load_csv(csv_path: str) -> list[dict]:
 # ══════════════════════════════════════════════════════════════════════════════
 
 class AutoGitPusher:
-    def __init__(self, csv_path: str, push_log_path: str, live_ui: "LiveUI" = None):
+    def __init__(self, csv_path: str, push_log_path: str, live_ui: "LiveUI" = None,
+                 watcher_log_path: str = "watcher.log"):
         self.csv_path      = csv_path
         self.push_log_path = push_log_path
+        self.watcher_log_path = watcher_log_path
         self.live_ui       = live_ui
         self.observer      = Observer()
         self._watched: dict = {}
@@ -1160,7 +1162,8 @@ class AutoGitPusher:
 
         startup_sync(local_path, repo_name, repo_url, self.push_log_path)
 
-        handler = RepoEventHandler(local_path, repo_name, repo_url, self.push_log_path)
+        handler = RepoEventHandler(local_path, repo_name, repo_url, self.push_log_path,
+                                    self.watcher_log_path)
         watch   = self.observer.schedule(handler, path=local_path, recursive=True)
         self._watched[local_path] = watch
         log.info(f"[{repo_name}] Watching: {local_path}")
