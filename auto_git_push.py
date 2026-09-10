@@ -1028,12 +1028,13 @@ def git_add_commit_push(
 class RepoEventHandler(FileSystemEventHandler):
     COOLDOWN = 5  # seconds
 
-    def __init__(self, local_path, repo_name, repo_url, push_log_path):
+    def __init__(self, local_path, repo_name, repo_url, push_log_path, watcher_log_path="watcher.log"):
         super().__init__()
         self.local_path = local_path
         self.repo_name  = repo_name
         self.repo_url   = repo_url
         self.push_log   = push_log_path
+        self.watcher_log_name = os.path.basename(watcher_log_path)
         self._last_push = 0.0
         # Serialises pushes for THIS repo so two events can't run git add/commit
         # concurrently and collide on .git/index.lock.
@@ -1046,9 +1047,11 @@ class RepoEventHandler(FileSystemEventHandler):
             return True
         # The watcher writes its own push log + rotating logs into whichever repo
         # it lives in; those writes must never trigger a push, or the repo keeps
-        # re-committing itself in a loop.
+        # re-committing itself in a loop. Matched against the *actual* --log /
+        # --logfile names (not a hardcoded "watcher.log") so custom filenames
+        # (e.g. push_log_linux.csv / watcher_linux.log) are still excluded.
         name = Path(path).name
-        return name == os.path.basename(self.push_log) or name.startswith("watcher.log")
+        return name == os.path.basename(self.push_log) or name.startswith(self.watcher_log_name)
 
     def _handle(self, event, event_type: str):
         if event.is_directory or self._should_ignore(event.src_path):
