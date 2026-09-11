@@ -5126,6 +5126,7 @@ timestamp,repo_name,repo_url,file_changed,event_type,status,message
 2026-08-29 16:03:57,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/components/SurveyFlow.tsx.tmp.75737.1618a9ad11ab,created,success,auto-push: SurveyFlow.tsx [2026-08-29 16:03:53] --END--
 2026-08-29 16:04:31,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,tsconfig.tsbuildinfo,modified,success,auto-push: SurveyFlow.tsx [2026-08-29 16:04:27] --END--
 2026-08-29 16:13:46,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/components/SurveyFlow.tsx.tmp.75737.f69cec3ae928,created,success,auto-push: SurveyFlow.tsx [2026-08-29 16:13:43] --END--
+<<<<<<< HEAD
 2026-08-29 22:31:18,GitHub-AutoPush-Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,"ush_log.csv, watcher.log, watcher.log.1, watcher.log.2, watcher.log.3",startup-sync,success,"startup-sync: ush_log.csv, watcher.log, watcher.log.1, watcher.log.2, watcher.log.3 [2026-08-29 22:31:13] --END--"
 2026-08-29 22:31:25,HabitFarmer,https://github.com/deka1105/HabitFarmer.git,OS_App_v2/HabitFarmer,startup-sync,success,startup-sync: HabitFarmer [2026-08-29 22:31:24] --END--
 2026-08-29 22:37:53,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/giveaway.ts.tmp.75737.76e05e8a1b1b,created,success,auto-push: giveaway.ts [2026-08-29 22:37:51] --END--
@@ -5153,3 +5154,6 @@ timestamp,repo_name,repo_url,file_changed,event_type,status,message
 2026-08-31 10:08:44,redoubt-insurance_pilot,https://github.com/deka1105/redoubt-insurance_pilot.git,gitignore,startup-sync,success,startup-sync: gitignore [2026-08-31 10:08:43] --END--
 2026-08-31 10:08:46,rote_pilot,https://github.com/deka1105/rote_pilot.git,gitignore,startup-sync,success,startup-sync: gitignore [2026-08-31 10:08:45] --END--
 2026-08-31 10:08:47,GitHub-AutoPush-Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,repos_config.csv,modified,failed,"rebase conflict unresolved: From https://github.com/deka1105/GitHub-AutoPush-Analytics\n * branch            HEAD       -> FETCH_HEAD\nfatal: It seems that there is already a rebase-merge directory, and\nI wonder if you are in the middle of another rebase.  If that is the\ncase, please try\n	git rebase (--continue | --abort | --skip)\nIf that is not the case, please\n	rm -fr "".git/rebase-merge""\nand run me again.  I am stopping in case you still have something\nvaluable there. --END--"
+=======
+2026-09-09 22:11:31,GitHub-AutoPush-Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,"ashboard.py, reposlinux_config.csv, watcher.log, watcher.log.1, watcher.log.2",startup-sync,success,startup-sync: 6 offline changes [2026-09-09 22:11:28] --END--
+>>>>>>> ffcc865580f0077e2a8edeeb9eabf3c6977c6e25

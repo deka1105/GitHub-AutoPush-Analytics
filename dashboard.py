@@ -18,6 +18,12 @@ a spare terminal next to auto_git_push.py.
     python3 dashboard.py                      # ./push_log.csv + ./watcher.log
     python3 dashboard.py --split-cols 140     # require a wider window to split
     python3 dashboard.py --interval 5         # refresh every 5s (default 1.5)
+    python3 dashboard.py --log push_log_linux.csv push_log_mac.csv
+                                               # merge stats from multiple machines
+                                               # (each machine should write to its
+                                               # own --log file in auto_git_push.py
+                                               # to avoid push_log.csv rebase
+                                               # conflicts between machines)
 
 Quit with q or Ctrl-C.
 """
@@ -301,6 +307,40 @@ def load(path: str) -> list[dict]:
     for r in rows:
         r["_dt"] = _parse_dt(r.get("timestamp"))
     return rows
+
+
+class MultiLog:
+    """Tracks a set of push_log.csv paths (e.g. one per machine) and reloads
+    only the files that changed on disk, so stats can be merged across
+    machines that each write their own log file (avoids the rebase conflicts
+    that come from multiple machines committing to a single shared file)."""
+
+    def __init__(self, paths: list[str]):
+        self.paths     = paths
+        self._mtimes: dict[str, float] = {}
+        self._rows:   dict[str, list[dict]] = {}
+
+    def poll(self) -> tuple[list[dict] | None, str | None]:
+        """Re-reads any changed/newly-appearing file. Returns (merged_rows,
+        error) — merged_rows is None only if no path has ever loaded."""
+        err = None
+        for p in self.paths:
+            try:
+                mtime = os.path.getmtime(p)
+            except OSError as e:
+                if p not in self._rows:
+                    err = f"cannot read {p}: {e}"
+                continue
+            if self._mtimes.get(p) != mtime:
+                try:
+                    self._rows[p] = load(p)
+                    self._mtimes[p] = mtime
+                except (OSError, csv.Error) as e:
+                    err = f"cannot read {p}: {e}"
+        if not self._rows:
+            return None, err
+        merged = [r for p in self.paths for r in self._rows.get(p, [])]
+        return merged, err
 
 
 def load_repos(path: str) -> list[dict]:
@@ -713,7 +753,7 @@ HOME, CLEAR       = "\x1b[H", "\x1b[2J"
 
 
 def frame(stats: Stats | None, logs: list[str], err: str | None,
-          push_path: str, log_path: str, cols: int, rows: int,
+          push_paths: list[str], log_path: str, cols: int, rows: int,
           split_cols: int, view: "LogView | None" = None,
           repos: list[dict] | None = None, repos_view: "LogView | None" = None,
           focus: str = "logs") -> str:
@@ -775,7 +815,7 @@ def frame(stats: Stats | None, logs: list[str], err: str | None,
     elif mode == "split":
         hint = f"↑↓ scroll logs · {os.path.basename(log_path)}"
     else:
-        hint = os.path.basename(push_path)
+        hint = " + ".join(os.path.basename(p) for p in push_paths)
     live = [seg("↕ scrolled", AMBER)] if scrolled else [seg("● live", GREEN)]
     footer = [seg("  q", _BOLD), seg(" quit   ", GREY)] + live + [seg(f"  {hint}", GREY)]
     lines.append(render(pad(_truncate(footer, cols), cols)))
@@ -788,11 +828,12 @@ def frame(stats: Stats | None, logs: list[str], err: str | None,
     return HOME + body + "\x1b[J"
 
 
-def run(path: str, log_path: str, interval: float, split_cols: int,
+def run(paths: list[str], log_path: str, interval: float, split_cols: int,
         config_path: str = "repos_config.csv") -> int:
-    if not os.path.exists(path):
-        print(f"push log not found: {path}", file=sys.stderr)
+    if not any(os.path.exists(p) for p in paths):
+        print(f"push log not found: {', '.join(paths)}", file=sys.stderr)
         return 1
+    multilog = MultiLog(paths)
 
     stdin_tty = sys.stdin.isatty()
     old_term = None
@@ -807,7 +848,7 @@ def run(path: str, log_path: str, interval: float, split_cols: int,
     out.write(ALT_ON + CUR_OFF + CLEAR)
     out.flush()
 
-    cache_mtime = repos_mtime = -1.0
+    repos_mtime = -1.0
     log_rows: list[dict] | None = None       # cached parse (note: `rows` below is the terminal height)
     stats: Stats | None = None
     logs: list[str] = []
@@ -826,12 +867,10 @@ def run(path: str, log_path: str, interval: float, split_cols: int,
 
     try:
         while True:
-            try:
-                mtime = os.path.getmtime(path)
-                if mtime != cache_mtime:          # re-parse only when the file grows
-                    log_rows, cache_mtime, err = load(path), mtime, None
-            except (OSError, csv.Error) as e:
-                err = f"cannot read {path}: {e}"
+            merged, poll_err = multilog.poll()   # re-parses only files that changed
+            if merged is not None:
+                log_rows = merged
+            err = poll_err
             # rebuild Stats every tick (≈2ms with cached timestamps) so the
             # time-windowed metrics — Today / Last 24h / per-day — stay live
             # instead of freezing until the next commit lands.
@@ -846,7 +885,7 @@ def run(path: str, log_path: str, interval: float, split_cols: int,
 
             logs = tail_log(log_path)
             cols, rows = shutil.get_terminal_size((80, 24))
-            out.write(frame(stats, logs, err, path, log_path, cols, rows, split_cols,
+            out.write(frame(stats, logs, err, paths, log_path, cols, rows, split_cols,
                             view, repos, repos_view, focus))
             out.flush()
 
@@ -876,7 +915,10 @@ def run(path: str, log_path: str, interval: float, split_cols: int,
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="Live split-screen analytics dashboard + log tail")
-    ap.add_argument("--log", default="push_log.csv", help="path to push_log.csv (default: ./push_log.csv)")
+    ap.add_argument("--log", nargs="+", default=["push_log.csv"],
+                    help="path(s) to push_log.csv — pass multiple to merge stats "
+                         "across machines, e.g. --log push_log_linux.csv push_log_mac.csv "
+                         "(default: ./push_log.csv)")
     ap.add_argument("--watcher-log", default="watcher.log", help="path to the watcher's log file (default: ./watcher.log)")
     ap.add_argument("--interval", type=float, default=1.5, help="refresh seconds (default: 1.5)")
     ap.add_argument("--split-cols", type=int, default=120,
