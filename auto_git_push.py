@@ -1083,12 +1083,14 @@ def git_add_commit_push(
 class RepoEventHandler(FileSystemEventHandler):
     COOLDOWN = 5  # seconds
 
-    def __init__(self, local_path, repo_name, repo_url, push_log_path):
+    def __init__(self, local_path, repo_name, repo_url, push_log_path,
+                 watcher_log_path=DEFAULT_WATCHER_LOG):
         super().__init__()
         self.local_path = local_path
         self.repo_name  = repo_name
         self.repo_url   = repo_url
         self.push_log   = push_log_path
+        self.watcher_log_name = os.path.basename(watcher_log_path)
         self._last_push = 0.0
         # Serialises pushes for THIS repo so two events can't run git add/commit
         # concurrently and collide on .git/index.lock.
@@ -1101,11 +1103,13 @@ class RepoEventHandler(FileSystemEventHandler):
             return True
         # The watcher writes its own push log + rotating logs into whichever repo
         # it lives in; those writes must never trigger a push, or the repo keeps
-        # re-committing itself in a loop.
+        # re-committing itself in a loop. Matched against the *actual* --log /
+        # --logfile names (not a hardcoded "watcher.log") so custom filenames
+        # (e.g. push_log_linux.csv / watcher_linux.log) are still excluded.
+        # startswith() also covers the rotations: watcher_mac.log.3 etc.
         name = Path(path).name
-        # Covers watcher.log, watcher.log.3, watcher_mac.log, watcher_linux.log.2
         return (name == os.path.basename(self.push_log)
-                or _re.match(r"^watcher(_[a-z0-9]+)?\.log(\.\d+)?$", name) is not None)
+                or name.startswith(self.watcher_log_name))
 
     def _handle(self, event, event_type: str):
         if event.is_directory or self._should_ignore(event.src_path):
@@ -1191,9 +1195,11 @@ def load_csv(csv_path: str) -> list[dict]:
 # ══════════════════════════════════════════════════════════════════════════════
 
 class AutoGitPusher:
-    def __init__(self, csv_path: str, push_log_path: str, live_ui: "LiveUI" = None):
+    def __init__(self, csv_path: str, push_log_path: str, live_ui: "LiveUI" = None,
+                 watcher_log_path: str = DEFAULT_WATCHER_LOG):
         self.csv_path      = csv_path
         self.push_log_path = push_log_path
+        self.watcher_log_path = watcher_log_path
         self.live_ui       = live_ui
         self.observer      = Observer()
         self._watched: dict = {}
@@ -1214,7 +1220,8 @@ class AutoGitPusher:
 
         startup_sync(local_path, repo_name, repo_url, self.push_log_path)
 
-        handler = RepoEventHandler(local_path, repo_name, repo_url, self.push_log_path)
+        handler = RepoEventHandler(local_path, repo_name, repo_url, self.push_log_path,
+                                   self.watcher_log_path)
         watch   = self.observer.schedule(handler, path=local_path, recursive=True)
         self._watched[local_path] = watch
         log.info(f"[{repo_name}] Watching: {local_path}")
@@ -1348,7 +1355,7 @@ def main():
 
     try:
         AutoGitPusher(csv_path=args.csv, push_log_path=args.log,
-                      live_ui=live_ui).start()
+                      live_ui=live_ui, watcher_log_path=args.logfile).start()
     finally:
         if live_ui:
             live_ui.stop()   # always restore the terminal, even on crash
