@@ -200,7 +200,11 @@ def init_push_log(log_path: str):
     """Create push_log.csv with headers if it does not exist."""
     if not os.path.exists(log_path):
         with open(log_path, "w", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=PUSH_LOG_HEADERS)
+            # lineterminator="\n": csv defaults to \r\n, which git then silently
+            # normalises to LF on commit. Writing LF directly keeps the working
+            # copy and the committed blob byte-identical.
+            writer = csv.DictWriter(f, fieldnames=PUSH_LOG_HEADERS,
+                                    lineterminator="\n")
             writer.writeheader()
         log.info(f"Push log created: {log_path}")
 
@@ -219,7 +223,8 @@ def write_push_log(log_path: str, **fields):
     row["message"] = f"{msg} --END--" if msg else "--END--"
     with PUSH_LOG_LOCK:
         with open(log_path, "a", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=PUSH_LOG_HEADERS)
+            writer = csv.DictWriter(f, fieldnames=PUSH_LOG_HEADERS,
+                                    lineterminator="\n")
             writer.writerow(row)
     if STATS_PANEL is not None:
         STATS_PANEL.invalidate()
