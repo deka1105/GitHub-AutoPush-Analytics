@@ -90,6 +90,14 @@ _MSG_COLOURS = {
 }
 
 import re as _re
+import platform
+# Each machine writes its own log files. Two machines appending to one tracked
+# file conflict on every concurrent write, which is what produced the
+# unresolved conflict markers in push_log.csv.
+_MACHINE = {"Darwin": "mac", "Linux": "linux"}.get(platform.system(),
+                                                   platform.system().lower())
+DEFAULT_PUSH_LOG    = f"push_log_{_MACHINE}.csv"
+DEFAULT_WATCHER_LOG = f"watcher_{_MACHINE}.log"
 _REPO_PAT = _re.compile(r"^\[([^\]]+)\]\s*(.*)")
 
 
@@ -575,13 +583,19 @@ def run(cmd: list, cwd: str) -> tuple[int, str, str]:
 
 # Files that are always append-only — rebase conflicts are resolved by keeping
 # the local (ours) version rather than failing.
-APPEND_ONLY_PATTERNS = {"push_log.csv", "push_log.csv.bak"}
+APPEND_ONLY_PATTERNS = {"push_log.csv", "push_log.csv.bak",
+                        DEFAULT_PUSH_LOG, DEFAULT_PUSH_LOG + ".bak",
+                        "push_log_mac.csv", "push_log_linux.csv"}
 
 def is_append_only(filename: str) -> bool:
     return Path(filename).name in APPEND_ONLY_PATTERNS
 
-# GitHub hard limit
-GITHUB_MAX_BYTES = 100 * 1024 * 1024   # 100 MB
+# GitHub hard limit, and the margin we actually refuse at. Blocking a little
+# under the limit leaves room for the ~1-2% a packfile can add over the raw
+# blob size, so we never hand GitHub something it will reject at pre-receive.
+GITHUB_MAX_BYTES = 100 * 1024 * 1024   # 100 MB - GitHub's hard limit
+MAX_COMMIT_BYTES = 95  * 1024 * 1024   # 95 MB  - what the watcher refuses at
+
 
 # Dirs never to commit (supplements .gitignore)
 DEFAULT_IGNORE_DIRS = {
@@ -594,20 +608,42 @@ DEFAULT_IGNORE_DIRS = {
 
 def check_large_files(local_path: str, repo_name: str) -> list:
     """Return staged files exceeding GITHUB_MAX_BYTES."""
-    _, files_out, _ = run(["git", "diff", "--cached", "--name-only"], cwd=local_path)
+    # -z (NUL-separated) is required, not cosmetic. Plain --name-only QUOTES any
+    # path with non-ASCII bytes: a macOS screen recording holds U+202F before
+    # "PM", so git returned the literal 25-char-escaped string
+    #     "Screen Recording ... 6.31.40\\342\\200\\257PM.mov"
+    # os.path.isfile() on that is False, the size check was skipped, and a
+    # 122 MB blob went into history and blocked every push for two days.
+    _, files_out, _ = run(
+        ["git", "-c", "core.quotepath=false",
+         "diff", "--cached", "--name-only", "-z"], cwd=local_path)
     oversized = []
-    for rel in files_out.splitlines():
-        rel = rel.strip()
+    for rel in files_out.split("\0"):
         if not rel:
             continue
         abs_path = os.path.join(local_path, rel)
-        if os.path.isfile(abs_path):
-            size = os.path.getsize(abs_path)
-            if size >= GITHUB_MAX_BYTES:
-                mb = size / (1024 * 1024)
-                log.warning(f"[{repo_name}] Oversized: {rel} ({mb:.1f} MB) — GitHub limit is 100 MB")
-                oversized.append(rel)
+        if not os.path.isfile(abs_path):
+            # Staged deletion, or a path we still failed to decode. Say so —
+            # silently skipping here is the exact bug described above.
+            log.debug(f"[{repo_name}] staged path not statable, no size check: {rel!r}")
+            continue
+        size = os.path.getsize(abs_path)
+        if size >= MAX_COMMIT_BYTES:
+            mb = size / (1024 * 1024)
+            log.warning(
+                f"[{repo_name}] Oversized: {rel} ({mb:.1f} MB) — refusing at "
+                f"{MAX_COMMIT_BYTES / 1024 / 1024:.0f} MB, GitHub rejects at 100 MB")
+            oversized.append(rel)
     return oversized
+
+
+def _gitignore_entry(rel: str) -> str:
+    """
+    Turn a repo-relative path into a .gitignore line that matches it literally.
+    Anchored at the repo root, with glob metacharacters escaped, so a filename
+    containing [ ] * ? # ! does not silently become a pattern.
+    """
+    return "/" + _re.sub(r"([*?\[\]!#\\ ])", r"\\\1", rel)
 
 
 def unstage_and_ignore(local_path: str, repo_name: str, files: list):
@@ -619,10 +655,11 @@ def unstage_and_ignore(local_path: str, repo_name: str, files: list):
             existing = {ln.strip() for ln in f}
     new_entries = []
     for f in files:
-        run(["git", "rm", "--cached", "--force", f], cwd=local_path)
+        run(["git", "rm", "--cached", "--force", "--", f], cwd=local_path)
         log.info(f"[{repo_name}] Unstaged {f} from index")
-        if f not in existing:
-            new_entries.append(f)
+        entry = _gitignore_entry(f)
+        if entry not in existing and f not in existing:
+            new_entries.append(entry)
     if new_entries:
         with open(gitignore_path, "a") as gi:
             gi.write("\n# Auto-added by watcher (too large for GitHub)\n")
@@ -685,13 +722,26 @@ def resolve_rebase_conflict(local_path: str, repo_name: str) -> bool:
     Returns True if conflict was fully resolved and rebase can continue.
     Returns False if conflict could not be auto-resolved (rebase is aborted).
     """
-    _, status_out, _ = run(["git", "status", "--porcelain"], cwd=local_path)
-    conflicted = [
-        line[3:].strip()
-        for line in status_out.splitlines()
-        if line.startswith("UU") or line.startswith("AA") or line.startswith("DD")
-        or line[:2] in ("DU", "UD", "AU", "UA")
-    ]
+    # An interrupted run leaves .git/rebase-merge behind, and every later pull
+    # then dies with "there is already a rebase-merge directory". That stuck
+    # directory blocked CasaVault for ~30 hours across 41 identical failures,
+    # so clear it before doing anything else.
+    for d in ("rebase-merge", "rebase-apply"):
+        stale = os.path.join(local_path, ".git", d)
+        if not os.path.isdir(stale):
+            continue
+        log.warning(f"[{repo_name}] Stale .git/{d} from an interrupted rebase — clearing")
+        run(["git", "rebase", "--abort"], cwd=local_path)
+        if os.path.isdir(stale):
+            shutil.rmtree(stale, ignore_errors=True)
+            log.warning(f"[{repo_name}] Force-removed .git/{d}")
+
+    # --diff-filter=U with -z: lists exactly the unmerged paths, NUL-separated
+    # so non-ASCII names are not quoted (same trap as check_large_files).
+    _, unmerged_out, _ = run(
+        ["git", "-c", "core.quotepath=false",
+         "diff", "--name-only", "--diff-filter=U", "-z"], cwd=local_path)
+    conflicted = [f for f in unmerged_out.split("\0") if f]
 
     if not conflicted:
         log.warning(f"[{repo_name}] Rebase issue but no conflicted files found.")
@@ -1048,7 +1098,9 @@ class RepoEventHandler(FileSystemEventHandler):
         # it lives in; those writes must never trigger a push, or the repo keeps
         # re-committing itself in a loop.
         name = Path(path).name
-        return name == os.path.basename(self.push_log) or name.startswith("watcher.log")
+        # Covers watcher.log, watcher.log.3, watcher_mac.log, watcher_linux.log.2
+        return (name == os.path.basename(self.push_log)
+                or _re.match(r"^watcher(_[a-z0-9]+)?\.log(\.\d+)?$", name) is not None)
 
     def _handle(self, event, event_type: str):
         if event.is_directory or self._should_ignore(event.src_path):
@@ -1237,8 +1289,10 @@ class AutoGitPusher:
 def main():
     parser = argparse.ArgumentParser(description="Auto Git Pusher v4")
     parser.add_argument("--csv",     required=True,          help="Path to repos config CSV")
-    parser.add_argument("--log",     default="push_log.csv", help="Push events CSV output path")
-    parser.add_argument("--logfile", default="watcher.log",  help="Detailed log file path (default: watcher.log)")
+    parser.add_argument("--log",     default=DEFAULT_PUSH_LOG,
+                        help=f"Push events CSV output path (default: {DEFAULT_PUSH_LOG})")
+    parser.add_argument("--logfile", default=DEFAULT_WATCHER_LOG,
+                        help=f"Detailed log file path (default: {DEFAULT_WATCHER_LOG})")
     parser.add_argument("--no-dashboard", action="store_true",
                         help="Disable the live split-screen dashboard; use classic scrolling logs")
     parser.add_argument("--split-cols", type=int, default=120,

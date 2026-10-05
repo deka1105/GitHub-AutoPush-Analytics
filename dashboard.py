@@ -30,6 +30,10 @@ Quit with q or Ctrl-C.
 from __future__ import annotations
 
 import argparse
+import platform
+
+_MACHINE = {"Darwin": "mac", "Linux": "linux"}.get(
+    platform.system(), platform.system().lower())
 import csv
 import math
 import os
@@ -915,11 +919,15 @@ def run(paths: list[str], log_path: str, interval: float, split_cols: int,
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="Live split-screen analytics dashboard + log tail")
-    ap.add_argument("--log", nargs="+", default=["push_log.csv"],
+    ap.add_argument("--log", nargs="+",
+                    default=["push_log_mac.csv", "push_log_linux.csv"],
                     help="path(s) to push_log.csv — pass multiple to merge stats "
                          "across machines, e.g. --log push_log_linux.csv push_log_mac.csv "
-                         "(default: ./push_log.csv)")
-    ap.add_argument("--watcher-log", default="watcher.log", help="path to the watcher's log file (default: ./watcher.log)")
+                         "(default: the per-machine logs; push_log.csv is the "
+                         "frozen pre-split archive)")
+    ap.add_argument("--watcher-log", default=f"watcher_{_MACHINE}.log",
+                    help="path to the watcher's log file "
+                         f"(default: ./watcher_{_MACHINE}.log)")
     ap.add_argument("--interval", type=float, default=1.5, help="refresh seconds (default: 1.5)")
     ap.add_argument("--split-cols", type=int, default=120,
                     help="min terminal width to show the dashboard beside the logs; "
