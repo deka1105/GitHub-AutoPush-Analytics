@@ -1,0 +1,28 @@
+2026-10-11 19:07:43 [WARNING ] Running as root (sudo) — git can't see your keychain credentials and will fail auth. Run WITHOUT sudo: python auto_git_push.py ...
+2026-10-11 19:07:43 [INFO    ] ============================================================
+2026-10-11 19:07:43 [INFO    ] Auto Git Pusher v4 starting
+2026-10-11 19:07:43 [INFO    ]   Config CSV : reposlinux_config.csv
+2026-10-11 19:07:43 [INFO    ]   Push log   : push_log_linux.csv
+2026-10-11 19:07:43 [INFO    ]   Watcher log: watcher_linux.log
+2026-10-11 19:07:43 [INFO    ] ============================================================
+2026-10-11 19:07:43 [INFO    ] Loaded 2 repo(s) from reposlinux_config.csv
+2026-10-11 19:07:43 [INFO    ] [n8n_IG_workflow] Setting up repo…
+2026-10-11 19:07:43 [DEBUG   ]   $ git remote get-url origin  [cwd=/home/zeus/n8n_IG_workflow]
+2026-10-11 19:07:43 [DEBUG   ]   stdout: https://github.com/deka1105/n8n_IG_workflow
+2026-10-11 19:07:43 [INFO    ] [n8n_IG_workflow] Repo ready at /home/zeus/n8n_IG_workflow
+2026-10-11 19:07:43 [INFO    ] [n8n_IG_workflow] Startup sync — checking for offline changes…
+2026-10-11 19:07:43 [DEBUG   ]   $ git stash --include-untracked  [cwd=/home/zeus/n8n_IG_workflow]
+2026-10-11 19:07:43 [DEBUG   ]   stdout: No local changes to save
+2026-10-11 19:07:43 [DEBUG   ]   $ git -c diff.ignoreSubmodules=all pull --rebase --autostash origin HEAD  [cwd=/home/zeus/n8n_IG_workflow]
+2026-10-11 19:07:43 [DEBUG   ]   stdout: Current branch master is up to date.
+2026-10-11 19:07:43 [DEBUG   ]   stderr: From https://github.com/deka1105/n8n_IG_workflow
+ * branch            HEAD       -> FETCH_HEAD
+2026-10-11 19:07:43 [DEBUG   ]   $ git status --porcelain  [cwd=/home/zeus/n8n_IG_workflow]
+2026-10-11 19:07:43 [INFO    ] [n8n_IG_workflow] Startup sync: nothing to push — already up to date.
+2026-10-11 19:07:43 [INFO    ] [n8n_IG_workflow] Watching: /home/zeus/n8n_IG_workflow
+2026-10-11 19:07:43 [INFO    ] [GitHub-AutoPush-Analytics] Setting up repo…
+2026-10-11 19:07:43 [DEBUG   ]   $ git remote get-url origin  [cwd=/home/zeus/claudeCode/GitHub-AutoPush-Analytics]
+2026-10-11 19:07:43 [DEBUG   ]   stdout: https://github.com/deka1105/GitHub-AutoPush-Analytics.git
+2026-10-11 19:07:43 [INFO    ] [GitHub-AutoPush-Analytics] Repo ready at /home/zeus/claudeCode/GitHub-AutoPush-Analytics
+2026-10-11 19:07:43 [INFO    ] [GitHub-AutoPush-Analytics] Startup sync — checking for offline changes…
+2026-10-11 19:07:43 [DEBUG   ]   $ git stash --include-untracked  [cwd=/home/zeus/claudeCode/GitHub-AutoPush-Analytics]
