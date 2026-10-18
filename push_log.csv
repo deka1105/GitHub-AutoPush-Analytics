@@ -9077,6 +9077,7 @@ timestamp,repo_name,repo_url,file_changed,event_type,status,message
 2026-10-07 16:10:16,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,.github/social-preview.png,created,success,auto-push: social-preview.png [2026-10-07 16:10:14] --END--
 2026-10-07 16:10:19,Observatory,https://github.com/deka1105/Observatory.git,.github/social-preview.png,modified,success,auto-push: social-preview.png [2026-10-07 16:10:17] --END--
 2026-10-07 16:10:21,RingEventWall,https://github.com/deka1105/RingEventWall.git,.github/social-preview.png,modified,success,auto-push: social-preview.png [2026-10-07 16:10:19] --END--
+<<<<<<< Updated upstream
 =======
 2026-09-24 17:05:56,GitHub-AutoPush-Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,"ush_log.csv, watcher.log, watcher.log.1, watcher.log.2, watcher.log.3",startup-sync,success,"startup-sync: ush_log.csv, watcher.log, watcher.log.1, watcher.log.2, watcher.log.3 [2026-09-24 17:05:49] --END--"
 2026-09-24 17:07:05,n8n_IG_workflow,https://github.com/deka1105/n8n_IG_workflow,post_schedule.csv,modified,success,auto-push: post_schedule.csv [2026-09-24 17:06:57] --END--
@@ -9099,3 +9100,259 @@ timestamp,repo_name,repo_url,file_changed,event_type,status,message
 2026-10-11 10:00:53,n8n_IG_workflow,https://github.com/deka1105/n8n_IG_workflow,post_schedule.csv,modified,failed,auth/network error: fatal: unable to access 'https://github.com/deka1105/n8n_IG_workflow/': Could not resolve host: github.com --END--
 >>>>>>> Stashed changes
 2026-10-11 19:07:43,GitHub-AutoPush-Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,"push_log.csv, watcher.log, watcher.log.1, watcher.log.2, watcher.log.3",startup-sync,success,"startup-sync: push_log.csv, watcher.log, watcher.log.1, watcher.log.2, watcher.log.3 [2026-10-11 19:07:38] --END--"
+=======
+2026-10-07 16:10:24,GitHub-AutoPush-Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,.github/social-preview.png,modified,success,"auto-push: social-preview.png, push_log.csv [2026-10-07 16:10:22] --END--"
+2026-10-07 16:10:27,repoherald,https://github.com/deka1105/repoherald.git,.github/social-preview.png,modified,success,"auto-push: social-preview.png, README.md [2026-10-07 16:10:25] --END--"
+2026-10-07 16:10:30,globeProducts,https://github.com/deka1105/globeProducts.git,.github/social-preview.png,modified,success,auto-push: social-preview.png [2026-10-07 16:10:27] --END--
+2026-10-07 16:10:32,yc-pilots,https://github.com/deka1105/yc-pilots.git,.github/social-preview.png,modified,success,auto-push: social-preview.png [2026-10-07 16:10:30] --END--
+2026-10-07 16:17:17,globeProducts,https://github.com/deka1105/globeProducts.git,README.md,modified,success,auto-push: README.md [2026-10-07 16:17:15] --END--
+2026-10-07 16:21:24,globeProducts,https://github.com/deka1105/globeProducts.git,assets/thumbs/observatory.svg,created,success,auto-push: 7 files changed [2026-10-07 16:21:22] --END--
+2026-10-07 16:22:32,globeProducts,https://github.com/deka1105/globeProducts.git,portfolio-data.json,modified,success,auto-push: portfolio-data.json [2026-10-07 16:22:29] --END--
+2026-10-08 11:00:26,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/valon/valon-boarding-gate/file.ts,created,success,auto-push: file.ts [2026-10-08 11:00:23] --END--
+2026-10-08 11:03:12,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/valon/valon-boarding-gate/checks.ts,created,success,auto-push: checks.ts [2026-10-08 11:03:09] --END--
+2026-10-08 11:03:53,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/valon/valon-boarding-gate/load.ts,created,success,"auto-push: actions.ts, load.ts [2026-10-08 11:03:51] --END--"
+2026-10-08 11:04:22,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/valon/valon-boarding-gate/WeightsCard.tsx,created,success,auto-push: WeightsCard.tsx [2026-10-08 11:04:20] --END--
+2026-10-08 11:05:25,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/valon/valon-boarding-gate/Gate.tsx,created,success,auto-push: Gate.tsx [2026-10-08 11:05:22] --END--
+2026-10-08 11:05:52,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/valon/valon-boarding-gate/Pilot.tsx,created,success,auto-push: Pilot.tsx [2026-10-08 11:05:49] --END--
+2026-10-08 11:13:00,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-08 11:12:58] --END--
+2026-10-08 11:13:39,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/_gate-check.ts,created,success,auto-push: _gate-check.ts [2026-10-08 11:13:36] --END--
+2026-10-08 11:13:47,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/_gate-check.ts,modified,success,auto-push: _gate-check.ts [2026-10-08 11:13:45] --END--
+2026-10-08 11:14:29,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/valon/valon-boarding-gate/file.ts,modified,success,"auto-push: Gate.tsx, checks.ts, file.ts, _gate-check.ts [2026-10-08 11:14:26] --END--"
+2026-10-08 11:14:49,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/.!80330!_gate-check.ts,created,success,auto-push: _gate-check.ts [2026-10-08 11:14:45] --END--
+2026-10-08 11:15:30,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/_gate-check.ts,deleted,success,"auto-push: pilots.md, _gate-check.ts, pilots.ts [2026-10-08 11:15:27] --END--"
+2026-10-08 11:19:37,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/valon/valon-boarding-gate/Gate.tsx,modified,success,"auto-push: Gate.tsx, Pilot.tsx [2026-10-08 11:19:34] --END--"
+2026-10-08 12:55:58,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/targets.ts,created,success,"auto-push: actions.ts, targets.ts [2026-10-08 12:55:56] --END--"
+2026-10-08 12:56:17,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/_components/QueueForm.tsx,modified,success,auto-push: QueueForm.tsx [2026-10-08 12:56:15] --END--
+2026-10-08 13:50:40,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/flagright/dossier.md,created,success,auto-push: dossier.md [2026-10-08 13:50:38] --END--
+2026-10-08 13:51:16,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/flagright/use-cases.md,created,success,auto-push: use-cases.md [2026-10-08 13:51:14] --END--
+2026-10-08 13:53:01,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/phonely/dossier.md,created,success,auto-push: dossier.md [2026-10-08 13:52:59] --END--
+2026-10-08 13:53:38,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/phonely/use-cases.md,created,success,auto-push: use-cases.md [2026-10-08 13:53:36] --END--
+2026-10-08 13:55:41,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/mastra/dossier.md,created,success,"auto-push: dossier.md, use-cases.md [2026-10-08 13:55:39] --END--"
+2026-10-08 13:57:28,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/artos/dossier.md,created,success,"auto-push: dossier.md, use-cases.md [2026-10-08 13:57:25] --END--"
+2026-10-08 13:59:20,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/humand/dossier.md,created,success,"auto-push: dossier.md, use-cases.md [2026-10-08 13:59:18] --END--"
+2026-10-08 14:01:22,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/axle/dossier.md,created,success,"auto-push: dossier.md, use-cases.md [2026-10-08 14:01:20] --END--"
+2026-10-08 14:03:09,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/reacher/dossier.md,created,success,"auto-push: dossier.md, use-cases.md [2026-10-08 14:03:07] --END--"
+2026-10-08 14:04:41,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/valon/dossier.md,modified,success,auto-push: dossier.md [2026-10-08 14:04:39] --END--
+2026-10-08 14:06:32,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/forgegui/dossier.md,created,success,"auto-push: dossier.md, use-cases.md [2026-10-08 14:06:29] --END--"
+2026-10-08 14:08:52,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/crustdata/dossier.md,created,success,"auto-push: dossier.md, use-cases.md [2026-10-08 14:08:49] --END--"
+2026-10-08 14:10:51,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/viktor/dossier.md,created,success,"auto-push: dossier.md, use-cases.md [2026-10-08 14:10:49] --END--"
+2026-10-08 14:12:47,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/flagright/pilots.md,created,success,auto-push: pilots.md [2026-10-08 14:12:45] --END--
+2026-10-08 14:14:13,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/phonely/pilots.md,created,success,auto-push: pilots.md [2026-10-08 14:14:11] --END--
+2026-10-08 14:15:41,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/mastra/pilots.md,created,success,auto-push: pilots.md [2026-10-08 14:15:39] --END--
+2026-10-08 14:17:09,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/artos/pilots.md,created,success,auto-push: pilots.md [2026-10-08 14:17:07] --END--
+2026-10-08 14:18:38,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/humand/pilots.md,created,success,auto-push: pilots.md [2026-10-08 14:18:36] --END--
+2026-10-08 14:20:05,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/axle/pilots.md,created,success,auto-push: pilots.md [2026-10-08 14:20:03] --END--
+2026-10-08 14:21:31,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/reacher/pilots.md,created,success,auto-push: pilots.md [2026-10-08 14:21:28] --END--
+2026-10-08 14:22:44,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/valon/pilots.md,modified,success,auto-push: pilots.md [2026-10-08 14:22:42] --END--
+2026-10-08 14:24:19,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/forgegui/pilots.md,created,success,auto-push: pilots.md [2026-10-08 14:24:17] --END--
+2026-10-08 14:25:41,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/crustdata/pilots.md,created,success,auto-push: pilots.md [2026-10-08 14:25:38] --END--
+2026-10-08 14:27:05,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/viktor/pilots.md,created,success,auto-push: pilots.md [2026-10-08 14:27:03] --END--
+2026-10-08 15:09:42,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/page.tsx,modified,success,auto-push: page.tsx [2026-10-08 15:09:40] --END--
+2026-10-08 15:16:07,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/_components/NextCheck.tsx,modified,success,"auto-push: NextCheck.tsx, page.tsx, page.tsx [2026-10-08 15:16:04] --END--"
+2026-10-08 15:16:56,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/_components/NextCheck.tsx,modified,success,auto-push: NextCheck.tsx [2026-10-08 15:16:52] --END--
+2026-10-08 15:53:53,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/flow.ts,modified,success,"auto-push: page.tsx, flow.ts [2026-10-08 15:53:50] --END--"
+2026-10-08 20:36:17,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/flagright/flagright-threshold-curve/rules.ts,created,success,auto-push: rules.ts [2026-10-08 20:36:15] --END--
+2026-10-08 20:36:53,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/flagright/flagright-threshold-curve/load.ts,created,success,"auto-push: actions.ts, load.ts [2026-10-08 20:36:51] --END--"
+2026-10-08 20:37:48,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/flagright/flagright-threshold-curve/Frontier.tsx,created,success,auto-push: Frontier.tsx [2026-10-08 20:37:45] --END--
+2026-10-08 20:38:48,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/flagright/flagright-threshold-curve/rules.ts,modified,success,"auto-push: Scoreboard.tsx, rules.ts [2026-10-08 20:38:45] --END--"
+2026-10-08 20:39:36,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/flagright/flagright-threshold-curve/Curve.tsx,created,success,"auto-push: Curve.tsx, Pilot.tsx, RuleCard.tsx [2026-10-08 20:39:34] --END--"
+2026-10-08 20:40:39,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-08 20:40:37] --END--
+2026-10-08 20:41:13,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/pilots.ts,modified,success,"auto-push: pilots.md, _fg-check.ts, pilots.ts [2026-10-08 20:41:10] --END--"
+2026-10-08 20:42:02,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-08 20:41:57] --END--
+2026-10-08 20:42:56,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/flagright/flagright-threshold-curve/rules.ts,modified,success,auto-push: rules.ts [2026-10-08 20:42:51] --END--
+2026-10-08 20:43:20,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/_fg-check.ts,deleted,success,auto-push: _fg-check.ts [2026-10-08 20:43:17] --END--
+2026-10-08 20:46:00,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/flagright/flagright-threshold-curve/Frontier.tsx,modified,success,auto-push: Frontier.tsx [2026-10-08 20:45:55] --END--
+2026-10-08 20:49:50,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/flagright/flagright-threshold-curve/RuleCard.tsx,modified,success,auto-push: RuleCard.tsx [2026-10-08 20:49:46] --END--
+2026-10-08 21:04:55,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/phonely/phonely-transfer-threshold/calls.ts,created,success,auto-push: calls.ts [2026-10-08 21:04:53] --END--
+2026-10-08 21:05:19,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/phonely/phonely-transfer-threshold/load.ts,created,success,"auto-push: actions.ts, load.ts [2026-10-08 21:05:17] --END--"
+2026-10-08 21:06:06,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/phonely/phonely-transfer-threshold/CostCurve.tsx,created,success,auto-push: CostCurve.tsx [2026-10-08 21:06:03] --END--
+2026-10-08 21:06:44,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/phonely/phonely-transfer-threshold/Calls.tsx,created,success,auto-push: Calls.tsx [2026-10-08 21:06:42] --END--
+2026-10-08 21:07:22,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/phonely/phonely-transfer-threshold/CostCard.tsx,created,success,"auto-push: CostCard.tsx, Pilot.tsx [2026-10-08 21:07:17] --END--"
+2026-10-08 21:07:49,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/phonely/phonely-transfer-threshold/Calls.tsx,moved,success,"auto-push: CallList.tsx, Pilot.tsx [2026-10-08 21:07:46] --END--"
+2026-10-08 21:08:49,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-08 21:08:46] --END--
+2026-10-08 21:09:06,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/_ph-check.ts,created,success,auto-push: _ph-check.ts [2026-10-08 21:09:04] --END--
+2026-10-08 21:09:45,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,"auto-push: calls.ts, seed-pilots.mjs [2026-10-08 21:09:43] --END--"
+2026-10-08 21:10:17,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/phonely/phonely-transfer-threshold/calls.ts,modified,success,"auto-push: calls.ts, seed-pilots.mjs [2026-10-08 21:10:14] --END--"
+2026-10-08 21:10:41,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/phonely/phonely-transfer-threshold/calls.ts,modified,success,"auto-push: calls.ts, seed-pilots.mjs [2026-10-08 21:10:38] --END--"
+2026-10-08 21:11:03,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/_ph-check.ts,deleted,success,auto-push: _ph-check.ts [2026-10-08 21:11:00] --END--
+2026-10-08 21:11:28,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/lock,created,success,"auto-push: pilots.md, pilots.ts [2026-10-08 21:11:26] --END--"
+2026-10-09 15:22:03,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/app.json,modified,success,auto-push: app.json [2026-10-09 15:22:01] --END--
+2026-10-09 15:22:13,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/eas.json,modified,success,auto-push: eas.json [2026-10-09 15:22:12] --END--
+2026-10-09 15:22:32,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/.gitignore,modified,success,auto-push: .gitignore [2026-10-09 15:22:30] --END--
+2026-10-09 15:26:57,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/assets/icon.png,modified,success,auto-push: icon.png [2026-10-09 15:26:55] --END--
+2026-10-09 15:27:18,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/upload.keystore,created,success,auto-push: 8 files changed [2026-10-09 15:27:16] --END--
+2026-10-09 17:19:42,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/play-assets/play-icon-512.png,created,success,auto-push: play-icon-512.png [2026-10-09 17:19:40] --END--
+2026-10-09 17:20:30,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/play-assets/PLAY-SETUP.md.tmp.1473.4cc1e990fce5,created,success,"auto-push: PLAY-SETUP.md, feature-graphic-1024x500.png [2026-10-09 17:20:28] --END--"
+2026-10-10 17:57:09,repoherald,https://github.com/deka1105/repoherald.git,src/lib/github-user.ts,created,success,auto-push: github-user.ts [2026-10-10 17:57:06] --END--
+2026-10-10 17:57:18,repoherald,https://github.com/deka1105/repoherald.git,src/auth.ts,modified,success,auto-push: auth.ts [2026-10-10 17:57:16] --END--
+2026-10-10 17:57:38,repoherald,https://github.com/deka1105/repoherald.git,src/lib/mobile-auth.ts,created,success,auto-push: mobile-auth.ts [2026-10-10 17:57:35] --END--
+2026-10-10 17:57:59,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/mobile/v1/session/route.ts,created,success,"auto-push: route.ts, route.ts, route.ts [2026-10-10 17:57:56] --END--"
+2026-10-10 17:58:35,repoherald,https://github.com/deka1105/repoherald.git,src/auth.ts,modified,success,auto-push: auth.ts [2026-10-10 17:58:33] --END--
+2026-10-10 17:59:16,repoherald,https://github.com/deka1105/repoherald.git,mobile/.gitignore,created,success,auto-push: 13 files changed [2026-10-10 17:59:12] --END--
+2026-10-10 17:59:53,repoherald,https://github.com/deka1105/repoherald.git,mobile/node_modules/unicode-property-aliases-ecmascript/index.js,created,success,"auto-push: settings.json, AGENTS.md, CLAUDE.md, app.json [2026-10-10 17:59:51] --END--"
+2026-10-10 18:00:08,repoherald,https://github.com/deka1105/repoherald.git,mobile/node_modules/expo-auth-session/node_modules/expo-constants/android/build.gradle,created,success,"auto-push: package-lock.json, package.json [2026-10-10 18:00:06] --END--"
+2026-10-10 18:00:49,repoherald,https://github.com/deka1105/repoherald.git,mobile/.gitignore,modified,success,"auto-push: .gitignore, app.json, package-lock.json [2026-10-10 18:00:46] --END--"
+2026-10-10 18:01:05,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/config.ts,created,success,"auto-push: app.json, eas.json, api.ts, config.ts [2026-10-10 18:01:02] --END--"
+2026-10-10 18:01:23,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/auth.tsx,created,success,auto-push: auth.tsx [2026-10-10 18:01:20] --END--
+2026-10-10 18:01:54,repoherald,https://github.com/deka1105/repoherald.git,mobile/App.tsx,modified,success,auto-push: App.tsx [2026-10-10 18:01:49] --END--
+2026-10-10 18:04:20,repoherald,https://github.com/deka1105/repoherald.git,mobauth.test.ts,created,success,auto-push: mobauth.test.ts [2026-10-10 18:04:16] --END--
+2026-10-10 18:04:31,repoherald,https://github.com/deka1105/repoherald.git,.next/dev/cache/turbopack/v16.2.10/LOG,modified,success,auto-push: mobauth.test.ts [2026-10-10 18:04:28] --END--
+2026-10-10 18:04:51,repoherald,https://github.com/deka1105/repoherald.git,tests/mobile-auth.test.ts,created,success,auto-push: mobile-auth.test.ts [2026-10-10 18:04:46] --END--
+2026-10-10 18:05:27,repoherald,https://github.com/deka1105/repoherald.git,tsconfig.tsbuildinfo,modified,success,auto-push: package.json [2026-10-10 18:05:23] --END--
+2026-10-10 18:08:53,repoherald,https://github.com/deka1105/repoherald.git,eslint.config.mjs,modified,success,"auto-push: eslint.config.mjs, App.tsx, mobile-auth.test.ts [2026-10-10 18:08:42] --END--"
+2026-10-10 18:10:54,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/play-assets/play-screenshot-1-deck.png,created,success,auto-push: play-screenshot-1-deck.png [2026-10-10 18:10:48] --END--
+2026-10-10 18:27:57,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/play-assets/play-icon-512.png,modified,success,"auto-push: play-icon-512.png, play-screenshot-1-deck.png, play-screenshot-2-apps.png [2026-10-10 18:27:55] --END--"
+2026-10-10 21:25:10,repoherald,https://github.com/deka1105/repoherald.git,LICENSE,created,success,auto-push: LICENSE [2026-10-10 21:25:07] --END--
+2026-10-10 22:33:44,repoherald,https://github.com/deka1105/repoherald.git,.gitlab-ci.yml,created,success,auto-push: .gitlab-ci.yml [2026-10-10 22:33:42] --END--
+2026-10-10 22:34:16,repoherald,https://github.com/deka1105/repoherald.git,.gitlab/duo/mr-review-instructions.yaml,created,success,auto-push: mr-review-instructions.yaml [2026-10-10 22:34:14] --END--
+2026-10-11 00:01:05,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/BACKLOG.md.tmp.1473.69386c6ca9f9,created,success,auto-push: BACKLOG.md [2026-10-11 00:01:03] --END--
+2026-10-11 13:17:27,claude-config,https://github.com/deka1105/claude-config.git,skills/personalSchedule/SKILL.md,created,success,auto-push: SKILL.md [2026-10-11 13:17:26] --END--
+2026-10-11 13:18:01,claude-config,https://github.com/deka1105/claude-config.git,skills/personalSchedule/projects.md,created,success,auto-push: projects.md [2026-10-11 13:17:58] --END--
+2026-10-11 13:21:51,repoherald,https://github.com/deka1105/repoherald.git,.gitlab-ci.yml,modified,success,auto-push: .gitlab-ci.yml [2026-10-11 13:21:48] --END--
+2026-10-11 13:25:15,claude-config,https://github.com/deka1105/claude-config.git,skills/personalSchedule/projects.md,modified,success,auto-push: projects.md [2026-10-11 13:25:12] --END--
+2026-10-11 14:55:05,claude-config,https://github.com/deka1105/claude-config.git,skills/personalSchedule/schedule.html.tmp.97502.17ebad281c51,created,success,auto-push: schedule.html [2026-10-11 14:55:03] --END--
+2026-10-11 14:55:29,claude-config,https://github.com/deka1105/claude-config.git,skills/personalSchedule/SKILL.md,modified,success,auto-push: SKILL.md [2026-10-11 14:55:27] --END--
+2026-10-11 17:18:56,RingEventWall,https://github.com/deka1105/RingEventWall.git,tv/src/ring/client.ts,modified,success,auto-push: client.ts [2026-10-11 17:18:54] --END--
+2026-10-11 17:19:50,RingEventWall,https://github.com/deka1105/RingEventWall.git,tv/test/client.spec.ts,created,success,auto-push: client.spec.ts [2026-10-11 17:19:48] --END--
+2026-10-11 17:20:08,RingEventWall,https://github.com/deka1105/RingEventWall.git,tv/test/client.spec.ts,modified,success,auto-push: client.spec.ts [2026-10-11 17:20:06] --END--
+2026-10-11 17:20:48,RingEventWall,https://github.com/deka1105/RingEventWall.git,tv/.eslintrc,modified,success,auto-push: .eslintrc [2026-10-11 17:20:46] --END--
+2026-10-11 17:22:08,RingEventWall,https://github.com/deka1105/RingEventWall.git,scripts/build-fixtures.py,created,success,auto-push: build-fixtures.py [2026-10-11 17:22:06] --END--
+2026-10-11 17:22:54,RingEventWall,https://github.com/deka1105/RingEventWall.git,sandbox/sandbox.log,modified,success,"auto-push: devices.json, history.ava1.ring.device.D2BCF9C1A195483A86EC.json, history.ava1.ring.device.FAEBB1EAA41446C4930B.json [2026-10-11 17:22:52] --END--"
+2026-10-12 00:10:49,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/src/Paywall.tsx,modified,success,auto-push: Paywall.tsx [2026-10-12 00:10:46] --END--
+2026-10-12 00:39:00,repoherald,https://github.com/deka1105/repoherald.git,scripts/ci/config-drift.mjs,created,success,auto-push: config-drift.mjs [2026-10-12 00:38:55] --END--
+2026-10-12 00:39:43,repoherald,https://github.com/deka1105/repoherald.git,scripts/ci/impact.mjs,created,success,auto-push: impact.mjs [2026-10-12 00:39:41] --END--
+2026-10-12 00:40:26,repoherald,https://github.com/deka1105/repoherald.git,.gitlab-ci.yml,modified,success,"auto-push: .gitlab-ci.yml, plan-impact.json [2026-10-12 00:40:24] --END--"
+2026-10-12 00:40:45,repoherald,https://github.com/deka1105/repoherald.git,plan-impact.json,modified,success,auto-push: plan-impact.json [2026-10-12 00:40:43] --END--
+2026-10-12 00:40:54,repoherald,https://github.com/deka1105/repoherald.git,.gitignore,modified,success,"auto-push: .gitignore, plan-impact.json [2026-10-12 00:40:52] --END--"
+2026-10-13 13:28:04,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/App.tsx.tmp.1473.34f2bc0c4308,created,success,auto-push: App.tsx [2026-10-13 13:28:02] --END--
+2026-10-13 13:28:18,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/App.tsx,modified,success,auto-push: App.tsx [2026-10-13 13:28:16] --END--
+2026-10-13 13:28:56,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/app.json,modified,success,auto-push: app.json [2026-10-13 13:28:54] --END--
+2026-10-13 13:30:23,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/app-review/reply-2.3.8-and-5.1.1.md,created,success,auto-push: reply-2.3.8-and-5.1.1.md [2026-10-13 13:30:21] --END--
+2026-10-13 13:54:45,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/app.json,modified,success,auto-push: app.json [2026-10-13 13:54:43] --END--
+2026-10-13 13:55:08,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/BACKLOG.md.tmp.1473.35c8fb7de14d,created,success,auto-push: BACKLOG.md [2026-10-13 13:55:06] --END--
+2026-10-13 14:00:13,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/app.json,modified,success,auto-push: app.json [2026-10-13 14:00:11] --END--
+2026-10-13 14:00:53,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/BACKLOG.md.tmp.1473.5d1b319d0226,created,success,auto-push: BACKLOG.md [2026-10-13 14:00:51] --END--
+2026-10-13 15:33:14,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/play-assets/PLAY-SETUP.md.tmp.1473.b2c7560a732b,created,success,auto-push: PLAY-SETUP.md [2026-10-13 15:33:11] --END--
+2026-10-13 15:33:25,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/BACKLOG.md.tmp.1473.3e632320f22c,created,success,auto-push: BACKLOG.md [2026-10-13 15:33:23] --END--
+2026-10-13 15:33:33,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/BACKLOG.md.tmp.1473.0918067497ba,created,success,auto-push: BACKLOG.md [2026-10-13 15:33:31] --END--
+2026-10-13 15:33:47,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/BACKLOG.md,modified,success,auto-push: BACKLOG.md [2026-10-13 15:33:44] --END--
+2026-10-13 15:33:57,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/BACKLOG.md,modified,success,auto-push: BACKLOG.md [2026-10-13 15:33:55] --END--
+2026-10-13 16:28:59,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/BACKLOG.md,modified,success,auto-push: BACKLOG.md [2026-10-13 16:28:56] --END--
+2026-10-13 21:40:06,repoherald,https://github.com/deka1105/repoherald.git,src/db/schema.ts,modified,success,auto-push: schema.ts [2026-10-13 21:40:03] --END--
+2026-10-13 21:40:27,repoherald,https://github.com/deka1105/repoherald.git,drizzle/meta/0017_snapshot.json,created,success,"auto-push: 0017_public_cable.sql, 0017_snapshot.json, _journal.json [2026-10-13 21:40:25] --END--"
+2026-10-13 21:41:10,repoherald,https://github.com/deka1105/repoherald.git,src/app/(legal)/privacy/page.tsx,modified,success,auto-push: page.tsx [2026-10-13 21:41:07] --END--
+2026-10-13 21:41:57,repoherald,https://github.com/deka1105/repoherald.git,scripts/ingest-role.sql,created,success,auto-push: ingest-role.sql [2026-10-13 21:41:54] --END--
+2026-10-13 21:44:33,repoherald,https://github.com/deka1105/repoherald.git,src/app/actions/ingest.ts,created,success,auto-push: ingest.ts [2026-10-13 21:44:31] --END--
+2026-10-13 21:45:17,repoherald,https://github.com/deka1105/repoherald.git,src/app/actions/ingest.ts,modified,success,auto-push: ingest.ts [2026-10-13 21:45:15] --END--
+2026-10-13 21:45:50,repoherald,https://github.com/deka1105/repoherald.git,src/app/(app)/admin/ingest/page.tsx,created,success,auto-push: page.tsx [2026-10-13 21:45:48] --END--
+2026-10-13 22:55:35,repoherald,https://github.com/deka1105/repoherald.git,src/lib/email-templates.ts,modified,success,"auto-push: layout.tsx, email-templates.ts, notify.ts [2026-10-13 22:55:32] --END--"
+2026-10-13 22:55:56,repoherald,https://github.com/deka1105/repoherald.git,src/app/actions/support.ts,modified,success,auto-push: support.ts [2026-10-13 22:55:54] --END--
+2026-10-14 13:16:18,repoherald,https://github.com/deka1105/repoherald.git,tsconfig.json,modified,success,auto-push: tsconfig.json [2026-10-14 13:16:14] --END--
+2026-10-14 13:27:06,repoherald,https://github.com/deka1105/repoherald.git,src/app/(app)/admin/ingest/page.tsx,modified,success,auto-push: page.tsx [2026-10-14 13:27:00] --END--
+2026-10-14 14:15:33,repoherald,https://github.com/deka1105/repoherald.git,src/app/actions/ingest.ts,modified,success,auto-push: ingest.ts [2026-10-14 14:15:27] --END--
+2026-10-14 14:15:58,repoherald,https://github.com/deka1105/repoherald.git,src/app/(app)/admin/ingest/page.tsx,modified,success,auto-push: page.tsx [2026-10-14 14:15:52] --END--
+2026-10-14 15:03:16,repoherald,https://github.com/deka1105/repoherald.git,src/components/landing-live.tsx,modified,success,auto-push: landing-live.tsx [2026-10-14 15:03:13] --END--
+2026-10-14 15:03:25,repoherald,https://github.com/deka1105/repoherald.git,src/components/landing/landing.css,modified,success,auto-push: landing.css [2026-10-14 15:03:23] --END--
+2026-10-14 15:03:33,repoherald,https://github.com/deka1105/repoherald.git,src/app/page.tsx,modified,success,auto-push: page.tsx [2026-10-14 15:03:31] --END--
+2026-10-14 15:40:03,repoherald,https://github.com/deka1105/repoherald.git,src/lib/settings.ts,created,success,auto-push: settings.ts [2026-10-14 15:40:00] --END--
+2026-10-14 15:40:49,repoherald,https://github.com/deka1105/repoherald.git,src/lib/ingest-post.ts,created,success,auto-push: ingest-post.ts [2026-10-14 15:40:47] --END--
+2026-10-14 15:41:06,repoherald,https://github.com/deka1105/repoherald.git,src/app/actions/ingest.ts,modified,success,auto-push: ingest.ts [2026-10-14 15:41:03] --END--
+2026-10-14 15:41:39,repoherald,https://github.com/deka1105/repoherald.git,src/lib/.!23376!settings.ts,created,success,auto-push: settings.ts [2026-10-14 15:41:37] --END--
+2026-10-14 15:41:52,repoherald,https://github.com/deka1105/repoherald.git,src/app/actions/admin-settings.ts,created,success,auto-push: admin-settings.ts [2026-10-14 15:41:50] --END--
+2026-10-14 15:42:23,repoherald,https://github.com/deka1105/repoherald.git,src/app/(app)/admin/settings/page.tsx,created,success,auto-push: page.tsx [2026-10-14 15:42:21] --END--
+2026-10-14 15:42:45,repoherald,https://github.com/deka1105/repoherald.git,src/app/(app)/admin/settings/page.tsx,modified,success,auto-push: page.tsx [2026-10-14 15:42:43] --END--
+2026-10-14 15:43:00,repoherald,https://github.com/deka1105/repoherald.git,src/app/(app)/admin/layout.tsx,modified,success,"auto-push: layout.tsx, header.tsx [2026-10-14 15:42:58] --END--"
+2026-10-14 15:43:13,repoherald,https://github.com/deka1105/repoherald.git,src/components/header-nav.tsx,modified,success,"auto-push: header-nav.tsx, mobile-nav.tsx [2026-10-14 15:43:11] --END--"
+2026-10-14 15:43:33,repoherald,https://github.com/deka1105/repoherald.git,src/components/landing-live.tsx,modified,success,"auto-push: page.tsx, landing-live.tsx [2026-10-14 15:43:31] --END--"
+2026-10-14 15:43:43,repoherald,https://github.com/deka1105/repoherald.git,src/components/landing-live.tsx,modified,success,auto-push: landing-live.tsx [2026-10-14 15:43:41] --END--
+2026-10-14 15:43:57,repoherald,https://github.com/deka1105/repoherald.git,src/app/promote/page.tsx,modified,success,"auto-push: page.tsx, feed.ts [2026-10-14 15:43:56] --END--"
+2026-10-14 15:44:06,repoherald,https://github.com/deka1105/repoherald.git,.next/dev/cache/turbopack/v16.2.10/00000204.sst,created,success,auto-push: feed.ts [2026-10-14 15:44:04] --END--
+2026-10-14 15:44:44,repoherald,https://github.com/deka1105/repoherald.git,src/app/actions/admin-settings.ts,modified,success,auto-push: admin-settings.ts [2026-10-14 15:44:37] --END--
+2026-10-14 15:45:42,repoherald,https://github.com/deka1105/repoherald.git,src/app/actions/admin-settings.ts,modified,success,auto-push: admin-settings.ts [2026-10-14 15:45:38] --END--
+2026-10-14 15:46:13,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/cron/reverify/route.ts,modified,success,auto-push: route.ts [2026-10-14 15:46:08] --END--
+2026-10-14 15:49:39,repoherald,https://github.com/deka1105/repoherald.git,src/lib/ingest-post.ts,modified,success,auto-push: ingest-post.ts [2026-10-14 15:49:36] --END--
+2026-10-14 15:55:56,repoherald,https://github.com/deka1105/repoherald.git,src/components/landing-live.tsx,modified,success,auto-push: landing-live.tsx [2026-10-14 15:55:52] --END--
+2026-10-14 15:56:04,repoherald,https://github.com/deka1105/repoherald.git,.next/dev/logs/next-development.log,modified,success,auto-push: landing-live.tsx [2026-10-14 15:56:02] --END--
+2026-10-14 15:56:15,repoherald,https://github.com/deka1105/repoherald.git,src/app/page.tsx,modified,success,auto-push: page.tsx [2026-10-14 15:56:11] --END--
+2026-10-14 15:56:24,repoherald,https://github.com/deka1105/repoherald.git,.next/dev/logs/next-development.log,modified,success,"auto-push: admin-settings.ts, settings.ts [2026-10-14 15:56:21] --END--"
+2026-10-14 15:56:36,repoherald,https://github.com/deka1105/repoherald.git,src/app/(app)/admin/settings/page.tsx,modified,success,auto-push: page.tsx [2026-10-14 15:56:33] --END--
+2026-10-14 17:31:10,repoherald,https://github.com/deka1105/repoherald.git,src/db/schema.ts,modified,success,auto-push: schema.ts [2026-10-14 17:31:02] --END--
+2026-10-14 17:31:32,repoherald,https://github.com/deka1105/repoherald.git,drizzle/meta/0018_snapshot.json,created,success,"auto-push: 0018_far_scarlet_witch.sql, 0018_snapshot.json, _journal.json [2026-10-14 17:31:25] --END--"
+2026-10-14 17:32:43,repoherald,https://github.com/deka1105/repoherald.git,src/lib/account-link.ts,created,success,auto-push: account-link.ts [2026-10-14 17:32:36] --END--
+2026-10-14 17:35:13,repoherald,https://github.com/deka1105/repoherald.git,src/app/actions/repos.ts,modified,success,"auto-push: claims.ts, issue-reports.ts, repos.ts [2026-10-14 17:35:11] --END--"
+2026-10-14 17:36:01,repoherald,https://github.com/deka1105/repoherald.git,src/lib/display-name.ts,created,success,auto-push: display-name.ts [2026-10-14 17:35:54] --END--
+2026-10-14 17:36:20,repoherald,https://github.com/deka1105/repoherald.git,tsconfig.tsbuildinfo,modified,success,"auto-push: page.tsx, comments.tsx, social.ts [2026-10-14 17:36:17] --END--"
+2026-10-14 17:36:42,repoherald,https://github.com/deka1105/repoherald.git,src/lib/github-user.ts,modified,success,auto-push: github-user.ts [2026-10-14 17:36:37] --END--
+2026-10-14 17:37:16,repoherald,https://github.com/deka1105/repoherald.git,src/lib/google-user.ts,created,success,auto-push: google-user.ts [2026-10-14 17:37:10] --END--
+2026-10-14 17:38:08,repoherald,https://github.com/deka1105/repoherald.git,src/auth.ts,modified,success,auto-push: auth.ts [2026-10-14 17:38:01] --END--
+2026-10-14 17:39:36,repoherald,https://github.com/deka1105/repoherald.git,src/app/(app)/lists/[slug]/page.tsx,modified,success,auto-push: page.tsx [2026-10-14 17:39:30] --END--
+2026-10-14 17:40:31,repoherald,https://github.com/deka1105/repoherald.git,src/lib/platform-lists.ts,created,success,auto-push: platform-lists.ts [2026-10-14 17:40:25] --END--
+2026-10-14 17:41:56,repoherald,https://github.com/deka1105/repoherald.git,src/lib/ingest-post.ts,modified,success,auto-push: ingest-post.ts [2026-10-14 17:41:52] --END--
+2026-10-14 17:42:56,repoherald,https://github.com/deka1105/repoherald.git,src/app/actions/social-handles.ts,created,success,auto-push: social-handles.ts [2026-10-14 17:42:50] --END--
+2026-10-14 17:43:34,repoherald,https://github.com/deka1105/repoherald.git,src/lib/platform-lists.ts,modified,success,"auto-push: social-handles.ts, platform-lists.ts [2026-10-14 17:43:28] --END--"
+2026-10-14 17:45:13,repoherald,https://github.com/deka1105/repoherald.git,src/components/social-handle-form.tsx,created,success,auto-push: social-handle-form.tsx [2026-10-14 17:45:08] --END--
+2026-10-14 17:45:49,repoherald,https://github.com/deka1105/repoherald.git,src/app/account/page.tsx,modified,success,auto-push: page.tsx [2026-10-14 17:45:44] --END--
+2026-10-14 17:46:39,repoherald,https://github.com/deka1105/repoherald.git,src/app/(app)/admin/ingest/page.tsx,modified,success,auto-push: page.tsx [2026-10-14 17:46:35] --END--
+2026-10-14 17:47:22,repoherald,https://github.com/deka1105/repoherald.git,src/app/(app)/admin/settings/page.tsx,modified,success,auto-push: page.tsx [2026-10-14 17:47:17] --END--
+2026-10-14 17:48:09,repoherald,https://github.com/deka1105/repoherald.git,src/app/(legal)/privacy/page.tsx,modified,success,"auto-push: page.tsx, legal.ts [2026-10-14 17:48:02] --END--"
+2026-10-14 18:12:00,repoherald,https://github.com/deka1105/repoherald.git,src/db/schema.ts,modified,success,"auto-push: package-lock.json, package.json, schema.ts [2026-10-14 18:11:56] --END--"
+2026-10-14 18:12:34,repoherald,https://github.com/deka1105/repoherald.git,src/lib/clerk-user.ts,created,success,"auto-push: 0019_unique_galactus.sql, 0019_snapshot.json, _journal.json, clerk-user.ts [2026-10-14 18:12:31] --END--"
+2026-10-14 18:13:28,repoherald,https://github.com/deka1105/repoherald.git,src/auth.ts,modified,success,"auto-push: auth.ts, route.ts, auth.ts [2026-10-14 18:13:26] --END--"
+2026-10-14 18:13:56,repoherald,https://github.com/deka1105/repoherald.git,src/components/header-nav.tsx,modified,success,"auto-push: header-nav.tsx, landing-live.tsx [2026-10-14 18:13:53] --END--"
+2026-10-14 18:14:12,repoherald,https://github.com/deka1105/repoherald.git,src/components/landing-live.tsx,modified,success,auto-push: landing-live.tsx [2026-10-14 18:14:09] --END--
+2026-10-14 18:14:22,repoherald,https://github.com/deka1105/repoherald.git,src/app/actions/account.ts,modified,success,auto-push: account.ts [2026-10-14 18:14:19] --END--
+2026-10-14 18:14:54,repoherald,https://github.com/deka1105/repoherald.git,src/proxy.ts,created,success,"auto-push: github-token.ts, proxy.ts [2026-10-14 18:14:51] --END--"
+2026-10-14 18:15:20,repoherald,https://github.com/deka1105/repoherald.git,src/app/actions/claims.ts,modified,success,"auto-push: claims.ts, issue-reports.ts, repos.ts, issue-validation.ts [2026-10-14 18:15:17] --END--"
+2026-10-14 18:15:34,repoherald,https://github.com/deka1105/repoherald.git,src/lib/.!59651!issue-validation.ts,created,success,auto-push: issue-validation.ts [2026-10-14 18:15:32] --END--
+2026-10-14 18:16:03,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/cron/reverify/route.ts,modified,success,auto-push: route.ts [2026-10-14 18:16:00] --END--
+2026-10-14 18:16:23,repoherald,https://github.com/deka1105/repoherald.git,src/app/layout.tsx,modified,success,auto-push: layout.tsx [2026-10-14 18:16:21] --END--
+2026-10-14 18:17:46,repoherald,https://github.com/deka1105/repoherald.git,.env.example,modified,success,"auto-push: package-lock.json, package.json, config-drift.mjs [2026-10-14 18:17:44] --END--"
+2026-10-14 18:18:05,repoherald,https://github.com/deka1105/repoherald.git,src/app/(legal)/privacy/page.tsx,modified,success,auto-push: page.tsx [2026-10-14 18:18:03] --END--
+2026-10-14 21:34:29,repoherald,https://github.com/deka1105/repoherald.git,src/lib/ingest-post.ts,modified,success,auto-push: ingest-post.ts [2026-10-14 21:34:21] --END--
+2026-10-14 21:35:04,repoherald,https://github.com/deka1105/repoherald.git,src/lib/ingest-post.ts,modified,success,auto-push: ingest-post.ts [2026-10-14 21:34:54] --END--
+2026-10-14 21:36:21,repoherald,https://github.com/deka1105/repoherald.git,src/app/actions/social-handles.ts,modified,success,auto-push: social-handles.ts [2026-10-14 21:36:13] --END--
+2026-10-14 21:37:41,repoherald,https://github.com/deka1105/repoherald.git,src/lib/ingest-post.ts,modified,success,auto-push: ingest-post.ts [2026-10-14 21:37:34] --END--
+2026-10-14 21:39:17,repoherald,https://github.com/deka1105/repoherald.git,AGENTS.md,modified,success,auto-push: AGENTS.md [2026-10-14 21:39:11] --END--
+2026-10-14 21:39:34,repoherald,https://github.com/deka1105/repoherald.git,AGENTS.md,modified,success,auto-push: AGENTS.md [2026-10-14 21:39:28] --END--
+2026-10-14 21:43:04,repoherald,https://github.com/deka1105/repoherald.git,src/lib/primary-admins.ts,created,success,auto-push: primary-admins.ts [2026-10-14 21:43:00] --END--
+2026-10-14 21:43:23,repoherald,https://github.com/deka1105/repoherald.git,src/lib/clerk-user.ts,modified,success,auto-push: clerk-user.ts [2026-10-14 21:43:17] --END--
+2026-10-14 21:43:53,repoherald,https://github.com/deka1105/repoherald.git,src/lib/clerk-user.ts,modified,success,auto-push: clerk-user.ts [2026-10-14 21:43:43] --END--
+2026-10-14 21:44:58,repoherald,https://github.com/deka1105/repoherald.git,src/app/actions/admin.ts,modified,success,auto-push: admin.ts [2026-10-14 21:44:53] --END--
+2026-10-14 21:45:45,repoherald,https://github.com/deka1105/repoherald.git,src/app/(app)/admin/users/page.tsx,modified,success,auto-push: page.tsx [2026-10-14 21:45:41] --END--
+2026-10-14 21:47:11,repoherald,https://github.com/deka1105/repoherald.git,AGENTS.md,modified,success,auto-push: AGENTS.md [2026-10-14 21:47:08] --END--
+2026-10-15 05:52:44,repoherald,https://github.com/deka1105/repoherald.git,src/lib/github-token.ts,modified,success,"auto-push: claims.ts, issue-reports.ts, repos.ts, github-token.ts [2026-10-15 05:52:41] --END--"
+2026-10-15 05:53:13,repoherald,https://github.com/deka1105/repoherald.git,src/app/actions/repos.ts,modified,success,"auto-push: claims.ts, issue-reports.ts, repos.ts [2026-10-15 05:53:10] --END--"
+2026-10-15 05:53:32,repoherald,https://github.com/deka1105/repoherald.git,src/app/actions/.!4988!claims.ts,created,success,"auto-push: claims.ts, repos.ts [2026-10-15 05:53:30] --END--"
+2026-10-15 05:58:21,repoherald,https://github.com/deka1105/repoherald.git,src/lib/search.ts,created,success,auto-push: search.ts [2026-10-15 05:58:18] --END--
+2026-10-15 05:58:47,repoherald,https://github.com/deka1105/repoherald.git,src/app/(app)/search/page.tsx,created,success,auto-push: page.tsx [2026-10-15 05:58:43] --END--
+2026-10-15 05:59:35,repoherald,https://github.com/deka1105/repoherald.git,src/components/header-nav.tsx,modified,success,auto-push: header-nav.tsx [2026-10-15 05:59:31] --END--
+2026-10-15 06:02:24,repoherald,https://github.com/deka1105/repoherald.git,src/lib/github.ts,modified,success,"auto-push: github-link.ts, github.ts [2026-10-15 06:02:21] --END--"
+2026-10-15 06:03:03,repoherald,https://github.com/deka1105/repoherald.git,src/components/account/connect-github.tsx,created,success,auto-push: connect-github.tsx [2026-10-15 06:03:00] --END--
+2026-10-15 06:03:14,repoherald,https://github.com/deka1105/repoherald.git,tsconfig.tsbuildinfo,modified,success,auto-push: page.tsx [2026-10-15 06:03:11] --END--
+2026-10-15 06:04:57,repoherald,https://github.com/deka1105/repoherald.git,src/components/landing-live.tsx,modified,success,auto-push: landing-live.tsx [2026-10-15 06:04:52] --END--
+2026-10-15 06:05:28,repoherald,https://github.com/deka1105/repoherald.git,src/components/landing-live.tsx,modified,success,auto-push: landing-live.tsx [2026-10-15 06:05:24] --END--
+2026-10-15 06:07:12,repoherald,https://github.com/deka1105/repoherald.git,src/components/landing-live.tsx,modified,success,auto-push: landing-live.tsx [2026-10-15 06:07:06] --END--
+2026-10-15 06:09:15,repoherald,https://github.com/deka1105/repoherald.git,src/components/landing-live.tsx,modified,success,auto-push: landing-live.tsx [2026-10-15 06:09:11] --END--
+2026-10-15 06:36:48,repoherald,https://github.com/deka1105/repoherald.git,src/lib/lists.ts,modified,success,auto-push: lists.ts [2026-10-15 06:36:44] --END--
+2026-10-15 06:37:32,repoherald,https://github.com/deka1105/repoherald.git,src/lib/lists.ts,modified,success,auto-push: lists.ts [2026-10-15 06:37:29] --END--
+2026-10-15 06:38:30,repoherald,https://github.com/deka1105/repoherald.git,src/app/(app)/admin/lists/page.tsx,modified,success,auto-push: page.tsx [2026-10-15 06:38:27] --END--
+2026-10-15 11:42:15,repoherald,https://github.com/deka1105/repoherald.git,src/components/landing/landing-v2.css,created,success,auto-push: landing-v2.css [2026-10-15 11:42:13] --END--
+2026-10-15 11:44:22,repoherald,https://github.com/deka1105/repoherald.git,src/components/landing-live.tsx,modified,success,auto-push: landing-live.tsx [2026-10-15 11:44:18] --END--
+2026-10-15 11:47:57,repoherald,https://github.com/deka1105/repoherald.git,src/components/landing/landing-v2.css,modified,success,auto-push: landing-v2.css [2026-10-15 11:47:54] --END--
+2026-10-15 11:49:06,repoherald,https://github.com/deka1105/repoherald.git,src/components/landing-live.tsx,modified,success,"auto-push: landing-live.tsx, landing-v2.css [2026-10-15 11:49:04] --END--"
+2026-10-15 11:50:14,repoherald,https://github.com/deka1105/repoherald.git,src/components/landing/landing-v2.css,modified,success,auto-push: landing-v2.css [2026-10-15 11:50:08] --END--
+2026-10-15 23:04:57,claude-config,https://github.com/deka1105/claude-config.git,skills/ig-reel-script-writer/references/script-template.md,created,success,auto-push: 18 files changed [2026-10-15 23:04:54] --END--
+2026-10-15 23:20:02,repoherald,https://github.com/deka1105/repoherald.git,marketing/reels/01-cheat-my-own-site.md,created,success,auto-push: 01-cheat-my-own-site.md [2026-10-15 23:20:00] --END--
+2026-10-15 23:20:26,repoherald,https://github.com/deka1105/repoherald.git,marketing/reels/02-three-stars-not-the-code.md,created,success,"auto-push: 02-three-stars-not-the-code.md, 03-ranking-formula.md [2026-10-15 23:20:24] --END--"
+2026-10-15 23:20:52,repoherald,https://github.com/deka1105/repoherald.git,marketing/reels/04-sponsorship-buys-nothing.md,created,success,"auto-push: 04-sponsorship-buys-nothing.md, 05-currency-backed-by-stars.md [2026-10-15 23:20:51] --END--"
+2026-10-15 23:21:04,repoherald,https://github.com/deka1105/repoherald.git,marketing/reels/README.md,created,success,auto-push: README.md [2026-10-15 23:21:02] --END--
+2026-10-15 23:26:28,repoherald,https://github.com/deka1105/repoherald.git,marketing/reels/05-currency-backed-by-stars.md,modified,success,"auto-push: 02-three-stars-not-the-code.md, 04-sponsorship-buys-nothing.md, 05-currency-backed-by-stars.md [2026-10-15 23:26:26] --END--"
+2026-10-15 23:26:37,repoherald,https://github.com/deka1105/repoherald.git,marketing/reels/README.md,modified,success,auto-push: README.md [2026-10-15 23:26:35] --END--
+2026-10-15 23:40:13,repoherald,https://github.com/deka1105/repoherald.git,.gitignore,modified,success,auto-push: 6 files changed [2026-10-15 23:40:10] --END--
+2026-10-15 23:47:04,repoherald,https://github.com/deka1105/repoherald.git,marketing/reels/out/reel06-painfirst-storyboard.png,created,success,"auto-push: frame-pain.html, shoot.mjs [2026-10-15 23:47:01] --END--"
+2026-10-15 23:53:20,repoherald,https://github.com/deka1105/repoherald.git,marketing/reels/out/reel07-saved-folder-storyboard.png,created,success,"auto-push: extract-facts.mjs, facts.json, frame-pain.html, frame-saved.html, shoot-saved.mjs [2026-10-15 23:53:17] --END--"
+2026-10-16 11:45:06,repoherald,https://github.com/deka1105/repoherald.git,marketing/reels/out/reel08-instagram-rescue-storyboard.png,created,success,"auto-push: frame-rescue.html, frame-saved.html, shoot-rescue.mjs [2026-10-16 11:45:04] --END--"
+2026-10-16 11:51:37,repoherald,https://github.com/deka1105/repoherald.git,marketing/reels/acted/A-standup.md,created,success,auto-push: A-standup.md [2026-10-16 11:51:34] --END--
+2026-10-16 11:52:58,repoherald,https://github.com/deka1105/repoherald.git,marketing/reels/acted/B-2am.md,created,success,"auto-push: B-2am.md, C-handoff.md, D-backfill.md [2026-10-16 11:52:55] --END--"
+2026-10-16 11:53:32,repoherald,https://github.com/deka1105/repoherald.git,marketing/reels/acted/README.md,created,success,auto-push: README.md [2026-10-16 11:53:29] --END--
+>>>>>>> Stashed changes
