@@ -1,0 +1,49 @@
+local_path,repo_url,repo_name
+/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher,https://github.com/deka1105/TestWatcher.git,TestWatcher
+/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard,https://github.com/deka1105/MultistockDashboard.git,MultistockDashboard
+/Users/shubhamarundekatey/ClaudeCode/day0, https://github.com/deka1105/Playbooks.git, PlayBooks
+/Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics, https://github.com/deka1105/GitHub-AutoPush-Analytics.git, GitHub-AutoPush-Analytics
+/Users/shubhamarundekatey/ClaudeCode/day11/WarehouseFlow, https://github.com/deka1105/WarehouseFlow.git, WarehouseFlow
+/Users/shubhamarundekatey/ClaudeCode/day8/ImageFix, https://github.com/deka1105/Image-Fix.git, ImageFix
+/Users/shubhamarundekatey/ClaudeCode/day12/TrashMan, https://github.com/deka1105/TrashMan.git, TrashMan
+/Users/shubhamarundekatey/ClaudeCode/day13/ShadowController, https://github.com/deka1105/ShadowController.git, ShadowController
+/Users/shubhamarundekatey/ClaudeCode/day17/globeProducts, https://github.com/deka1105/globeProducts.git, globeProducts
+/Users/shubhamarundekatey/ClaudeCode/day14/CodeFlow, https://github.com/deka1105/CodeFlow.git, CodeFlow
+/Users/shubhamarundekatey/ClaudeCode/day20/3DPrintMaket, https://github.com/deka1105/3DPrintMaket.git, 3DPrintMaket
+/Users/shubhamarundekatey/ClaudeCode/day20/HomeCook, https://github.com/deka1105/HomeCook.git, HomeCook
+/Users/shubhamarundekatey/ClaudeCode/day21/HabitFarmer, https://github.com/deka1105/HabitFarmer.git, HabitFarmer
+/Users/shubhamarundekatey/ClaudeCode/day21/HabitFarmer/iOS_App_v1/HabitFarmer, https://github.com/deka1105/HabitFarmer-iOS-v1.git, HabitFarmer-iOS-v1
+/Users/shubhamarundekatey/ClaudeCode/day21/HabitFarmer/iOS_App_v2/HabitFarmer, https://github.com/deka1105/HabitFarmer-iOS-v2.git, HabitFarmer-iOS-v2
+/Users/shubhamarundekatey/ClaudeCode/day22/ColdEmails, https://github.com/deka1105/ColdEmails.git, ColdEmails
+/Users/shubhamarundekatey/ClaudeCode/day21/ClaudeCertificates, https://github.com/deka1105/ClaudeCertificates.git, ClaudeCertificates
+/Users/shubhamarundekatey/ClaudeCode/day6/Instagram Save Grid, https://github.com/deka1105/Instagram-Save-Grid.git, Instagram-Save-Grid
+/Users/shubhamarundekatey/ClaudeCode/day7/Image Similarity, https://github.com/deka1105/Image-Similarity.git, Image-Similarity
+/Users/shubhamarundekatey/ClaudeCode/day7/Instagram Saved download, https://github.com/deka1105/Instagram-Saved-download.git, Instagram-Saved-download
+/Users/shubhamarundekatey/ClaudeCode/day8/Instagram Tab Title, https://github.com/deka1105/Instagram-Tab-Title.git, Instagram-Tab-Title
+/Users/shubhamarundekatey/ClaudeCode/day14/SimuLogin, https://github.com/deka1105/SimuLogin.git, SimuLogin
+/Users/shubhamarundekatey/ClaudeCode/day15/SessionForgeFox, https://github.com/deka1105/SessionForgeFox.git, SessionForgeFox
+/Users/shubhamarundekatey/ClaudeCode/day15/SessionForgeFox/SessionForgeMobile, https://github.com/deka1105/SessionForgeMobile.git, SessionForgeMobile
+/Users/shubhamarundekatey/ClaudeCode/day15/SessionForgePublic, https://github.com/deka1105/SessionForgePublic.git, SessionForgePublic
+/Users/shubhamarundekatey/ClaudeCode/day16/Lumon, https://github.com/deka1105/Lumon.git, Lumon
+/Users/shubhamarundekatey/ClaudeCode/day17/ImageConstellation, https://github.com/deka1105/ImageConstellation.git, ImageConstellation
+/Users/shubhamarundekatey/ClaudeCode/day18/LinkedinMessageBuilder, https://github.com/deka1105/LinkedinMessageBuilder.git, LinkedinMessageBuilder
+/Users/shubhamarundekatey/ClaudeCode/day20/3DPrintMaket/Philamentos-pilot, https://github.com/deka1105/Philamentos-pilot.git, Philamentos-pilot
+/Users/shubhamarundekatey/ClaudeCode/day24/Map_Plot_API, https://github.com/deka1105/Map_Plot_API.git, Map_Plot_API
+/Users/shubhamarundekatey/ClaudeCode/day24/WallBoard, https://github.com/deka1105/WallBoard.git, WallBoard
+/Users/shubhamarundekatey/ClaudeCode/day27/streamPhoneDeck, https://github.com/deka1105/streamPhoneDeck.git, streamPhoneDeck
+/Users/shubhamarundekatey/ClaudeCode/day28/StreamDeck-Premium, https://github.com/deka1105/StreamDeck-Premium.git, StreamDeck-Premium
+/Users/shubhamarundekatey/ClaudeCode/day29/pilot-factory, https://github.com/deka1105/pilot-factory.git, pilot-factory
+/Users/shubhamarundekatey/ClaudeCode/day29/claimsorted_pilot, https://github.com/deka1105/claimsorted_pilot.git, claimsorted_pilot
+/Users/shubhamarundekatey/ClaudeCode/day29/covera_pilot, https://github.com/deka1105/covera_pilot.git, covera_pilot
+/Users/shubhamarundekatey/ClaudeCode/day29/curri_pilot, https://github.com/deka1105/curri_pilot.git, curri_pilot
+/Users/shubhamarundekatey/ClaudeCode/day29/hedge_pilot, https://github.com/deka1105/hedge_pilot.git, hedge_pilot
+/Users/shubhamarundekatey/ClaudeCode/day29/kastle_pilot, https://github.com/deka1105/kastle_pilot.git, kastle_pilot
+/Users/shubhamarundekatey/ClaudeCode/day29/lightfield_pilot, https://github.com/deka1105/lightfield_pilot.git, lightfield_pilot
+/Users/shubhamarundekatey/ClaudeCode/day29/redoubt-insurance_pilot, https://github.com/deka1105/redoubt-insurance_pilot.git, redoubt-insurance_pilot
+/Users/shubhamarundekatey/ClaudeCode/day29/rote_pilot, https://github.com/deka1105/rote_pilot.git, rote_pilot
+/Users/shubhamarundekatey/ClaudeCode/day29/YC_Pilots, https://github.com/deka1105/yc-pilots.git, yc-pilots
+/Users/shubhamarundekatey/EZ_Clip_Extension, https://github.com/deka1105/EZ_Clip_Extension.git, EZ_Clip_Extension
+/Users/shubhamarundekatey/ClaudeCode/day30/CasaVault, https://github.com/deka1105/CasaVault.git, CasaVault
+/Users/shubhamarundekatey/ClaudeCode/day31/Observatory, https://github.com/deka1105/Observatory.git, Observatory
+/Users/shubhamarundekatey/claude-config, https://github.com/deka1105/claude-config.git, claude-config
+/Users/shubhamarundekatey/ClaudeCode/day31/RingEventWall, https://github.com/deka1105/RingEventWall.git, RingEventWall

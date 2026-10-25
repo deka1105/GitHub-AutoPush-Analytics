@@ -9420,3 +9420,325 @@ timestamp,repo_name,repo_url,file_changed,event_type,status,message
 2026-10-18 22:40:04,repoherald,https://github.com/deka1105/repoherald.git,mobile/App.tsx,modified,success,auto-push: App.tsx [2026-10-18 22:39:59] --END--
 2026-10-18 22:40:55,repoherald,https://github.com/deka1105/repoherald.git,mobile/eas.json,modified,success,auto-push: eas.json [2026-10-18 22:40:50] --END--
 2026-10-18 23:04:57,repoherald,https://github.com/deka1105/repoherald.git,mobile/PLAYSTORE.md,modified,success,auto-push: PLAYSTORE.md [2026-10-18 23:04:53] --END--
+2026-10-19 15:50:56,GitHub-AutoPush-Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,session-logs/session_2026-09-28_0747_538e37c7.md,modified,success,"auto-push: push_log.csv, watcher_mac.log, watcher_mac.log.1, watcher_mac.log.2, watcher_mac.log.3 [2026-10-19 15:50:50] --END--"
+2026-10-20 09:04:46,repoherald,https://github.com/deka1105/repoherald.git,mobile/eas.json.bak,created,success,"auto-push: eas.json, eas.json.bak [2026-10-20 09:04:43] --END--"
+2026-10-20 15:46:54,repoherald,https://github.com/deka1105/repoherald.git,mobile/AuthKey_UJ39YTD9H2.p8,created,success,auto-push: eas.json.bak [2026-10-20 15:46:50] --END--
+2026-10-22 08:27:19,repoherald,https://github.com/deka1105/repoherald.git,brag-output/brag-plan.md,created,success,auto-push: brag-plan.md [2026-10-22 08:27:17] --END--
+2026-10-22 08:38:18,claude-config,https://github.com/deka1105/claude-config.git,skills/figma/SKILL.md,created,success,auto-push: 79 files changed [2026-10-22 08:38:15] --END--
+2026-10-22 08:39:08,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/index.html,created,success,auto-push: 6 files changed [2026-10-22 08:39:06] --END--
+2026-10-22 08:39:58,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/assets/music/happy-beats-business-moves-vol-9-by-ende-dot-app.mp3,created,success,auto-push: happy-beats-business-moves-vol-9-by-ende-dot-app.mp3 [2026-10-22 08:39:55] --END--
+2026-10-22 08:40:49,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/index.html.tmp.56036.ccfce5195ae3,created,success,auto-push: index.html [2026-10-22 08:40:46] --END--
+2026-10-22 08:41:01,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/compositions/s1.html.tmp.56036.d754fd311c21,created,success,auto-push: s1.html [2026-10-22 08:40:59] --END--
+2026-10-22 08:41:35,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/compositions/s2.html.tmp.56036.868b3c26a049,created,success,auto-push: s2.html [2026-10-22 08:41:33] --END--
+2026-10-22 08:41:48,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/compositions/s3.html.tmp.56036.cfba337d1688,created,success,auto-push: s3.html [2026-10-22 08:41:46] --END--
+2026-10-22 08:42:02,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/compositions/s4.html.tmp.56036.c233559602fd,created,success,auto-push: s4.html [2026-10-22 08:42:00] --END--
+2026-10-22 08:42:14,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/.hyperframes/history-id,created,success,"auto-push: history-id, click_001.ogg, switch_001.ogg, switch_002.ogg, switch_004.ogg [2026-10-22 08:42:12] --END--"
+2026-10-22 08:42:22,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/.hyperframes/artifacts/checks/e2555e03-ea95-4ec6-a0ca-ea937cfb9906.json,created,success,"auto-push: e2555e03-ea95-4ec6-a0ca-ea937cfb9906.json, video-state.json [2026-10-22 08:42:20] --END--"
+2026-10-22 08:43:22,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/compositions/s1.html.tmp.56036.82fe20704195,created,success,auto-push: s1.html [2026-10-22 08:43:20] --END--
+2026-10-22 08:43:55,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/compositions/s2.html.tmp.56036.9b156cb8e985,created,success,auto-push: s2.html [2026-10-22 08:43:53] --END--
+2026-10-22 08:44:10,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/compositions/s4.html.tmp.56036.8709e3fc03c4,created,success,auto-push: s4.html [2026-10-22 08:44:08] --END--
+2026-10-22 08:44:20,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/index.html.tmp.56036.3cb6b7755199,created,success,auto-push: index.html [2026-10-22 08:44:19] --END--
+2026-10-22 08:44:30,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/index.html,modified,success,auto-push: index.html [2026-10-22 08:44:28] --END--
+2026-10-22 08:44:36,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/.hyperframes/artifacts/checks/5ec41968-1782-4c73-9ec2-101f2135adc3.json,created,error,git add failed: fatal: unable to stat 'brag-output/composition/.hyperframes/video-state-lock/owner.pid-16652-56cdb60a-ed22-488c-977c-dcb596f1cca1.tmp': No such file or directory --END--
+2026-10-22 08:44:46,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/.hyperframes/artifacts/snapshots/14a017a8-7aa8-4deb-9933-dad4620d9d84/.capture-owner.json,created,success,"auto-push: 5ec41968-1782-4c73-9ec2-101f2135adc3.json, .capture-owner.json, video-state.json [2026-10-22 08:44:44] --END--"
+2026-10-22 08:44:54,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/.hyperframes/artifacts/snapshots/14a017a8-7aa8-4deb-9933-dad4620d9d84/.capture-QwoX7s/review-beats.jpg,created,success,auto-push: 28 files changed [2026-10-22 08:44:52] --END--
+2026-10-22 08:45:39,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/compositions/s3.html.tmp.56036.a82c24f9477f,created,success,"auto-push: .capture-owner.json, review-phone.jpg, s3.html [2026-10-22 08:45:37] --END--"
+2026-10-22 08:45:56,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/index.html,modified,success,auto-push: index.html [2026-10-22 08:45:54] --END--
+2026-10-22 08:46:11,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/.hyperframes/artifacts/snapshots/9ce1aa41-189f-4833-9f85-2e3b3379cf88/.capture-owner.json,created,success,"auto-push: faa652ba-880f-4521-8163-ec693900fee9.json, .capture-owner.json, video-state.json [2026-10-22 08:46:08] --END--"
+2026-10-22 08:46:36,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/.hyperframes/video-state-lock/owner.pid,created,success,auto-push: 9 files changed [2026-10-22 08:46:34] --END--
+2026-10-22 08:46:59,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition-brief.md.tmp.56036.707fab23513e,created,success,"auto-push: owner.json, composition-brief.md [2026-10-22 08:46:57] --END--"
+2026-10-22 08:47:08,repoherald,https://github.com/deka1105/repoherald.git,brag-output/.brag.hf-transaction-F4k5vQ/brag.mp4,created,success,auto-push: brag.mp4 [2026-10-22 08:47:05] --END--
+2026-10-22 08:47:27,repoherald,https://github.com/deka1105/repoherald.git,brag-output/brag.jpg,created,success,"auto-push: owner.json, brag.jpg, brag.mp4, owner.pid [2026-10-22 08:47:25] --END--"
+2026-10-22 08:47:34,claude-config,https://github.com/deka1105/claude-config.git,skills/synced/ce612ff5-7ba1-4a7f-89db-026d0e624bf0_545f864f-7719-4e8b-8307-047f76d79252/.last-complete-round,deleted,success,auto-push: 221 files changed [2026-10-22 08:47:31] --END--
+2026-10-22 08:47:43,repoherald,https://github.com/deka1105/repoherald.git,brag-output/brag.poster.mp4,created,success,auto-push: brag.poster.mp4 [2026-10-22 08:47:40] --END--
+2026-10-22 08:48:39,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/index.html,modified,success,"auto-push: brag.mp4, brag.poster.mp4, index.html [2026-10-22 08:48:37] --END--"
+2026-10-22 08:48:52,repoherald,https://github.com/deka1105/repoherald.git,brag-output/composition/.hyperframes/video-state-lock/owner.pid,created,success,"auto-push: 980ee293-ad86-494f-a7b3-6c2713a70612.json, owner.pid, video-state.json [2026-10-22 08:48:51] --END--"
+2026-10-22 08:49:23,repoherald,https://github.com/deka1105/repoherald.git,brag-output/.brag.hf-transaction-IBMngJ/brag.mp4,created,error,git add failed: fatal: unable to stat 'brag-output/.brag.hf-transaction-IBMngJ/owner.json': No such file or directory --END--
+2026-10-22 08:50:22,repoherald,https://github.com/deka1105/repoherald.git,brag-output/share-copy.txt,created,success,auto-push: 34 files changed [2026-10-22 08:50:19] --END--
+2026-10-22 10:44:44,repoherald,https://github.com/deka1105/repoherald.git,mobile/APPREVIEW-2.1-REPLY.md.tmp.56036.1db24615dea4,created,success,auto-push: APPREVIEW-2.1-REPLY.md [2026-10-22 10:44:41] --END--
+2026-10-22 10:52:17,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/mobile/v1/report/route.ts.tmp.56036.f01b6e839af5,created,success,auto-push: route.ts [2026-10-22 10:52:13] --END--
+2026-10-22 10:52:26,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/api.ts.tmp.56036.e09d066923e5,created,success,auto-push: api.ts [2026-10-22 10:52:23] --END--
+2026-10-22 10:52:39,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/blocks.ts.tmp.56036.3e78b1a3a00e,created,success,auto-push: blocks.ts [2026-10-22 10:52:37] --END--
+2026-10-22 10:53:26,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/moderation.tsx.tmp.56036.bfc5b21bda49,created,success,auto-push: moderation.tsx [2026-10-22 10:53:23] --END--
+2026-10-22 10:53:40,repoherald,https://github.com/deka1105/repoherald.git,mobile/App.tsx.tmp.56036.f4dd975caf23,created,success,auto-push: App.tsx [2026-10-22 10:53:37] --END--
+2026-10-22 10:53:50,repoherald,https://github.com/deka1105/repoherald.git,mobile/App.tsx.tmp.56036.9361e217103c,created,success,auto-push: App.tsx [2026-10-22 10:53:47] --END--
+2026-10-22 10:54:00,repoherald,https://github.com/deka1105/repoherald.git,mobile/App.tsx.tmp.56036.974a0b137dcc,created,success,auto-push: App.tsx [2026-10-22 10:53:57] --END--
+2026-10-22 10:54:08,repoherald,https://github.com/deka1105/repoherald.git,mobile/App.tsx.tmp.56036.3bf22478c2ba,created,success,auto-push: App.tsx [2026-10-22 10:54:06] --END--
+2026-10-22 10:54:19,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/account.tsx.tmp.56036.a65ed2fe132d,created,success,auto-push: account.tsx [2026-10-22 10:54:16] --END--
+2026-10-22 10:54:32,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/account.tsx,modified,success,auto-push: account.tsx [2026-10-22 10:54:30] --END--
+2026-10-22 10:55:10,repoherald,https://github.com/deka1105/repoherald.git,src/app/(legal)/privacy/page.tsx.tmp.56036.f29bf5d2a10b,created,success,auto-push: page.tsx [2026-10-22 10:55:07] --END--
+2026-10-22 10:56:11,repoherald,https://github.com/deka1105/repoherald.git,mobile/APPSTORE.md,modified,success,auto-push: APPSTORE.md [2026-10-22 10:56:08] --END--
+2026-10-22 10:56:33,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/moderation.tsx.tmp.56036.6f0b9dd1f065,created,success,auto-push: moderation.tsx [2026-10-22 10:56:31] --END--
+2026-10-22 10:56:55,repoherald,https://github.com/deka1105/repoherald.git,mobile/.expo/cache/eslint/.cache_18uxpu,modified,success,"auto-push: App.tsx, moderation.tsx [2026-10-22 10:56:49] --END--"
+2026-10-22 10:57:58,repoherald,https://github.com/deka1105/repoherald.git,mobile/APPREVIEW-2.1-REPLY.md,modified,success,auto-push: APPREVIEW-2.1-REPLY.md [2026-10-22 10:57:56] --END--
+2026-10-22 11:07:46,repoherald,https://github.com/deka1105/repoherald.git,mobile/App.tsx.tmp.56036.f39bad243283,created,success,auto-push: App.tsx [2026-10-22 11:07:43] --END--
+2026-10-22 11:08:07,repoherald,https://github.com/deka1105/repoherald.git,mobile/.expo/cache/eslint/.cache_18uxpu,modified,success,auto-push: App.tsx [2026-10-22 11:08:04] --END--
+2026-10-22 11:08:51,repoherald,https://github.com/deka1105/repoherald.git,mobile/RECORDING-SCRIPT.md.tmp.56036.0d4a6ccc39e0,created,success,auto-push: RECORDING-SCRIPT.md [2026-10-22 11:08:47] --END--
+2026-10-22 22:49:30,repoherald,https://github.com/deka1105/repoherald.git,src/lib/mobile-api.ts,created,success,auto-push: mobile-api.ts [2026-10-22 22:49:28] --END--
+2026-10-22 22:49:50,repoherald,https://github.com/deka1105/repoherald.git,src/lib/claim.ts,created,success,"auto-push: claims.ts, claim.ts [2026-10-22 22:49:48] --END--"
+2026-10-22 22:50:31,repoherald,https://github.com/deka1105/repoherald.git,src/lib/post-repo.ts,created,success,auto-push: post-repo.ts [2026-10-22 22:50:29] --END--
+2026-10-22 22:50:40,repoherald,https://github.com/deka1105/repoherald.git,src/app/actions/repos.ts,modified,success,auto-push: repos.ts [2026-10-22 22:50:38] --END--
+2026-10-22 22:51:02,repoherald,https://github.com/deka1105/repoherald.git,src/lib/support-ticket.ts,created,success,"auto-push: support.ts, support-ticket.ts [2026-10-22 22:51:00] --END--"
+2026-10-22 22:51:31,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/mobile/v1/feed/route.ts,modified,success,"auto-push: route.ts, route.ts, route.ts [2026-10-22 22:51:29] --END--"
+2026-10-22 22:52:04,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/mobile/v1/repos/[id]/route.ts,created,success,auto-push: route.ts [2026-10-22 22:52:02] --END--
+2026-10-22 22:52:45,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/mobile/v1/repos/[id]/like/route.ts,created,success,"auto-push: route.ts, route.ts, route.ts, route.ts [2026-10-22 22:52:43] --END--"
+2026-10-22 22:53:30,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/mobile/v1/lists/route.ts,created,success,"auto-push: route.ts, route.ts [2026-10-22 22:53:28] --END--"
+2026-10-22 22:54:01,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/mobile/v1/lists/[slug]/route.ts,modified,success,"auto-push: route.ts, route.ts, route.ts [2026-10-22 22:53:59] --END--"
+2026-10-22 22:54:39,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/mobile/v1/wallet/route.ts,created,success,"auto-push: route.ts, route.ts, route.ts [2026-10-22 22:54:37] --END--"
+2026-10-22 22:55:05,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/mobile/v1/wallet/route.ts,modified,success,auto-push: route.ts [2026-10-22 22:55:03] --END--
+2026-10-22 22:56:06,repoherald,https://github.com/deka1105/repoherald.git,mobile/package.json.0HIQyptOWYPHwb5NhN56y9Rx5zUo-YOljq5X6buzDvs,created,success,auto-push: package.json [2026-10-22 22:56:04] --END--
+2026-10-22 22:58:29,repoherald,https://github.com/deka1105/repoherald.git,mobile/tsconfig.json,modified,success,auto-push: 6 files changed [2026-10-22 22:58:27] --END--
+2026-10-22 22:59:18,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/api.ts,modified,success,auto-push: api.ts [2026-10-22 22:59:16] --END--
+2026-10-22 23:00:09,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/components/ui.tsx,created,success,auto-push: ui.tsx [2026-10-22 23:00:08] --END--
+2026-10-22 23:00:18,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/components/ui.tsx,modified,success,auto-push: ui.tsx [2026-10-22 23:00:16] --END--
+2026-10-22 23:00:43,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/components/repo-card.tsx,created,success,auto-push: repo-card.tsx [2026-10-22 23:00:41] --END--
+2026-10-22 23:01:16,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/moderation.tsx,modified,success,"auto-push: app-state.tsx, moderation.tsx [2026-10-22 23:01:14] --END--"
+2026-10-22 23:01:59,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/theme.ts,modified,success,auto-push: theme.ts [2026-10-22 23:01:57] --END--
+2026-10-22 23:02:28,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/app/_layout.tsx,created,success,"auto-push: _layout.tsx, _layout.tsx [2026-10-22 23:02:26] --END--"
+2026-10-22 23:02:40,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/app/(tabs)/_layout.tsx,modified,success,auto-push: _layout.tsx [2026-10-22 23:02:39] --END--
+2026-10-22 23:03:12,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/app/(tabs)/index.tsx,created,success,auto-push: index.tsx [2026-10-22 23:03:11] --END--
+2026-10-22 23:03:43,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/app/(tabs)/search.tsx,created,success,auto-push: search.tsx [2026-10-22 23:03:42] --END--
+2026-10-22 23:04:41,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/app/repo/[id].tsx,created,success,auto-push: [id].tsx [2026-10-22 23:04:39] --END--
+2026-10-22 23:04:55,repoherald,https://github.com/deka1105/repoherald.git,src/lib/lists.ts,modified,success,auto-push: lists.ts [2026-10-22 23:04:54] --END--
+2026-10-22 23:05:12,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/api.ts,modified,success,"auto-push: api.ts, [id].tsx [2026-10-22 23:05:10] --END--"
+2026-10-22 23:05:42,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/app/(tabs)/post.tsx,created,success,auto-push: post.tsx [2026-10-22 23:05:40] --END--
+2026-10-22 23:06:13,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/app/(tabs)/lists.tsx,created,success,auto-push: lists.tsx [2026-10-22 23:06:11] --END--
+2026-10-22 23:06:43,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/app/list/[slug].tsx,created,success,auto-push: [slug].tsx [2026-10-22 23:06:41] --END--
+2026-10-22 23:07:13,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/app/(tabs)/wallet.tsx,created,success,auto-push: wallet.tsx [2026-10-22 23:07:11] --END--
+2026-10-22 23:07:52,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/config.ts,modified,success,"auto-push: account.tsx, account.tsx, config.ts [2026-10-22 23:07:50] --END--"
+2026-10-22 23:08:13,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/app/support.tsx,created,success,auto-push: support.tsx [2026-10-22 23:08:11] --END--
+2026-10-22 23:08:32,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/app/(tabs)/_layout.tsx,modified,success,auto-push: _layout.tsx [2026-10-22 23:08:30] --END--
+2026-10-22 23:09:20,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/app/(tabs)/_layout.tsx,modified,success,auto-push: _layout.tsx [2026-10-22 23:09:18] --END--
+2026-10-22 23:09:59,repoherald,https://github.com/deka1105/repoherald.git,mobile/package.json.bfAeeKRuDWv7x-n3q55ujlgKpobuK3B5XOx9KSek8AA,created,success,auto-push: package.json [2026-10-22 23:09:57] --END--
+2026-10-22 23:10:07,repoherald,https://github.com/deka1105/repoherald.git,mobile/package.json.CCcmQ2V83k8_z-hXYVonDAE-5jaECsCY2_PX_4Mm2UU,created,success,"auto-push: app.json, package-lock.json, package.json [2026-10-22 23:10:06] --END--"
+2026-10-22 23:10:47,repoherald,https://github.com/deka1105/repoherald.git,mobile/.expo/cache/eslint/.cache_18uxpu,modified,success,auto-push: package-lock.json [2026-10-22 23:10:45] --END--
+2026-10-22 23:25:02,repoherald,https://github.com/deka1105/repoherald.git,mobile/APPSTORE.md,modified,success,auto-push: APPSTORE.md [2026-10-22 23:24:59] --END--
+2026-10-22 23:53:05,repoherald,https://github.com/deka1105/repoherald.git,mobile/node_modules/detect-node-es/LICENSE,created,success,auto-push: package-lock.json [2026-10-22 23:53:01] --END--
+2026-10-22 23:54:48,repoherald,https://github.com/deka1105/repoherald.git,mobile/.expo/cache/eslint/.cache_18uxpu,modified,success,auto-push: package-lock.json [2026-10-22 23:54:46] --END--
+2026-10-23 00:01:37,repoherald,https://github.com/deka1105/repoherald.git,mobile/AGENTS.md,modified,success,auto-push: AGENTS.md [2026-10-23 00:01:35] --END--
+2026-10-23 00:02:16,repoherald,https://github.com/deka1105/repoherald.git,mobile/RECORDING-SCRIPT.md,modified,success,auto-push: RECORDING-SCRIPT.md [2026-10-23 00:02:13] --END--
+2026-10-23 00:07:41,repoherald,https://github.com/deka1105/repoherald.git,mobile/APPREVIEW-2.1-REPLY.md,modified,success,auto-push: APPREVIEW-2.1-REPLY.md [2026-10-23 00:07:39] --END--
+2026-10-23 00:12:16,repoherald,https://github.com/deka1105/repoherald.git,mobile/SUBMISSION.md,modified,success,auto-push: SUBMISSION.md [2026-10-23 00:12:13] --END--
+2026-10-23 00:12:40,repoherald,https://github.com/deka1105/repoherald.git,mobile/PLAYSTORE.md,modified,success,auto-push: PLAYSTORE.md [2026-10-23 00:12:39] --END--
+2026-10-23 00:17:22,repoherald,https://github.com/deka1105/repoherald.git,mobile/PLAYSTORE.md,modified,success,auto-push: PLAYSTORE.md [2026-10-23 00:17:19] --END--
+2026-10-23 00:27:32,repoherald,https://github.com/deka1105/repoherald.git,mobile/YOUR-TURN.md,created,success,auto-push: YOUR-TURN.md [2026-10-23 00:27:29] --END--
+2026-10-23 09:42:03,repoherald,https://github.com/deka1105/repoherald.git,mobile/YOUR-TURN.md,modified,success,"auto-push: APPSTORE.md, YOUR-TURN.md [2026-10-23 09:42:01] --END--"
+2026-10-23 13:31:45,repoherald,https://github.com/deka1105/repoherald.git,mobile/YOUR-TURN.md,modified,success,auto-push: YOUR-TURN.md [2026-10-23 13:31:42] --END--
+2026-10-23 13:44:06,repoherald,https://github.com/deka1105/repoherald.git,mobile/screenshots/iphone-6.9/01-explore-yours.png,created,success,auto-push: YOUR-TURN.md [2026-10-23 13:44:03] --END--
+2026-10-23 13:49:10,repoherald,https://github.com/deka1105/repoherald.git,mobile/APPSTORE.md,modified,success,auto-push: APPSTORE.md [2026-10-23 13:49:07] --END--
+2026-10-23 15:05:11,repoherald,https://github.com/deka1105/repoherald.git,mobile/YOUR-TURN.md,modified,success,auto-push: YOUR-TURN.md [2026-10-23 15:05:09] --END--
+2026-10-23 15:28:07,repoherald,https://github.com/deka1105/repoherald.git,mobile/APPREVIEW-2.1-REPLY.md,modified,success,auto-push: APPREVIEW-2.1-REPLY.md [2026-10-23 15:28:03] --END--
+2026-10-23 15:55:42,repoherald,https://github.com/deka1105/repoherald.git,mobile/src/app/_layout.tsx,modified,success,auto-push: _layout.tsx [2026-10-23 15:55:37] --END--
+2026-10-23 16:05:47,repoherald,https://github.com/deka1105/repoherald.git,mobile/assets/splash-icon.png,modified,success,auto-push: splash-icon.png [2026-10-23 16:05:36] --END--
+2026-10-23 18:58:07,repoherald,https://github.com/deka1105/repoherald.git,mobile/APPREVIEW-REPLY.txt,created,success,auto-push: APPREVIEW-REPLY.txt [2026-10-23 18:58:03] --END--
+2026-10-23 22:12:58,repoherald,https://github.com/deka1105/repoherald.git,mobile/PLAYSTORE.md,modified,success,auto-push: PLAYSTORE.md [2026-10-23 22:12:55] --END--
+2026-10-23 22:13:15,repoherald,https://github.com/deka1105/repoherald.git,mobile/PLAYSTORE.md,modified,success,auto-push: PLAYSTORE.md [2026-10-23 22:13:12] --END--
+2026-10-23 22:16:48,repoherald,https://github.com/deka1105/repoherald.git,mobile/YOUR-TURN.md,modified,success,auto-push: YOUR-TURN.md [2026-10-23 22:16:42] --END--
+2026-10-24 00:00:25,repoherald,https://github.com/deka1105/repoherald.git,mobile/YOUR-TURN.md,modified,success,auto-push: YOUR-TURN.md [2026-10-24 00:00:23] --END--
+2026-10-24 00:00:43,repoherald,https://github.com/deka1105/repoherald.git,mobile/PLAYSTORE.md,modified,success,auto-push: PLAYSTORE.md [2026-10-24 00:00:41] --END--
+2026-10-24 00:11:14,repoherald,https://github.com/deka1105/repoherald.git,mobile/YOUR-TURN.md,modified,success,auto-push: YOUR-TURN.md [2026-10-24 00:11:10] --END--
+2026-10-24 08:51:43,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/mastra/mastra-eval-diff/eval.ts,created,success,auto-push: eval.ts [2026-10-24 08:51:41] --END--
+2026-10-24 08:53:03,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-24 08:53:01] --END--
+2026-10-24 08:53:37,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-24 08:53:35] --END--
+2026-10-24 08:54:08,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/mastra/mastra-eval-diff/load.ts,created,success,auto-push: load.ts [2026-10-24 08:54:06] --END--
+2026-10-24 08:54:38,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/mastra/mastra-eval-diff/Headline.tsx,created,success,auto-push: Headline.tsx [2026-10-24 08:54:35] --END--
+2026-10-24 08:55:10,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/mastra/mastra-eval-diff/CaseTable.tsx,created,success,auto-push: CaseTable.tsx [2026-10-24 08:55:08] --END--
+2026-10-24 08:55:31,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/mastra/mastra-eval-diff/Pilot.tsx,created,success,auto-push: Pilot.tsx [2026-10-24 08:55:29] --END--
+2026-10-24 08:55:44,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/pilots.ts,modified,success,auto-push: pilots.ts [2026-10-24 08:55:42] --END--
+2026-10-24 08:56:02,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/lock,created,success,auto-push: pilots.md [2026-10-24 08:56:00] --END--
+2026-10-24 09:00:26,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-24 09:00:23] --END--
+2026-10-24 09:03:38,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/artos/artos-number-reconciliation/reconcile.ts,created,success,auto-push: reconcile.ts [2026-10-24 09:03:36] --END--
+2026-10-24 09:04:08,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-24 09:04:06] --END--
+2026-10-24 09:04:32,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-24 09:04:30] --END--
+2026-10-24 09:04:50,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/artos/artos-number-reconciliation/load.ts,created,success,auto-push: load.ts [2026-10-24 09:04:48] --END--
+2026-10-24 09:05:04,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/artos/artos-number-reconciliation/reconcile.ts,modified,success,auto-push: reconcile.ts [2026-10-24 09:05:02] --END--
+2026-10-24 09:05:45,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/artos/artos-number-reconciliation/Findings.tsx,created,success,"auto-push: Findings.tsx, Pilot.tsx [2026-10-24 09:05:43] --END--"
+2026-10-24 09:05:54,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/pilots.ts,modified,success,auto-push: pilots.ts [2026-10-24 09:05:52] --END--
+2026-10-24 09:06:15,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/lock,created,success,auto-push: pilots.md [2026-10-24 09:06:13] --END--
+2026-10-24 09:07:57,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/humand/humand-reach-decay/reach.ts,created,success,auto-push: reach.ts [2026-10-24 09:07:55] --END--
+2026-10-24 09:08:37,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-24 09:08:35] --END--
+2026-10-24 09:09:03,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-24 09:09:01] --END--
+2026-10-24 09:09:34,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/humand/humand-reach-decay/load.ts,created,success,auto-push: load.ts [2026-10-24 09:09:32] --END--
+2026-10-24 09:10:32,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/humand/humand-reach-decay/Overview.tsx,created,success,"auto-push: Cohorts.tsx, Overview.tsx [2026-10-24 09:10:30] --END--"
+2026-10-24 09:11:00,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/humand/humand-reach-decay/Pilot.tsx,created,success,"auto-push: Pilot.tsx, pilots.ts [2026-10-24 09:10:58] --END--"
+2026-10-24 09:11:08,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/static/chunks/2g7grke4rzq2j.js,created,success,auto-push: pilots.md [2026-10-24 09:11:06] --END--
+2026-10-24 09:11:20,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/humand/humand-reach-decay/.!42884!reach.ts,created,success,"auto-push: Overview.tsx, reach.ts [2026-10-24 09:11:18] --END--"
+2026-10-24 09:12:03,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/humand/humand-reach-decay/Cohorts.tsx,modified,success,auto-push: Cohorts.tsx [2026-10-24 09:12:01] --END--
+2026-10-24 09:14:18,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/axle/axle-lapse-exposure/exposure.ts,created,success,auto-push: exposure.ts [2026-10-24 09:14:16] --END--
+2026-10-24 09:14:45,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-24 09:14:43] --END--
+2026-10-24 09:15:14,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/axle/axle-lapse-exposure/load.ts,created,success,auto-push: load.ts [2026-10-24 09:15:12] --END--
+2026-10-24 09:16:06,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/axle/axle-lapse-exposure/exposure.ts,modified,success,"auto-push: exposure.ts, seed-pilots.mjs [2026-10-24 09:16:04] --END--"
+2026-10-24 09:16:17,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/axle/axle-lapse-exposure/load.ts,modified,success,auto-push: load.ts [2026-10-24 09:16:15] --END--
+2026-10-24 09:16:49,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-24 09:16:48] --END--
+2026-10-24 09:18:09,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/axle/axle-lapse-exposure/Clock.tsx,created,success,auto-push: Clock.tsx [2026-10-24 09:18:07] --END--
+2026-10-24 09:18:31,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/axle/axle-lapse-exposure/Pilot.tsx,created,success,"auto-push: Pilot.tsx, pilots.ts [2026-10-24 09:18:28] --END--"
+2026-10-24 09:18:38,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/build/chunks/node_modules_20v-8wl._.js.map,created,success,auto-push: pilots.md [2026-10-24 09:18:36] --END--
+2026-10-24 09:19:09,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/axle/axle-lapse-exposure/Clock.tsx,modified,success,auto-push: Clock.tsx [2026-10-24 09:19:07] --END--
+2026-10-24 09:20:05,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-24 09:20:02] --END--
+2026-10-24 09:20:31,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/pilots.ts,modified,success,"auto-push: pilots.md, pilots.ts [2026-10-24 09:20:29] --END--"
+2026-10-24 09:22:30,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/reacher/reacher-sample-payback/economics.ts,created,success,auto-push: economics.ts [2026-10-24 09:22:28] --END--
+2026-10-24 09:22:49,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-24 09:22:46] --END--
+2026-10-24 09:23:15,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-24 09:23:13] --END--
+2026-10-24 09:23:46,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/reacher/reacher-sample-payback/economics.ts,modified,success,"auto-push: economics.ts, load.ts [2026-10-24 09:23:45] --END--"
+2026-10-24 09:24:17,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/reacher/reacher-sample-payback/economics.ts,modified,success,auto-push: economics.ts [2026-10-24 09:24:16] --END--
+2026-10-24 09:25:42,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/reacher/reacher-sample-payback/Payback.tsx,created,success,"auto-push: Payback.tsx, Pilot.tsx [2026-10-24 09:25:40] --END--"
+2026-10-24 09:25:50,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/build/chunks/node_modules_20v-8wl._.js.map,created,success,"auto-push: pilots.md, pilots.ts [2026-10-24 09:25:48] --END--"
+2026-10-24 09:26:19,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/reacher/reacher-sample-payback/.!51308!Payback.tsx,created,success,auto-push: Payback.tsx [2026-10-24 09:26:18] --END--
+2026-10-24 09:26:58,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/reacher/reacher-sample-payback/Pilot.tsx,modified,success,auto-push: Pilot.tsx [2026-10-24 09:26:56] --END--
+2026-10-24 09:28:22,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/forgegui/forgegui-set-coherence/coherence.ts,created,success,auto-push: coherence.ts [2026-10-24 09:28:20] --END--
+2026-10-24 09:29:00,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-24 09:28:58] --END--
+2026-10-24 09:29:45,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/forgegui/forgegui-set-coherence/coherence.ts,modified,success,"auto-push: coherence.ts, load.ts, seed-pilots.mjs [2026-10-24 09:29:43] --END--"
+2026-10-24 09:30:15,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/forgegui/forgegui-set-coherence/AssetTile.tsx,created,success,auto-push: AssetTile.tsx [2026-10-24 09:30:13] --END--
+2026-10-24 09:30:51,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/forgegui/forgegui-set-coherence/Report.tsx,created,success,auto-push: Report.tsx [2026-10-24 09:30:49] --END--
+2026-10-24 09:31:19,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/forgegui/forgegui-set-coherence/Report.tsx,modified,success,"auto-push: Pilot.tsx, Report.tsx, pilots.ts [2026-10-24 09:31:17] --END--"
+2026-10-24 09:31:27,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/static/chunks/2en_uvtuu24nm.js,created,success,auto-push: pilots.md [2026-10-24 09:31:25] --END--
+2026-10-24 09:33:36,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/crustdata/crustdata-freshness-decay/freshness.ts,created,success,auto-push: freshness.ts [2026-10-24 09:33:34] --END--
+2026-10-24 09:34:09,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-24 09:34:07] --END--
+2026-10-24 09:34:47,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/crustdata/crustdata-freshness-decay/freshness.ts,modified,success,"auto-push: freshness.ts, load.ts [2026-10-24 09:34:45] --END--"
+2026-10-24 09:35:27,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,"auto-push: freshness.ts, seed-pilots.mjs [2026-10-24 09:35:25] --END--"
+2026-10-24 09:36:57,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/crustdata/crustdata-freshness-decay/Audit.tsx,created,success,"auto-push: Audit.tsx, Pilot.tsx [2026-10-24 09:36:55] --END--"
+2026-10-24 09:37:05,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/dev/cache/turbopack/v16.3.3-a9a1cb78/LOG,modified,success,"auto-push: pilots.md, pilots.ts [2026-10-24 09:37:03] --END--"
+2026-10-24 09:38:58,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/viktor/viktor-blast-radius/plan.ts,created,success,auto-push: plan.ts [2026-10-24 09:38:56] --END--
+2026-10-24 09:39:33,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-24 09:39:31] --END--
+2026-10-24 09:40:53,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/viktor/viktor-blast-radius/load.ts,created,success,"auto-push: Preview.tsx, load.ts [2026-10-24 09:40:51] --END--"
+2026-10-24 09:41:21,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/viktor/viktor-blast-radius/Pilot.tsx,created,success,"auto-push: Pilot.tsx, pilots.ts [2026-10-24 09:41:18] --END--"
+2026-10-24 09:41:28,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/turbopack,created,success,auto-push: pilots.md [2026-10-24 09:41:26] --END--
+2026-10-24 12:05:46,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/conveo/pilots.md,modified,success,"auto-push: pilots.md, pilots.md [2026-10-24 12:05:44] --END--"
+2026-10-24 12:09:07,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/redoubt-insurance/redoubt-requirement-decoder/Decoder.tsx,modified,success,auto-push: Decoder.tsx [2026-10-24 12:09:05] --END--
+2026-10-24 12:09:17,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/redoubt-insurance/redoubt-requirement-decoder/Decoder.tsx,modified,success,auto-push: Decoder.tsx [2026-10-24 12:09:15] --END--
+2026-10-24 12:09:28,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/covera/covera-rekeying-tax/PortalForm.tsx,modified,success,"auto-push: PortalForm.tsx, page.tsx [2026-10-24 12:09:26] --END--"
+2026-10-24 12:27:55,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/queries.ts,modified,success,auto-push: queries.ts [2026-10-24 12:27:53] --END--
+2026-10-24 12:28:10,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/page.tsx,modified,success,auto-push: page.tsx [2026-10-24 12:28:08] --END--
+2026-10-24 12:28:51,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/queries.ts,modified,success,auto-push: queries.ts [2026-10-24 12:28:49] --END--
+2026-10-24 13:27:08,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/schema.sql,modified,success,"auto-push: schema.sql, sync.mjs, queries.ts [2026-10-24 13:27:06] --END--"
+2026-10-24 13:27:21,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/companies/[slug]/page.tsx,modified,success,auto-push: page.tsx [2026-10-24 13:27:19] --END--
+2026-10-24 13:27:46,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/companies/page.tsx.tmp.21944.ff717d0a5179,created,success,auto-push: page.tsx [2026-10-24 13:27:43] --END--
+2026-10-24 13:35:49,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/ranking.ts.tmp.21944.485add7aba37,created,success,auto-push: ranking.ts [2026-10-24 13:35:47] --END--
+2026-10-24 13:36:10,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/pilots/page.tsx.tmp.21944.d1ded379bc64,created,success,auto-push: page.tsx [2026-10-24 13:36:08] --END--
+2026-10-24 13:36:48,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/ranking.ts,modified,success,"auto-push: queries.ts, ranking.ts [2026-10-24 13:36:46] --END--"
+2026-10-24 13:37:10,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/queries.ts,modified,success,auto-push: queries.ts [2026-10-24 13:37:09] --END--
+2026-10-24 13:37:31,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/page.tsx,modified,success,auto-push: page.tsx [2026-10-24 13:37:29] --END--
+2026-10-24 13:39:06,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/ranking.ts,modified,success,auto-push: ranking.ts [2026-10-24 13:39:04] --END--
+2026-10-24 15:52:51,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/_components/SiteNav.tsx,modified,success,"auto-push: SiteNav.tsx, page.tsx, page.tsx [2026-10-24 15:52:49] --END--"
+2026-10-24 16:24:05,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/graph.ts,modified,success,auto-push: graph.ts [2026-10-24 16:24:03] --END--
+2026-10-24 16:24:22,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/engine.ts,modified,success,auto-push: engine.ts [2026-10-24 16:24:19] --END--
+2026-10-24 16:24:39,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/actions.ts,modified,success,auto-push: actions.ts [2026-10-24 16:24:37] --END--
+2026-10-24 16:25:12,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/_components/RunControls.tsx,modified,success,"auto-push: RunControls.tsx, page.tsx [2026-10-24 16:25:10] --END--"
+2026-10-24 16:25:32,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/runs/[id]/page.tsx,modified,success,auto-push: page.tsx [2026-10-24 16:25:30] --END--
+2026-10-24 16:26:23,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/graph-test.ts,modified,success,auto-push: graph-test.ts [2026-10-24 16:26:20] --END--
+2026-10-24 16:27:39,yc-pilots,https://github.com/deka1105/yc-pilots.git,.claude/commands/outreach.md,created,success,auto-push: outreach.md [2026-10-24 16:27:36] --END--
+2026-10-24 16:27:59,yc-pilots,https://github.com/deka1105/yc-pilots.git,.claude/commands/work-graph.md,modified,success,auto-push: work-graph.md [2026-10-24 16:27:57] --END--
+2026-10-24 16:29:02,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/artos/outreach.md,created,success,"auto-push: work-graph.md, outreach.md, outreach.md, outreach.md [2026-10-24 16:29:00] --END--"
+2026-10-24 16:29:36,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/claimsorted/outreach.md,created,success,"auto-push: outreach.md, outreach.md, outreach.md, outreach.md [2026-10-24 16:29:34] --END--"
+2026-10-24 16:30:06,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/curri/outreach.md,created,success,"auto-push: outreach.md, outreach.md, outreach.md, outreach.md [2026-10-24 16:30:04] --END--"
+2026-10-24 16:30:37,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/humand/outreach.md,created,success,"auto-push: outreach.md, outreach.md, outreach.md, outreach.md [2026-10-24 16:30:34] --END--"
+2026-10-24 16:31:08,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/mastra/outreach.md,created,success,"auto-push: outreach.md, outreach.md, outreach.md, outreach.md [2026-10-24 16:31:06] --END--"
+2026-10-24 16:31:37,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/redoubt-insurance/outreach.md,created,success,"auto-push: outreach.md, outreach.md, outreach.md, outreach.md [2026-10-24 16:31:35] --END--"
+2026-10-24 16:31:50,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/weave/outreach.md,created,success,auto-push: outreach.md [2026-10-24 16:31:48] --END--
+2026-10-24 16:32:24,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/humand/outreach.md,modified,success,"auto-push: outreach.md, outreach.md, outreach.md [2026-10-24 16:32:22] --END--"
+2026-10-24 16:35:03,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/flow.ts,modified,success,auto-push: flow.ts [2026-10-24 16:35:01] --END--
+2026-10-24 16:50:38,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/_components/ui.tsx.tmp.21944.69ef4944620c,created,success,auto-push: ui.tsx [2026-10-24 16:50:35] --END--
+2026-10-24 16:50:48,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/_components/TierBadge.tsx.tmp.21944.0cffab72ada3,created,success,auto-push: TierBadge.tsx [2026-10-24 16:50:46] --END--
+2026-10-24 16:51:36,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/pilots/page.tsx,modified,success,auto-push: page.tsx [2026-10-24 16:51:34] --END--
+2026-10-24 16:52:08,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/companies/page.tsx,modified,success,auto-push: page.tsx [2026-10-24 16:52:06] --END--
+2026-10-24 16:53:08,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/page.tsx,modified,success,auto-push: page.tsx [2026-10-24 16:53:06] --END--
+2026-10-24 16:53:37,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/apps/Gallery.tsx,modified,success,"auto-push: Gallery.tsx, page.tsx [2026-10-24 16:53:35] --END--"
+2026-10-24 16:54:35,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/flow/page.tsx,modified,success,auto-push: page.tsx [2026-10-24 16:54:33] --END--
+2026-10-24 16:54:44,yc-pilots,https://github.com/deka1105/yc-pilots.git,tsconfig.tsbuildinfo,modified,success,auto-push: page.tsx [2026-10-24 16:54:42] --END--
+2026-10-24 16:55:13,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/runs/page.tsx,modified,success,"auto-push: page.tsx, page.tsx, page.tsx [2026-10-24 16:55:11] --END--"
+2026-10-24 16:55:27,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/runs/page.tsx,modified,success,"auto-push: page.tsx, page.tsx, page.tsx [2026-10-24 16:55:26] --END--"
+2026-10-24 16:56:02,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/companies/[slug]/page.tsx,modified,success,auto-push: page.tsx [2026-10-24 16:56:00] --END--
+2026-10-24 16:56:30,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/companies/[slug]/page.tsx,modified,success,auto-push: page.tsx [2026-10-24 16:56:28] --END--
+2026-10-24 16:58:06,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/runs/page.tsx,modified,success,"auto-push: page.tsx, page.tsx, page.tsx [2026-10-24 16:58:04] --END--"
+2026-10-24 16:59:49,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/app/_components/SiteNav.tsx,modified,success,auto-push: SiteNav.tsx [2026-10-24 16:59:47] --END--
+2026-10-24 18:47:43,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/mcp/route.ts.tmp.68806.455da8ccde91,created,success,"auto-push: package-lock.json, package.json, route.ts [2026-10-24 18:47:40] --END--"
+2026-10-24 18:48:23,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/mcp/route.ts.tmp.68806.cf7e893b057b,created,success,auto-push: route.ts [2026-10-24 18:48:21] --END--
+2026-10-24 18:49:58,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/mcp/route.ts.tmp.68806.a76f06638abb,created,success,auto-push: route.ts [2026-10-24 18:49:55] --END--
+2026-10-24 18:50:06,repoherald,https://github.com/deka1105/repoherald.git,.next/dev/cache/turbopack/v16.2.10/00000658.sst,created,success,auto-push: route.ts [2026-10-24 18:50:03] --END--
+2026-10-24 18:50:40,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/mcp/route.ts.tmp.68806.01dece2f0cc8,created,success,auto-push: route.ts [2026-10-24 18:50:39] --END--
+2026-10-24 19:17:44,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/mcp/route.ts.tmp.68806.1b54f4e9454d,created,success,auto-push: route.ts [2026-10-24 19:17:41] --END--
+2026-10-24 19:18:04,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/mcp/route.ts.tmp.68806.3f6389ee84cd,created,success,auto-push: route.ts [2026-10-24 19:18:02] --END--
+2026-10-24 19:18:20,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/mcp/route.ts.tmp.68806.68c974aec4c8,created,success,auto-push: route.ts [2026-10-24 19:18:18] --END--
+2026-10-25 00:13:08,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/scrape-sources.mjs,created,success,auto-push: scrape-sources.mjs [2026-10-25 00:13:05] --END--
+2026-10-25 00:13:17,yc-pilots,https://github.com/deka1105/yc-pilots.git,package.json,modified,success,auto-push: package.json [2026-10-25 00:13:15] --END--
+2026-10-25 00:13:54,yc-pilots,https://github.com/deka1105/yc-pilots.git,leads/a16z.json,created,success,"auto-push: a16z.json, startups-gallery.json [2026-10-25 00:13:51] --END--"
+2026-10-25 00:14:22,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/scrape-sources.mjs,modified,success,"auto-push: leads.json, scrape-sources.mjs [2026-10-25 00:14:20] --END--"
+2026-10-25 00:14:56,yc-pilots,https://github.com/deka1105/yc-pilots.git,leads/a16z.json,modified,success,"auto-push: a16z.json, leads.json, startups-gallery.json [2026-10-25 00:14:54] --END--"
+2026-10-25 00:16:04,yc-pilots,https://github.com/deka1105/yc-pilots.git,leads/README.md,created,success,auto-push: README.md [2026-10-25 00:16:02] --END--
+2026-10-25 00:26:55,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prime-intellect/dossier.md,created,success,auto-push: dossier.md [2026-10-25 00:26:53] --END--
+2026-10-25 00:27:28,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prime-intellect/use-cases.md,created,success,auto-push: use-cases.md [2026-10-25 00:27:26] --END--
+2026-10-25 00:29:15,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/inferact/dossier.md,created,success,"auto-push: dossier.md, use-cases.md [2026-10-25 00:29:13] --END--"
+2026-10-25 00:31:03,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/agentio/dossier.md,created,success,"auto-push: dossier.md, use-cases.md [2026-10-25 00:31:01] --END--"
+2026-10-25 00:32:36,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/conduct/dossier.md,created,success,"auto-push: dossier.md, use-cases.md [2026-10-25 00:32:35] --END--"
+2026-10-25 00:34:27,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/runlayer/dossier.md,created,success,"auto-push: dossier.md, use-cases.md [2026-10-25 00:34:25] --END--"
+2026-10-25 00:36:33,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prior-labs/dossier.md,created,success,"auto-push: dossier.md, use-cases.md [2026-10-25 00:36:31] --END--"
+2026-10-25 00:38:28,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/tandem-health/dossier.md,created,success,"auto-push: dossier.md, use-cases.md [2026-10-25 00:38:26] --END--"
+2026-10-25 00:40:16,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/enterpret/dossier.md,created,success,"auto-push: dossier.md, use-cases.md [2026-10-25 00:40:14] --END--"
+2026-10-25 00:42:29,yc-pilots,https://github.com/deka1105/yc-pilots.git,leads/README.md,modified,success,auto-push: README.md [2026-10-25 00:42:27] --END--
+2026-10-25 00:59:50,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prime-intellect/pilots.md,created,success,auto-push: pilots.md [2026-10-25 00:59:48] --END--
+2026-10-25 01:00:58,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/inferact/pilots.md,created,success,auto-push: pilots.md [2026-10-25 01:00:56] --END--
+2026-10-25 01:02:06,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/agentio/pilots.md,created,success,auto-push: pilots.md [2026-10-25 01:02:04] --END--
+2026-10-25 01:03:13,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/conduct/pilots.md,created,success,auto-push: pilots.md [2026-10-25 01:03:11] --END--
+2026-10-25 01:04:21,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/runlayer/pilots.md,created,success,auto-push: pilots.md [2026-10-25 01:04:19] --END--
+2026-10-25 01:05:33,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prior-labs/pilots.md,created,success,auto-push: pilots.md [2026-10-25 01:05:31] --END--
+2026-10-25 01:06:42,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/tandem-health/pilots.md,created,success,auto-push: pilots.md [2026-10-25 01:06:40] --END--
+2026-10-25 01:07:55,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/enterpret/pilots.md,created,success,auto-push: pilots.md [2026-10-25 01:07:53] --END--
+2026-10-25 01:30:41,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/runlayer/runlayer-mcp-review-report/analyze.ts,created,success,auto-push: analyze.ts [2026-10-25 01:30:28] --END--
+2026-10-25 01:33:08,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/runlayer/runlayer-mcp-review-report/fixtures.ts,created,success,auto-push: fixtures.ts [2026-10-25 01:32:59] --END--
+2026-10-25 01:36:38,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/runlayer/runlayer-mcp-review-report/analyze.ts,modified,success,auto-push: analyze.ts [2026-10-25 01:36:22] --END--
+2026-10-25 01:38:03,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/runlayer/runlayer-mcp-review-report/analyze.ts,modified,success,auto-push: analyze.ts [2026-10-25 01:37:45] --END--
+2026-10-25 01:38:34,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/runlayer/runlayer-mcp-review-report/load.ts,created,success,"auto-push: actions.ts, load.ts [2026-10-25 01:38:30] --END--"
+2026-10-25 01:39:44,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/runlayer/runlayer-mcp-review-report/Report.tsx,created,success,auto-push: Report.tsx [2026-10-25 01:39:23] --END--
+2026-10-25 01:40:40,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/runlayer/runlayer-mcp-review-report/Reviewer.tsx,created,success,"auto-push: Pilot.tsx, Reviewer.tsx [2026-10-25 01:40:17] --END--"
+2026-10-25 01:41:17,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/seed-pilots.mjs,modified,success,auto-push: seed-pilots.mjs [2026-10-25 01:41:09] --END--
+2026-10-25 01:43:07,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/pilots.ts,modified,success,auto-push: pilots.ts [2026-10-25 01:42:57] --END--
+2026-10-25 01:54:20,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/runlayer/runlayer-mcp-review-report/analyze.ts,modified,success,"auto-push: Pilot.tsx, Report.tsx, analyze.ts [2026-10-25 01:54:14] --END--"
+2026-10-25 01:54:53,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/runlayer/runlayer-mcp-review-report/analyze.ts,modified,success,auto-push: analyze.ts [2026-10-25 01:54:49] --END--
+2026-10-25 01:55:07,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/runlayer/pilots.md,modified,success,auto-push: pilots.md [2026-10-25 01:55:04] --END--
+2026-10-25 02:04:33,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/pilots.ts,modified,success,auto-push: pilots.ts [2026-10-25 02:04:30] --END--
+2026-10-25 07:17:47,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/agentio/agentio-attribution-truth/model.ts,created,success,auto-push: model.ts [2026-10-25 07:17:45] --END--
+2026-10-25 07:18:43,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/agentio/agentio-attribution-truth/model.ts,modified,success,auto-push: model.ts [2026-10-25 07:18:41] --END--
+2026-10-25 07:19:15,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/agentio/agentio-attribution-truth/model.ts,modified,success,auto-push: model.ts [2026-10-25 07:19:12] --END--
+2026-10-25 07:20:14,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/agentio/agentio-attribution-truth/Harness.tsx,created,success,"auto-push: Harness.tsx, Pilot.tsx [2026-10-25 07:20:12] --END--"
+2026-10-25 07:20:29,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/pilots.ts,modified,success,auto-push: pilots.ts [2026-10-25 07:20:26] --END--
+2026-10-25 07:20:42,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/dev/cache/turbopack/v16.3.3-a9a1cb78/LOG,modified,success,auto-push: pilots.md [2026-10-25 07:20:40] --END--
+2026-10-25 07:21:10,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/conduct/conduct-keep-revert-retire/estate.ts,created,success,auto-push: estate.ts [2026-10-25 07:21:08] --END--
+2026-10-25 07:21:52,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/conduct/conduct-keep-revert-retire/fixtures.ts,created,success,auto-push: fixtures.ts [2026-10-25 07:21:49] --END--
+2026-10-25 07:22:15,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/conduct/conduct-keep-revert-retire/fixtures.ts,modified,success,"auto-push: estate.ts, fixtures.ts [2026-10-25 07:22:13] --END--"
+2026-10-25 07:23:01,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/conduct/conduct-keep-revert-retire/Board.tsx,created,success,"auto-push: Board.tsx, Pilot.tsx [2026-10-25 07:22:58] --END--"
+2026-10-25 07:23:08,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/dev/cache/turbopack/v16.3.3-a9a1cb78/LOG,modified,success,"auto-push: pilots.md, pilots.ts [2026-10-25 07:23:07] --END--"
+2026-10-25 07:23:22,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/conduct/conduct-keep-revert-retire/fixtures.ts,modified,success,auto-push: fixtures.ts [2026-10-25 07:23:20] --END--
+2026-10-25 07:25:05,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/enterpret/enterpret-taxonomy-drift/drift.ts,created,success,auto-push: drift.ts [2026-10-25 07:25:03] --END--
+2026-10-25 07:26:01,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/enterpret/enterpret-taxonomy-drift/Monitor.tsx,created,success,"auto-push: Monitor.tsx, Pilot.tsx [2026-10-25 07:25:58] --END--"
+2026-10-25 07:26:10,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/dev/cache/turbopack/v16.3.3-a9a1cb78/LOG,modified,success,"auto-push: pilots.md, pilots.ts [2026-10-25 07:26:08] --END--"
+2026-10-25 07:27:22,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/inferact/inferact-rollout-canary/replay.ts,created,success,auto-push: replay.ts [2026-10-25 07:27:20] --END--
+2026-10-25 07:27:52,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/inferact/inferact-rollout-canary/replay.ts,modified,success,auto-push: replay.ts [2026-10-25 07:27:50] --END--
+2026-10-25 07:28:07,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/inferact/inferact-rollout-canary/replay.ts,modified,success,auto-push: replay.ts [2026-10-25 07:28:05] --END--
+2026-10-25 07:28:54,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/inferact/inferact-rollout-canary/Gate.tsx,created,success,"auto-push: Gate.tsx, Pilot.tsx [2026-10-25 07:28:51] --END--"
+2026-10-25 07:29:06,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/dev/cache/turbopack/v16.3.3-a9a1cb78/00001717.sst,created,success,"auto-push: pilots.md, pilots.ts [2026-10-25 07:29:03] --END--"
+2026-10-25 07:30:48,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prime-intellect/prime-intellect-reward-hack-harness/envs.ts,created,success,auto-push: envs.ts [2026-10-25 07:30:46] --END--
+2026-10-25 07:31:28,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prime-intellect/prime-intellect-reward-hack-harness/envs.ts,modified,success,auto-push: envs.ts [2026-10-25 07:31:26] --END--
+2026-10-25 07:32:17,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prime-intellect/prime-intellect-reward-hack-harness/Harness.tsx,created,success,"auto-push: Harness.tsx, Pilot.tsx [2026-10-25 07:32:15] --END--"
+2026-10-25 07:32:45,yc-pilots,https://github.com/deka1105/yc-pilots.git,tsconfig.tsbuildinfo,modified,success,"auto-push: pilots.md, pilots.ts [2026-10-25 07:32:42] --END--"
+2026-10-25 07:33:44,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prior-labs/prior-labs-adverse-action/credit.ts,created,success,auto-push: credit.ts [2026-10-25 07:33:42] --END--
+2026-10-25 07:34:00,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prior-labs/prior-labs-adverse-action/fixtures.ts,created,success,auto-push: fixtures.ts [2026-10-25 07:33:58] --END--
+2026-10-25 07:35:03,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prior-labs/prior-labs-adverse-action/credit.ts,modified,success,"auto-push: Pilot.tsx, Review.tsx, credit.ts [2026-10-25 07:35:01] --END--"
+2026-10-25 07:35:12,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/dev/cache/turbopack/v16.3.3-a9a1cb78/LOG,modified,success,"auto-push: pilots.md, pilots.ts [2026-10-25 07:35:10] --END--"
+2026-10-25 07:36:28,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/tandem-health/tandem-health-procurement-pack/pack.ts,created,success,auto-push: pack.ts [2026-10-25 07:36:26] --END--
+2026-10-25 07:36:52,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/tandem-health/tandem-health-procurement-pack/pack.ts,modified,success,auto-push: pack.ts [2026-10-25 07:36:50] --END--
+2026-10-25 07:37:31,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/tandem-health/tandem-health-procurement-pack/Pack.tsx,created,success,"auto-push: Pack.tsx, Pilot.tsx [2026-10-25 07:37:28] --END--"
+2026-10-25 07:37:43,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/dev/cache/turbopack/v16.3.3-a9a1cb78/00001765.sst,created,success,"auto-push: pilots.md, pilots.ts [2026-10-25 07:37:42] --END--"
+2026-10-25 07:38:55,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/corgi/corgi-contract-requirements/extract.ts,created,success,"auto-push: contracts.ts, extract.ts [2026-10-25 07:38:53] --END--"
+2026-10-25 07:39:47,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/corgi/corgi-contract-requirements/extract.ts,modified,success,auto-push: extract.ts [2026-10-25 07:39:45] --END--
+2026-10-25 07:40:22,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/corgi/corgi-contract-requirements/extract.ts,modified,success,auto-push: extract.ts [2026-10-25 07:40:20] --END--
+2026-10-25 07:41:02,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/corgi/corgi-contract-requirements/Review.tsx,created,success,"auto-push: Pilot.tsx, Review.tsx [2026-10-25 07:40:59] --END--"
+2026-10-25 07:42:08,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/firecrawl/firecrawl-change-watcher/watch.ts,created,success,"auto-push: pilots.md, watch.ts, pilots.ts [2026-10-25 07:42:06] --END--"
+2026-10-25 07:42:26,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/firecrawl/firecrawl-change-watcher/pages.ts,created,success,auto-push: pages.ts [2026-10-25 07:42:24] --END--
+2026-10-25 07:43:11,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/firecrawl/firecrawl-change-watcher/Watcher.tsx,created,success,"auto-push: Pilot.tsx, Watcher.tsx [2026-10-25 07:43:08] --END--"
+2026-10-25 07:43:18,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/dev/cache/turbopack/v16.3.3-a9a1cb78/00001746.sst,deleted,success,"auto-push: pilots.md, pilots.ts [2026-10-25 07:43:16] --END--"
+2026-10-25 07:44:26,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/firecrawl/firecrawl-change-watcher/.!55430!Pilot.tsx,created,success,"auto-push: Pilot.tsx, plan.ts [2026-10-25 07:44:24] --END--"
+2026-10-25 07:44:47,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/reach-velocity/reach-velocity-team-sequencer/plan.ts,modified,success,auto-push: plan.ts [2026-10-25 07:44:45] --END--
+2026-10-25 07:45:36,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/reach-velocity/reach-velocity-team-sequencer/Sequencer.tsx,created,success,"auto-push: Pilot.tsx, Sequencer.tsx [2026-10-25 07:45:33] --END--"
+2026-10-25 07:45:46,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/dev/cache/turbopack/v16.3.3-a9a1cb78/00001812.sst,created,success,"auto-push: pilots.md, pilots.ts [2026-10-25 07:45:44] --END--"
+2026-10-25 07:46:12,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/tandem-health/tandem-health-procurement-pack/Pack.tsx,moved,success,"auto-push: Pilot.tsx, QuestionnaireView.tsx [2026-10-25 07:46:09] --END--"
+2026-10-25 07:50:32,PlayBooks,https://github.com/deka1105/Playbooks.git,GitAutoPushHandler.py.bak,created,success,auto-push: GitAutoPushHandler.py.bak [2026-10-25 07:50:29] --END--
