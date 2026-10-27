@@ -561,8 +561,15 @@ class LiveUI:
 # the executable has a directory component (no PATH search in posix_spawn).
 GIT_BIN = shutil.which("git") or "git"
 
-def run(cmd: list, cwd: str) -> tuple[int, str, str]:
-    """Run a git command, log it at DEBUG level, return (code, stdout, stderr)."""
+def run(cmd: list, cwd: str, strip: bool = True) -> tuple[int, str, str]:
+    """
+    Run a git command, log it at DEBUG level, return (code, stdout, stderr).
+
+    strip=False returns stdout verbatim. Needed for `git status --porcelain`,
+    whose first field is a single-character status that may itself be a space
+    (" M path"). Stripping eats it and shifts every fixed offset into the
+    path by one.
+    """
     log.debug(f"  $ {' '.join(cmd)}  [cwd={cwd}]")
     # Never block on an interactive credential prompt. If git can't find a
     # credential helper / stored token it fails fast with a clear error that
@@ -586,7 +593,8 @@ def run(cmd: list, cwd: str) -> tuple[int, str, str]:
         log.debug(f"  stdout: {result.stdout.strip()[:400]}")
     if result.stderr.strip():
         log.debug(f"  stderr: {result.stderr.strip()[:400]}")
-    return result.returncode, result.stdout.strip(), result.stderr.strip()
+    out = result.stdout if not strip else result.stdout.strip()
+    return result.returncode, out, result.stderr.strip()
 
 
 # Files that are always append-only — rebase conflicts are resolved by keeping
@@ -867,19 +875,33 @@ def startup_sync(local_path: str, repo_name: str, repo_url: str, push_log_path: 
         if pop_code != 0:
             log.warning(f"[{repo_name}] Startup stash pop issue (non-fatal): {pop_err}")
 
-    _, status_out, _ = run(["git", "status", "--porcelain"], cwd=local_path)
+    # -z, not line-based. Porcelain is "XY PATH" and the old code sliced line[3:],
+    # but run() strips the whole stdout, so the FIRST line lost its leading space
+    # and that slice ate the first character of its path: " M push_log.csv" came
+    # back as "ush_log.csv". 21 commit messages carry a mangled name because of
+    # it. -z also stops git quoting non-ASCII paths.
+    _, status_out, _ = run(["git", "-c", "core.quotepath=false",
+                            "status", "--porcelain", "-z"], cwd=local_path,
+                           strip=False)
     if not status_out:
         log.info(f"[{repo_name}] Startup sync: nothing to push — already up to date.")
         return
 
     changed_files = []
-    for line in status_out.splitlines():
-        if not line.strip():
+    entries = [e for e in status_out.split("\0") if e]
+    i = 0
+    while i < len(entries):
+        entry = entries[i]
+        i += 1
+        if len(entry) < 4:
             continue
-        # Porcelain format is "XY PATH" (2 status chars + space); slice the raw
-        # line so paths keep their first character (don't strip() beforehand).
-        parts = line[3:].split(" -> ")
-        changed_files.append(parts[-1].strip())
+        xy, path = entry[:2], entry[3:]
+        # A rename/copy stores the destination in this entry and the ORIGINAL
+        # path as the next NUL-separated field; consume it so it is not read as
+        # a status entry of its own.
+        if xy[0] in ("R", "C") or xy[1] in ("R", "C"):
+            i += 1
+        changed_files.append(path)
 
     log.info(f"[{repo_name}] Startup sync: {len(changed_files)} offline change(s) → {changed_files[:5]}")
 
