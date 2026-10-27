@@ -98,6 +98,9 @@ _MACHINE = {"Darwin": "mac", "Linux": "linux"}.get(platform.system(),
                                                    platform.system().lower())
 DEFAULT_PUSH_LOG    = f"push_log_{_MACHINE}.csv"
 DEFAULT_WATCHER_LOG = f"watcher_{_MACHINE}.log"
+
+# Shared log filenames retired by the per-machine split. Kept for history only.
+RETIRED_PUSH_LOGS = {"push_log.csv"}
 _REPO_PAT = _re.compile(r"^\[([^\]]+)\]\s*(.*)")
 
 
@@ -1330,6 +1333,17 @@ def main():
 
     global log
     log = setup_logging(args.logfile, console=live_ui.handler() if live_ui else None)
+
+    # push_log.csv is the retired pre-split archive. Both machines used to append
+    # to it, which conflicted on every concurrent write and left unresolved merge
+    # markers committed in the file. Passing --log push_log.csv silently puts us
+    # back in that state, so say so loudly rather than letting it drift again.
+    if os.path.basename(args.log) in RETIRED_PUSH_LOGS:
+        log.warning("=" * 70)
+        log.warning(f"--log {args.log} is the RETIRED shared archive, not a live log.")
+        log.warning(f"Both machines appending to it is what caused the committed")
+        log.warning(f"conflict markers. Drop the flag to use {DEFAULT_PUSH_LOG}.")
+        log.warning("=" * 70)
 
     if not os.path.exists(args.csv):
         log.error(f"CSV not found: {args.csv}")
