@@ -353,7 +353,8 @@ def load_repos(path: str) -> list[dict]:
         with open(path, newline="") as f:
             rows = [{k.strip(): (v.strip() if v else "") for k, v in row.items()}
                     for row in csv.DictReader(f)]
-        return [r for r in rows if r.get("repo_name")]
+        return [r for r in rows if r.get("repo_name")
+                and not r.get("local_path", "").startswith("#")]
     except (OSError, csv.Error):
         return []
 

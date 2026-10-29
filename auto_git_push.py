@@ -1208,6 +1208,11 @@ def load_csv(csv_path: str) -> list[dict]:
         reader = csv.DictReader(f)
         for row in reader:
             row = {k.strip(): (v.strip() if v is not None else "") for k, v in row.items()}
+            # A leading '#' on local_path comments a repo out of the watch list
+            # without deleting its row — csv.DictReader has no comment syntax,
+            # so without this the row becomes a repo at a literal '#...' path.
+            if row.get("local_path", "").startswith("#"):
+                continue
             if row.get("local_path") and row.get("repo_url") and row.get("repo_name"):
                 repos.append(row)
             else:
