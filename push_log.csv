@@ -9019,3 +9019,68 @@ timestamp,repo_name,repo_url,file_changed,event_type,status,message
 2026-10-04 21:32:59,Observatory,https://github.com/deka1105/Observatory.git,Screen Recording 2026-10-02 at 6.31.40 PM.mov,deleted,failed,"rebase conflict unresolved: From https://github.com/deka1105/Observatory\n * branch            HEAD       -> FETCH_HEAD\nfatal: It seems that there is already a rebase-merge directory, and\nI wonder if you are in the middle of another rebase.  If that is the\ncase, please try\n	git rebase (--continue | --abort | --skip)\nIf that is not the case, please\n	rm -fr "".git/rebase-merge""\nand run me again.  I am stopping in case you still have something\nvaluable there. --END--"
 2026-10-27 06:55:06,GitHub-AutoPush-Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,watcher_mac.log,startup-sync,success,startup-sync: watcher_mac.log [2026-10-27 06:55:05] --END--
 2026-10-27 06:59:58,GitHub-AutoPush-Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,session-logs/session_2026-09-28_0747_538e37c7.md,modified,success,auto-push: push_log.csv [2026-10-27 06:59:55] --END--
+2026-10-27 08:51:18,GitHub-AutoPush-Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,"push_log.csv, watcher_mac.log",startup-sync,success,"startup-sync: push_log.csv, watcher_mac.log [2026-10-27 08:51:16] --END--"
+2026-10-28 09:50:18,repoherald,https://github.com/deka1105/repoherald.git,src/lib/nemotron.ts.tmp.5446.45aeed7e92a1,created,success,auto-push: nemotron.ts [2026-10-28 09:50:13] --END--
+2026-10-28 09:51:20,repoherald,https://github.com/deka1105/repoherald.git,src/lib/resolve-repo.ts.tmp.5446.96c7f889658c,created,success,auto-push: resolve-repo.ts [2026-10-28 09:51:18] --END--
+2026-10-28 09:52:20,repoherald,https://github.com/deka1105/repoherald.git,src/lib/resolve-repo.ts.tmp.5446.2cdb7ca8554d,created,success,auto-push: resolve-repo.ts [2026-10-28 09:52:17] --END--
+2026-10-28 09:52:35,repoherald,https://github.com/deka1105/repoherald.git,tests/fixtures/repo-names.json,created,success,"auto-push: resolve-repo.ts, repo-names.json [2026-10-28 09:52:33] --END--"
+2026-10-28 09:53:10,repoherald,https://github.com/deka1105/repoherald.git,tests/corrupt.ts.tmp.5446.8335e5d9c5ce,created,success,auto-push: corrupt.ts [2026-10-28 09:53:07] --END--
+2026-10-28 09:53:48,repoherald,https://github.com/deka1105/repoherald.git,tests/resolve-repo.test.ts.tmp.5446.0eab471928fd,created,success,auto-push: resolve-repo.test.ts [2026-10-28 09:53:46] --END--
+2026-10-28 09:54:00,repoherald,https://github.com/deka1105/repoherald.git,package.json,modified,success,auto-push: package.json [2026-10-28 09:53:58] --END--
+2026-10-28 09:54:26,repoherald,https://github.com/deka1105/repoherald.git,tests/resolve-repo.test.ts.tmp.5446.cd6bdf148821,created,success,auto-push: resolve-repo.test.ts [2026-10-28 09:54:24] --END--
+2026-10-28 09:55:20,repoherald,https://github.com/deka1105/repoherald.git,scripts/nemotron-doctor.ts.tmp.5446.c06a2f882b52,created,success,"auto-push: nemotron-doctor.ts, tavily.ts [2026-10-28 09:55:18] --END--"
+2026-10-28 09:55:56,repoherald,https://github.com/deka1105/repoherald.git,tests/eval-resolve.ts.tmp.5446.de0255be2941,created,success,auto-push: eval-resolve.ts [2026-10-28 09:55:54] --END--
+2026-10-28 09:56:20,repoherald,https://github.com/deka1105/repoherald.git,scripts/.!43518!nemotron-doctor.ts,created,success,"auto-push: nemotron-doctor.ts, resolve-repo.test.ts [2026-10-28 09:56:18] --END--"
+2026-10-28 09:57:28,repoherald,https://github.com/deka1105/repoherald.git,src/lib/github.ts.tmp.5446.57c91c360c9c,created,success,auto-push: github.ts [2026-10-28 09:57:26] --END--
+2026-10-28 09:57:58,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/identify/route.ts.tmp.5446.12ba0f6ee34e,created,success,auto-push: route.ts [2026-10-28 09:57:55] --END--
+2026-10-28 09:58:55,repoherald,https://github.com/deka1105/repoherald.git,src/app/identify/identify-form.tsx.tmp.5446.fdbfa87b72b6,created,success,auto-push: identify-form.tsx [2026-10-28 09:58:53] --END--
+2026-10-28 09:59:08,repoherald,https://github.com/deka1105/repoherald.git,src/app/identify/page.tsx.tmp.5446.d38232239e9c,created,success,auto-push: page.tsx [2026-10-28 09:59:06] --END--
+2026-10-28 09:59:30,repoherald,https://github.com/deka1105/repoherald.git,src/app/(legal)/privacy/page.tsx.tmp.5446.6a3a11b63b69,created,success,auto-push: page.tsx [2026-10-28 09:59:28] --END--
+2026-10-28 09:59:40,repoherald,https://github.com/deka1105/repoherald.git,src/app/(legal)/privacy/page.tsx.tmp.5446.c066dae80446,created,success,auto-push: page.tsx [2026-10-28 09:59:38] --END--
+2026-10-28 10:00:13,repoherald,https://github.com/deka1105/repoherald.git,tests/eval-resolve.ts.tmp.5446.62d8f94bc8bf,created,success,"auto-push: eval-resolve.ts, resolve-repo.test.ts [2026-10-28 10:00:11] --END--"
+2026-10-28 10:00:53,repoherald,https://github.com/deka1105/repoherald.git,src/app/identify/page.tsx.tmp.5446.966b1ea47fec,created,success,auto-push: page.tsx [2026-10-28 10:00:51] --END--
+2026-10-28 10:02:49,repoherald,https://github.com/deka1105/repoherald.git,README.md.tmp.5446.d67c709951f1,created,success,auto-push: README.md [2026-10-28 10:02:47] --END--
+2026-10-28 10:02:59,repoherald,https://github.com/deka1105/repoherald.git,README.md.tmp.5446.dd980b40dbe6,created,success,auto-push: README.md [2026-10-28 10:02:57] --END--
+2026-10-28 10:03:08,repoherald,https://github.com/deka1105/repoherald.git,AGENTS.md.tmp.5446.96110ed1b3f4,created,success,auto-push: AGENTS.md [2026-10-28 10:03:06] --END--
+2026-10-28 10:46:28,repoherald,https://github.com/deka1105/repoherald.git,tests/eval-resolve.ts.tmp.5446.b33024799de9,created,success,auto-push: eval-resolve.ts [2026-10-28 10:46:24] --END--
+2026-10-28 10:46:38,repoherald,https://github.com/deka1105/repoherald.git,tests/eval-resolve.ts.tmp.5446.4f21ca57ea0d,created,success,auto-push: eval-resolve.ts [2026-10-28 10:46:35] --END--
+2026-10-28 10:46:50,repoherald,https://github.com/deka1105/repoherald.git,tsconfig.tsbuildinfo,modified,success,auto-push: eval-resolve.ts [2026-10-28 10:46:48] --END--
+2026-10-28 10:47:57,repoherald,https://github.com/deka1105/repoherald.git,tests/eval-resolve.ts.tmp.5446.f00c54bfd803,created,success,auto-push: eval-resolve.ts [2026-10-28 10:47:53] --END--
+2026-10-28 10:48:07,repoherald,https://github.com/deka1105/repoherald.git,tests/eval-resolve.ts.tmp.5446.c0bb3cce8f21,created,success,auto-push: eval-resolve.ts [2026-10-28 10:48:03] --END--
+2026-10-28 10:48:24,repoherald,https://github.com/deka1105/repoherald.git,tsconfig.tsbuildinfo,modified,success,auto-push: eval-resolve.ts [2026-10-28 10:48:22] --END--
+2026-10-28 10:49:04,repoherald,https://github.com/deka1105/repoherald.git,tests/eval-resolve.ts.tmp.5446.627da39c55e2,created,success,"auto-push: route.ts, eval-resolve.ts [2026-10-28 10:49:02] --END--"
+2026-10-28 10:49:19,repoherald,https://github.com/deka1105/repoherald.git,src/app/identify/page.tsx.tmp.5446.b8e7ddd3a2a7,created,success,"auto-push: route.ts, identify-form.tsx, page.tsx [2026-10-28 10:49:17] --END--"
+2026-10-28 10:51:20,repoherald,https://github.com/deka1105/repoherald.git,README.md.tmp.5446.27e8c82524b2,created,success,auto-push: README.md [2026-10-28 10:51:17] --END--
+2026-10-28 11:22:32,repoherald,https://github.com/deka1105/repoherald.git,tests/nemotron-wire.test.ts.tmp.5446.25827e07b0cd,created,success,auto-push: nemotron-wire.test.ts [2026-10-28 11:22:28] --END--
+2026-10-28 11:23:09,repoherald,https://github.com/deka1105/repoherald.git,README.md.tmp.5446.4a74470f86d8,created,success,"auto-push: AGENTS.md, README.md, package.json [2026-10-28 11:23:05] --END--"
+2026-10-28 11:45:25,repoherald,https://github.com/deka1105/repoherald.git,tests/fixtures/repo-descriptions.json,created,success,auto-push: repo-descriptions.json [2026-10-28 11:45:22] --END--
+2026-10-28 11:45:55,repoherald,https://github.com/deka1105/repoherald.git,src/lib/resolve-repo.ts.tmp.5446.f9e7b69f74a0,created,success,auto-push: resolve-repo.ts [2026-10-28 11:45:52] --END--
+2026-10-28 11:46:18,repoherald,https://github.com/deka1105/repoherald.git,src/lib/resolve-repo.ts.tmp.5446.3a4e36713861,created,success,auto-push: resolve-repo.ts [2026-10-28 11:46:16] --END--
+2026-10-28 11:46:42,repoherald,https://github.com/deka1105/repoherald.git,src/lib/tavily.ts.tmp.5446.90f07a781d36,created,success,auto-push: tavily.ts [2026-10-28 11:46:40] --END--
+2026-10-28 11:46:59,repoherald,https://github.com/deka1105/repoherald.git,tests/corrupt.ts.tmp.5446.f9d250d01241,created,success,auto-push: corrupt.ts [2026-10-28 11:46:56] --END--
+2026-10-28 11:47:13,repoherald,https://github.com/deka1105/repoherald.git,tests/eval-resolve.ts.tmp.5446.5c9539a47e2d,created,success,auto-push: eval-resolve.ts [2026-10-28 11:47:10] --END--
+2026-10-28 11:47:43,repoherald,https://github.com/deka1105/repoherald.git,tests/resolve-repo.test.ts.tmp.5446.cbfbc3cb8130,created,success,"auto-push: eval-resolve.ts, resolve-repo.test.ts [2026-10-28 11:47:41] --END--"
+2026-10-28 11:48:32,repoherald,https://github.com/deka1105/repoherald.git,tests/fixtures/repo-descriptions.json,modified,success,auto-push: repo-descriptions.json [2026-10-28 11:48:30] --END--
+2026-10-28 11:48:45,repoherald,https://github.com/deka1105/repoherald.git,src/lib/resolve-repo.ts.tmp.5446.e35b1c11287c,created,success,"auto-push: resolve-repo.ts, resolve-repo.test.ts [2026-10-28 11:48:43] --END--"
+2026-10-28 11:49:39,repoherald,https://github.com/deka1105/repoherald.git,README.md.tmp.5446.b04983c350f3,created,success,auto-push: README.md [2026-10-28 11:49:35] --END--
+2026-10-28 11:54:05,repoherald,https://github.com/deka1105/repoherald.git,src/lib/resolve-repo.ts.tmp.5446.b11ff983f362,created,success,auto-push: resolve-repo.ts [2026-10-28 11:54:03] --END--
+2026-10-28 11:54:17,repoherald,https://github.com/deka1105/repoherald.git,src/lib/resolve-repo.ts.tmp.5446.15e29d74bad3,created,success,auto-push: resolve-repo.ts [2026-10-28 11:54:15] --END--
+2026-10-28 11:54:37,repoherald,https://github.com/deka1105/repoherald.git,src/app/api/identify/route.ts.tmp.5446.177bd026cebd,created,success,"auto-push: route.ts, resolve-repo.ts [2026-10-28 11:54:34] --END--"
+2026-10-28 11:55:00,repoherald,https://github.com/deka1105/repoherald.git,src/app/identify/identify-form.tsx.tmp.5446.eb4c5dd34b25,created,success,"auto-push: route.ts, identify-form.tsx, resolve-repo.test.ts [2026-10-28 11:54:57] --END--"
+2026-10-28 11:56:06,repoherald,https://github.com/deka1105/repoherald.git,README.md.tmp.5446.d0f69cfe09f3,created,success,"auto-push: AGENTS.md, README.md [2026-10-28 11:56:03] --END--"
+2026-10-28 17:48:17,repoherald,https://github.com/deka1105/repoherald.git,package.json,modified,success,auto-push: package.json [2026-10-28 17:48:14] --END--
+2026-10-28 17:51:47,repoherald,https://github.com/deka1105/repoherald.git,src/lib/nemotron.ts,modified,success,auto-push: nemotron.ts [2026-10-28 17:51:45] --END--
+2026-10-28 17:52:07,repoherald,https://github.com/deka1105/repoherald.git,src/lib/nemotron.ts,modified,success,auto-push: nemotron.ts [2026-10-28 17:52:04] --END--
+2026-10-28 17:52:29,repoherald,https://github.com/deka1105/repoherald.git,scripts/nemotron-doctor.ts,modified,success,auto-push: nemotron-doctor.ts [2026-10-28 17:52:28] --END--
+2026-10-28 17:52:56,repoherald,https://github.com/deka1105/repoherald.git,tests/eval-resolve.ts,modified,success,"auto-push: eval-resolve.ts, resolve-repo.test.ts [2026-10-28 17:52:54] --END--"
+2026-10-28 17:53:28,repoherald,https://github.com/deka1105/repoherald.git,tests/nemotron-wire.test.ts,modified,success,auto-push: nemotron-wire.test.ts [2026-10-28 17:53:26] --END--
+2026-10-28 17:56:05,repoherald,https://github.com/deka1105/repoherald.git,README.md,modified,success,auto-push: README.md [2026-10-28 17:56:03] --END--
+2026-10-28 17:56:15,repoherald,https://github.com/deka1105/repoherald.git,AGENTS.md,modified,success,auto-push: AGENTS.md [2026-10-28 17:56:13] --END--
+2026-10-28 18:15:16,repoherald,https://github.com/deka1105/repoherald.git,src/lib/resolve-repo.ts,modified,success,auto-push: resolve-repo.ts [2026-10-28 18:15:14] --END--
+2026-10-28 18:15:26,repoherald,https://github.com/deka1105/repoherald.git,src/lib/resolve-repo.ts,modified,success,auto-push: resolve-repo.ts [2026-10-28 18:15:24] --END--
+2026-10-28 18:16:05,repoherald,https://github.com/deka1105/repoherald.git,tests/resolve-repo.test.ts,modified,success,auto-push: resolve-repo.test.ts [2026-10-28 18:16:03] --END--
+2026-10-28 18:16:40,repoherald,https://github.com/deka1105/repoherald.git,tests/resolve-repo.test.ts,modified,success,auto-push: resolve-repo.test.ts [2026-10-28 18:16:38] --END--
+2026-10-28 18:17:06,repoherald,https://github.com/deka1105/repoherald.git,src/app/identify/identify-form.tsx,modified,success,auto-push: identify-form.tsx [2026-10-28 18:17:04] --END--
+2026-10-28 18:17:37,repoherald,https://github.com/deka1105/repoherald.git,tests/resolve-repo.test.ts,modified,success,auto-push: resolve-repo.test.ts [2026-10-28 18:17:34] --END--
+2026-10-28 18:17:53,repoherald,https://github.com/deka1105/repoherald.git,tests/resolve-repo.test.ts,modified,success,auto-push: resolve-repo.test.ts [2026-10-28 18:17:51] --END--
+2026-10-28 18:31:00,repoherald,https://github.com/deka1105/repoherald.git,README.md,modified,success,auto-push: README.md [2026-10-28 18:30:58] --END--
