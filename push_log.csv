@@ -9089,3 +9089,86 @@ timestamp,repo_name,repo_url,file_changed,event_type,status,message
 2026-10-29 11:00:42,repoherald,https://github.com/deka1105/repoherald.git,src/components/landing/landing-v2.css,modified,success,auto-push: landing-v2.css [2026-10-29 11:00:40] --END--
 2026-10-29 11:00:59,repoherald,https://github.com/deka1105/repoherald.git,src/components/landing-live.tsx,modified,success,auto-push: landing-live.tsx [2026-10-29 11:00:58] --END--
 2026-10-29 11:06:07,repoherald,https://github.com/deka1105/repoherald.git,src/app/(legal)/privacy/page.tsx,modified,success,auto-push: page.tsx [2026-10-29 11:06:05] --END--
+2026-10-29 11:24:24,GitHub-AutoPush-Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,"auto_git_push.py, dashboard.py, push_log.csv, repos_config.csv, watcher_mac.log",startup-sync,success,startup-sync: 8 offline changes [2026-10-29 11:24:21] --END--
+2026-10-29 11:51:07,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos_Pitch_Deck.pptx,created,success,auto-push: Philamentos_Pitch_Deck.pptx [2026-10-29 11:51:05] --END--
+2026-10-29 13:16:39,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos_Pitch_Deck.pptx,modified,success,auto-push: Philamentos_Pitch_Deck.pptx [2026-10-29 13:16:37] --END--
+2026-10-29 13:52:56,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos_Pitch_Deck.pptx,created,success,"auto-push: Philamentos_Pitch_Deck.pptx, ~$Philamentos_Pitch_Deck.pptx [2026-10-29 13:52:53] --END--"
+2026-10-29 14:16:49,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos_Pitch_Deck.pptx,modified,success,auto-push: Philamentos_Pitch_Deck.pptx [2026-10-29 14:16:46] --END--
+2026-10-29 14:17:56,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos_Pitch_Deck.pdf,created,success,auto-push: Philamentos_Pitch_Deck.pdf [2026-10-29 14:17:52] --END--
+2026-10-29 15:10:18,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,philamentos_logo_pack_v0/icon_orange.svg,modified,success,"auto-push: .DS_Store, .DS_Store [2026-10-29 15:10:15] --END--"
+2026-10-29 15:21:02,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos_Pitch_Deck.pptx,created,success,auto-push: Philamentos_Pitch_Deck.pptx [2026-10-29 15:20:56] --END--
+2026-10-29 15:43:12,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos_Pitch_Deck.pptx,modified,success,auto-push: Philamentos_Pitch_Deck.pptx [2026-10-29 15:43:09] --END--
+2026-10-29 15:45:48,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos_Pitch_Deck.pptx,created,success,auto-push: Philamentos_Pitch_Deck.pptx [2026-10-29 15:45:45] --END--
+2026-10-29 15:46:48,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos_Pitch_Deck.pptx,created,success,auto-push: Philamentos_Pitch_Deck.pptx [2026-10-29 15:46:45] --END--
+2026-10-29 16:02:06,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos_Pitch_Deck.pptx,created,success,auto-push: Philamentos_Pitch_Deck.pptx [2026-10-29 16:02:03] --END--
+2026-10-29 16:03:47,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos_Pitch_Deck.pptx,created,success,auto-push: Philamentos_Pitch_Deck.pptx [2026-10-29 16:03:44] --END--
+2026-10-29 16:04:17,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,~$Accelerator_Draft1.pptx,created,success,"auto-push: Accelerator_Draft1.pptx, ~$Accelerator_Draft1.pptx [2026-10-29 16:04:14] --END--"
+2026-10-29 16:10:58,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos_Pitch_Deck.pptx,modified,success,"auto-push: Philamentos_Pitch_Deck.pptx, ~$Accelerator_Draft1.pptx [2026-10-29 16:10:56] --END--"
+2026-10-29 16:21:31,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Accelerator_Draft1.pptx,modified,success,auto-push: ~$Philamentos_Pitch_Deck.pptx [2026-10-29 16:21:28] --END--
+2026-10-29 16:37:36,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Accelerator_Draft1.pptx,created,success,"auto-push: Accelerator_Draft1.pptx, ~$Accelerator_Draft1.pptx [2026-10-29 16:37:33] --END--"
+2026-10-29 18:14:17,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Accelerator_Draft1.pptx,modified,success,auto-push: Accelerator_Draft1.pptx [2026-10-29 18:14:14] --END--
+2026-10-29 18:14:34,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,~$Accelerator_Draft2.pptx,created,success,"auto-push: Accelerator_Draft2.pptx, ~$Accelerator_Draft2.pptx [2026-10-29 18:14:32] --END--"
+2026-10-29 18:16:20,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,~$Philamentos_Pitch_Deck.pptx,modified,success,"auto-push: Accelerator_Draft2.pptx, ~$Accelerator_Draft1.pptx, ~$Accelerator_Draft2.pptx, ~$Philamentos_Pitch_Deck.pptx [2026-10-29 18:16:17] --END--"
+2026-10-29 18:30:47,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Accelerator_Draft2.pptx,modified,success,"auto-push: Accelerator_Draft2.pptx, ~$Accelerator_Draft2.pptx [2026-10-29 18:30:44] --END--"
+2026-10-29 18:31:45,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,~$Accelerator_Draft2.pptx,modified,success,auto-push: ~$Accelerator_Draft2.pptx [2026-10-29 18:31:43] --END--
+2026-10-29 18:34:02,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,~$Accelerator_Draft1.pptx,created,success,"auto-push: ~$Accelerator_Draft1.pptx, ~$Accelerator_Draft2.pptx [2026-10-29 18:34:00] --END--"
+2026-10-29 18:38:24,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Accelerator_Draft2.pptx,created,success,auto-push: Accelerator_Draft2.pptx [2026-10-29 18:38:21] --END--
+2026-10-29 18:46:47,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Accelerator_Draft2.mp4,created,success,"auto-push: Accelerator_Draft2.mp4, Accelerator_Draft2.pptx [2026-10-29 18:46:44] --END--"
+2026-10-29 18:48:24,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Accelerator_Draft2.mp4,deleted,success,"auto-push: .gitignore, Accelerator_Draft2.mp4 [2026-10-29 18:48:22] --END--"
+2026-10-29 18:57:22,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Accelerator_Draft1.pptx,created,success,auto-push: Accelerator_Draft1.pptx [2026-10-29 18:57:19] --END--
+2026-10-29 19:01:31,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos_Pitch_Deck.pdf,modified,success,"auto-push: .gitignore, Accelerator_Draft2.pptx, ~$Accelerator_Draft1.pptx, ~$Accelerator_Draft2.pptx [2026-10-29 19:01:29] --END--"
+2026-10-29 19:04:43,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,PhilamentosYoutube.png,created,success,"auto-push: PhilamentosYoutube.png, ~$Accelerator_Draft1.pptx [2026-10-29 19:04:40] --END--"
+2026-10-29 19:21:39,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Accelerator_Draft1.pptx,created,success,auto-push: Accelerator_Draft1.pptx [2026-10-29 19:21:36] --END--
+2026-10-31 14:40:42,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,store/JUSTIFICATIONS.md,modified,success,auto-push: JUSTIFICATIONS.md [2026-10-31 14:40:40] --END--
+2026-10-31 14:41:49,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,store/promo-440x280.png,created,success,auto-push: promo-440x280.png [2026-10-31 14:41:47] --END--
+2026-10-31 14:42:02,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,store/promo-440x280.png,modified,success,auto-push: promo-440x280.png [2026-10-31 14:42:00] --END--
+2026-10-31 14:42:12,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,store/PUBLISHING.md,modified,success,auto-push: PUBLISHING.md [2026-10-31 14:42:10] --END--
+2026-10-31 16:27:31,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,scripts/package.mjs,modified,success,auto-push: package.mjs [2026-10-31 16:27:29] --END--
+2026-10-31 20:29:26,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,vitest.config.ts.timestamp-1793492962174-49482da17cd27.mjs,created,success,"auto-push: manifest.base.json, package.json [2026-10-31 20:29:22] --END--"
+2026-10-31 20:35:01,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,BUILDING.md,modified,success,auto-push: BUILDING.md [2026-10-31 20:34:56] --END--
+2026-10-31 21:17:36,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/lib/auth.ts,modified,success,auto-push: auth.ts [2026-10-31 21:17:31] --END--
+2026-10-31 21:17:53,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/lib/auth.ts,modified,success,auto-push: auth.ts [2026-10-31 21:17:48] --END--
+2026-10-31 21:18:26,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,store/oauth-bounce/index.html,modified,success,auto-push: index.html [2026-10-31 21:18:23] --END--
+2026-10-31 21:19:04,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,scripts/build.mjs,modified,success,auto-push: build.mjs [2026-10-31 21:19:01] --END--
+2026-10-31 21:20:31,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,scripts/uitest.mjs,modified,success,auto-push: uitest.mjs [2026-10-31 21:20:28] --END--
+2026-10-31 21:21:45,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,scripts/site.mjs,modified,success,auto-push: site.mjs [2026-10-31 21:21:41] --END--
+2026-10-31 21:22:37,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,store/STAGE0.md,modified,success,"auto-push: index.html, STAGE0.md [2026-10-31 21:22:33] --END--"
+2026-10-31 23:09:53,yc-pilots,https://github.com/deka1105/yc-pilots.git,.claude/commands/autowork.md,created,success,auto-push: autowork.md [2026-10-31 23:09:51] --END--
+2026-10-31 23:14:54,yc-pilots,https://github.com/deka1105/yc-pilots.git,CLAUDE.md,modified,success,auto-push: CLAUDE.md [2026-10-31 23:14:51] --END--
+2026-10-31 23:15:04,yc-pilots,https://github.com/deka1105/yc-pilots.git,.claude/commands/work-graph.md,modified,success,auto-push: work-graph.md [2026-10-31 23:15:02] --END--
+2026-10-31 23:15:38,yc-pilots,https://github.com/deka1105/yc-pilots.git,.claude/commands/autowork.md,modified,success,auto-push: autowork.md [2026-10-31 23:15:36] --END--
+2026-10-31 23:31:59,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/_template/contacts.md,created,success,auto-push: contacts.md [2026-10-31 23:31:56] --END--
+2026-10-31 23:32:25,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prime-intellect/contacts.md,created,success,auto-push: contacts.md [2026-10-31 23:32:23] --END--
+2026-10-31 23:36:33,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prime-intellect/prime-intellect-reward-hack-harness/envs.ts,modified,success,auto-push: envs.ts [2026-10-31 23:36:31] --END--
+2026-10-31 23:37:21,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prime-intellect/prime-intellect-reward-hack-harness/Harness.tsx,modified,success,auto-push: Harness.tsx [2026-10-31 23:37:19] --END--
+2026-10-31 23:37:51,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prime-intellect/prime-intellect-reward-hack-harness/Harness.tsx,modified,success,auto-push: Harness.tsx [2026-10-31 23:37:47] --END--
+2026-10-31 23:42:06,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prime-intellect/prime-intellect-reward-hack-harness/envs.ts,modified,success,auto-push: envs.ts [2026-10-31 23:42:04] --END--
+2026-10-31 23:42:19,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prime-intellect/prime-intellect-reward-hack-harness/Harness.tsx,modified,success,auto-push: Harness.tsx [2026-10-31 23:42:17] --END--
+2026-10-31 23:44:42,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/pilots.ts,modified,success,auto-push: pilots.ts [2026-10-31 23:44:40] --END--
+2026-10-31 23:45:00,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/pilots.ts,modified,success,auto-push: pilots.ts [2026-10-31 23:44:58] --END--
+2026-10-31 23:47:05,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prime-intellect/outreach.md,created,success,auto-push: outreach.md [2026-10-31 23:47:03] --END--
+2026-10-31 23:47:20,yc-pilots,https://github.com/deka1105/yc-pilots.git,job-search/prime-intellect.md,modified,success,"auto-push: envs.ts, prime-intellect.md [2026-10-31 23:47:19] --END--"
+2026-10-31 23:47:28,yc-pilots,https://github.com/deka1105/yc-pilots.git,.next/server/chunks/ssr/_1x1j_ym._.js.map,created,success,auto-push: prime-intellect.md [2026-10-31 23:47:26] --END--
+2026-10-31 23:48:26,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/inferact/contacts.md,created,success,auto-push: contacts.md [2026-10-31 23:48:24] --END--
+2026-10-31 23:49:20,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/inferact/outreach.md,created,success,auto-push: outreach.md [2026-10-31 23:49:18] --END--
+2026-10-31 23:50:36,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/agentio/contacts.md,created,success,"auto-push: contacts.md, outreach.md [2026-10-31 23:50:34] --END--"
+2026-10-31 23:52:09,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/conduct/contacts.md,created,success,"auto-push: contacts.md, outreach.md [2026-10-31 23:52:07] --END--"
+2026-10-31 23:53:56,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/runlayer/contacts.md,created,success,"auto-push: contacts.md, outreach.md [2026-10-31 23:53:54] --END--"
+2026-10-31 23:55:27,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prior-labs/contacts.md,created,success,auto-push: contacts.md [2026-10-31 23:55:25] --END--
+2026-10-31 23:55:54,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/prior-labs/outreach.md,created,success,auto-push: outreach.md [2026-10-31 23:55:52] --END--
+2026-10-31 23:56:50,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/tandem-health/dossier.md,modified,success,auto-push: dossier.md [2026-10-31 23:56:48] --END--
+2026-10-31 23:57:40,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/tandem-health/contacts.md,created,success,"auto-push: contacts.md, outreach.md [2026-10-31 23:57:38] --END--"
+2026-10-31 23:59:03,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/enterpret/contacts.md,created,success,"auto-push: contacts.md, outreach.md [2026-10-31 23:59:02] --END--"
+2026-11-01 00:52:22,yc-pilots,https://github.com/deka1105/yc-pilots.git,.claude/commands/autowork.md,modified,success,auto-push: autowork.md [2026-11-01 00:52:20] --END--
+2026-11-01 00:54:53,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/extend/extend-confidence-calibration/calibration.ts,created,success,auto-push: calibration.ts [2026-11-01 00:54:51] --END--
+2026-11-01 00:56:15,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/extend/extend-confidence-calibration/calibration.ts,modified,success,auto-push: calibration.ts [2026-11-01 00:56:13] --END--
+2026-11-01 00:58:05,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/extend/extend-confidence-calibration/calibration.ts,modified,success,auto-push: calibration.ts [2026-11-01 00:58:03] --END--
+2026-11-01 00:58:39,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/extend/extend-confidence-calibration/calibration.ts,modified,success,auto-push: calibration.ts [2026-11-01 00:58:37] --END--
+2026-11-01 01:00:21,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/extend/extend-confidence-calibration/Reliability.tsx,created,success,auto-push: Reliability.tsx [2026-11-01 01:00:19] --END--
+2026-11-01 01:01:46,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/extend/extend-confidence-calibration/Audit.tsx,created,success,"auto-push: Audit.tsx, Pilot.tsx [2026-11-01 01:01:43] --END--"
+2026-11-01 01:02:16,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/pilots.ts,modified,success,"auto-push: pilots.md, pilots.ts [2026-11-01 01:02:14] --END--"
+2026-11-01 01:02:46,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/extend/extend-confidence-calibration/.!5557!Audit.tsx,created,success,auto-push: Audit.tsx [2026-11-01 01:02:44] --END--
+2026-11-01 01:05:50,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/extend/extend-confidence-calibration/Audit.tsx,modified,success,"auto-push: Audit.tsx, calibration.ts [2026-11-01 01:05:48] --END--"
+2026-11-01 01:06:39,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/extend/extend-confidence-calibration/calibration.ts,modified,success,auto-push: calibration.ts [2026-11-01 01:06:37] --END--
+2026-11-01 01:08:40,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/extend/extend-confidence-calibration/Audit.tsx,modified,success,auto-push: Audit.tsx [2026-11-01 01:08:38] --END--
+2026-11-01 01:10:08,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/extend/extend-confidence-calibration/Audit.tsx,modified,success,auto-push: Audit.tsx [2026-11-01 01:10:06] --END--
