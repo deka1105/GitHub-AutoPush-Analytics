@@ -838,19 +838,42 @@ def startup_sync(local_path: str, repo_name: str, repo_url: str, push_log_path: 
     """
     log.info(f"[{repo_name}] Startup sync — checking for offline changes…")
 
-    _, ss_out, _ = run(["git", "stash", "--include-untracked"], cwd=local_path)
-    ss_stashed = "No local changes" not in ss_out
-    if ss_stashed:
-        log.debug(f"[{repo_name}] Startup: stashed working tree before pull")
+    # A branch with no commits yet (freshly `git init`-ed, nothing pushed) can
+    # be neither stashed nor rebased: `git stash` reports "You do not have the
+    # initial commit yet" and `pull --rebase origin HEAD` dies with "Updating
+    # an unborn branch with changes added to the index". Neither is a conflict,
+    # so skip to the add/commit/push below, which makes the first commit and
+    # creates the remote branch via `push --set-upstream`.
+    unborn = run(["git", "rev-parse", "--verify", "HEAD"], cwd=local_path)[0] != 0
+
+    ss_stashed = False
+    if unborn:
+        log.info(f"[{repo_name}] Startup sync: no commits yet — skipping pull, "
+                 "creating the initial commit.")
+    else:
+        # A stash that errored out left the tree alone; only a real stash may
+        # be popped, or the pop fails and logs a phantom problem.
+        ss_code, ss_out, _ = run(["git", "stash", "--include-untracked"], cwd=local_path)
+        ss_stashed = ss_code == 0 and "No local changes" not in ss_out
+        if ss_stashed:
+            log.debug(f"[{repo_name}] Startup: stashed working tree before pull")
 
     # -c diff.ignoreSubmodules=all → dirty nested repos (gitlinks) can't be
     # stashed and would otherwise fail rebase's clean-tree check forever.
     # --autostash → files written between our stash and the rebase (e.g. an
     # app appending to a log) get stashed by the rebase itself, closing the race.
-    pull_code, _, pull_err = run(
-        ["git", "-c", "diff.ignoreSubmodules=all", "pull", "--rebase",
-         "--autostash", "origin", "HEAD"], cwd=local_path
-    )
+    pull_code, pull_err = 0, ""
+    if not unborn:
+        pull_code, _, pull_err = run(
+            ["git", "-c", "diff.ignoreSubmodules=all", "pull", "--rebase",
+             "--autostash", "origin", "HEAD"], cwd=local_path
+        )
+    # A remote with no refs at all (repo created empty, never pushed to) makes
+    # `pull origin HEAD` fail on the missing ref. There is nothing to rebase
+    # onto, so carry on to the push instead of calling it a conflict.
+    if pull_code != 0 and "couldn't find remote ref" in pull_err.lower():
+        log.info(f"[{repo_name}] Remote has no branches yet — nothing to pull.")
+        pull_code, pull_err = 0, ""
     if pull_code != 0:
         if is_auth_or_network_error(pull_err):
             if ss_stashed:
@@ -1064,6 +1087,12 @@ def git_add_commit_push(
         ["git", "-c", "diff.ignoreSubmodules=all", "pull", "--rebase",
          "--autostash", "origin", "HEAD"], cwd=local_path
     )
+    # A remote with no refs at all (repo created empty, never pushed to) makes
+    # `pull origin HEAD` fail on the missing ref. There is nothing to rebase
+    # onto, so carry on to the push instead of calling it a conflict.
+    if pull_code != 0 and "couldn't find remote ref" in pull_err.lower():
+        log.info(f"[{repo_name}] Remote has no branches yet — nothing to pull.")
+        pull_code, pull_err = 0, ""
     if pull_code != 0:
         if is_auth_or_network_error(pull_err):
             if stashed:
