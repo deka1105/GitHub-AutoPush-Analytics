@@ -9641,3 +9641,361 @@ timestamp,repo_name,repo_url,file_changed,event_type,status,message
 2026-11-09 16:47:35,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,.!10757!package-lock.json,created,success,auto-push: package-lock.json [2026-11-09 16:47:32] --END--
 2026-11-09 16:47:53,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,HANDOFF.md,modified,success,auto-push: HANDOFF.md [2026-11-09 16:47:51] --END--
 2026-11-09 16:49:27,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,store/PUBLISHING.md,modified,success,auto-push: PUBLISHING.md [2026-11-09 16:49:25] --END--
+2026-11-09 22:56:50,GitHub-AutoPush-Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,session-logs/session_2026-11-09_1045_076d9a41.md,created,success,"auto-push: push_log.csv, watcher_mac.log, watcher_mac.log.1, watcher_mac.log.2, watcher_mac.log.3 [2026-11-09 22:56:45] --END--"
+2026-11-10 10:00:19,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/lib/buttonColors.ts.tmp.60847.280b36a354ab,created,success,auto-push: buttonColors.ts [2026-11-10 10:00:17] --END--
+2026-11-10 10:00:30,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/lib/settings.ts,modified,success,auto-push: settings.ts [2026-11-10 10:00:28] --END--
+2026-11-10 10:00:57,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/content/feedButtons.ts,modified,success,auto-push: feedButtons.ts [2026-11-10 10:00:55] --END--
+2026-11-10 10:01:12,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/content/inject.ts,modified,success,auto-push: inject.ts [2026-11-10 10:01:10] --END--
+2026-11-10 10:01:34,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/content/inject.ts,modified,success,auto-push: inject.ts [2026-11-10 10:01:32] --END--
+2026-11-10 10:02:09,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/content/inject.ts,modified,success,auto-push: inject.ts [2026-11-10 10:02:06] --END--
+2026-11-10 10:02:42,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/options.html,modified,success,"auto-push: background.ts, options.html [2026-11-10 10:02:40] --END--"
+2026-11-10 10:02:56,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/style.css,modified,success,auto-push: style.css [2026-11-10 10:02:54] --END--
+2026-11-10 10:03:33,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/options.ts,modified,success,auto-push: options.ts [2026-11-10 10:03:31] --END--
+2026-11-10 10:03:51,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/lib/configFile.ts,modified,success,auto-push: configFile.ts [2026-11-10 10:03:48] --END--
+2026-11-10 10:04:22,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,tests/configFile.test.ts,modified,success,"auto-push: configFile.ts, configFile.test.ts, feedButtons.test.ts [2026-11-10 10:04:18] --END--"
+2026-11-10 10:04:56,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,tests/buttonColors.test.ts.tmp.60847.8fcca927f9fd,created,success,auto-push: buttonColors.test.ts [2026-11-10 10:04:53] --END--
+2026-11-10 10:05:19,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,tests/configFile.test.ts,modified,success,auto-push: configFile.test.ts [2026-11-10 10:05:16] --END--
+2026-11-10 10:06:40,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,scripts/uitest.mjs,modified,success,auto-push: uitest.mjs [2026-11-10 10:06:38] --END--
+2026-11-10 10:08:01,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,scripts/feedtest.mjs,modified,success,auto-push: feedtest.mjs [2026-11-10 10:07:58] --END--
+2026-11-10 10:08:31,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,manifest.base.json,modified,success,"auto-push: manifest.base.json, package-lock.json, package.json [2026-11-10 10:08:24] --END--"
+2026-11-10 10:09:12,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,README.md,modified,success,"auto-push: BUILDING.md, HANDOFF.md, README.md [2026-11-10 10:09:09] --END--"
+2026-11-10 10:09:22,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,README.md,modified,success,auto-push: README.md [2026-11-10 10:09:19] --END--
+2026-11-10 10:09:49,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,HANDOFF.md,modified,success,auto-push: HANDOFF.md [2026-11-10 10:09:48] --END--
+2026-11-10 10:10:09,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,store/LISTING.md,modified,success,"auto-push: LISTING.md, PUBLISHING.md [2026-11-10 10:10:06] --END--"
+2026-11-10 10:10:50,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,tests/configFile.test.ts,modified,success,auto-push: configFile.test.ts [2026-11-10 10:10:48] --END--
+2026-11-10 19:17:49,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/lib/templates.ts,created,success,auto-push: templates.ts [2026-11-10 19:17:45] --END--
+2026-11-10 19:18:07,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/lib/settings.ts,modified,success,auto-push: settings.ts [2026-11-10 19:18:02] --END--
+2026-11-10 19:18:35,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,tests/configFile.test.ts,modified,success,auto-push: configFile.test.ts [2026-11-10 19:18:32] --END--
+2026-11-10 19:19:43,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,tests/templates.test.ts,created,success,auto-push: templates.test.ts [2026-11-10 19:19:41] --END--
+2026-11-10 19:19:59,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,tests/templates.test.ts,modified,success,auto-push: templates.test.ts [2026-11-10 19:19:56] --END--
+2026-11-10 19:21:06,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/lib/sendOne.ts,modified,success,auto-push: sendOne.ts [2026-11-10 19:21:03] --END--
+2026-11-10 19:21:16,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/content/inject.ts,modified,success,auto-push: inject.ts [2026-11-10 19:21:14] --END--
+2026-11-10 19:21:32,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/campaign.html,modified,success,auto-push: campaign.html [2026-11-10 19:21:30] --END--
+2026-11-10 19:22:29,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/campaign.ts,modified,success,auto-push: campaign.ts [2026-11-10 19:22:27] --END--
+2026-11-10 19:22:53,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/campaign.ts,modified,success,auto-push: campaign.ts [2026-11-10 19:22:51] --END--
+2026-11-10 19:23:06,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/campaign.ts,modified,success,auto-push: campaign.ts [2026-11-10 19:23:03] --END--
+2026-11-10 19:23:23,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/campaign.ts,modified,success,auto-push: campaign.ts [2026-11-10 19:23:20] --END--
+2026-11-10 19:23:48,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/campaign.ts,modified,success,auto-push: campaign.ts [2026-11-10 19:23:44] --END--
+2026-11-10 19:24:43,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/board.ts,created,success,auto-push: board.ts [2026-11-10 19:24:40] --END--
+2026-11-10 19:25:53,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/style.css,modified,success,"auto-push: board.ts, style.css [2026-11-10 19:25:51] --END--"
+2026-11-10 19:26:08,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/options.html,modified,success,auto-push: options.html [2026-11-10 19:26:04] --END--
+2026-11-10 19:26:24,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/options.ts,modified,success,auto-push: options.ts [2026-11-10 19:26:20] --END--
+2026-11-10 19:26:50,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/options.ts,modified,success,auto-push: options.ts [2026-11-10 19:26:47] --END--
+2026-11-10 19:27:06,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/options.ts,modified,success,auto-push: options.ts [2026-11-10 19:27:03] --END--
+2026-11-10 19:27:43,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/options.ts,modified,success,auto-push: options.ts [2026-11-10 19:27:40] --END--
+2026-11-10 19:28:23,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/options.ts,modified,success,auto-push: options.ts [2026-11-10 19:28:19] --END--
+2026-11-10 19:28:37,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/options.ts,modified,success,auto-push: options.ts [2026-11-10 19:28:33] --END--
+2026-11-10 19:29:12,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/lib/configFile.ts,modified,success,auto-push: configFile.ts [2026-11-10 19:29:08] --END--
+2026-11-10 19:30:15,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/lib/senderSheet.ts,modified,success,auto-push: senderSheet.ts [2026-11-10 19:30:11] --END--
+2026-11-10 19:30:36,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/lib/senderSheet.ts,modified,success,auto-push: senderSheet.ts [2026-11-10 19:30:31] --END--
+2026-11-10 19:30:54,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,tests/senderSheet.test.ts,modified,success,"auto-push: .DS_Store, senderSheet.test.ts [2026-11-10 19:30:51] --END--"
+2026-11-10 19:31:48,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,tests/senderSheet.test.ts,modified,success,auto-push: senderSheet.test.ts [2026-11-10 19:31:44] --END--
+2026-11-10 19:32:07,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,tests/senderSheet.test.ts,modified,success,auto-push: senderSheet.test.ts [2026-11-10 19:32:02] --END--
+2026-11-10 19:32:40,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/options.ts,modified,success,auto-push: options.ts [2026-11-10 19:32:36] --END--
+2026-11-10 19:33:31,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,tests/senderSheet.test.ts,modified,success,auto-push: senderSheet.test.ts [2026-11-10 19:33:28] --END--
+2026-11-10 19:33:56,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,tests/configFile.test.ts,modified,success,auto-push: configFile.test.ts [2026-11-10 19:33:53] --END--
+2026-11-10 19:34:29,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/options.ts,modified,success,auto-push: options.ts [2026-11-10 19:34:25] --END--
+2026-11-10 19:34:37,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/campaign.ts,modified,success,auto-push: campaign.ts [2026-11-10 19:34:34] --END--
+2026-11-10 19:34:53,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,package.json,modified,success,"auto-push: manifest.base.json, package-lock.json, package.json, exttest.mjs [2026-11-10 19:34:50] --END--"
+2026-11-10 19:36:57,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,scripts/uitest.mjs,modified,success,auto-push: uitest.mjs [2026-11-10 19:36:55] --END--
+2026-11-10 19:38:03,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,scripts/uitest.mjs,modified,success,auto-push: uitest.mjs [2026-11-10 19:38:01] --END--
+2026-11-10 19:38:49,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,scripts/uitest.mjs,modified,success,auto-push: uitest.mjs [2026-11-10 19:38:47] --END--
+2026-11-10 19:40:08,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,HANDOFF.md,modified,success,auto-push: HANDOFF.md [2026-11-10 19:40:06] --END--
+2026-11-10 19:41:01,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,scripts/feedtest.mjs,modified,success,auto-push: feedtest.mjs [2026-11-10 19:40:59] --END--
+2026-11-10 19:41:30,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,scripts/feedtest.mjs,modified,success,auto-push: feedtest.mjs [2026-11-10 19:41:28] --END--
+2026-11-10 19:42:27,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,src/ui/board.ts,modified,success,"auto-push: board.ts, options.ts [2026-11-10 19:42:25] --END--"
+2026-11-10 19:43:11,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,scripts/uitest.mjs,modified,success,auto-push: uitest.mjs [2026-11-10 19:43:09] --END--
+2026-11-10 19:44:31,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,BUILDING.md,modified,success,"auto-push: BUILDING.md, HANDOFF.md, README.md, LISTING.md, PUBLISHING.md [2026-11-10 19:44:28] --END--"
+2026-11-10 19:44:38,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,store/PUBLISHING.md,modified,success,auto-push: PUBLISHING.md [2026-11-10 19:44:36] --END--
+2026-11-10 19:44:50,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,README.md,modified,success,auto-push: README.md [2026-11-10 19:44:47] --END--
+2026-11-11 09:54:49,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos-pilot/session-logs/session_2026-11-07_2336_04ccb485.md,created,success,"auto-push: .DS_Store, .DS_Store [2026-11-11 09:54:46] --END--"
+2026-11-11 10:00:28,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/clerkEmail.ts.tmp.36552.a09aa01f0eb9,created,success,"auto-push: blobUrl.ts, clerkEmail.ts, trustBoundaries.test.ts [2026-11-11 10:00:25] --END--"
+2026-11-11 10:00:30,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos-pilot/src/lib/clerkEmail.ts.tmp.36552.a09aa01f0eb9,created,success,auto-push: .DS_Store [2026-11-11 10:00:28] --END--
+2026-11-11 10:00:43,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/validators.ts,modified,success,auto-push: 6 files changed [2026-11-11 10:00:41] --END--
+2026-11-11 10:00:46,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos-pilot/src/lib/validators.ts,modified,success,auto-push: .DS_Store [2026-11-11 10:00:43] --END--
+2026-11-11 10:01:00,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/api/admin/users/route.ts,modified,success,auto-push: 10 files changed [2026-11-11 10:00:57] --END--
+2026-11-11 10:01:02,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos-pilot/src/app/api/admin/users/route.ts,modified,success,auto-push: .DS_Store [2026-11-11 10:01:00] --END--
+2026-11-11 10:01:30,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/mailer.ts,modified,success,"auto-push: route.ts, route.ts, mailer.ts, orderService.ts [2026-11-11 10:01:27] --END--"
+2026-11-11 10:01:32,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos-pilot/src/lib/mailer.ts,modified,success,auto-push: .DS_Store [2026-11-11 10:01:30] --END--
+2026-11-11 10:02:05,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos-pilot/src/app/api/printer/jobs/[id]/route.ts,modified,success,auto-push: .DS_Store [2026-11-11 10:02:02] --END--
+2026-11-11 10:02:07,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/api/printer/jobs/[id]/route.ts,modified,success,"auto-push: route.ts, route.ts, otp.ts [2026-11-11 10:02:05] --END--"
+2026-11-11 10:03:00,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/store.ts,modified,success,"auto-push: index.tsx, orders.tsx, api.ts, store.ts, ui.tsx [2026-11-11 10:02:57] --END--"
+2026-11-11 10:03:02,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos-pilot/mobile/src/store.ts,modified,success,auto-push: .DS_Store [2026-11-11 10:03:00] --END--
+2026-11-11 10:03:53,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos-pilot/mobile/app/order/[id].tsx,modified,success,auto-push: .DS_Store [2026-11-11 10:03:50] --END--
+2026-11-11 10:03:56,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/order/[id].tsx,modified,success,auto-push: 6 files changed [2026-11-11 10:03:53] --END--
+2026-11-11 10:04:15,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos-pilot/mobile/README.md,modified,success,auto-push: .DS_Store [2026-11-11 10:04:12] --END--
+2026-11-11 10:04:18,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/README.md,modified,success,auto-push: README.md [2026-11-11 10:04:15] --END--
+2026-11-11 10:05:19,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos-pilot/docs/AUDIT-2026-11.md.tmp.36552.4586bee2c6a5,created,success,auto-push: .DS_Store [2026-11-11 10:05:16] --END--
+2026-11-11 10:05:22,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/AUDIT-2026-11.md.tmp.36552.4586bee2c6a5,created,success,"auto-push: CLAUDE.md, AUDIT-2026-11.md [2026-11-11 10:05:19] --END--"
+2026-11-11 11:02:19,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos-pilot/docs/HANDOFF-2026-11.md.tmp.36552.73f31be596c5,created,success,auto-push: .DS_Store [2026-11-11 11:02:17] --END--
+2026-11-11 11:02:21,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md.tmp.36552.73f31be596c5,created,success,auto-push: HANDOFF-2026-11.md [2026-11-11 11:02:19] --END--
+2026-11-11 11:10:59,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,session-logs/session_2026-11-09_1019_76e212ff.md,created,success,auto-push: .DS_Store [2026-11-11 11:10:57] --END--
+2026-11-11 11:40:49,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,vitest.config.ts.timestamp-1794415245802-576ee89bc1379.mjs,created,success,auto-push: .DS_Store [2026-11-11 11:40:45] --END--
+2026-11-11 11:41:20,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,dist-chrome/background.js,deleted,success,auto-push: .DS_Store [2026-11-11 11:41:18] --END--
+2026-11-11 13:52:38,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,shots-debug.tmp.mjs,created,success,"auto-push: .DS_Store, shots-debug.tmp.mjs [2026-11-11 13:52:35] --END--"
+2026-11-11 13:53:39,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,scripts/screenshots.mjs,modified,success,auto-push: screenshots.mjs [2026-11-11 13:53:36] --END--
+2026-11-11 13:53:51,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,store/screenshots/2-preflight-and-blocked-row.png,modified,success,"auto-push: .DS_Store, 2-preflight-and-blocked-row.png [2026-11-11 13:53:50] --END--"
+2026-11-11 13:54:52,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,scripts/screenshots.mjs,modified,success,"auto-push: screenshots.mjs, 1-template-and-preview.png, 3-settings-roles-and-resumes.png [2026-11-11 13:54:49] --END--"
+2026-11-11 13:55:00,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,store/screenshots/2-preflight-and-blocked-row.png,modified,success,auto-push: .DS_Store [2026-11-11 13:54:58] --END--
+2026-11-11 13:55:35,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,shots-debug.tmp.mjs,deleted,success,"auto-push: .DS_Store, shots-debug.tmp.mjs, LISTING.md, 3-settings-roles-and-resumes.png [2026-11-11 13:55:33] --END--"
+2026-11-11 13:55:49,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,docs/assets/1-template-and-preview.png,modified,success,"auto-push: 1-template-and-preview.png, 2-preflight-and-blocked-row.png, 3-settings-roles-and-resumes.png [2026-11-11 13:55:47] --END--"
+2026-11-11 13:57:00,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,store/PUBLISHING.md,modified,success,"auto-push: .DS_Store, PUBLISHING.md [2026-11-11 13:56:58] --END--"
+2026-11-11 13:57:11,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,HANDOFF.md,modified,success,"auto-push: .DS_Store, HANDOFF.md [2026-11-11 13:57:09] --END--"
+2026-11-11 14:00:08,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,store/LISTING.md,modified,success,"auto-push: .DS_Store, LISTING.md [2026-11-11 14:00:06] --END--"
+2026-11-11 14:00:45,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,store/JUSTIFICATIONS.md,modified,success,auto-push: JUSTIFICATIONS.md [2026-11-11 14:00:43] --END--
+2026-11-11 14:01:19,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,store/DEMO-VIDEO.md,modified,success,"auto-push: .DS_Store, DEMO-VIDEO.md [2026-11-11 14:01:17] --END--"
+2026-11-11 14:01:41,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,store/DEMO-VIDEO.md,modified,success,"auto-push: DEMO-VIDEO.md, PUBLISHING.md [2026-11-11 14:01:39] --END--"
+2026-11-11 14:01:50,sheet-mailer-extension,https://github.com/deka1105/sheet-mailer-extension.git,web-ext-artifacts/sheet_mailer-3.2.0.zip,modified,success,auto-push: .DS_Store [2026-11-11 14:01:48] --END--
+2026-11-11 18:25:44,claude-config,https://github.com/deka1105/claude-config.git,skills/personalSchedule/projects.md.tmp.98589.916e8fff1a7b,created,success,auto-push: projects.md [2026-11-11 18:25:42] --END--
+2026-11-12 01:18:09,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos-pilot/session-logs/session_2026-11-07_2336_04ccb485.md,modified,success,auto-push: .DS_Store [2026-11-12 01:18:06] --END--
+2026-11-12 01:27:54,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/operatorKeys.ts.tmp.16286.71b886051d92,created,success,auto-push: operatorKeys.ts [2026-11-12 01:27:51] --END--
+2026-11-12 01:28:09,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/adminAuth.ts,modified,success,"auto-push: page.tsx, page.tsx, page.tsx, adminAuth.ts [2026-11-12 01:28:07] --END--"
+2026-11-12 01:28:19,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/middleware.ts,modified,success,auto-push: middleware.ts [2026-11-12 01:28:17] --END--
+2026-11-12 01:28:36,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,tests/operatorKeys.test.ts.tmp.16286.82880fe30690,created,success,auto-push: operatorKeys.test.ts [2026-11-12 01:28:34] --END--
+2026-11-12 01:29:04,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/operatorKeys.ts.tmp.16286.cf68292b364d,created,success,auto-push: operatorKeys.ts [2026-11-12 01:29:01] --END--
+2026-11-12 01:30:17,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/operatorKeys.ts,modified,success,"auto-push: route.ts, operatorKeys.ts [2026-11-12 01:30:14] --END--"
+2026-11-12 01:30:33,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/OPERATIONS.md,modified,success,auto-push: OPERATIONS.md [2026-11-12 01:30:31] --END--
+2026-11-12 01:30:44,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,.env.example,modified,success,auto-push: .env.example [2026-11-12 01:30:42] --END--
+2026-11-12 01:31:54,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,scripts/check-email-case.ts.tmp.16286.1f1a53bde281,created,success,auto-push: check-email-case.ts [2026-11-12 01:31:48] --END--
+2026-11-12 01:33:02,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,.next/cache/webpack/server-development/7.pack.gz_,created,success,auto-push: package.json [2026-11-12 01:32:59] --END--
+2026-11-12 01:33:21,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,PLAN.md,modified,success,auto-push: PLAN.md [2026-11-12 01:33:19] --END--
+2026-11-12 01:33:37,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,.next/react-loadable-manifest.json,modified,success,auto-push: route.ts [2026-11-12 01:33:35] --END--
+2026-11-12 01:33:56,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/orderService.ts,modified,success,auto-push: orderService.ts [2026-11-12 01:33:54] --END--
+2026-11-12 01:34:13,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/api/admin/forfeits/[id]/route.ts.tmp.16286.829ef763bddc,created,success,auto-push: route.ts [2026-11-12 01:34:10] --END--
+2026-11-12 01:34:30,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/components/AdminOps.tsx,modified,success,auto-push: AdminOps.tsx [2026-11-12 01:34:28] --END--
+2026-11-12 01:34:49,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/admin/page.tsx,modified,success,auto-push: page.tsx [2026-11-12 01:34:42] --END--
+2026-11-12 01:35:29,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/terms/page.tsx,modified,success,"auto-push: page.tsx, page.tsx, page.tsx, mailer.ts [2026-11-12 01:35:27] --END--"
+2026-11-12 01:35:43,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/terms/page.tsx,modified,success,"auto-push: page.tsx, forfeits.test.ts [2026-11-12 01:35:41] --END--"
+2026-11-12 01:37:27,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/orderService.ts.tmp.16286.3e4b723ebc90,created,success,auto-push: orderService.ts [2026-11-12 01:37:24] --END--
+2026-11-12 01:38:54,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,prisma/schema.prisma,modified,success,auto-push: schema.prisma [2026-11-12 01:38:52] --END--
+2026-11-12 01:39:17,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,scripts/build-zip-centroids.ts.tmp.16286.156c6bd2a18f,created,success,auto-push: build-zip-centroids.ts [2026-11-12 01:39:15] --END--
+2026-11-12 01:39:25,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,package.json,modified,success,auto-push: package.json [2026-11-12 01:39:23] --END--
+2026-11-12 01:39:49,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/zipCentroids.ts.tmp.16286.aa9d2b7f5035,created,success,"auto-push: zipCentroids.json, zipCentroids.ts [2026-11-12 01:39:47] --END--"
+2026-11-12 01:40:11,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/geo.ts,modified,success,auto-push: geo.ts [2026-11-12 01:40:09] --END--
+2026-11-12 01:40:24,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/zipCentroids.ts.tmp.16286.a43f2ef22150,created,success,auto-push: zipCentroids.ts [2026-11-12 01:40:22] --END--
+2026-11-12 01:40:38,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/orderService.ts,modified,success,"auto-push: route.ts, orderService.ts, validators.ts [2026-11-12 01:40:36] --END--"
+2026-11-12 01:40:56,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/orderService.ts,modified,success,auto-push: orderService.ts [2026-11-12 01:40:54] --END--
+2026-11-12 01:41:12,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/api/orders/route.ts,modified,success,"auto-push: route.ts, route.ts, route.ts [2026-11-12 01:41:10] --END--"
+2026-11-12 01:41:48,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/api/admin/applications/[id]/route.ts,modified,success,auto-push: route.ts [2026-11-12 01:41:46] --END--
+2026-11-12 01:42:07,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/geo.ts,modified,success,auto-push: geo.ts [2026-11-12 01:42:03] --END--
+2026-11-12 01:42:23,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,tsconfig.tsbuildinfo,modified,success,auto-push: page.tsx [2026-11-12 01:42:21] --END--
+2026-11-12 01:42:43,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,scripts/backfill-printer-coords.ts.tmp.16286.6137f9313bb4,created,success,auto-push: backfill-printer-coords.ts [2026-11-12 01:42:41] --END--
+2026-11-12 01:43:38,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/components/OrderForm.tsx,modified,success,"auto-push: package.json, OrderForm.tsx [2026-11-12 01:43:36] --END--"
+2026-11-12 01:44:05,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/components/CustomUploadForm.tsx,modified,success,auto-push: CustomUploadForm.tsx [2026-11-12 01:44:03] --END--
+2026-11-12 01:44:21,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/api/printers/route.ts,modified,success,auto-push: route.ts [2026-11-12 01:44:18] --END--
+2026-11-12 01:44:57,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,tests/geo.test.ts.tmp.16286.435461d066ea,created,success,auto-push: geo.test.ts [2026-11-12 01:44:56] --END--
+2026-11-12 01:53:56,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/store.ts,modified,success,"auto-push: api.ts, store.ts [2026-11-12 01:53:54] --END--"
+2026-11-12 01:54:11,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/design/[slug].tsx,modified,success,auto-push: [slug].tsx [2026-11-12 01:54:09] --END--
+2026-11-12 01:54:21,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/design/[slug].tsx,modified,success,auto-push: [slug].tsx [2026-11-12 01:54:19] --END--
+2026-11-12 01:55:30,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/mailer.ts,modified,success,auto-push: mailer.ts [2026-11-12 01:55:28] --END--
+2026-11-12 01:55:52,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/orderService.ts,modified,success,auto-push: orderService.ts [2026-11-12 01:55:50] --END--
+2026-11-12 01:56:07,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/api/printer/jobs/[id]/route.ts,modified,success,auto-push: route.ts [2026-11-12 01:56:05] --END--
+2026-11-12 01:56:27,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/api/cron/sweep/route.ts,modified,success,auto-push: route.ts [2026-11-12 01:56:25] --END--
+2026-11-12 01:56:57,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/printerStats.ts.tmp.16286.34eeac7b1f28,created,success,auto-push: printerStats.ts [2026-11-12 01:56:55] --END--
+2026-11-12 01:57:09,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/printMatch.ts,modified,success,auto-push: printMatch.ts [2026-11-12 01:57:06] --END--
+2026-11-12 01:57:46,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/printMatch.ts,modified,success,"auto-push: route.ts, printMatch.ts [2026-11-12 01:57:43] --END--"
+2026-11-12 01:58:14,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/orderService.ts,modified,success,auto-push: orderService.ts [2026-11-12 01:58:11] --END--
+2026-11-12 01:58:43,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/designs/[slug]/page.tsx,modified,success,"auto-push: route.ts, route.ts, page.tsx [2026-11-12 01:58:41] --END--"
+2026-11-12 01:59:15,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/components/OrderForm.tsx,modified,success,auto-push: OrderForm.tsx [2026-11-12 01:59:12] --END--
+2026-11-12 02:01:54,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/components/OrderForm.tsx.tmp.16286.a84380f3e75d,created,success,auto-push: OrderForm.tsx [2026-11-12 02:01:51] --END--
+2026-11-12 02:02:02,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/components/OrderForm.tsx.tmp.16286.cfebb79c2db5,created,success,auto-push: OrderForm.tsx [2026-11-12 02:02:00] --END--
+2026-11-12 02:02:29,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/designs/[slug]/page.tsx,modified,success,auto-push: page.tsx [2026-11-12 02:02:28] --END--
+2026-11-12 02:02:52,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/api.ts,modified,success,auto-push: api.ts [2026-11-12 02:02:50] --END--
+2026-11-12 02:03:06,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/design/[slug].tsx.tmp.16286.94a204e40db0,created,success,auto-push: [slug].tsx [2026-11-12 02:03:04] --END--
+2026-11-12 02:03:23,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/config.ts,modified,success,"auto-push: [slug].tsx, config.ts [2026-11-12 02:03:21] --END--"
+2026-11-12 02:03:57,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,tests/printerStats.test.ts.tmp.16286.82cfd793a39c,created,success,auto-push: printerStats.test.ts [2026-11-12 02:03:55] --END--
+2026-11-12 02:04:25,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/format.ts,created,success,"auto-push: config.ts, format.ts [2026-11-12 02:04:20] --END--"
+2026-11-12 02:04:38,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,tests/.!55800!printerStats.test.ts,created,success,auto-push: printerStats.test.ts [2026-11-12 02:04:35] --END--
+2026-11-12 02:09:14,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/api/printer/jobs/route.ts.tmp.16286.61b3d9200897,created,success,auto-push: route.ts [2026-11-12 02:09:11] --END--
+2026-11-12 02:09:58,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/api.ts,modified,success,auto-push: api.ts [2026-11-12 02:09:55] --END--
+2026-11-12 02:10:36,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/printer.tsx,modified,success,auto-push: printer.tsx [2026-11-12 02:10:34] --END--
+2026-11-12 02:10:50,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/printer.tsx.tmp.16286.1f0ce446ecfb,created,success,auto-push: printer.tsx [2026-11-12 02:10:48] --END--
+2026-11-12 02:11:14,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/printer.tsx,modified,success,auto-push: printer.tsx [2026-11-12 02:11:12] --END--
+2026-11-12 02:11:47,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/printer.tsx,modified,success,auto-push: printer.tsx [2026-11-12 02:11:45] --END--
+2026-11-12 02:14:19,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,prisma/schema.prisma,modified,success,auto-push: schema.prisma [2026-11-12 02:14:17] --END--
+2026-11-12 02:14:53,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/push.ts.tmp.16286.c3ea842e7149,created,success,auto-push: push.ts [2026-11-12 02:14:51] --END--
+2026-11-12 02:15:13,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/api/push/register/route.ts.tmp.16286.25fa9f5bbf26,created,success,auto-push: route.ts [2026-11-12 02:15:10] --END--
+2026-11-12 02:15:20,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/api/push/unregister/route.ts,created,success,auto-push: route.ts [2026-11-12 02:15:18] --END--
+2026-11-12 02:15:28,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/rateLimit.ts.tmp.16286.107e2024651a,created,success,auto-push: rateLimit.ts [2026-11-12 02:15:26] --END--
+2026-11-12 02:15:47,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/orderService.ts,modified,success,auto-push: orderService.ts [2026-11-12 02:15:45] --END--
+2026-11-12 02:16:05,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/api/printer/jobs/[id]/route.ts,modified,success,auto-push: route.ts [2026-11-12 02:16:03] --END--
+2026-11-12 02:16:28,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/package.json._rgl0nBFPSzETt2wZz1xW-nMWT3-cyngK9L6QC0lrQM,created,success,auto-push: package.json [2026-11-12 02:16:26] --END--
+2026-11-12 02:16:45,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app.json,modified,success,"auto-push: app.json, package-lock.json [2026-11-12 02:16:43] --END--"
+2026-11-12 02:17:13,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/push.ts.tmp.16286.23867f7bed72,created,success,auto-push: push.ts [2026-11-12 02:17:11] --END--
+2026-11-12 02:17:40,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/_layout.tsx,modified,success,"auto-push: orders.tsx, _layout.tsx [2026-11-12 02:17:38] --END--"
+2026-11-12 02:18:06,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/design/[slug].tsx,modified,success,"auto-push: [slug].tsx, printer.tsx [2026-11-12 02:18:04] --END--"
+2026-11-12 02:18:25,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/(tabs)/orders.tsx,modified,success,auto-push: orders.tsx [2026-11-12 02:18:24] --END--
+2026-11-12 02:22:03,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/blobUpload.ts.tmp.16286.ed1f118fd9a8,created,success,auto-push: blobUpload.ts [2026-11-12 02:22:00] --END--
+2026-11-12 02:22:23,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/api.ts,modified,success,auto-push: api.ts [2026-11-12 02:22:21] --END--
+2026-11-12 02:23:15,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/(tabs)/upload.tsx.tmp.16286.52ac1a428859,created,success,auto-push: upload.tsx [2026-11-12 02:23:13] --END--
+2026-11-12 02:23:28,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/(tabs)/upload.tsx.tmp.16286.9de76124339b,created,success,auto-push: upload.tsx [2026-11-12 02:23:27] --END--
+2026-11-12 02:23:55,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/.well-known/apple-app-site-association/route.ts,created,success,"auto-push: route.ts, route.ts, siteGate.ts [2026-11-12 02:23:52] --END--"
+2026-11-12 02:24:04,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,tests/siteGate.test.ts,modified,success,auto-push: siteGate.test.ts [2026-11-12 02:24:02] --END--
+2026-11-12 02:25:11,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/+native-intent.tsx,created,success,"auto-push: app.json, +native-intent.tsx [2026-11-12 02:25:08] --END--"
+2026-11-12 02:25:35,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/format.ts,modified,success,"auto-push: +native-intent.tsx, format.ts [2026-11-12 02:25:33] --END--"
+2026-11-12 02:25:59,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,tests/appLinks.test.ts.tmp.16286.6204eab463ab,created,success,auto-push: appLinks.test.ts [2026-11-12 02:25:57] --END--
+2026-11-12 02:26:25,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/format.ts.tmp.16286.ef5516ef7124,created,success,auto-push: format.ts [2026-11-12 02:26:23] --END--
+2026-11-12 02:27:00,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,.env.example,modified,success,"auto-push: .env.example, OPERATIONS.md, appLinks.test.ts [2026-11-12 02:26:58] --END--"
+2026-11-12 02:27:48,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,auto-push: HANDOFF-2026-11.md [2026-11-12 02:27:46] --END--
+2026-11-12 02:33:58,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/README.md,modified,success,"auto-push: HANDOFF-2026-11.md, README.md [2026-11-12 02:33:55] --END--"
+2026-11-13 13:08:37,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/src/Paywall.tsx,modified,success,auto-push: Paywall.tsx [2026-11-13 13:08:28] --END--
+2026-11-13 13:08:51,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/src/Paywall.tsx,modified,success,auto-push: Paywall.tsx [2026-11-13 13:08:48] --END--
+2026-11-13 13:09:19,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/src/Paywall.tsx,modified,success,auto-push: Paywall.tsx [2026-11-13 13:09:17] --END--
+2026-11-13 13:10:04,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,site/index.html,modified,success,auto-push: index.html [2026-11-13 13:10:02] --END--
+2026-11-13 13:10:15,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,.github/workflows/pages.yml,created,success,auto-push: pages.yml [2026-11-13 13:10:13] --END--
+2026-11-13 13:14:08,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/app-review/reply-2.1b-and-3.1.2c.md,created,success,auto-push: reply-2.1b-and-3.1.2c.md [2026-11-13 13:14:06] --END--
+2026-11-13 13:14:36,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/BACKLOG.md,modified,success,auto-push: BACKLOG.md [2026-11-13 13:14:35] --END--
+2026-11-13 13:23:33,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/App.tsx,modified,success,auto-push: App.tsx [2026-11-13 13:23:31] --END--
+2026-11-13 13:23:54,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/src/SnippetLibrary.tsx,modified,success,auto-push: SnippetLibrary.tsx [2026-11-13 13:23:52] --END--
+2026-11-13 13:24:07,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/src/TileEditor.tsx,modified,success,"auto-push: Paywall.tsx, ProProvider.tsx, TileEditor.tsx, purchases.ts [2026-11-13 13:24:05] --END--"
+2026-11-13 13:24:16,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/App.tsx,modified,success,auto-push: App.tsx [2026-11-13 13:24:14] --END--
+2026-11-13 13:24:42,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/.env.example,deleted,success,"auto-push: .env.example, package-lock.json, package.json [2026-11-13 13:24:40] --END--"
+2026-11-13 13:24:57,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/README.md,modified,success,auto-push: README.md [2026-11-13 13:24:56] --END--
+2026-11-13 13:25:16,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,README.md,modified,success,auto-push: README.md [2026-11-13 13:25:14] --END--
+2026-11-13 13:27:23,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,site/index.html,modified,success,auto-push: index.html [2026-11-13 13:27:21] --END--
+2026-11-13 13:27:41,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,site/privacy.html,modified,success,"auto-push: privacy.html, terms.html [2026-11-13 13:27:39] --END--"
+2026-11-13 13:27:52,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,site/privacy.html,modified,success,"auto-push: privacy.html, terms.html [2026-11-13 13:27:49] --END--"
+2026-11-13 13:28:24,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/app-review/APP-REVIEW-NOTES.txt,modified,success,auto-push: APP-REVIEW-NOTES.txt [2026-11-13 13:28:22] --END--
+2026-11-13 13:28:55,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/app-review/reply-2.1b-and-3.1.2c.md,deleted,success,auto-push: reply-2.1b-and-3.1.2c.md [2026-11-13 13:28:52] --END--
+2026-11-13 13:29:29,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/BACKLOG.md,modified,success,auto-push: BACKLOG.md [2026-11-13 13:29:27] --END--
+2026-11-13 13:29:45,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/BACKLOG.md,modified,success,auto-push: BACKLOG.md [2026-11-13 13:29:43] --END--
+2026-11-13 13:32:05,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/BACKLOG.md,modified,success,auto-push: BACKLOG.md [2026-11-13 13:32:02] --END--
+2026-11-13 13:43:29,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/eas.json,modified,success,"auto-push: app.json, eas.json [2026-11-13 13:43:26] --END--"
+2026-11-13 15:33:05,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/assets/icon.png,modified,success,"auto-push: android-icon-foreground.png, icon.png [2026-11-13 15:33:01] --END--"
+2026-11-13 15:48:17,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,site/app-icon.png,modified,success,auto-push: 9 files changed [2026-11-13 15:48:14] --END--
+2026-11-13 17:57:24,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,Extras/app-review/reply-2.1b-and-3.1.2c.md,modified,success,"auto-push: reply-2.1b-and-3.1.2c.md, app.json [2026-11-13 17:57:21] --END--"
+2026-11-13 18:42:10,site-probe,https://github.com/deka1105/site-probe.git,probe.py.tmp.44399.98178a28c646,created,success,auto-push: probe.py [2026-11-13 18:42:08] --END--
+2026-11-13 18:44:54,site-probe,https://github.com/deka1105/site-probe.git,probe.py.tmp.44399.c9b83e7a6421,created,success,auto-push: probe.py [2026-11-13 18:44:52] --END--
+2026-11-13 18:46:37,site-probe,https://github.com/deka1105/site-probe.git,probe.py.tmp.44399.0257c8ec3a49,created,success,auto-push: probe.py [2026-11-13 18:46:35] --END--
+2026-11-13 19:11:05,site-probe,https://github.com/deka1105/site-probe.git,probe.py.tmp.44399.fda97f80cfdd,created,success,auto-push: probe.py [2026-11-13 19:11:02] --END--
+2026-11-13 19:27:45,site-probe,https://github.com/deka1105/site-probe.git,probe.py.tmp.44399.52844b79929d,created,success,auto-push: probe.py [2026-11-13 19:27:43] --END--
+2026-11-13 19:28:07,site-probe,https://github.com/deka1105/site-probe.git,probe.py.tmp.44399.ebcba433fc99,created,success,auto-push: probe.py [2026-11-13 19:28:05] --END--
+2026-11-13 23:22:35,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/src/theme.ts,created,success,auto-push: theme.ts [2026-11-13 23:22:33] --END--
+2026-11-13 23:23:09,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/src/motion.ts,created,success,auto-push: motion.ts [2026-11-13 23:23:07] --END--
+2026-11-13 23:23:30,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/.!84743!App.tsx,created,error,git add failed: fatal: unable to stat 'mobile/src/.!84749!SnippetLibrary.tsx': No such file or directory --END--
+2026-11-13 23:27:44,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/App.tsx,modified,success,auto-push: 6 files changed [2026-11-13 23:27:41] --END--
+2026-11-13 23:28:26,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/App.tsx,modified,success,auto-push: App.tsx [2026-11-13 23:28:21] --END--
+2026-11-13 23:29:06,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/src/SnippetLibrary.tsx,modified,success,"auto-push: SnippetLibrary.tsx, TileEditor.tsx [2026-11-13 23:29:04] --END--"
+2026-11-13 23:30:57,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,site/support.html,created,success,"auto-push: NamePrompt.tsx, ProfileSettings.tsx, SnippetLibrary.tsx, TileEditor.tsx, support.html [2026-11-13 23:30:55] --END--"
+2026-11-13 23:31:52,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,site/download.html,created,success,"auto-push: changelog.html, download.html [2026-11-13 23:31:50] --END--"
+2026-11-13 23:32:10,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,site/index.html,modified,success,"auto-push: index.html, privacy.html [2026-11-13 23:32:08] --END--"
+2026-11-14 01:45:45,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/src/buttons.ts,modified,success,auto-push: buttons.ts [2026-11-14 01:45:40] --END--
+2026-11-14 03:51:29,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/src/storage.ts,modified,success,auto-push: storage.ts [2026-11-14 03:51:27] --END--
+2026-11-14 03:51:54,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/src/rpc.ts,modified,success,"auto-push: demo.ts, host.ts, rpc.ts [2026-11-14 03:51:52] --END--"
+2026-11-14 03:53:25,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,desktop/src/executor.mjs,modified,success,"auto-push: main.mjs, preload.cjs, executor.mjs, host.mjs, demo.ts [2026-11-14 03:53:23] --END--"
+2026-11-14 03:53:44,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,desktop/pair.html,modified,success,auto-push: pair.html [2026-11-14 03:53:42] --END--
+2026-11-14 03:55:19,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/src/deckStorage.ts,modified,success,"auto-push: ProfileSettings.tsx, deckStorage.ts [2026-11-14 03:55:18] --END--"
+2026-11-14 03:56:17,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/src/HostsSheet.tsx,created,success,"auto-push: HostsSheet.tsx, ImportProfileSheet.tsx, VolumeSheet.tsx [2026-11-14 03:56:13] --END--"
+2026-11-14 03:58:14,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/src/TileEditor.tsx,modified,success,auto-push: TileEditor.tsx [2026-11-14 03:58:11] --END--
+2026-11-14 04:00:27,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/App.tsx,modified,success,auto-push: App.tsx [2026-11-14 04:00:21] --END--
+2026-11-14 04:01:05,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/App.tsx,modified,success,auto-push: App.tsx [2026-11-14 04:01:03] --END--
+2026-11-14 04:02:16,StreamDeck-Premium,https://github.com/deka1105/StreamDeck-Premium.git,mobile/app.json,modified,success,"auto-push: README.md, app.json, changelog.html [2026-11-14 04:02:13] --END--"
+2026-11-14 10:08:03,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,auto-push: HANDOFF-2026-11.md [2026-11-14 10:08:01] --END--
+2026-11-14 10:10:13,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,auto-push: HANDOFF-2026-11.md [2026-11-14 10:10:10] --END--
+2026-11-14 10:13:09,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,auto-push: HANDOFF-2026-11.md [2026-11-14 10:13:06] --END--
+2026-11-14 10:16:12,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,auto-push: HANDOFF-2026-11.md [2026-11-14 10:16:09] --END--
+2026-11-14 10:26:07,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,scripts/fix-email-case.ts,created,success,auto-push: fix-email-case.ts [2026-11-14 10:26:03] --END--
+2026-11-14 10:26:51,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,"auto-push: HANDOFF-2026-11.md, package.json [2026-11-14 10:26:48] --END--"
+2026-11-14 10:29:47,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,auto-push: HANDOFF-2026-11.md [2026-11-14 10:29:44] --END--
+2026-11-14 10:36:04,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,auto-push: HANDOFF-2026-11.md [2026-11-14 10:36:01] --END--
+2026-11-14 10:50:31,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,prisma/schema.prisma,modified,success,auto-push: schema.prisma [2026-11-14 10:50:29] --END--
+2026-11-14 10:51:02,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/rateLimit.ts,modified,success,auto-push: rateLimit.ts [2026-11-14 10:51:00] --END--
+2026-11-14 10:51:31,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,tests/rateLimit.test.ts,modified,success,auto-push: rateLimit.test.ts [2026-11-14 10:51:29] --END--
+2026-11-14 10:51:46,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/api/cron/sweep/route.ts,modified,success,auto-push: route.ts [2026-11-14 10:51:44] --END--
+2026-11-14 10:52:59,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,.env.example,modified,success,"auto-push: .env.example, HANDOFF-2026-11.md, OPERATIONS.md [2026-11-14 10:52:57] --END--"
+2026-11-14 11:01:17,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/package.json.7aAFxFFeO3cus7EdmIKgKE_5KdnBV1iJfK9pXUfpkk8,created,success,auto-push: package.json [2026-11-14 11:01:13] --END--
+2026-11-14 11:01:25,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,.next/server/app/api/printer/connect/route_client-reference-manifest.js,modified,success,"auto-push: app.json, package-lock.json [2026-11-14 11:01:22] --END--"
+2026-11-14 11:02:29,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,.next/cache/webpack/client-development/5.pack.gz_,created,success,"auto-push: package-lock.json, package.json [2026-11-14 11:02:26] --END--"
+2026-11-14 11:04:42,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,auto-push: HANDOFF-2026-11.md [2026-11-14 11:04:39] --END--
+2026-11-14 11:04:56,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/theme.ts.tmp.33218.9b7b2ef87453,created,success,auto-push: theme.ts [2026-11-14 11:04:53] --END--
+2026-11-14 11:05:57,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,.next/cache/webpack/client-development/5.pack.gz_,created,success,"auto-push: haptics.ts, store.ts [2026-11-14 11:05:55] --END--"
+2026-11-14 11:06:10,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/ui.tsx.tmp.33218.58597cd861cd,created,success,auto-push: ui.tsx [2026-11-14 11:06:07] --END--
+2026-11-14 11:07:12,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,.next/cache/webpack/client-development/5.pack.gz_,created,success,"auto-push: notification-icon.png, PrinterPicker.tsx [2026-11-14 11:07:09] --END--"
+2026-11-14 11:07:20,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/config.ts.tmp.33218.78941e4a088c,created,success,"auto-push: config.ts, push.ts [2026-11-14 11:07:19] --END--"
+2026-11-14 11:08:35,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/nav.ts.tmp.33218.01cf235d806a,created,success,"auto-push: _layout.tsx, nav.ts [2026-11-14 11:08:31] --END--"
+2026-11-14 11:10:55,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/(tabs)/(designs)/index.tsx.tmp.33218.d7f658441cfa,created,success,auto-push: 11 files changed [2026-11-14 11:10:52] --END--
+2026-11-14 11:13:01,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/order/[id].tsx.tmp.33218.f0d9fe8727b5,created,success,auto-push: 6 files changed [2026-11-14 11:12:58] --END--
+2026-11-14 11:14:03,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,.next/cache/webpack/client-development/5.pack.gz_,created,success,"auto-push: index.tsx.tmp.33218.60a66aade131, [slug].tsx [2026-11-14 11:14:01] --END--"
+2026-11-14 14:33:39,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,auto-push: HANDOFF-2026-11.md [2026-11-14 14:33:22] --END--
+2026-11-14 17:56:21,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,auto-push: HANDOFF-2026-11.md [2026-11-14 17:56:18] --END--
+2026-11-14 17:57:53,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/(tabs)/upload/index.tsx.tmp.33218.60a66aade131,moved,success,auto-push: index.tsx [2026-11-14 17:57:51] --END--
+2026-11-14 17:58:01,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/sign-in.tsx,modified,success,"auto-push: index.tsx, printer.tsx, sign-in.tsx, PrinterQueue.tsx [2026-11-14 17:58:00] --END--"
+2026-11-14 17:58:59,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/api.ts,modified,success,auto-push: api.ts [2026-11-14 17:58:56] --END--
+2026-11-14 17:59:18,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/status.ts.tmp.33218.bfe0e9fe55c8,created,success,"auto-push: index.tsx, index.tsx, nav.ts, status.ts, ui.tsx [2026-11-14 17:59:15] --END--"
+2026-11-14 17:59:35,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app.json,modified,success,auto-push: app.json [2026-11-14 17:59:33] --END--
+2026-11-14 18:02:05,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/stlRender.ts.tmp.33218.b2648b90cff7,created,success,auto-push: stlRender.ts [2026-11-14 18:02:03] --END--
+2026-11-14 18:02:24,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,tsconfig.tsbuildinfo,modified,success,auto-push: 8 files changed [2026-11-14 18:02:21] --END--
+2026-11-14 18:02:58,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/lib/.!71478!stlRender.ts,created,success,auto-push: stlRender.ts [2026-11-14 18:02:56] --END--
+2026-11-14 18:03:12,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/package.json.HBlIF026br52IPvx7w6CD6VSmA5ZDH6XTqR-kqSkI3Q,created,success,auto-push: package.json [2026-11-14 18:03:11] --END--
+2026-11-14 18:03:35,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/node_modules/expo-auth-session/LICENSE,moved,success,"auto-push: package-lock.json, package.json [2026-11-14 18:03:30] --END--"
+2026-11-14 18:04:14,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/ios/Philamentos.xcodeproj/project.pbxproj,created,success,"auto-push: app.json, package-lock.json [2026-11-14 18:04:10] --END--"
+2026-11-14 18:04:23,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/.expo/web/cache/production/images/splash-ios/splash-ios-6835017ca5278c2e4553e805e7d86809bce93a44e61e88bcb31a134e9c29ad81-contain/icon_660.png,created,success,auto-push: package.json [2026-11-14 18:04:20] --END--
+2026-11-14 18:05:07,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,.next/build-manifest.json,modified,success,"auto-push: HANDOFF-2026-11.md, MOBILE-UI-2026-11.md, README.md [2026-11-14 18:05:03] --END--"
+2026-11-14 18:05:31,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,.next/static/chunks/app/layout.js,modified,success,auto-push: PrinterPicker.tsx [2026-11-14 18:05:28] --END--
+2026-11-14 18:07:17,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,.next/static/chunks/app/layout.js,modified,success,auto-push: stlRender.ts [2026-11-14 18:07:14] --END--
+2026-11-14 18:27:53,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app.json,modified,success,auto-push: app.json [2026-11-14 18:27:46] --END--
+2026-11-14 18:31:41,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,auto-push: HANDOFF-2026-11.md [2026-11-14 18:31:36] --END--
+2026-11-14 18:35:04,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,.vercelignore,created,success,auto-push: .vercelignore [2026-11-14 18:34:59] --END--
+2026-11-14 19:31:36,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/nav.ts,modified,success,auto-push: nav.ts [2026-11-14 19:31:32] --END--
+2026-11-14 19:36:10,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/_layout.tsx,modified,success,auto-push: _layout.tsx [2026-11-14 19:36:06] --END--
+2026-11-14 19:37:17,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,auto-push: HANDOFF-2026-11.md [2026-11-14 19:37:13] --END--
+2026-11-14 19:44:47,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/nav.ts,modified,success,auto-push: nav.ts [2026-11-14 19:44:44] --END--
+2026-11-14 19:47:44,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,auto-push: HANDOFF-2026-11.md [2026-11-14 19:47:41] --END--
+2026-11-14 19:47:53,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/_layout.tsx,modified,success,auto-push: _layout.tsx [2026-11-14 19:47:50] --END--
+2026-11-14 19:48:03,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,.next/react-loadable-manifest.json,modified,success,auto-push: MOBILE-UI-2026-11.md [2026-11-14 19:48:00] --END--
+2026-11-14 19:50:07,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,auto-push: HANDOFF-2026-11.md [2026-11-14 19:50:03] --END--
+2026-11-14 19:52:46,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/_layout.tsx,modified,success,"auto-push: _layout.tsx, nav.ts [2026-11-14 19:52:43] --END--"
+2026-11-14 20:01:25,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,eas.json,created,success,auto-push: eas.json [2026-11-14 20:01:20] --END--
+2026-11-14 20:01:30,claude-config,https://github.com/deka1105/claude-config.git,skills/AgentQuest/agentquest.py.tmp.90555.0840d337001e,created,success,auto-push: agentquest.py [2026-11-14 20:01:26] --END--
+2026-11-14 20:02:54,claude-config,https://github.com/deka1105/claude-config.git,skills/AgentQuest/SKILL.md.tmp.90555.1ba21c492f3b,created,success,"auto-push: SKILL.md, agentquest.py [2026-11-14 20:02:51] --END--"
+2026-11-14 20:04:38,claude-config,https://github.com/deka1105/claude-config.git,skills/AgentQuest/agentquest.py.tmp.90555.c3027abbc697,created,success,auto-push: agentquest.py [2026-11-14 20:04:34] --END--
+2026-11-14 20:05:30,claude-config,https://github.com/deka1105/claude-config.git,skills/AgentQuest/agentquest.py.tmp.90555.bbff2259f832,created,success,auto-push: agentquest.py [2026-11-14 20:05:26] --END--
+2026-11-14 20:06:22,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,app.json,created,success,auto-push: app.json [2026-11-14 20:06:19] --END--
+2026-11-14 20:06:37,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,app.json,deleted,success,auto-push: app.json [2026-11-14 20:06:33] --END--
+2026-11-14 20:10:12,claude-config,https://github.com/deka1105/claude-config.git,skills/AgentQuest/agentquest.py.tmp.90555.391db7a9d326,created,success,auto-push: agentquest.py [2026-11-14 20:10:09] --END--
+2026-11-14 20:10:54,claude-config,https://github.com/deka1105/claude-config.git,skills/AgentQuest/agentquest.py.tmp.90555.efc386d93e45,created,success,auto-push: agentquest.py [2026-11-14 20:10:50] --END--
+2026-11-14 20:11:03,claude-config,https://github.com/deka1105/claude-config.git,skills/AgentQuest/agentquest.py.tmp.90555.43d38ab94237,created,success,auto-push: agentquest.py [2026-11-14 20:11:00] --END--
+2026-11-14 20:11:48,claude-config,https://github.com/deka1105/claude-config.git,skills/AgentQuest/SKILL.md.tmp.90555.1c2a770a38b5,created,success,auto-push: SKILL.md [2026-11-14 20:11:45] --END--
+2026-11-14 20:16:48,claude-config,https://github.com/deka1105/claude-config.git,skills/AgentQuest/agentquest.py.tmp.90555.06624e5a9cae,created,success,"auto-push: SKILL.md, agentquest.py [2026-11-14 20:16:45] --END--"
+2026-11-14 20:17:09,claude-config,https://github.com/deka1105/claude-config.git,skills/synced/ea4c7d77-2c20-47e3-9afe-86f52becc08e_12fe102e-f205-4362-83b1-9f550a29aa0b/.last-complete-round,deleted,success,auto-push: agentquest.py [2026-11-14 20:17:05] --END--
+2026-11-14 20:18:23,claude-config,https://github.com/deka1105/claude-config.git,skills/AgentQuest/agentquest.py.tmp.90555.8ff1ff416728,created,success,auto-push: agentquest.py [2026-11-14 20:18:20] --END--
+2026-11-14 20:27:09,claude-config,https://github.com/deka1105/claude-config.git,skills/synced/ea4c7d77-2c20-47e3-9afe-86f52becc08e_12fe102e-f205-4362-83b1-9f550a29aa0b/.last-complete-round,deleted,success,auto-push: agentquest.py [2026-11-14 20:27:06] --END--
+2026-11-14 20:53:40,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/MOBILE-UI-2026-11.md,modified,success,"auto-push: HANDOFF-2026-11.md, MOBILE-UI-2026-11.md [2026-11-14 20:53:36] --END--"
+2026-11-15 00:41:39,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,auto-push: HANDOFF-2026-11.md [2026-11-15 00:41:36] --END--
+2026-11-15 00:50:19,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,auto-push: HANDOFF-2026-11.md [2026-11-15 00:50:16] --END--
+2026-11-15 00:57:28,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,docs/HANDOFF-2026-11.md,modified,success,auto-push: HANDOFF-2026-11.md [2026-11-15 00:57:23] --END--
+2026-11-15 23:48:33,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,src/app/api/orders/[id]/status/route.ts,modified,success,auto-push: route.ts [2026-11-15 23:48:30] --END--
+2026-11-15 23:49:10,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/api.ts,modified,success,auto-push: api.ts [2026-11-15 23:49:08] --END--
+2026-11-15 23:50:30,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/src/components/BuyerActions.tsx,created,success,auto-push: BuyerActions.tsx [2026-11-15 23:50:28] --END--
+2026-11-15 23:50:47,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/order/[id].tsx,modified,success,auto-push: [id].tsx [2026-11-15 23:50:44] --END--
+2026-11-15 23:51:18,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app/order/[id].tsx,modified,success,auto-push: [id].tsx [2026-11-15 23:51:16] --END--
+2026-11-15 23:52:34,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/README.md,modified,success,auto-push: README.md [2026-11-15 23:52:32] --END--
+2026-11-15 23:53:36,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,.next/cache/webpack/client-development/5.pack.gz_,created,success,auto-push: MOBILE-UI-2026-11.md [2026-11-15 23:53:34] --END--
+2026-11-16 01:45:44,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,mobile/app.json,modified,success,auto-push: app.json [2026-11-16 01:45:41] --END--
+2026-11-16 01:49:46,Philamentos-pilot,https://github.com/deka1105/Philamentos-pilot.git,.next/cache/webpack/client-development/5.pack.gz_,created,success,auto-push: MOBILE-UI-2026-11.md [2026-11-16 01:49:43] --END--
+2026-11-16 02:25:03,yc-pilots,https://github.com/deka1105/yc-pilots.git,.claude/commands/autowork.md,modified,success,auto-push: autowork.md [2026-11-16 02:24:57] --END--
+2026-11-16 02:29:28,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/dossier.md,created,success,auto-push: dossier.md [2026-11-16 02:29:26] --END--
+2026-11-16 02:30:05,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/use-cases.md,created,success,auto-push: use-cases.md [2026-11-16 02:30:03] --END--
+2026-11-16 02:31:46,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/pilots.md,created,success,auto-push: pilots.md [2026-11-16 02:31:44] --END--
+2026-11-16 02:34:08,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/taktile-backtest-coverage/backtest.ts,created,success,auto-push: backtest.ts [2026-11-16 02:34:06] --END--
+2026-11-16 02:35:23,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/taktile-backtest-coverage/fixtures.ts.tmp.39765.9192454b26f6,created,success,auto-push: fixtures.ts [2026-11-16 02:35:21] --END--
+2026-11-16 02:37:52,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/taktile-backtest-coverage/CoverageReport.tsx.tmp.39765.9416c893d68d,created,success,auto-push: CoverageReport.tsx [2026-11-16 02:37:50] --END--
+2026-11-16 02:38:17,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/taktile-backtest-coverage/Pilot.tsx.tmp.39765.76e8419800f6,created,success,auto-push: Pilot.tsx [2026-11-16 02:38:15] --END--
+2026-11-16 02:42:02,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/taktile-backtest-coverage/fixtures.ts.tmp.39765.d017d53409e0,created,success,auto-push: fixtures.ts [2026-11-16 02:42:00] --END--
+2026-11-16 02:42:14,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/taktile-backtest-coverage/backtest.ts.tmp.39765.8f49dbe3afaf,created,success,"auto-push: backtest.ts, fixtures.ts [2026-11-16 02:42:12] --END--"
+2026-11-16 02:42:23,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/taktile-backtest-coverage/backtest.ts.tmp.39765.10230784eedc,created,success,auto-push: backtest.ts [2026-11-16 02:42:21] --END--
+2026-11-16 02:42:35,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/taktile-backtest-coverage/.!51727!CoverageReport.tsx,created,success,auto-push: backtest.ts [2026-11-16 02:42:33] --END--
+2026-11-16 02:43:05,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/taktile-backtest-coverage/backtest.ts.tmp.39765.fac9a87c683c,created,success,auto-push: backtest.ts [2026-11-16 02:43:03] --END--
+2026-11-16 02:43:53,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/taktile-backtest-coverage/backtest.ts.tmp.39765.58662f3154d9,created,success,"auto-push: backtest.ts, fixtures.ts [2026-11-16 02:43:51] --END--"
+2026-11-16 02:44:09,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/taktile-backtest-coverage/CoverageReport.tsx.tmp.39765.6b81fe358985,created,success,auto-push: CoverageReport.tsx [2026-11-16 02:44:07] --END--
+2026-11-16 02:44:37,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/taktile-backtest-coverage/CoverageReport.tsx.tmp.39765.5a549da92f35,created,success,auto-push: CoverageReport.tsx [2026-11-16 02:44:36] --END--
+2026-11-16 02:44:45,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/taktile-backtest-coverage/CoverageReport.tsx.tmp.39765.4152aac296ce,created,success,auto-push: CoverageReport.tsx [2026-11-16 02:44:44] --END--
+2026-11-16 02:45:09,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/pilots.ts.tmp.39765.67d40c3c8bad,created,success,"auto-push: CoverageReport.tsx, pilots.ts [2026-11-16 02:45:07] --END--"
+2026-11-16 02:45:51,yc-pilots,https://github.com/deka1105/yc-pilots.git,src/lib/pilots.ts.tmp.39765.3fa2c94f36f8,created,success,auto-push: pilots.ts [2026-11-16 02:45:49] --END--
+2026-11-16 02:46:42,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/pilots.md.tmp.39765.e955bad92201,created,success,auto-push: pilots.md [2026-11-16 02:46:40] --END--
+2026-11-16 02:47:30,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/sync.mjs.tmp.39765.d095a0149011,created,success,auto-push: sync.mjs [2026-11-16 02:47:28] --END--
+2026-11-16 02:47:41,yc-pilots,https://github.com/deka1105/yc-pilots.git,scripts/sync.mjs.tmp.39765.965126c0d212,created,success,auto-push: sync.mjs [2026-11-16 02:47:39] --END--
+2026-11-16 02:50:39,yc-pilots,https://github.com/deka1105/yc-pilots.git,.verify-taktile.mjs,created,success,auto-push: .verify-taktile.mjs [2026-11-16 02:50:36] --END--
+2026-11-16 02:51:21,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/taktile-backtest-coverage/CoverageReport.tsx.tmp.39765.05e5cf9fcef4,created,success,auto-push: CoverageReport.tsx [2026-11-16 02:51:19] --END--
+2026-11-16 02:53:11,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/contacts.md.tmp.39765.6f78bdb24788,created,success,auto-push: contacts.md [2026-11-16 02:53:09] --END--
+2026-11-16 02:54:01,yc-pilots,https://github.com/deka1105/yc-pilots.git,companies/taktile/outreach.md.tmp.39765.3bd057a2c89b,created,success,auto-push: outreach.md [2026-11-16 02:53:59] --END--
