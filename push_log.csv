@@ -10193,3 +10193,25 @@ timestamp,repo_name,repo_url,file_changed,event_type,status,message
 2026-11-17 22:35:22,AIOrganizer,https://github.com/deka1105/AIOrganizer.git,.DS_Store,startup-sync,success,startup-sync: .DS_Store [2026-11-17 22:35:21] --END--
 2026-11-17 22:35:28,OFLCDashboard,https://github.com/deka1105/OFLCDashboard.git,".DS_Store, 2026/.DS_Store, 2026Live/.DS_Store, 2027/.DS_Store",startup-sync,success,"startup-sync: .DS_Store, .DS_Store, .DS_Store, .DS_Store [2026-11-17 22:35:25] --END--"
 2026-11-17 22:45:09,adal-launch-radar,https://github.com/deka1105/adal-launch-radar.git,".gitignore, index.html",startup-sync,success,"startup-sync: .gitignore, index.html [2026-11-17 22:45:07] --END--"
+2026-11-17 22:45:11,GitHub-AutoPush-Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,repos_config.csv,modified,success,"auto-push: push_log.csv, repos_config.csv, repos_config.csv.bak.20261117-223428 [2026-11-17 22:45:09] --END--"
+2026-11-17 22:45:22,adal-launch-radar,https://github.com/deka1105/adal-launch-radar.git,guide.js.tmp.45476.1a95c9f9ed28,created,success,auto-push: guide.js [2026-11-17 22:45:20] --END--
+2026-11-17 22:45:28,GitHub-AutoPush-Analytics,https://github.com/deka1105/GitHub-AutoPush-Analytics.git,repos_config.csv,modified,error,git add failed: fatal: unable to stat 'repos_config.csv.sb-f5f2e51d-pn7iPG': No such file or directory --END--
+2026-11-17 22:45:31,adal-launch-radar,https://github.com/deka1105/adal-launch-radar.git,app.js.tmp.45476.9ba7c15b9dc8,created,success,auto-push: app.js [2026-11-17 22:45:30] --END--
+2026-11-17 23:09:07,adal-launch-radar,https://github.com/deka1105/adal-launch-radar.git,lib/parse_post.js.tmp.45476.3ce2ee9d16a3,created,success,auto-push: parse_post.js [2026-11-17 23:09:04] --END--
+2026-11-17 23:09:21,adal-launch-radar,https://github.com/deka1105/adal-launch-radar.git,data/feeds.json,created,success,"auto-push: sources.json, sources.json.tmp.45476.8a1082b4d991, feeds.js, feeds.json, find.mjs [2026-11-17 23:09:19] --END--"
+2026-11-17 23:09:37,adal-launch-radar,https://github.com/deka1105/adal-launch-radar.git,lib/parse_post.js,modified,success,"auto-push: parse_post.js, find.mjs [2026-11-17 23:09:35] --END--"
+2026-11-17 23:09:46,adal-launch-radar,https://github.com/deka1105/adal-launch-radar.git,data/feeds.json,modified,success,"auto-push: feeds.js, feeds.json [2026-11-17 23:09:43] --END--"
+2026-11-17 23:10:06,adal-launch-radar,https://github.com/deka1105/adal-launch-radar.git,lib/parse_post.js,modified,success,auto-push: parse_post.js [2026-11-17 23:10:03] --END--
+2026-11-17 23:10:14,adal-launch-radar,https://github.com/deka1105/adal-launch-radar.git,data/feeds.json,modified,success,"auto-push: feeds.js, feeds.json [2026-11-17 23:10:12] --END--"
+2026-11-17 23:10:26,adal-launch-radar,https://github.com/deka1105/adal-launch-radar.git,.github/workflows/daily-find.yml,created,success,"auto-push: daily-find.yml, x_posts.example.json [2026-11-17 23:10:25] --END--"
+2026-11-17 23:14:15,adal-launch-radar,https://github.com/deka1105/adal-launch-radar.git,app.js.tmp.45476.e4abef595c8f,created,success,auto-push: app.js [2026-11-17 23:14:12] --END--
+2026-11-17 23:14:34,adal-launch-radar,https://github.com/deka1105/adal-launch-radar.git,index.html,modified,success,"auto-push: sample_leads.js, index.html [2026-11-17 23:14:32] --END--"
+2026-11-17 23:14:58,adal-launch-radar,https://github.com/deka1105/adal-launch-radar.git,guide.js,modified,success,auto-push: guide.js [2026-11-17 23:14:56] --END--
+2026-11-17 23:15:20,adal-launch-radar,https://github.com/deka1105/adal-launch-radar.git,lib/parse_post.js,modified,success,auto-push: parse_post.js [2026-11-17 23:15:18] --END--
+2026-11-17 23:16:45,adal-launch-radar,https://github.com/deka1105/adal-launch-radar.git,app.js,modified,success,auto-push: app.js [2026-11-17 23:16:42] --END--
+2026-11-18 09:51:33,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos_Pitch_Deck.pdf,moved,success,auto-push: 9 files changed [2026-11-18 09:51:31] --END--
+2026-11-18 09:51:56,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,PitchDeck/YC_philamentos.pdf,moved,success,auto-push: 10 files changed [2026-11-18 09:51:53] --END--
+2026-11-18 09:52:17,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,PitchDeck/~$Accelerator_Draft1.pptx,created,success,"auto-push: .DS_Store, Antler_philamentos.pdf, YC_philamentos.pdf, a16z_philamentos.pdf, ~$Accelerator_Draft1.pptx [2026-11-18 09:52:14] --END--"
+2026-11-18 09:53:59,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,PitchDeck/Submitted/techstars_philamentos.pdf,created,success,auto-push: techstars_philamentos.pdf [2026-11-18 09:53:57] --END--
+2026-11-18 14:08:50,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,Philamentos-pilot/session-logs/session_2026-11-16_1748_667e2b17.md,created,success,"auto-push: .DS_Store, .DS_Store, Accelerator_Draft1.pptx, ~$Accelerator_Draft1.pptx [2026-11-18 14:08:48] --END--"
+2026-11-18 16:55:36,3DPrintMaket,https://github.com/deka1105/3DPrintMaket.git,session-logs/session_2026-11-15_2131_f24d87bb.md,created,success,auto-push: .DS_Store [2026-11-18 16:55:33] --END--
