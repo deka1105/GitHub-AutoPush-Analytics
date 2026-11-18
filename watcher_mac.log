@@ -3384,3 +3384,121 @@ Modified files:
 2026-11-17 02:31:40 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics/.git/index.lock", inode=311757605, flags=11900, id=1343387052): is_coalesced, is_created, is_file, is_modified, is_renamed
 2026-11-17 02:31:40 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics/.git/index", inode=311757592, flags=10800, id=1343387054): is_file, is_renamed
 2026-11-17 02:31:40 [DEBUG   ] NativeEvent(path="/Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics/.git/index", inode=311757592, flags=10800, id=1343387054): is_file, is_renamed
+2026-11-17 22:33:51 [WARNING ] ======================================================================
+2026-11-17 22:33:51 [WARNING ] --log push_log.csv is the RETIRED shared archive, not a live log.
+2026-11-17 22:33:51 [WARNING ] Both machines appending to it is what caused the committed
+2026-11-17 22:33:51 [WARNING ] conflict markers. Drop the flag to use push_log_mac.csv.
+2026-11-17 22:33:51 [WARNING ] ======================================================================
+2026-11-17 22:33:51 [INFO    ] ============================================================
+2026-11-17 22:33:51 [INFO    ] Auto Git Pusher v4 starting
+2026-11-17 22:33:51 [INFO    ]   Config CSV : repos_config.csv
+2026-11-17 22:33:51 [INFO    ]   Push log   : push_log.csv
+2026-11-17 22:33:51 [INFO    ]   Watcher log: watcher_mac.log
+2026-11-17 22:33:51 [INFO    ] ============================================================
+2026-11-17 22:33:51 [INFO    ] Loaded 107 repo(s) from repos_config.csv
+2026-11-17 22:33:51 [INFO    ] [TestWatcher] Setting up repo…
+2026-11-17 22:33:51 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-11-17 22:33:51 [DEBUG   ]   stdout: https://github.com/deka1105/TestWatcher.git
+2026-11-17 22:33:51 [INFO    ] [TestWatcher] Repo ready at /Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher
+2026-11-17 22:33:51 [INFO    ] [TestWatcher] Startup sync — checking for offline changes…
+2026-11-17 22:33:51 [DEBUG   ]   $ git rev-parse --verify HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-11-17 22:33:51 [DEBUG   ]   stdout: e1ff07f076ddb10156c99d94a9fa44578aee363b
+2026-11-17 22:33:51 [DEBUG   ]   $ git stash --include-untracked  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-11-17 22:33:51 [DEBUG   ]   stdout: No local changes to save
+2026-11-17 22:33:51 [DEBUG   ]   $ git -c diff.ignoreSubmodules=all pull --rebase --autostash origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-11-17 22:33:51 [DEBUG   ]   stdout: Already up to date.
+2026-11-17 22:33:51 [DEBUG   ]   stderr: From https://github.com/deka1105/TestWatcher
+ * branch            HEAD       -> FETCH_HEAD
+2026-11-17 22:33:51 [DEBUG   ]   $ git -c core.quotepath=false status --porcelain -z  [cwd=/Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher]
+2026-11-17 22:33:51 [INFO    ] [TestWatcher] Startup sync: nothing to push — already up to date.
+2026-11-17 22:33:51 [INFO    ] [TestWatcher] Watching: /Users/shubhamarundekatey/ClaudeCode/Day9/TestWatcher
+2026-11-17 22:33:51 [INFO    ] [MultistockDashboard] Setting up repo…
+2026-11-17 22:33:51 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-11-17 22:33:51 [DEBUG   ]   stdout: https://github.com/deka1105/MultistockDashboard.git
+2026-11-17 22:33:51 [INFO    ] [MultistockDashboard] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard
+2026-11-17 22:33:51 [INFO    ] [MultistockDashboard] Startup sync — checking for offline changes…
+2026-11-17 22:33:51 [DEBUG   ]   $ git rev-parse --verify HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-11-17 22:33:51 [DEBUG   ]   stdout: 845de18f5ad85383ccfeb82cfa8a4532aea90856
+2026-11-17 22:33:51 [DEBUG   ]   $ git stash --include-untracked  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-11-17 22:33:51 [DEBUG   ]   stdout: Saved working directory and index state WIP on main: 845de18 auto-push: social-preview.png [2026-10-07 16:10:11]
+2026-11-17 22:33:51 [DEBUG   ] [MultistockDashboard] Startup: stashed working tree before pull
+2026-11-17 22:33:51 [DEBUG   ]   $ git -c diff.ignoreSubmodules=all pull --rebase --autostash origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-11-17 22:33:52 [DEBUG   ]   stdout: Already up to date.
+2026-11-17 22:33:52 [DEBUG   ]   stderr: From https://github.com/deka1105/MultistockDashboard
+ * branch            HEAD       -> FETCH_HEAD
+2026-11-17 22:33:52 [DEBUG   ]   $ git stash pop  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-11-17 22:33:52 [DEBUG   ]   stdout: On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (675e1e139893394176e68f2ba1a898fa6f47bbcb)
+2026-11-17 22:33:52 [DEBUG   ]   $ git -c core.quotepath=false status --porcelain -z  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-11-17 22:33:52 [DEBUG   ]   stdout: M .DS_Store 
+2026-11-17 22:33:52 [INFO    ] [MultistockDashboard] Startup sync: 1 offline change(s) → ['.DS_Store']
+2026-11-17 22:33:52 [DEBUG   ]   $ git add -A  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-11-17 22:33:52 [DEBUG   ]   $ git diff --cached --name-only  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-11-17 22:33:52 [DEBUG   ]   stdout: .DS_Store
+2026-11-17 22:33:52 [DEBUG   ]   $ git commit -m startup-sync: .DS_Store [2026-11-17 22:33:52]  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-11-17 22:33:52 [DEBUG   ]   stdout: [main 7640868] startup-sync: .DS_Store [2026-11-17 22:33:52]
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+2026-11-17 22:33:52 [DEBUG   ]   $ git push --set-upstream origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard]
+2026-11-17 22:33:54 [DEBUG   ]   stdout: branch 'main' set up to track 'origin/main'.
+2026-11-17 22:33:54 [DEBUG   ]   stderr: To https://github.com/deka1105/MultistockDashboard.git
+   845de18..7640868  HEAD -> main
+2026-11-17 22:33:54 [INFO    ] [MultistockDashboard] Startup sync: pushed 1 change(s) ✓
+2026-11-17 22:33:54 [DEBUG   ] Push log written: status=success file=.DS_Store
+2026-11-17 22:33:54 [INFO    ] [MultistockDashboard] Watching: /Users/shubhamarundekatey/ClaudeCode/day3/MultistockDashboard
+2026-11-17 22:33:54 [INFO    ] [PlayBooks] Setting up repo…
+2026-11-17 22:33:54 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-11-17 22:33:54 [DEBUG   ]   stdout: https://github.com/deka1105/Playbooks.git
+2026-11-17 22:33:54 [INFO    ] [PlayBooks] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day0
+2026-11-17 22:33:54 [INFO    ] [PlayBooks] Startup sync — checking for offline changes…
+2026-11-17 22:33:54 [DEBUG   ]   $ git rev-parse --verify HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-11-17 22:33:54 [DEBUG   ]   stdout: da41101e1906c325af325c21390dff5f4684fe7f
+2026-11-17 22:33:54 [DEBUG   ]   $ git stash --include-untracked  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-11-17 22:33:54 [DEBUG   ]   stdout: Saved working directory and index state WIP on main: da41101 auto-push: repos.csv, repos.csv.bak [2026-11-03 15:52:43]
+2026-11-17 22:33:54 [DEBUG   ] [PlayBooks] Startup: stashed working tree before pull
+2026-11-17 22:33:54 [DEBUG   ]   $ git -c diff.ignoreSubmodules=all pull --rebase --autostash origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-11-17 22:33:54 [DEBUG   ]   stdout: Already up to date.
+2026-11-17 22:33:54 [DEBUG   ]   stderr: From https://github.com/deka1105/Playbooks
+ * branch            HEAD       -> FETCH_HEAD
+2026-11-17 22:33:54 [DEBUG   ]   $ git stash pop  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-11-17 22:33:54 [DEBUG   ]   stdout: On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (9e6775f70dd7278bd41a8251d09b6b3341752ece)
+2026-11-17 22:33:54 [DEBUG   ]   $ git -c core.quotepath=false status --porcelain -z  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-11-17 22:33:54 [DEBUG   ]   stdout: M .DS_Store 
+2026-11-17 22:33:54 [INFO    ] [PlayBooks] Startup sync: 1 offline change(s) → ['.DS_Store']
+2026-11-17 22:33:54 [DEBUG   ]   $ git add -A  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-11-17 22:33:54 [DEBUG   ]   $ git diff --cached --name-only  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-11-17 22:33:54 [DEBUG   ]   stdout: .DS_Store
+2026-11-17 22:33:54 [DEBUG   ]   $ git commit -m startup-sync: .DS_Store [2026-11-17 22:33:54]  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-11-17 22:33:54 [DEBUG   ]   stdout: [main 77440bc] startup-sync: .DS_Store [2026-11-17 22:33:54]
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+2026-11-17 22:33:54 [DEBUG   ]   $ git push --set-upstream origin HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day0]
+2026-11-17 22:33:56 [DEBUG   ]   stdout: branch 'main' set up to track 'origin/main'.
+2026-11-17 22:33:56 [DEBUG   ]   stderr: To https://github.com/deka1105/Playbooks.git
+   da41101..77440bc  HEAD -> main
+2026-11-17 22:33:56 [INFO    ] [PlayBooks] Startup sync: pushed 1 change(s) ✓
+2026-11-17 22:33:56 [DEBUG   ] Push log written: status=success file=.DS_Store
+2026-11-17 22:33:56 [INFO    ] [PlayBooks] Watching: /Users/shubhamarundekatey/ClaudeCode/day0
+2026-11-17 22:33:56 [INFO    ] [GitHub-AutoPush-Analytics] Setting up repo…
+2026-11-17 22:33:56 [DEBUG   ]   $ git remote get-url origin  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics]
+2026-11-17 22:33:56 [DEBUG   ]   stdout: https://github.com/deka1105/GitHub-AutoPush-Analytics.git
+2026-11-17 22:33:56 [INFO    ] [GitHub-AutoPush-Analytics] Repo ready at /Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics
+2026-11-17 22:33:56 [INFO    ] [GitHub-AutoPush-Analytics] Startup sync — checking for offline changes…
+2026-11-17 22:33:56 [DEBUG   ]   $ git rev-parse --verify HEAD  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics]
+2026-11-17 22:33:56 [DEBUG   ]   stdout: 2375bb6a562783ad8bb63db78152befd9ef84381
+2026-11-17 22:33:56 [DEBUG   ]   $ git stash --include-untracked  [cwd=/Users/shubhamarundekatey/ClaudeCode/day10/GitHub-AutoPush-Analytics]
